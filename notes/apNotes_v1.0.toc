@@ -1,0 +1,6 @@
+\vspace {-\cftbeforepartskip }
+\babel@toc {english}{}\relax 
+\contentsline {part}{\numberline {i}{Theory}}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}{Introduzione}}{3}{chapter.1}%
+\contentsline {chapter}{Bibliography}{5}{section*.1}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
