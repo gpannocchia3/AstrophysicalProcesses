@@ -7,12 +7,10 @@
 \contentsline {section}{\numberline {1.3}{Blackbody radiation}}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}{Radiative transfer equation}}{7}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}{Monochromatic emission coefficient}}{8}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}{Absorption}}{8}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}{Emission only}}{9}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}{Absorption only}}{9}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.2}{Absorption coefficient}}{8}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}{Kirchhoff's Law and LTE}}{10}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}{Local Thermodynamic Equilibrium (LTE)}}{10}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.1}{Local Thermodynamic Equilibrium (LTE)}}{11}{subsection.1.5.1}%
 \contentsline {part}{\numberline {ii}{Fluid dynamics}}{13}{part.2}%
 \contentsline {part}{\numberline {iii}{Gravitation}}{15}{part.3}%
-\contentsline {chapter}{Bibliography}{17}{section*.4}%
+\contentsline {chapter}{Bibliography}{17}{section*.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

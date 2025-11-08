@@ -161,7 +161,7 @@ where $\rho$ is the mass density of the emitting medium.
 \begin{equation*}
 	\text{d}I_{\nu} = j_{\nu}\,\text{d}s
 \end{equation*}
-\subsection{Absorption}
+\subsection{Absorption coefficient}
 Similarly, we can consider the energy that is absorbed from the radiation when passing through a medium. There exists similar definition; I'll use the one we gave in class and that is incidentally the one used in \cite{choudhuri} and \cite{1986rpa..book.....R} as well.
 \par We define the \emph{absorption coefficient} $\alpha_{\nu}$ through the following relation
 \begin{equation}
@@ -180,13 +180,13 @@ where $\kappa_{\nu}$ is called the mass absorption coefficient or the \emph{mass
 	\frac{\text{d}I_{\nu}}{\text{d}s} = -\alpha_{\nu}I_{\nu}+j_{\nu}
 \end{equation}
 which is actually fairly easy to solve when one of the two coefficients vanishes.
-\subsection{Emission only}
+\subsubsection*{Emission only}
 We set $\alpha_{\nu} = 0$ and the equation may be solved by direct integration
 \begin{equation*}
 	I_{\nu}(s) = I_{\nu}(s_{0})+\int_{s_{0}}^{s} j_{\nu}(s')\,\text{d}s'
 \end{equation*}
 the result is not that interesting per se.
-\subsection{Absorption only}
+\subsubsection*{Absorption only}
 This time we set $j_{\nu} = 0$. The equation is easily solved this time as well 
 \begin{equation*}
 	I_{\nu}(s) = I_{\nu}(s_{0})\exp\left(-\int_{s_{0}}^{s} \alpha_{\nu}(s')\,\text{d}s'\right)
@@ -242,7 +242,19 @@ which actually puts a constraint on the possible values of the emission coeffici
 	j_{\nu} = \alpha_{\nu}B_{\nu}
 \end{equation}
 Let us briefly consider what we have just derived. Often matter tends to emit and absorb at specific frequencies corresponding to what are commonly called \emph{spectral lines}. We would expect then  both $j_{\nu}$ and $\alpha_{\nu}$ to have peaks (or depression) around these lines. But Kirchhoff's law forces their ratio to be equal to a smooth blackbody profile.
-\par Thus we can expect to observe two very different scenarios if the medium is optically thin rather than optically thick. In the former, the radiation emerging from the medium is essentially determined by its emission coefficient; since $j_{\nu}$ is expected to present peaks, we find the radiation spectrum to replicate such features and to be mainly in spectral lines.
+\par Thus we can expect to observe two very different scenarios if the medium is optically thin rather than optically thick. In the former, the radiation emerging from the medium is essentially determined by its emission coefficient; since $j_{\nu}$ is expected to present peaks, so will the radiation spectrum, which will be appear in spectral lines, as shown in Fig.\ref{fig:emission} and Fig.\ref{fig:absorption}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/img2.pdf}
+	\caption{An example of emission features formation for different temperatures and different values of $\tau$. Credits: Prof. Walter del Pozzo.}
+	\label{fig:emission}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/img1.pdf}
+	\caption{An example of absorption features formation for different temperatures and different values of $\tau$. Credits: Prof. Walter del Pozzo.}
+	\label{fig:absorption}
+\end{figure}
 \par On the other hand, the intensity coming out of an optically thick body is its source function, which must be equal to the blackbody function. Hence we expect the medium the emit in a continuum, pretty much like a blackbody.
 \par All throughout this description, we've been assuming the medium to have constant properties, which has the perk of being a good approximation for many objects of interest, but still turns out to be a really poor one for many other objects. Stars, for example. 
 \par Ingenuously, we may expect stars to emit radiation like blackbodies, but they're not. Actually, stars present absorption lines--possibly many, depending on the class of star. What we cannot assume in stars is them having constant properties, starting from temperature.
