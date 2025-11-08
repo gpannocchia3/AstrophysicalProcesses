@@ -1,18 +1,8 @@
 \begin{thebibliography}{1}
 
-\bibitem{1952LIACo...4..251B}
-L.~{Biermann}.
-\newblock {Physical Processes in Comet Tails and their Relation to Solar Activity}.
-\newblock In P.~{Swings}, editor, {\em Liege International Astrophysical Colloquia}, volume~4 of {\em Liege International Astrophysical Colloquia}, pages 251--262, January 1952.
-
-\bibitem{1958ApJ...128..664P}
-E.~N. {Parker}.
-\newblock {Dynamics of the Interplanetary Gas and Magnetic Fields.}
-\newblock {\em \apj}, 128:664, November 1958.
-
-\bibitem{1949Obs....69..219U}
-A.~{Unsold} and S.~{Chapman}.
-\newblock {Optical and radiofrequency ansorption by solar corpuscular bursts}.
-\newblock {\em The Observatory}, 69:219--221, December 1949.
+\bibitem{choudhuri}
+A.~R. Choudhuri.
+\newblock {\em Astrophysics for Physicists}.
+\newblock Astrophysics-Testbooks. Cambridge University Press, 2010.
 
 \end{thebibliography}

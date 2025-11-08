@@ -1,6 +1,12 @@
 \vspace {-\cftbeforepartskip }
 \babel@toc {english}{}\relax 
-\contentsline {part}{\numberline {i}{Theory}}{1}{part.1}%
-\contentsline {chapter}{\numberline {1}{Introduzione}}{3}{chapter.1}%
-\contentsline {chapter}{Bibliography}{5}{section*.1}%
+\contentsline {part}{\numberline {i}{Radiative Transport}}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}{Interaction of radiation with matter}}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}{Introduction}}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}{Relevant quantities for radiative transfer}}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}{Blackbody radiation}}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}{Radiative transfer equation}}{5}{section.1.4}%
+\contentsline {part}{\numberline {ii}{Fluid dynamics}}{7}{part.2}%
+\contentsline {part}{\numberline {iii}{Gravitation}}{9}{part.3}%
+\contentsline {chapter}{Bibliography}{11}{section*.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

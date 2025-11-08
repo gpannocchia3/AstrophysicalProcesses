@@ -1,19 +1,96 @@
 
 %============================= HEADER =================================
-\chapter{Introduzione}\label{sec:i}
+\chapter{Interaction of radiation with matter}\label{ch:i}
 
-In un suo articolo del 1952, Biermann \cite{1952LIACo...4..251B} si propone di analizzare le anomalie osservate nel moto delle code delle comete, con l'intenzione di applicare i risultati della \emph{fisica dei plasmi} in ambito astrofisico.
-\par La materia ionizzata che costituisce le code delle comete presenta spesso accelerazioni dell'ordine di $100 \, g_{\odot}$, con $g_{\odot}$ l'accelerazione di gravità solare superficiale. 
-\par \emph{Rebus sic stantibus}, è impossibile attribuire un'accelerazione di tale entità alla pressione di radiazione solare, che porterebbe ad una forza di oscillazione per la transizione $\gtrapprox 20$, ovvero oltre due ordini di grandezza rispetto a quanto osservato.
-\par Riprendendo l'analisi effettuata da Unsöld e Chapman \cite{1949Obs....69..219U}, basata su osservazioni spettrografiche e nel radio, Biermann assume una densità massima alla radiazione corpuscolare del Sole di $10^{5}\, \text{ioni}/\text{cm}^{3}$ per tempeste geomagnetiche molto intense, mentre in condizioni "normali" e magneticamente indisturbate, la densità di particelle di radiazione corpuscolare è di circa $10^{3}\, \text{ioni}/\text{cm}^{3}$.
-\par Le accelerazioni osservate sono compatibili con l'assunzione di un moto influenzato non solo dalla radiazione elettromagnetica prodotta dalla materia ionizzata, ma anche dalle collisioni tra le particelle che costituiscono la radiazione corpuscolare (elettroni e protoni) e le molecole ionizzate che compongono la coda stessa (e.g. $\text{CO}^{+}, \, \text{N}_{2}^{+}$ e altri ioni). 
-\par Per completezza, riporto a titolo di esempio l'equazione del bilancio dei momenti per una delle tre componenti coinvolte\footnote{Per una trattazione completa, rimando all'articolo originale di Biermann \cite{1952LIACo...4..251B}\,.}:
+\section{Introduction}
+Most of our knowledge about the Universe is based on the electromagnetic radiation that reaches us from far far away. EM radiation is obviusly not the only way we can probe the Universe we live in but, in respect to neutrinos, cosmic rays or even gravitational waves, it's not a long stretch to claim it is by far the most understood.
+\par It is most important then that an astrophysicist worthy of his (or her) name has a good grasp of the theory of radiative transfer and of its applications.
+\par Apart from a few more key differences, I'll follow the description of radiative transfer of \cite{choudhuri}, but I won't fail to emphasize whenever I'll be doing otherwise.
+
+\section{Relevant quantities for radiative transfer}
+Although some books often start their description of radiative transfer from the definition of \emph{monochromatic energy} and \emph{monochromatic intensity}, I found that it is most misleading, since, in all but a few cases, what we experimentally measure are fundamentally \emph{fluxes}. 
+\par We shall then consider the \emph{monochromatic flux} $F_{\nu}$ ($\text{erg}\,\text{s}^{-1}\,\text{Hz}^{-1}\,\text{cm}^{-2}$) produced by some source passing through a small area $\text{d}A$ located somewhere in space. 
+\par If we call \textbf{$\hat{k}$} the propagation direction of the flux and \textbf{$\hat{n}$} the unit vector emerging from the surface $\text{d}A$, it's easy to get convinced that what is actually passing through the surface is somewhat proportional to $F_{\nu} (\textbf{$\hat{k}$} \cdot \textbf{$\hat{n}$})$.
+\par From the monochromatic flux we can define the \emph{bolometric flux}, which is just the monochromatic flux integrated over all frequencies (or wavelengths)
 \begin{equation}
-	m_{m}\frac{d\textbf{v}_{m}}{dt} + \mu_{mp}\gamma_{mp}(\textbf{v}_{m}-\textbf{v}_{p}) + \mu_{me}\gamma_{me}(\textbf{v}_{m}-\textbf{v}_{e}) = e\textbf{E} + \frac{e}{c}[\textbf{v}_{m}\textbf{H}]
-	\label{eq:biermann}
+	F = \int_{0}^{+\infty} F_{\nu}\, \text{d}\nu = \int_{0}^{+\infty} F_{\lambda}\, \text{d}\lambda
 \end{equation}
-dove $m_{m}$ è la massa della molecola, $m_p$ e $m_{e}$ rispettivamente massa di protone ed elettrone, $\textbf{v}_{m}$ la velocità delle molecole della coda, $\mu_{ij}$ (con $i,\,j$ tra $e,\,p,\,m$) la massa ridotta della coppia di particelle $i$, $j$ e $\gamma_{ij}$ la probabilità che una particolare componente $i$ collida con la componente $j$ per unità di tempo. \textbf{E}, \textbf{H}, $e$ e $c$ hanno il significato usuale. 
-\par Ammettendo alcune semplificazioni, il sistema di tre equazioni può essere risolto. Notabilmente, assumendo densità numeriche di particelle dell'ordine di quelle stimate da Unsöld e Chapman, e una velocità per i protoni di $v_{p} \simeq 10^{8}\, \text{cm}/\text{s}$, si ottengono accelerazioni per gli ioni $\text{CO}^{+}, \, \text{N}_{2}^{+}$ in un intervallo compreso tra $10^{2}-10^{4}\, \text{cm}/\text{s}^{2}$.
-\par Se ne deduce che le accelerazioni osservate per tali ioni nelle code possono essere consistentemente spiegate in termini di collisioni tra particelle della radiazione corpuscolare e molecole ionizzate. 
-\par Nelle sezioni a seguire, ci proponiamo sviluppare un modello di \emph{vento solare} che possa essere realisticamente responsabile per l'eiezione di $10^{14}-10^{15}\,\text{g}$ di idrogeno ionizzato al secondo, con velocità di $1000\, \text{km}/\text{s}$, come si richiede per spiegare le osservazioni di Biermann. Nel fare ciò, adotteremo l'approccio seguito da Parker \cite{1958ApJ...128..664P}.
-
+This also tells us how to convert a flux per unit frequency to a flux per unit wavelength
+\begin{equation*}
+	 F_{\nu}\, \text{d}\nu = F_{\lambda}\, \text{d}\lambda
+\end{equation*}
+\par By now it should be clear that, despite being experimentally sensible to use the flux, we're losing much information sticking with it, namely directional information.
+\par We consider then the amount of radiation $E_{\nu}\,\text{d}\nu$ passing through the same area in time $\text{d}t$ and solid angle $\text{d}\Omega$. Hence we can write
+\begin{equation}
+	\text{d}E_{\nu}\,\text{d}\nu = I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$}) (\textbf{$\hat{k}$} \cdot \textbf{$\hat{n}$}) \, \text{d}t \, \text{d}\Omega \, \text{d}A \, \text{d}\nu
+\end{equation}
+where the quantity $I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$})$ is called the \emph{specific monochromatic intensity}. If $I_{\nu}(\textbf{r}, t, \textbf{$\hat{k}$})$ is specified for all directions at every point in a certain region of spacetime, then we'd have a complete prescription of the radiation field we intend on studying.
+\par Capitalizing on the blatant similarities with distribution functions, we can evaluate the moments of the monochromatic intensity.
+\begin{definition}{Monochromatic mean intensity $J_{\nu}$}
+	\begin{equation*}
+		J_{\nu} = \frac{1}{4\pi} \int_{\Omega} I_{\nu}\, \text{d}\Omega = \frac{c}{4\pi} U_{\nu}
+	\end{equation*}
+	with $U_{\nu}$ the total energy density of radiation.
+	Note that $J_{\nu}$ is pretty much just an average of the monochromatic intensity over all solid angles.
+\end{definition}
+\begin{definition}{Monochromatic flux $\vec{F}_{\nu}$}
+	\begin{equation*}
+		\vec{H}_{\nu} = \frac{1}{4\pi} \int_{\Omega} I_{\nu}(\textbf{$\hat{k}$})\textbf{$\hat{k}$}\, \text{d}\Omega = \frac{1}{4\pi} \vec{F}_{\nu}
+	\end{equation*}
+	I haven't explicitly proved the last equality, but it shouldn't be hard for you to convince yourself (or prove it yourself) that it is indeed true.
+\end{definition}
+\begin{definition}{Monochromatic radiation pressure $p_{\nu}$}
+	The monochromatic pressure is defined starting from the different directions correlations of the monochromatic intensity 
+	\begin{equation*}
+		K_{\nu}^{ij} = \frac{1}{4\pi} \int_{\Omega} I_{\nu}(\textbf{$\hat{k}$})\textbf{$n^{i}$}\textbf{$n^{j}$}\, \text{d}\Omega 
+	\end{equation*}
+	The pressure in particular is usually expressed as
+	\begin{equation*}
+		P_{\nu} = \frac{1}{c} \int_{\Omega} I_{\nu}(\textbf{$\hat{k}$}) \cos^{2}\theta\,\text{d}\Omega
+	\end{equation*}
+	where $\cos^{2}\theta = (\textbf{$\hat{k}$} \cdot \textbf{$\hat{n}$})^{2}$.
+\end{definition}
+\section{Blackbody radiation}
+Even at an undergraduate level, we're all fairly familiar with \emph{blackbody radiation}. The easiest way to deduce the expression for the energy density of photons in \emph{thermal equilibrium} (STE) inside a cavity is by the means of statistical mechanics.
+\par Remember the Bose-Einstein distribution
+\begin{equation*}
+	n = \frac{1}{\exp(h\nu/kT)-1}
+\end{equation*}
+and the phase space density of states
+\begin{equation*}
+	\rho(\nu)\,\text{d}\nu = \frac{4\pi g \nu^{3}}{c^{3}}\,\text{d}\nu
+\end{equation*}
+from which deducing the expression from internal energy is straightforward. Remembering $g=2$ is the quantum degeneracy of photons, a simple moltiplication of the previous expressions yields
+\begin{equation*}
+	U_{\nu}\,\text{d}\nu = \frac{8\pi \nu^{3}}{c^{3}}\frac{1}{\exp(h\nu/kT)-1}\,\text{d}\nu
+\end{equation*}
+\par Since blackbody radiation is isotropic (it actually depends only on the absolute temperature $T$), the definition of mean monochromatic intensity yields
+\begin{equation}
+	\boxed{
+	B_{\nu}(T) = \frac{2h\nu^{3}}{c^{2}}\frac{1}{\exp(h\nu/kT)-1}
+	}
+	\label{blackbody}
+\end{equation}
+\par It's important to notice that, in principle, such a fundamental result holds only in \emph{strict thermodynamical equilibrium} (STE), but we'll soon see how to generalize this formulation for less "restrictive" environments.
+\par An incredible number of important results descends from (\ref{blackbody}), and it may be worthwhile to at least cite some of them, starting from Stefan-Boltzmann law.
+\par We'll use the following result without proving it 
+\begin{equation*}
+	\int_{0}^{+\infty} B_{\nu}(T)\,\text{d}\nu = \frac{2h}{c^{2}}\frac{\pi^{2}}{15}\left(\frac{kT}{h}\right)^{4}
+\end{equation*}
+\par Computing the bolometric flux and the bolometric energy density by integrating over all frequencies using what we've just written down, you find the following 
+\begin{equation*}
+	U(T) = aT^{4} \quad F(T) = \sigma_{SB}T^{4}
+\end{equation*}
+\par Clearly the two constants $a$ and $\sigma_{SB}$ cannot be independent, and are actually related by the integral we've previously calculated. Using for example
+\begin{equation*}
+	F(T) = \pi \int_{0}^{+\infty} B_{\nu}(T)\,\text{d}\nu
+\end{equation*}
+you can easily find out that the \emph{Stefan-Boltzmann constant} is equal to $$ \sigma_{SB} = \frac{2\pi^{5}k^{4}}{15c^{2}h^{3}}$$
+and the relation with $a$ is simply $\sigma_{SB} = ac/4$.
+\par The equation 
+\begin{equation}
+	F(T) = \frac{2\pi^{5}k^{4}}{15c^{2}h^{3}} T^{4}
+	\label{SB}
+\end{equation}
+is what is usually known as the \emph{Stefan-Boltzmann law}.
+\section{Radiative transfer equation}
