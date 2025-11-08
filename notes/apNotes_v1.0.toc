@@ -10,7 +10,9 @@
 \contentsline {subsection}{\numberline {1.4.2}{Absorption coefficient}}{8}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}{Kirchhoff's Law and LTE}}{10}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}{Local Thermodynamic Equilibrium (LTE)}}{11}{subsection.1.5.1}%
-\contentsline {part}{\numberline {ii}{Fluid dynamics}}{13}{part.2}%
-\contentsline {part}{\numberline {iii}{Gravitation}}{15}{part.3}%
-\contentsline {chapter}{Bibliography}{17}{section*.6}%
+\contentsline {chapter}{\numberline {2}{The Einstein coefficients}}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}{Introduction}}{13}{section.2.1}%
+\contentsline {part}{\numberline {ii}{Fluid dynamics}}{15}{part.2}%
+\contentsline {part}{\numberline {iii}{Gravitation}}{17}{part.3}%
+\contentsline {chapter}{Bibliography}{19}{section*.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

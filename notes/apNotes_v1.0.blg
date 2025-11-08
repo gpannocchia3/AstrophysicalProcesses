@@ -2,12 +2,13 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: apNotes_v1.0.aux
 A level-1 auxiliary file: chapters/chapter1.aux
+A level-1 auxiliary file: chapters/chapter2.aux
 The style file: plain.bst
 Database file #1: ref.bib
 Warning--empty publisher in 1986rpa..book.....R
 You've used 2 entries,
             2118 wiz_defined-function locations,
-            509 strings with 4247 characters,
+            510 strings with 4268 characters,
 and the built_in function-call counts, 499 in all, are:
 = -- 44
 > -- 20
