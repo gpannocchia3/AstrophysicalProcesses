@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.10)  8 NOV 2025 10:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.10)  8 NOV 2025 11:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1538,26 +1538,40 @@ Chapter 1.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
+<img/radcostruction.png, id=68, 306.64563pt x 172.645pt>
+File: img/radcostruction.png Graphic file (type png)
+<use img/radcostruction.png>
+Package pdftex.def Info: img/radcostruction.png  used on input line 15.
+(pdftex.def)             Requested size: 258.99887pt x 145.8269pt.
+
+Underfull \vbox (badness 1259) has occurred while \output is active []
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 \par C
-           apitalizing on the blatant similarities with distribution functio... [3
+l.22 \end{equation}
+                    [3
 
 
 
-]
+ </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/radcostruction.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73 \end{equation}
-                    [4]) [5] [6
+l.63 \end{equation*}
+                     [4]
+<img/blackbody.pdf, id=93, 462.52798pt x 346.89601pt>
+File: img/blackbody.pdf Graphic file (type pdf)
+<use img/blackbody.pdf>
+Package pdftex.def Info: img/blackbody.pdf  used on input line 81.
+(pdftex.def)             Requested size: 332.99774pt x 249.75963pt.
+ [5 </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/blackbody.pdf>]) [6] [7
 
 
 
 
-] [7] [8] [9
+] [8] [9
 
 
 ] [10] (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl) [11
@@ -1567,18 +1581,18 @@ l.73 \end{equation}
 
 ] (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.aux)) ) 
 Here is how much of TeX's memory you used:
- 48633 strings out of 476025
- 1116058 string characters out of 5790017
- 1869388 words of memory out of 5000000
- 68150 multiletter control sequences out of 15000+600000
- 623380 words of font info for 174 fonts, out of 8000000 for 9000
+ 48663 strings out of 476025
+ 1116672 string characters out of 5790017
+ 1866388 words of memory out of 5000000
+ 68172 multiletter control sequences out of 15000+600000
+ 629640 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,21n,110p,10692b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonab.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.pdf (19 pages, 205980 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonab.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.pdf (19 pages, 389792 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 25173 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 26207 words of extra memory for PDF output out of 29859 (max. 10000000)
 

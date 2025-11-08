@@ -10,6 +10,11 @@ Most of our knowledge about the Universe is based on the electromagnetic radiati
 \section{Relevant quantities for radiative transfer}
 Although some books often start their description of radiative transfer from the definition of \emph{monochromatic energy} and \emph{monochromatic intensity}, I found that it is most misleading, since, in all but a few cases, what we experimentally measure are fundamentally \emph{fluxes}. 
 \par We shall then consider the \emph{monochromatic flux} $F_{\nu}$ ($\text{erg}\,\text{s}^{-1}\,\text{Hz}^{-1}\,\text{cm}^{-2}$) produced by some source passing through a small area $\text{d}A$ located somewhere in space. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{img/radcostruction.png}
+	\caption{Schematic geometrical representation of the system. \\Credits: G. Rybicki, A. Lightman}
+\end{figure}
 \par If we call \textbf{$\hat{k}$} the propagation direction of the flux and \textbf{$\hat{n}$} the unit vector emerging from the surface $\text{d}A$, it's easy to get convinced that what is actually passing through the surface is somewhat proportional to $F_{\nu} (\textbf{$\hat{k}$} \cdot \textbf{$\hat{n}$})$.
 \par From the monochromatic flux we can define the \emph{bolometric flux}, which is just the monochromatic flux integrated over all frequencies (or wavelengths)
 \begin{equation}
@@ -71,6 +76,11 @@ from which deducing the expression from internal energy is straightforward. Reme
 	}
 	\label{blackbody}
 \end{equation}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{img/blackbody.pdf}
+	\caption{Blackbody frequency spectrum.}
+\end{figure}
 \par It's important to notice that, in principle, such a fundamental result holds only in \emph{strict thermodynamical equilibrium} (STE), but we'll soon see how to generalize this formulation for less "restrictive" environments.
 \par An incredible number of important results descends from (\ref{blackbody}), and it may be worthwhile to at least cite some of them, starting from Stefan-Boltzmann law.
 \par We'll use the following result without proving it 
@@ -93,4 +103,17 @@ and the relation with $a$ is simply $\sigma_{SB} = ac/4$.
 	\label{SB}
 \end{equation}
 is what is usually known as the \emph{Stefan-Boltzmann law}.
+\par Let us now consider two different regimes for eq.\ref{blackbody}: $h\nu/kT \ll 1$ and $h\nu/kT \gg 1$. The first yields what is commonly known as the Rayleigh-Jeans Law which is, sadly, pretty much relevant only for radioastronomy.
+\par Since 
+\begin{equation*}
+	\exp\left(\frac{h\nu}{kT}\right) = 1+\frac{h\nu}{kT}+o\left(\frac{h\nu}{kT}\right)^{2}
+\end{equation*} 
+the blackbody radiation assumes the much simpler form of
+\begin{equation}
+	B_{\nu}^{RJ} = \frac{2\nu^{2}}{c^{2}}kT
+\end{equation}
+\par Another important results is achieved in the opposite regime
+\begin{equation}
+	B_{\nu}^{W} = ...
+\end{equation}
 \section{Radiative transfer equation}
