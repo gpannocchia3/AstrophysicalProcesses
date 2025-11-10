@@ -1740,6 +1740,9 @@ INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProce
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux
 OUTPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -2053,6 +2056,16 @@ INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProce
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/lineprof.png
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/lineprof.png
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/lineprof.png
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+OUTPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl
@@ -2067,6 +2080,9 @@ INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProce
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux
 INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux
+INPUT /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb

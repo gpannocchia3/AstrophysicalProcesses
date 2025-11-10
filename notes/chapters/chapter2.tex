@@ -92,3 +92,34 @@ Note that since stimulated emission is proportional to the specific intensity $I
     \label{eq:alphacorrected}
 \end{equation}
 in which we're regarding stimulated emission kinda like a \emph{negative absorption}.
+\par In terms of the newly defined emission and absorption coefficients, the equation of radiative transfer takes a new look 
+\begin{equation}
+    \frac{\text{d}I_{\nu}}{\text{d}s} = -\frac{h\nu_{0}}{4\pi}\phi(\nu)(n_{1}B_{12}-n_{2}B_{21})+\frac{h\nu_{0}}{4\pi}n_{2}A_{21}\phi(\nu) 
+\end{equation}
+\par Computing the ratio $j_{\nu}/\alpha_{\nu}$ with the new definitions holds
+\begin{equation}
+    S_{\nu} = \frac{n_{2}A_{21}}{n_{1}B_{12}-n_{2}B_{21}} = \frac{2h\nu^{3}}{c^{2}}\left(\frac{g_{2}n_{1}}{g_{1}n_{2}}-1\right)^{-1}
+    \label{eq:generalkirch}
+\end{equation}
+where the last equality is obtained just by substitution of the Einstein relations (\ref{eq:einsteinrelations}). Note that eq.(\ref{eq:generalkirch}) is a generalized Kirchhoff's law. Let's consider three interesting cases sprouting from these last equality.
+\subsubsection*{Thermal Emission (LTE)}
+If the matter is in local thermal equilibrium (LTE) with itself (but not necessarily with the radiation), eq.\ref{boltmann-occ} must hold locally.
+In this case, we correctly retrieve $$ S_{\nu} = B_{\nu}$$
+\subsubsection*{Nonthermal Emission}
+We can't assume eq.\ref{boltmann-occ} to hold, and particles do not obey the Maxwellian distribution or any of the fancy properties we'd like them to.
+\subsubsection*{Inverted Populations: MASERS}
+Let's consider the definition of the absorption coefficient corrected for stimulated emission eq.\ref{eq:alphacorrected}. Whether the coefficient is positive or negative depends on the term within parentheses, which can be restated using Einstein's relations 
+\begin{equation*}
+    \frac{n_{1}g_{2}}{n_{2}g_{1}}-1 > 0
+\end{equation*}
+so that when this relation is satisfied, even out of thermal equilibrium, we say that the system has \emph{normal populations}. However, it is possible to put enough atoms in the upper state so that we achieve what is called a \emph{inverted population}
+$$ \frac{n_{1}}{g_{1}} < \frac{n_{2}}{g_{2}}$$
+which is quite the odd configuration, if you think about it. We're basically saying that a higher energy level is more densely populated than a lower energy one, which, by means of eq.\ref{boltmann-occ}, corresponds to stating that the temperature $T$ is negative, since $E$ is assumed to be non-negative.
+\par And no, $T$ is not in Celsius degrees.
+\par In such a scenario, the absorption coefficient is negative, so, rather than being damped to extintion, the intensity of the radiation ray \emph{increases} when passing through matter. Such a system is called MASER (Microwave Amplification by Stimulated Emission of Radiation). For visible light you'd get what we usually call "laser".
+\par The fun part here is that we actually \emph{observe} this phenomenon in Nature, like for example in some molecular clouds formed in the ISM. Some sources in specific molecular lines (like the OH lines) was found to be \emph{abnormally high}. Let me quantify how much "abnormal" we're talking about.
+\par Your typical molecular cloud has a density a bit shy of $10^{9}$ particles per $\text{m}^{3}$ and temperature in the range of $10-30\,\text{K}$, so kinda chilly. Cool.
+\par If those "abnormal" sources were assumed to be optically thick in the spectral lines and the specific intensity was equated to $B_{\nu}$, you'd probably roll down chair reading on your computer that those sources should have temperatures as high as $10^{9}\,\text{K}$.
+\par Not so chilly anymore, huh?
+\par The favored explaination for this weird phenomenon (and most likely the correct one) makes use exacly of what we've just shown: Maser action.
+\par If you want to read something (slightly) more rigorous, you can look at \cite{choudhuri}, §6.6.3.
