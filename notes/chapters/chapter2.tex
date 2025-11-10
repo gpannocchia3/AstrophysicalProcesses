@@ -3,4 +3,92 @@
 \chapter{The Einstein coefficients}\label{ch:2}
 
 \section{Introduction}
-Coming soon.
+Kirchhoff's law (eq.\ref{Kirchhoff}), which relates the (spontaneous) emission and the absorption coefficient, seems to imply some underlying microscopic connection between the two phenomena.
+\par As was first discovered by Einstein, that is exactly the case. Let's consider a two level atom interacting with radiation.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/twolevels.png}
+    \caption{Photon emission and absorption in a two levels atom. \\ Credits: G. Rybicki, A. Lightman.}
+    \label{fig:twolevels}
+\end{figure}
+As depicted in Fig.\ref{fig:twolevels}, we'll consider two discrete energy levels: the lower with energy $E$ and degeneracy $g_{1}$, while the upper level has energy equal to $E+h\nu_{0}$ and degeneracy $g_{2}$. Transition between the two levels is possible only through absorption ($1\to 2$) or emission ($2\to1$) of photons of energy $h\nu_{0}$.
+\par Three processes can be thus indentified: \emph{spontaneous emission}, \emph{stimulated emission} and \emph{absorption}.
+\subsection*{Spontaneous Emission}
+The process we'll refer to as \emph{spontaneous emission} occurs when the system transitions from the excited state 2 to the lower level 1 through the emission of a photon. 
+\par Spontaneous emission can occur even in the \textbf{absence of radiation fields} and can be assumed to be \textbf{isotropic}. The transition probability for spontaneous emission is defined through the \emph{Einstein A-coefficient} $A_{21}$, which has units $\text{s}^{-1}$.
+\subsection*{Absorption}
+In the presence of a radiation field with the right energy, the system can absorb a photon to transition from state 1 to a higher energy state. Assuming that the radiation field cannot self-interact, we expect the probability per unit time to be proportional to the density of photons (or to the mean intensity $J_{\nu}$) at frequency $\nu_{0}$.
+\par However, the energy difference between the two states is not infinitely sharp, but more like a smoother curve we'll call the \emph{line profile function $\phi(\nu)$}, 
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/lineprof}
+    \caption{Line profile for a two levels atom. \\ Credits: G. Rybicki, A. Lightman.}
+    \label{fig:lineprof}
+\end{figure}\\
+which is conveniently peaked at $\nu = \nu_{0}$ and is correctly normalized
+\begin{equation*}
+    \int_{0}^{+\infty} \phi(\nu)\,\text{d}\nu = 1
+\end{equation*}
+Not bothering for the moment with the underlying physical mechanisms that concur in determining the line profile, we'll propose the following definition for the transition probability for absorption $B_{12}\overline{J}$, where $\overline{J}$ is
+\begin{equation*}
+    \overline{J} = \int_{0}^{+\infty} J_{\nu}\phi(\nu)\,\text{d}\nu
+\end{equation*}
+and $B_{12}$ is the \emph{Einstein B-coefficient}.
+\subsection*{Stimulated Emission}
+As anticipated, there exists yet another way for a system to emit a photon, but this time requiring the presence of a radiation field. Taken $\overline{J}$ has the same meaning as before, we'll define the transition probability per unit time for stimulated emission as $B_{21}\overline{J}$.
+\par If we were to assume that the mean intensity $J_{\nu}$ changes slowly over the width $\Delta\nu$ of the line profile, we could in principle approximate the line profile as a $\delta$-function peaked at $\nu_{0}$. \par Some books use the energy density $U_{\nu}$ in the definitions. It's pretty much the same since they carry the same information, but be aware that the two definitions will differ of a $c/4\pi$ factor.
+\section{Relations between the Einstein Coefficients}
+It would be most useful if there were some kind of relations between the three different coefficients and if there were some way of relating them to what we've called $\alpha_{\nu}$ and $j_{\nu}$ when dealing the radiative transport. 
+\par If this wasn't the case, this section would have no reason to exist, so it's safe for you to assume that such relations do in fact exist. To do so, however, we have to invoke the \emph{quantum theorem of detailed balance} \cite{goodstein}, which roughly says 
+\begin{quotation}
+    If states $a$ and $b$ of a system have the same energy, then if $P_{ab}$ is the probability per unit time of a transition from $a$ to $b$, and $P_{ba}$ from $b$ to $a$,
+    $$ P_{ab} = P_{ba} $$
+\end{quotation}
+For an atom of matter to be in equilibrium with a radiation field, then, the probability of said atom being in the ground state and absorbing a photon of a given frequency must be equal to the probability that it is in the excited state and emits the photon.
+\par If we assume to be in a steady-state condition, the rate of transition from level 1 to level 2 has to be equal to the rate of transition from level 2 to level 1, or, more generally
+\begin{equation*}
+    n_{j}\sum_{j}R_{ij} - \sum_{j}n_{j}R_{ji} = 0
+\end{equation*}
+If we put in the transition rates we've written down earlier, we get 
+\begin{equation*}
+    n_{1}B_{12}\overline{J} = n_{2}A_{21}+n_{2}B_{21}\overline{J}
+\end{equation*}
+which means that the number of transitions per unit time per unit volume out of state 1 must be equal to the number of transitions per unit time per unit volume into state 1.
+\par Solving for $\overline{J}$
+\begin{equation}
+    \overline{J} = \frac{n_{2}A_{21}}{n_{1}B_{12}-n_{2}B_{21}} = \frac{A_{21}/B_{21}}{(n_{1}/n_{2})\cdot(B_{12}/B_{21})-1}
+\end{equation}
+In thermodynamic equilibrium we can use eq.\ref{boltmann-occ} to relate the occupation numbers
+\begin{equation*}
+    \frac{n_{1}}{n_{2}} = \frac{g_{1}}{g_{2}}\frac{\exp\left(-E/kT\right)}{\exp\left[-(E+h\nu_{0})/kT\right]} = \frac{g_{1}}{g_{2}}\exp\left(-h\nu_{0}/kT\right)
+\end{equation*}
+but in thermodynamic equilibrium we know that $J_{\nu} = B_{\nu}$, so if $B_{\nu}$ varies slowly on the scale of $\Delta\nu$ we can assume $\overline{J}\approx B_{\nu}(\nu_{0})$.
+\par That means the following relations must simultaneously hold
+\begin{align}
+    g_{1}B_{12} &= g_{2}B_{21} \\
+    A_{21} &= \frac{2h\nu^{3}}{c^{2}}B_{21}
+    \label{eq:einsteinrelations}
+\end{align}
+which are known as \emph{Einstein relations} and connect atomic properties $A_{21}$, $B_{21}$ and $B_{12}$ and have no reference to the temperature $T$ (unlike Kirchhoff's law).
+\par Although we have derived eq.\ref{eq:einsteinrelations} assuming thermodynamic equilibrium, those two relations \textbf{must be always valid} whether or not the atoms are in thermodynamic equilibrium.
+\subsection{Absorption and Emission coefficients in terms of Einstein coefficients}
+To obtain the emission coefficient $j_{\nu}$ we have to make a crucial assumption about the frequency distribution of the emitted radiation: This emission is distributed with the same line profile $\phi(\nu)$ that describes absorption, which is often verified in astrophysics (good for us).
+\par By the definition (\ref{eq:jnu}), we already know the amount of energy emitted in volume $\text{d}V$, solid angle $\text{d}\Omega$, frequency $\text{d}\nu$, and time $\text{d}t$. Now, since each atom contributes with $h\nu_{0}$ to spontaneous emission over a $4\pi$ solid angle, we can express the emission coefficient as 
+\begin{equation}
+    j_{\nu} = \frac{h\nu_{0}}{4\pi}n_{2}A_{21}\phi(\nu) 
+    \label{eq:jnueinstein}
+\end{equation}
+Similarly, you can show that the energy absorbed from radiation in frequency range $\text{d}\nu$, solid angle $\text{d}\Omega$, time $\text{d}t$ and volume $\text{d}V$ is
+\begin{equation*}
+    \frac{h\nu_{0}}{4\pi}n_{1}B_{12}I_{\nu}\phi(\nu)\,\text{d}\nu\,\text{d}\Omega\,\text{d}t\,\text{d}V
+\end{equation*}
+From here follows immediately the \emph{true absorption coefficient}
+\begin{equation}
+    \alpha_{\nu} = \frac{h\nu_{0}}{4\pi}n_{1}B_{12}\phi(\nu) 
+\end{equation}
+Note that since stimulated emission is proportional to the specific intensity $I_{\nu}$ and only affects the photons along the given beam, pretty much like true absorption. We shall then define the \emph{absorption coefficient, corrected for stimulated emission} as
+\begin{equation}
+    \alpha_{\nu} = \frac{h\nu_{0}}{4\pi}\phi(\nu)(n_{1}B_{12}-n_{2}B_{21})
+    \label{eq:alphacorrected}
+\end{equation}
+in which we're regarding stimulated emission kinda like a \emph{negative absorption}.
