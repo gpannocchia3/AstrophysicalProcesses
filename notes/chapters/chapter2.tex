@@ -101,14 +101,14 @@ in which we're regarding stimulated emission kinda like a \emph{negative absorpt
     S_{\nu} = \frac{n_{2}A_{21}}{n_{1}B_{12}-n_{2}B_{21}} = \frac{2h\nu^{3}}{c^{2}}\left(\frac{g_{2}n_{1}}{g_{1}n_{2}}-1\right)^{-1}
     \label{eq:generalkirch}
 \end{equation}
-where the last equality is obtained just by substitution of the Einstein relations (\ref{eq:einsteinrelations}). Note that eq.(\ref{eq:generalkirch}) is a generalized Kirchhoff's law. Let's consider three interesting cases sprouting from these last equality.
+where the last equality is obtained just by substitution of the Einstein relations (\ref{eq:einsteinrelations}). Note that eq.(\ref{eq:generalkirch}) is a generalized Kirchhoff's law. Let's consider three interesting cases sprouting from this last equality.
 \subsubsection*{Thermal Emission (LTE)}
 If the matter is in local thermal equilibrium (LTE) with itself (but not necessarily with the radiation), eq.\ref{boltmann-occ} must hold locally.
 In this case, we correctly retrieve $$ S_{\nu} = B_{\nu}$$
 \subsubsection*{Nonthermal Emission}
 We can't assume eq.\ref{boltmann-occ} to hold, and particles do not obey the Maxwellian distribution or any of the fancy properties we'd like them to.
 \subsubsection*{Inverted Populations: MASERS}
-Let's consider the definition of the absorption coefficient corrected for stimulated emission eq.\ref{eq:alphacorrected}. Whether the coefficient is positive or negative depends on the term within parentheses, which can be restated using Einstein's relations 
+Let's consider the definition of the absorption coefficient corrected for stimulated emission eq.\ref{eq:alphacorrected}. Whether the coefficient is positive or negative depends on the term in parentheses, which can be restated using Einstein's relations 
 \begin{equation*}
     \frac{n_{1}g_{2}}{n_{2}g_{1}}-1 > 0
 \end{equation*}
@@ -117,9 +117,109 @@ $$ \frac{n_{1}}{g_{1}} < \frac{n_{2}}{g_{2}}$$
 which is quite the odd configuration, if you think about it. We're basically saying that a higher energy level is more densely populated than a lower energy one, which, by means of eq.\ref{boltmann-occ}, corresponds to stating that the temperature $T$ is negative, since $E$ is assumed to be non-negative.
 \par And no, $T$ is not in Celsius degrees.
 \par In such a scenario, the absorption coefficient is negative, so, rather than being damped to extintion, the intensity of the radiation ray \emph{increases} when passing through matter. Such a system is called MASER (Microwave Amplification by Stimulated Emission of Radiation). For visible light you'd get what we usually call "laser".
-\par The fun part here is that we actually \emph{observe} this phenomenon in Nature, like for example in some molecular clouds formed in the ISM. Some sources in specific molecular lines (like the OH lines) was found to be \emph{abnormally high}. Let me quantify how much "abnormal" we're talking about.
+\par The fun part here is that we actually \emph{observe} this phenomenon in Nature, like for example in some molecular clouds formed in the ISM. Some sources in specific molecular lines (like the OH lines) were found to be \emph{abnormally high}. Let me quantify how much "abnormal" we're talking about.
 \par Your typical molecular cloud has a density a bit shy of $10^{9}$ particles per $\text{m}^{3}$ and temperature in the range of $10-30\,\text{K}$, so kinda chilly. Cool.
-\par If those "abnormal" sources were assumed to be optically thick in the spectral lines and the specific intensity was equated to $B_{\nu}$, you'd probably roll down chair reading on your computer that those sources should have temperatures as high as $10^{9}\,\text{K}$.
+\par If those "abnormal" sources were assumed to be optically thick in the spectral lines and the specific intensity was equated to $B_{\nu}$, you'd probably roll down you chair reading on your computer that those sources should have temperatures as high as $10^{9}\,\text{K}$.
 \par Not so chilly anymore, huh?
 \par The favored explaination for this weird phenomenon (and most likely the correct one) makes use exacly of what we've just shown: Maser action.
 \par If you want to read something (slightly) more rigorous, you can look at \cite{choudhuri}, §6.6.3.
+\section{Hydrogenoid Atoms}
+Fairly interesting objects to study are \emph{hydrogenoid atoms}, that is atoms with $Z$ protons but that had ended up (no matter how) with just one $e^{-}$. For this type of atoms, Quantum Mechanics predicts energy levels distributed as such 
+\begin{equation*}
+    E_{n} = -\frac{Z^{2}\,\text{Ry}}{n^{2}} \quad \text{Ry} = \frac{m_{e}e^{4}}{2\hbar^{2}} \approx 13.6\,\text{eV}
+\end{equation*}
+\par If we were to introduce relativistic corrections through perturbation theory, the expression would get a bit more complicated
+\begin{equation*}
+    E(n,\,l) = -\frac{Z^{2}\,\text{Ry}}{n^{2}}\left(1+\frac{Z^{2}\alpha^{2}}{n^{2}}\left[\frac{n}{j+1/2}-3/4\right]\right)
+\end{equation*}
+which introduces a \emph{fine splitting} of the energy levels, which now depend on the value of the angular momentum. It is probably worth pointing out that the energy levels are still degenerate in the magnetic quantum number $m$. Given a problem with spherical symmetry, it would be beneath us to claim that a scalar perturbation\footnote{The system is still invariant under rotations.} could be able to completely solve the degeneracy. Degeneracy is solved completely only if we introduce in the system a preferred direction\footnote{cfr. \emph{Stark-Lo Surdo Effect} and the \emph{Zeeman effect}.}.
+\par Depending on the value of the orbital angular momentum eigenvalue $l$ we can assign a name to distinguish them:
+\begin{itemize}
+    \centering
+    \item $l = 0 \to$ $s$-orbitals
+    \item $l = 1 \to$ $p$-orbitals
+    \item $l = 2 \to$ $d$-orbitals
+    \item $l = 3 \to$ $f$-orbitals
+\end{itemize}
+This way, transitions may be represented in a \emph{Grotrian diagram} (Fig.\ref{fig:grotrian}), where the energy of a given level is plotted in function of the $l$ eigenvalue, in which selection rules are made most evident.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/Grotrian_H.png}
+    \caption{Example of Grotrian Diagram for Hydrogen. Credits: Wikipedia.}
+    \label{fig:grotrian}
+\end{figure}
+What happens if we are to consider atoms with more than one electron? Does our model still work? Nope, not a chance.
+\par On top of getting stupidly difficult to even evaluate the non relativistic limit, there are \emph{many more ways} to couple interactions, resulting in more and more sources of opacity. It is actually elements with $Z>1$ and $\#e^{-} > 1$ that make the greatest contributions to opacity, especially \emph{metals} ($Z\geqslant 3$).
+\par Sometimes it is useful to express the electron configuration by means of the \emph{Russel-Saunders notation}. Said $S$, $L$, $J$ respectively the spin, the orbital angular momentum and the total angular momentum eigenvalues, we can express a given electron configuration in such a fashion
+\begin{equation*}
+    \,^{2S+1}L_{J}
+\end{equation*}
+where $L$ is usually written in spectroscopic notation, that is the symbol associated to the orbital with that $L$ value.
+\subsection{Hyperfine Transition}
+What we'll be most interested in considering, however, is the hyperfine splitting originating if we consider the coupling between the spin of the nucleus and the electron.
+\par If we were to consider such interaction, we'd find a hyperfine splitting of the ground state. We'll be interested in the energy of the radiation coming from an electron spin flip: The system will transition from a state with total spin $F = 1$ to a one with $F=0$, resulting in the emission of radiation.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/hlineflip.png}
+    \caption{Schematic representation of the spin flip and the resulting emission.\\ Credits: Wikipedia.}
+\end{figure}
+Ignoring higher order corrections to the Hamiltonian, the radiation resulting from the spin flip will have a wavelength 
+\begin{equation}
+    \lambda_{hf} = \frac{3\pi\hbar^{5}m_{p}c^{3}}{g_{e}g_{p}m_{e}^{2}e^{8}}\approx 21.106114054160(30)\,\text{cm}
+    \label{eq:21cm}
+\end{equation}
+where the expression is in CGS units and $g_{e}$, $g_{p}$ are respectively the electron and the proton spin g-factors ($\approx 2$ for the electron, $\approx 5.59$ for the proton).
+\par Unfortunately, such a transition cannot be observed in lab-experiments. The extimated half-life time of the transition from the Einstein $A$ coefficient\footnote{Remember that $A$ has the dimensions of the inverse of a time, so $\tau_{HL}\approx A^{-1}$.} is of the order of a few Myrs. Which means that unless you have \emph{a lot} of time to spare to fight against death, you'll probably never experience even a single one of these transitions. 
+\par This, however, has a strikingly beautiful consequence: Although "rare", we should be able to detect the 21-cm emission line if we were to look somewhere where the transition may have happened millions of years ago, namely somewhere in the sky.
+\par That is exactly the case. If you were to steal a radiotelescope\footnote{Do not recommend. They get awfully big if you want to see something cool.} and point it towards the Galactic plane, you'll see a really sharp line in proximity to the 21-cm line ($\sim 1420\,\text{MHz}$).
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/hydrogenspec.png}
+    \caption{Sampling of the 21-cm emission line with the new Spider500 Radio telescope of the Physics Department of the University of Pisa.\\ Credits: AMLab, Group 8, a.y. 2025/2026.}
+\end{figure}
+\section{Line Broadening}
+It would be most dumb for us to assume that energy levels, or the lines connecting them, are infinitely sharp. Even a quick look at Heisenberg's uncertainty principle should convince you otherwise.
+\par When we defined the Einstein's coefficients, we had to introduce the line profile $\phi(\nu)$ to account for the non-zero width of the line, and it's about time we consider some of the phenomena that concur in determining the line's actual shape.
+\subsection{Natural Broadening}
+For this one, you'll have to recall some of the basics results of Quantum Mechanics. The calculation is not particularly difficult, but it's surely long, so I'm going to omit that and take a simpler route.
+\par Note that the spontaneous decay of an atomic state $n$ proceeds at a rate
+\begin{equation*}
+    \Gamma = \sum_{m} A_{nm}
+\end{equation*}
+where the sum is over all states $m$ of lower energy (which may be a lot).If radiation is present, we should add the induced rates to this. The coefficient of the wave function of state $n$, therefore, is of the form $e^{-\Gamma t/2}$ and leads to a decay of the electric field by the same factor. We have an emitted spectrum determined by the decaying sinusoid type of electric field, so the line profile must be a \emph{Lorentz or Natural profile}
+\begin{equation*}
+    \phi(\nu) = \frac{\Gamma}{4\pi^{2}}\frac{1}{(\nu-\nu_{0})^{2}+\left(\frac{\Gamma}{4\pi}\right)^{2}}
+\end{equation*}
+More often than not, however, we're going to assume that the effect of natural broadening is rather peaked around $\nu_{0}$, similar to a $\delta$-function, since, at least as far as astrophysics is concerned, there are more relevant sources of broadening.
+\subsection{Doppler Broadening}
+An atom is in thermal motion, so that the frequency of emission or absorption in its own frame corresponds to a different frequency for an observer. Each atom has its own Doppler shift, so that the net effect is to spread the line out, but not to change its total strength.
+\par Recall the classic Doppler effect 
+\begin{equation}
+    \nu -\nu_{0} = \frac{\nu_{0}v_{z}}{c}
+\end{equation}
+Here $\nu_{0}$ is the rest frequency. Note that this can be extended to \emph{bulk motion} as well. We can decompose the velocity as
+\begin{equation*}
+    \vec{v} = \langle\vec{v}\rangle + \delta\vec{v}
+\end{equation*}
+which is often called \emph{Reynolds' decomposition} in Fluid-dynamics books when dealing with turbulence. Generally, an ensamble of atoms will have different $\delta\vec{v}$, so each atom will absorb photons at different frequencies.
+\par What we have to do is then convolute the Doppler effect over some velocity distribution. Assuming LTE to hold, such distribution will be the Maxwellian distribution. Switching into a reference frame where $\langle\vec{v}\rangle = 0$ (which is always possible), then the small fluctuations $\delta\vec{v}$ shall follow the Maxwellian distribution.
+\par Please note that the one dimensional version of the Maxwellian distribution must be used, which is a Gaussian distribution with $\mu = 0$ and a given variance.
+\par The convoluted line profile will then be 
+\begin{equation*}
+    \phi(\nu) = \int \delta(\nu-\nu_{0})\nu_{0}\left(1+\frac{v}{c}\right)\exp\left(-\frac{m_{a}v^{2}}{2kT}\right)\,\text{d}v
+\end{equation*}
+where, as anticipated, we identified the natural broadening as a $\delta$-function. This is easily computed
+\begin{equation}
+    \phi(\nu) = \frac{1}{\Delta\nu_{D}\sqrt{\pi}}e^{-(\nu-\nu_{0})^{2}/(\Delta \nu_{D})^{2}} \quad \Delta\nu_{D} = \frac{\nu_{0}}{c}\sqrt{\frac{2kT}{m_{a}}}
+\end{equation}
+Here $\Delta \nu_{D}$ represents the \emph{Doppler width}.
+\par Generally speaking, the minimum broadening we can expect is given by a convolution of Doppler Broadening and Natural Broadening in its proper Lorentzian form. This hasn't a fancy analytical solution, but it's rather expressed from what is called a \emph{Voigt profile}.
+\par Roughly speaking, the Voigt profile is something that looks like a Gaussian at the center of the line\footnote{Sometimes it's called \emph{kernel} of the distibution} (where Doppler effect dominates) but has the 
+\emph{wings} of the Lorentzian distribution.
+\begin{equation*}
+    H(a,u) = \frac{a}{\pi}\int_{-\infty}^{+\infty} \frac{e^{-y^{2}}}{a^{2}+(u-y)^{2}}\,\text{d}y \quad a = \frac{\Gamma}{4\pi\Delta\nu_{D}} \quad u = \frac{\nu-\nu_{0}}{\Delta\nu_{D}}
+\end{equation*}
+In terms of this compact definition of the Voigt profile, the overall line profile will be
+\begin{equation*}
+    \phi(nu) = \frac{1}{\Delta\nu_{D}\sqrt{\pi}}H(a,u)
+\end{equation*}

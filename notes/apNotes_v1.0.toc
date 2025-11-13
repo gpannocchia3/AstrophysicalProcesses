@@ -14,9 +14,14 @@
 \contentsline {section}{\numberline {2.1}{Introduction}}{13}{section.2.1}%
 \contentsline {section}{\numberline {2.2}{Relations between the Einstein Coefficients}}{15}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}{Absorption and Emission coefficients in terms of Einstein coefficients}}{16}{subsection.2.2.1}%
-\contentsline {chapter}{\numberline {3}{Scattering Processes}}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}{Introduction}}{19}{section.3.1}%
-\contentsline {part}{\numberline {ii}{Fluid dynamics}}{21}{part.2}%
-\contentsline {part}{\numberline {iii}{Gravitation}}{23}{part.3}%
-\contentsline {chapter}{Bibliography}{25}{section*.8}%
+\contentsline {section}{\numberline {2.3}{Hydrogenoid Atoms}}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}{Hyperfine Transition}}{19}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}{Line Broadening}}{20}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}{Natural Broadening}}{21}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}{Doppler Broadening}}{21}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}{Scattering Processes}}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}{Introduction}}{23}{section.3.1}%
+\contentsline {part}{\numberline {ii}{Fluid dynamics}}{25}{part.2}%
+\contentsline {part}{\numberline {iii}{Gravitation}}{27}{part.3}%
+\contentsline {chapter}{Bibliography}{29}{section*.11}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

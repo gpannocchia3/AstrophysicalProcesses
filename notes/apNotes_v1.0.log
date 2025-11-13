@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.10)  10 NOV 2025 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.10)  13 NOV 2025 11:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1538,7 +1538,7 @@ Chapter 1.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
-<img/radcostruction.png, id=88, 306.64563pt x 172.645pt>
+<img/radcostruction.png, id=98, 306.64563pt x 172.645pt>
 File: img/radcostruction.png Graphic file (type png)
 <use img/radcostruction.png>
 Package pdftex.def Info: img/radcostruction.png  used on input line 15.
@@ -1561,13 +1561,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has b
                    \relax 
 l.63 \end{equation*}
                      [4]
-<img/blackbody.pdf, id=116, 462.52798pt x 346.89601pt>
+<img/blackbody.pdf, id=126, 462.52798pt x 346.89601pt>
 File: img/blackbody.pdf Graphic file (type pdf)
 <use img/blackbody.pdf>
 Package pdftex.def Info: img/blackbody.pdf  used on input line 81.
 (pdftex.def)             Requested size: 332.99774pt x 249.75963pt.
  [5 </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/blackbody.pdf>] [6]
-<img/rtvacuum.png, id=154, 567.11874pt x 167.62625pt>
+<img/rtvacuum.png, id=164, 567.11874pt x 167.62625pt>
 File: img/rtvacuum.png Graphic file (type png)
 <use img/rtvacuum.png>
 Package pdftex.def Info: img/rtvacuum.png  used on input line 126.
@@ -1581,7 +1581,7 @@ Overfull \hbox (1.92351pt too wide) in paragraph at lines 155--157
  []
 
 [7 </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/rtvacuum.png>] [8] [9]
-<img/img2.pdf, id=188, 462.52798pt x 346.89601pt>
+<img/img2.pdf, id=198, 462.52798pt x 346.89601pt>
 File: img/img2.pdf Graphic file (type pdf)
 <use img/img2.pdf>
 Package pdftex.def Info: img/img2.pdf  used on input line 250.
@@ -1590,7 +1590,7 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 251.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 251.
-<img/img1.pdf, id=189, 462.52798pt x 346.89601pt>
+<img/img1.pdf, id=199, 462.52798pt x 346.89601pt>
 File: img/img1.pdf Graphic file (type pdf)
 <use img/img1.pdf>
 Package pdftex.def Info: img/img1.pdf  used on input line 256.
@@ -1604,7 +1604,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.tex
 Chapter 2.
-<img/twolevels.png, id=253, 454.69875pt x 200.24812pt>
+<img/twolevels.png, id=263, 454.69875pt x 200.24812pt>
 File: img/twolevels.png Graphic file (type png)
 <use img/twolevels.png>
 Package pdftex.def Info: img/twolevels.png  used on input line 10.
@@ -1619,49 +1619,71 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
  </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/twolevels.png>]
-<img/lineprof.png, id=261, 447.6725pt x 266.9975pt>
+<img/lineprof.png, id=271, 447.6725pt x 266.9975pt>
 File: img/lineprof.png Graphic file (type png)
 <use img/lineprof.png>
 Package pdftex.def Info: img/lineprof.png  used on input line 24.
 (pdftex.def)             Requested size: 332.99774pt x 198.60985pt.
- [14 </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/lineprof.png>] [15] [16]) [17]
+ [14 </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/lineprof.png>] [15] [16] [17]
+<img/Grotrian_H.png, id=313, 2569.6pt x 1686.3pt>
+File: img/Grotrian_H.png Graphic file (type png)
+<use img/Grotrian_H.png>
+Package pdftex.def Info: img/Grotrian_H.png  used on input line 147.
+(pdftex.def)             Requested size: 258.99887pt x 169.95215pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18]
+<img/hlineflip.png, id=320, 1927.2pt x 1759.57375pt>
+File: img/hlineflip.png Graphic file (type png)
+<use img/hlineflip.png>
+Package pdftex.def Info: img/hlineflip.png  used on input line 163.
+(pdftex.def)             Requested size: 185.0pt x 168.90642pt.
+ [19 </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/Grotrian_H.png> </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/hlineflip.png>]
+<img/hydrogenspec.png, id=329, 510.9489pt x 409.0482pt>
+File: img/hydrogenspec.png Graphic file (type png)
+<use img/hydrogenspec.png>
+Package pdftex.def Info: img/hydrogenspec.png  used on input line 177.
+(pdftex.def)             Requested size: 332.99774pt x 266.5897pt.
+ [20 </Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/hydrogenspec.png>] [21]) [22]
 \openout2 = `chapters/chapter3.aux'.
 
  (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex
 Chapter 3.
-[18
+) [23
 
 
 
 
 
-]) [19] [20
+] [24
 
 
 
 
-] [21] [22] [23
+] [25] [26] [27
 
 
-] [24] (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl) [25
+] [28] (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl) [29
 
 
 
 
 ] (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.aux) (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux) (/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux)) ) 
 Here is how much of TeX's memory you used:
- 48888 strings out of 476025
- 1122118 string characters out of 5790017
- 1866388 words of memory out of 5000000
- 68318 multiletter control sequences out of 15000+600000
- 643568 words of font info for 192 fonts, out of 8000000 for 9000
+ 48948 strings out of 476025
+ 1122992 string characters out of 5790017
+ 1867388 words of memory out of 5000000
+ 68349 multiletter control sequences out of 15000+600000
+ 649367 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,21n,110p,10692b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonab.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonabi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.pdf (33 pages, 616376 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonab.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonabi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.pdf (37 pages, 851686 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 402 compressed objects within 5 object streams
- 89 named destinations out of 1000 (max. 500000)
- 28872 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 29439 words of extra memory for PDF output out of 29859 (max. 10000000)
 
