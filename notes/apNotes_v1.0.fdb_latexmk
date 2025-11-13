@@ -1,27 +1,27 @@
 # Fdb version 4
-["bibtex /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0"] 1763030415 "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux" "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl" "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0" 1763030639 0
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux" 1763030638 11407 dda0f99d9644a19b3b537986e22b1442 "pdflatex"
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.aux" 1763030638 5049 8d12f195d5bdb1a78df6fac801b2c86b "pdflatex"
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux" 1763030638 4752 bdfee4f21d24939cdc1fabf6c42ec856 "pdflatex"
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux" 1763030638 1381 e2af5aeb8720b1dc7cec2b3cc3c15d34 "pdflatex"
+["bibtex /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0"] 1763035399 "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux" "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl" "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0" 1763035401 0
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux" 1763035401 13200 6b3aa79fbbd287cd7f9fd8c5c58dea8a "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.aux" 1763035400 5250 1510108fb5e625200c8663fc6dc9625f "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux" 1763035401 4743 7284e06e34a449cc47098e74482b25fd "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux" 1763035401 2058 e88d6d0ac77f3fa5a17d3aba426f6e15 "pdflatex"
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/ref.bib" 1762788476 4714 1d888c85bf5b9eeee5d661a4aa08aef7 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl"
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.blg"
   (rewritten before read)
-["pdflatex"] 1763030636 "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.tex" "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.pdf" "apNotes_v1.0" 1763030639 0
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux" 1763030638 11407 dda0f99d9644a19b3b537986e22b1442 "pdflatex"
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl" 1763030415 479 48a337f40f9d77818dd818dd0bde4370 "bibtex /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0"
+["pdflatex"] 1763035399 "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.tex" "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.pdf" "apNotes_v1.0" 1763035401 0
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.aux" 1763035401 13200 6b3aa79fbbd287cd7f9fd8c5c58dea8a "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.bbl" 1763035399 479 48a337f40f9d77818dd818dd0bde4370 "bibtex /Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0"
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.tex" 1763025454 1863 4e19ca237376bf2d6d70026be677a18f ""
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.toc" 1763030638 2220 c5fe681aa5f086dce6096d47ceda0a3e "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apNotes_v1.0.toc" 1763035401 2605 4d8c6d357c460aae9bf85cd1d63686f7 "pdflatex"
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/apnNotes-config.tex" 1762593464 997 623938df7562405f1d70e278959041ae ""
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.aux" 1763030638 5049 8d12f195d5bdb1a78df6fac801b2c86b "pdflatex"
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.tex" 1762790222 22556 c794c69654aaa34db04cdd230ac8aff0 ""
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux" 1763030638 4752 bdfee4f21d24939cdc1fabf6c42ec856 "pdflatex"
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.tex" 1763030636 22122 7ef1adfebe78369044ba2179a921cab3 ""
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux" 1763030638 1381 e2af5aeb8720b1dc7cec2b3cc3c15d34 "pdflatex"
-  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex" 1762793091 155 304dc4e8e38e47013df36f97e6fe2fc0 ""
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.aux" 1763035400 5250 1510108fb5e625200c8663fc6dc9625f "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter1.tex" 1763035396 22623 cb4a4d05059d8731f541ae40e7f38619 ""
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.aux" 1763035401 4743 7284e06e34a449cc47098e74482b25fd "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter2.tex" 1763030957 22123 1a7ca2a33b5d989afaa463e30a182c2a ""
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.aux" 1763035401 2058 e88d6d0ac77f3fa5a17d3aba426f6e15 "pdflatex"
+  "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/chapter3.tex" 1763035323 8922 4cc8d9aed36a2735b0596be4a29cf9f0 ""
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/chapters/preface.tex" 1762793414 1752 efa60ceeb91678b1a063581d2ba01633 ""
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/Grotrian_H.png" 1763025345 83946 ff8be91051cfb37abfe7945df26497a1 ""
   "/Users/giacomopannocchia/Desktop/Università/Magistrale/AstrophysicalProcesses/notes/img/blackbody.pdf" 1762598715 135559 7486a366a8c443cbe0d63a3e44782985 ""
