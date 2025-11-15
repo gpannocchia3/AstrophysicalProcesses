@@ -293,4 +293,107 @@ where $n_{e}$ is the density of electrons and $\chi_{j,\,j+1}$ is the ionization
 \par In such a fortunate scenario, known as \emph{Local Thermodynamic Equilibrium} (LTE), all the important laws requiring thermodynamic equilibrium are expected to hold, provided that we use the local temperature $T(\vec{x})$.
 \par In the interiors of stars, for example, LTE will prove to be a very good approximation, that will get progressively worse as we inch towards the "surface" of the star.
 \section{Parallel Plane Approximation}
-Coming soon.
+One useful approximation that may be worthwhile to dedicate some of our time to is the \emph{plane parallel atmosphere}, that will allow us to obtain notable results for describing of radiation travels through, say, the inner regions of the stellar atmosphere.
+\par In the following, we're going to assume to be able to neglect the curvature and assume the various thermodynamic quantities to be constant over horizontal planes.
+\input{chapters/ppa}
+Using Fig.6 as a reference, we see that 
+\begin{equation*}
+	\text{d}s = \frac{\text{d}z}{\cos\theta} = \frac{\text{d}z}{\mu}
+\end{equation*}
+where we used the customary notation in astrophysics $\mu = \cos\theta$.
+\par We shall consider a scattering free, stationary situation for the equation of radiative transport (\ref{eq:rt}). Hence, due to planar symmetry, we expect the specific intensity to depend only on $z$ and $\mu$. For the sake of the current discussion, we perform a slight modification to the definition of optical depth, so that 
+\begin{equation*}
+	\text{d}\tau_{\nu} = -\alpha_{\nu}\,\text{d}z
+\end{equation*}
+This way the equation of radiative transfer may be cast in the following form 
+\begin{equation*}
+	\mu\partial_{\tau_{\nu}}I_{\nu}(\tau_{\nu}, \mu) = I_{\nu}- S_{\nu}
+\end{equation*}
+which has a formal solution easily computed 
+\begin{equation}
+	I_{\nu}\exp(-\frac{t_{\nu}}{\mu})|^{\tau_{\nu}}_{\tau_{\nu,0}} = -\int_{\tau_{\nu,0}}^{\tau_{\nu}} \frac{S_{\nu}}{\mu}e^{-\frac{t_{\nu}}{\mu}}\,\text{d}t_{\nu}
+	\label{eq:ppart}
+\end{equation}
+This is customarily solved considering two distinct intervals for (I) $\mu$: $\mu\in[0,1]$ and (II) $\mu\in[-1,0]$. In case (I) we can assume the ray path to begin from a great depth inside the star, so that $\tau_{\nu,0}\to\infty$, while in case (II) we assume the ray to receive contributions beginning from with the top of the atmosphere, where $\tau_{\nu,0}\approx 0$. For case (II), we're also assuming no radiation is coming from \emph{outside the star}\footnote{Please note that this condition may be not valid at all in close binary systems.}
+\par Now we can assume LTE throughout the stellar atmosphere so that eq.\ref{Kirchhoff} is verified. The source function at some optical depth shall then be equal to $B_{\nu}(T(\tau_{\nu}))$. For the source function at a nearby optical depth we can simply compute a Taylor expansion around the optical depth $\tau_{\nu}$
+\begin{equation*}
+	S(t_{\nu}) = B_{\nu}(\tau_{\nu})-(t_{\nu}-\tau_{\nu})\frac{\text{d}B_{\nu}}{\text{d}\tau_{\nu}} +\text{o}(t_{\nu}^{2})
+\end{equation*}
+We can use this to solve eq.(\ref{eq:ppart}), finding for both positive and negative values of $\mu$ a very important equation 
+\begin{equation}
+	I_{\nu}(\tau_{\nu}, \mu) = B_{\nu}(\tau_{\nu})+\mu\,\frac{\text{d}B_{\nu}}{\text{d}\tau_{\nu}}
+	\label{eq:staratmo}
+\end{equation}
+provided the point considered is sufficiently inside the atmosphere so that $\tau_{\nu}\gg 1$\footnote{You can see \cite{choudhuri}, §2.4.1 for more detailed calculations.}. Using this simple result, we can compute the three momenta of the equation of transport
+\begin{align}
+	U_{\nu} &= \frac{4\pi}{c}B_{\nu}(\tau_{\nu})\\
+	F_{\nu} &= \frac{4\pi}{3}\frac{\text{d}B_{\nu}}{\text{d}\tau_{\nu}}\\
+	P_{\nu} &= \frac{4\pi}{3c}B_{\nu}(\tau_{\nu})
+\end{align}
+\subsection{The Grey Atmosphere}
+If we consider the absorption coefficient $\alpha_{\nu}$ constant at all frequencies, then the atmosphere is called a "grey atmosphere". This implies that the value of the optical depth at some physical depth is constant for all frequencies.
+\par Under this assumption, we could solve 
+\begin{equation*}
+	\mu \frac{\partial I}{\partial\tau} = I-S
+\end{equation*}
+I'll skip the explicit calculation (which are actually fairly easy for once) and present just the final result. Two more assumptions are to be made, however: The first is to assume \emph{radiative equilibrium}, which roughly translates into asking that there are not sources or sinks of energy in the atmosphere, thus $\partial_{\tau} F = 0$. As a further semplification, we assume the \emph{Eddington approximation} to hold everywhere in the atmosphere, so that 
+\begin{equation*}
+	P = \frac{1}{3}U
+\end{equation*}
+It should be evident that this last equation may be verified in presence of an isotropic source of radiation, also in its frequency-dependent form.
+\par We then come to the following conclusion 
+\begin{equation}
+	I_{obs}(\tau = 0,\mu) = \frac{3F}{4\pi}\left(\mu+\frac{2}{3}\right) = \frac{S(\tau)}{\left(\tau+\frac{2}{3}\right)}\left(\mu+\frac{2}{3}\right)
+\end{equation}
+from which we deduce the equation for the \emph{limb darkening}
+\begin{equation*}
+	\frac{I(0,\mu)}{I(0,1)} = \frac{3}{5}\left(\mu+\frac{2}{3}\right)
+\end{equation*}
+which roughly translates into saying that the radiation that we observe at the surface is the one equivalent at a source function $S$ evaluated at $\tau = 2/3$. This is known as the \emph{Eddington-Barbier estimation}.
+\par A somewhat more general way to solve the problem is assuming the following functional relation for the specific intensity 
+\begin{equation*}
+	I_{\nu}(\tau,\mu) = a_{\nu}(\tau_{\nu})+b_{\nu}(\tau_{\nu})\mu
+\end{equation*}
+and compure the three momenta proper
+\begin{align}
+	J_{\nu} &= \frac{1}{2}\int_{-1}^{+1} I_{\nu}\,\text{d}\mu = a_{\nu}\\
+	H_{\nu} &= \frac{1}{2}\int_{-1}^{+1} I_{\nu}\mu\,\text{d}\mu = \frac{b_{\nu}}{3}\\
+	K_{\nu} &= \frac{1}{2}\int_{-1}^{+1} I_{\nu}\mu^{2}\,\text{d}\mu = \frac{a_{\nu}}{3}
+\end{align}
+Now we assume a stronger version of the \emph{Eddington approximation} $K_{\nu} = J_{\nu}/3$ so that the two following expressions can be written 
+\begin{align}
+	\frac{\partial H_{\nu}}{\partial \tau_{\nu}} &= J_{\nu}-S_{\nu}\\
+	\frac{\partial K_{\nu}}{\partial \tau_{\nu}} &= H_{\nu} = \frac{1}{3}\frac{\partial J_{\nu}}{\partial \tau_{\nu}}
+\end{align}
+The mixing of the two gives us a second order PDE that it's still somewhat valid even in the outer regions of the stellar atmosphere.
+\section{Radiative Diffusion Approximation}
+This section would probably be clearer if you take a brief detour to Chapter \ref{ch:iii} to build some groundwork for scattering processes, but it still suits better the main subject of this chapter.
+\par For the sake of coherence (and personal laziness) I'm going to talk about the radiative diffusion approximation right here, also because it makes use of the plane parallel approximation we just went through.
+\par In Chapter \ref{ch:iii} we have used random walk arguments to show that $S_{\nu}$ approaches $B_{\nu}$ at large \emph{effective optical depths} in a homogeneous medium. Real media are seldom homogeneous, but often, as in the interiors of stars, there is a high degree of local homogeneity. 
+\par The equation of radiative transport in presence of scattering (\ref{eq:rtscattering}) may be cast in a slightly different form 
+\begin{equation*}
+	I_{\nu} = S_{\nu}-\frac{\mu}{\alpha_{\nu}+\sigma_{\nu}}\partial_{z}I_{\nu}
+\end{equation*}
+We shall then assume that over a distance $l_{*}$ (the thermalization length) $I_{\nu}$ is constant and at zero-th order is $I_{\nu}^{(0)}=S_{\nu}^{(0)} = B_{\nu}$. Plugging this in the equation of radiative transfer gives us $I_{\nu}^{(1)}$ by a simple iterative procedure
+\begin{equation}
+	I_{\nu}^{(1)} = B_{\nu} -\frac{\mu}{\alpha_{\nu}+\sigma_{\nu}}\partial_{z}B_{\nu}
+	\label{eq:intfirstorder}
+\end{equation}
+With the simple redefining $\text{d}\tau_{\nu} = -(\alpha_{\nu}+\sigma_{\nu})\,\text{d}z$, we can put eq.(\ref{eq:intfirstorder}) in a form functionally equal to (\ref{eq:staratmo}).
+\par Let us now compute the flux $F_{\nu}$ using the above form for the intensity
+\begin{equation*}
+	F_{\nu}(z) = 2\pi\int_{-1}^{+1} I_{\nu}^{(1)}\mu\,\text{d}\mu = -\frac{4\pi}{3}\frac{\partial_{z}B_{\nu}}{\alpha_{\nu}+\sigma_{\nu}} = -\frac{4\pi}{3}\frac{\partial_{T}B_{\nu}}{\alpha_{\nu}+\sigma_{\nu}}\partial_{z}T
+\end{equation*}
+Recalling the result
+\begin{equation*}
+	\partial_{T}\int_{0}^{+\infty}B_{\nu}\,\text{d}\nu = \frac{4\sigma_{SB}T^{3}}{\pi}
+\end{equation*}
+we can define a \emph{mean absorption coefficient} using the \emph{Rosseland approximation for radiative diffusion}
+\begin{equation}
+	\frac{1}{\alpha_{R}} := \frac{\int_{0}^{+\infty}\frac{1}{\alpha_{\nu}+\sigma_{\nu}}\,\partial_{T}B_{\nu}\,\text{d}\nu}{\int_{0}^{+\infty}\partial_{T}B_{\nu}\,\text{d}\nu}
+\end{equation}
+If we integrate the monochromatic flux over the frequencies and make use of the Rosseland mean, we find a useful expression often used in stellar structure models
+\begin{equation}
+	F(z) = -\frac{-16\sigma_{SB}T^{3}}{3\alpha_{R}}\partial_{z}T
+	\label{eq:sstr4}
+\end{equation}

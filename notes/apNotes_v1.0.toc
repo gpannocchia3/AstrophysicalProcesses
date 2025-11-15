@@ -11,21 +11,22 @@
 \contentsline {section}{\numberline {1.5}{Kirchhoff's Law and LTE}}{10}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}{Local Thermodynamic Equilibrium (LTE)}}{11}{subsection.1.5.1}%
 \contentsline {section}{\numberline {1.6}{Parallel Plane Approximation}}{12}{section.1.6}%
-\contentsline {chapter}{\numberline {2}{The Einstein coefficients}}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}{Introduction}}{13}{section.2.1}%
-\contentsline {section}{\numberline {2.2}{Relations between the Einstein Coefficients}}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}{Absorption and Emission coefficients in terms of Einstein coefficients}}{16}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}{Hydrogenoid Atoms}}{18}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}{Hyperfine Transition}}{19}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}{Line Broadening}}{20}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}{Natural Broadening}}{21}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}{Doppler Broadening}}{21}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}{Scattering Processes}}{23}{chapter.3}%
-\contentsline {section}{\numberline {3.1}{Transport through scattering}}{23}{section.3.1}%
-\contentsline {section}{\numberline {3.2}{Random Walks}}{24}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}{Combined scattering and absorption}}{24}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}{Radiative Diffusion Approximation}}{26}{section.3.3}%
-\contentsline {part}{\numberline {ii}{Fluid dynamics}}{27}{part.2}%
-\contentsline {part}{\numberline {iii}{Gravitation}}{29}{part.3}%
-\contentsline {chapter}{Bibliography}{31}{section*.11}%
+\contentsline {subsection}{\numberline {1.6.1}{The Grey Atmosphere}}{14}{subsection.1.6.1}%
+\contentsline {section}{\numberline {1.7}{Radiative Diffusion Approximation}}{15}{section.1.7}%
+\contentsline {chapter}{\numberline {2}{The Einstein coefficients}}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}{Introduction}}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}{Relations between the Einstein Coefficients}}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}{Absorption and Emission coefficients in terms of Einstein coefficients}}{20}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}{Hydrogenoid Atoms}}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}{Hyperfine Transition}}{23}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}{Line Broadening}}{24}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}{Natural Broadening}}{25}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}{Doppler Broadening}}{25}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}{Scattering Processes}}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}{Transport through scattering}}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}{Random Walks}}{28}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}{Combined scattering and absorption}}{28}{subsection.3.2.1}%
+\contentsline {part}{\numberline {ii}{Fluid dynamics}}{31}{part.2}%
+\contentsline {part}{\numberline {iii}{Gravitation}}{33}{part.3}%
+\contentsline {chapter}{Bibliography}{35}{section*.12}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
