@@ -1,0 +1,194 @@
+\chapter{Fundamentals of Fluid Dynamics}
+
+\section{Physical properties of fluids}
+A "simple" fluid might be defined as a material such that the relative positions of the elements that make it change by an amount which is not small when suitably chosen forces are applied. 
+\par Given this definition, we could be tempted to say there's not much difference between gases and liquids, but that wouldn't be a clever guess. The main difference between gases and liquids lays not in density, but in \emph{compressibility}.
+\par To build a coherent and "nice" description of a fluid, we have to be able to attach a definite meaning to the notion of value "at a point" for the various fluid properties. What we'd like is, essentially, to be able to treat a fluid like a continuum.
+\par We know that in the real world an abstract concept like a continuum cannot possibly exists: Matter is discrete and discrete alone. However, it may have occurred to you, that normally we don't exactly see matter broken down to its fundamental components. It looks rather smooth and continuous to me, not at all discrete.
+\par We are able to regard a fluid as a continuum when the measured fluid property is constant for sensitive volumes small on the macroscopic scale but large in respect to the microscopic ones.
+\par When looking at a fluid, we can fairly distinguish two kinds of forces that act on matter in bulk
+\begin{itemize}
+    \item long-range forces or \emph{body forces} (like gravity): $\delta\vec{F}_{v} = \vec{F}(\vec{x}, t)\rho\delta V$
+    \item short-range forces that arise from reactions with matter
+\end{itemize}
+The latter can be expressed as: $\delta\vec{F}_{s} = \vec{\sigma}(\hat{n}, \vec{x}, t)\delta A$, where $\vec{\sigma}$ is the stress exerted by the fluid on the surface element to which $\hat{n}$ points.
+\par The force exerted across the surface element on the fluid on the side to which $\hat{n}$ points is such that 
+\begin{equation*}
+    -\vec{\sigma}(\hat{n}, \vec{x}, t)\delta A = \vec{\sigma}(-\hat{n}, \vec{x}, t)\delta A
+\end{equation*}
+The classical procedure to obtain a functional expression for $\vec{\sigma}$ comes from considering all the forces acting instantaneously on the fluid within a $\delta V$ volume in the shape of a tetrahedron (Fig.\ref{fig:tetraedro}).
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.6\textwidth]{img/tetrahedron}
+    \caption{Tetrahedron construction for the stress tensor. Credits: Batchelor \cite{batchelor}}
+    \label{fig:tetraedro}
+\end{figure}
+The calculation is rather tedious but at least straightforward. At the end of it, you'll find out that the $i$-th component of the stress vector can be written as 
+\begin{equation*}
+    \sigma_{i} = \sigma^{ij}n_{j}
+\end{equation*}
+where the index placement is quite the overkill, but we'll be clearer in a moment. Here and in the following, we'll be often adopting Einstein convention for summation over repeated indices.
+\par It is customary to bestow a name on $\sigma^{ij}$: the \emph{stress tensor}. Curiously enough, the conservation of total angular momentum implies that the the stress tensor must be \emph{symmetric}. This rather nice properties should possibly be ringing a bell. 
+\par If we put ourselves in the fluid's rest frame, where there's no net flux of any of the components of momentum in any of the three orthogonal directions, it's not a far stretch to be claiming that the fluid is indeed isotropic at rest.
+\par Isotropy implies that, at least in this reference frame, the stress tensor must be diagonal. Since the symmetry of the system is essentially spherical, all the spatial components $\sigma^{ii}$ must therefore be equal. The most general form fot the 4-dimensional stress tensor is simply the energy-momentum tensor for a perfect fluid (as far as special relativity is concerned)
+\begin{equation}
+    T^{\mu\nu} = (\rho + p)u^{\mu}u^{\nu}+p\eta^{\mu\nu}
+    \label{eq:emtensorpf}
+\end{equation}
+\begin{equation*}
+     T^{\mu\nu} = 
+    \begin{pmatrix}
+        \rho & 0 & 0 & 0\\
+        0 & p & 0 & 0\\
+        0 & 0 & p & 0\\
+        0 & 0 & 0 & p\\
+    \end{pmatrix}
+\end{equation*}
+Note that we'll be using the same metric convention of \cite{carroll}, which is $\eta_{\mu\nu} = \text{diag}(-1,1,1,1)$ and will work in units $c=1$\footnote{To properly reintroduce $c$ factors, you have to multiply $\rho$ by $c^{2}$ and then look carefully at the definition of $u^{\mu}$.}. The 4-vector $u^{\mu}$ is the 4-velocity $u^{\mu} = \text{d}x^{\mu}/\text{d}s$. Please note that requiring the energy-momentum tensor to be locally conserved $\partial_{\mu}T^{\mu\nu} = 0$ would allow us to deduce the three fundamental equations of fluid dynamics: The mass conservation, the energy conservation and Euler's equation. We will, however, get to those equation taking another route, passing briefly from statistical mechanics. For those interested, you can see \cite{carroll}, §1.9.
+\par The stress tensor we've been discussing so far is the solely spatial component of $T^{\mu\nu}$, which is $\sigma^{ij}=T^{ij} = p\delta^{i}_{j}$.Since the stress tensor is isotropic, all its diagonal elements are equal and then we may just write 
+\begin{equation*}
+    p = -\frac{1}{3}\sigma^{i}_{i}
+\end{equation*}
+as a definition of \emph{static fluid pressure}.
+\subsection{Mechanical equilibrium}
+A necessary condition for equilibrium of a fluid requires that body and surface forces compensate 
+\begin{equation*}
+    \int_{V}\rho\vec{F}\,\text{d}V -\int_{\partial V} p\hat{n}\,\text{d}A = 0
+\end{equation*}
+Applying the divergence theorem and requiring that what we find holds for all possible volumes $V$, last equation yields
+\begin{equation}
+    \rho\vec{F} = \nabla p 
+    \label{eq:fluideq}
+\end{equation}
+If $\vec{F}$ is a conservative force $\vec{F} = -\nabla\phi$, then the condition for mechanical equilibrium may be cast in the equivalent form by taking the curl of both members
+\begin{equation*}
+    \nabla\rho \wedge \nabla\phi = 0 \implies \frac{\text{d}p}{\text{d}\phi} = -\rho(\phi)
+\end{equation*}
+So we find out that equilibrium in a fluid is possible if isochoric and equipotential surfaces are aligned.
+\par For example, for a self-gravitating medium, the following equation holds (in special relativity at least)
+\begin{equation}
+    \nabla^{2}\phi = 4\pi G\rho 
+    \label{eq:poissongrav}
+\end{equation}
+which can be suitably rearranged recalling $\nabla\phi = -\nabla p/ \rho$ into (we assume spherical symmetry)
+\begin{equation}
+    \frac{1}{r^{2}}\frac{\text{d}}{\text{d}r}\left(\frac{r^{2}}{\rho}\frac{\text{d}p}{\text{d}r}\right) = -4\pi G\rho
+\end{equation}
+which is of crucial importance for stellar structure models. Note that this is a prime example of the \emph{closure problem}: To be properly solved (either numerically or analitically) we need to specify an equation of state of some kind.
+\par Another most interesting example is what we observe if we consider a rotating spherical fluid with radius $R$ and angular velocity $\vec{\Omega}$. In the comoving frame, there are obviously fictious forces arising to account for the rotation: \emph{Coriolis' force} $\vec{\Omega} \wedge \vec{v}$ and \emph{Centrifugal acceleration} $\vec{\Omega}\wedge(\vec{\Omega}\wedge\vec{r})$. For the time being, we'll neglect the former.
+\par Centrifugal acceleration can be expressed by the gradient of a scalar potential
+\begin{equation}
+    \vec{\Omega}\wedge(\vec{\Omega}\wedge\vec{r}) = -\frac{1}{2}\nabla(\vec{\Omega}^{2}\,\vec{r}\,^{2}) = -\frac{1}{2}\nabla \phi_{C}
+    \label{eq:scalarcentrifugal}
+\end{equation}
+This means that the effective potential is no longer that that granted spherical symmetry (say, the usual Newtonian gravitational potential). The equation for mechanical equilibrium will have to be modified into 
+\begin{equation*}
+    -\rho\nabla(\phi-\phi_{C}) = \nabla p
+\end{equation*}
+which in polar coordinates reads something like
+\begin{align}
+    -\rho\partial_{r}\left[\phi-\Omega^{2}r^{2}\right] &= \partial_{r} p\\
+    -\rho\partial_{z}\phi &= \partial_{z}p
+\end{align}
+In conjunction with eq.\ref{eq:poissongrav} we could, at least theoretically, study the deviation from spherical symmetry, given that we're provided an equation of state, that is. But in general it's safe to assume that rotation \textbf{affects the structure of a star}.
+\input{chapters/ellipse}
+Since the star is no longer spherically symmetric, we'll no longer see the same surface temperature everywhere, but it will change from point to point, giving rise to temperature and pressure gradients.
+\par Now, if we are in presence of a temperature gradient, a sensible call would be remembering the existence of \emph{thermal conduction}, which is temperature-gradients driven. This implies the presence of blobs of hot gas (or whatever) moving towards the cooler regions. At this point, we'll no longer be able to neglect the Coriolis force, which will further twist the surface of the star.
+\par It's clear that hydrostatic equilibrium is not sustainable in these conditions.
+\section{Vlasov equation}
+What we'd like to do in the present section is trying to build a formalism that allows us to connect the microscopical interpretation of matter through statistical mechanics to the macroscopic space.
+\par To do so, we'll define a distribution function $f = f(\vec{x}, \vec{v}, t)$ so that the number of particles in range $[\vec{x}, \vec{x}+\text{d}\vec{x}]$ and $[\vec{v}, \vec{v}+\text{d}\vec{v}]$ is given by 
+\begin{equation}
+    \text{d}n(t) = f(\vec{x}, \vec{v}, t)\,{d}\vec{x}\,\text{d}\vec{v}
+\end{equation}
+To be properly defined, $f$ must meet the usual requirements for distribution functions
+\begin{equation}
+    f \geqslant 0 \quad \int f\,\text{d}\vec{x} < +\infty \quad \int f\,\text{d}\vec{v} < +\infty
+\end{equation}
+Thanks to this properties we can easily define the number and mass density 
+\begin{equation*}
+    n(\vec{x}, t) = \int f(\vec{x}, \vec{v}, t)\,\text{d}\vec{v} \implies \rho(\vec{x}, t) = Am_{H}n(\vec{x}, t)
+\end{equation*}
+as well as the concept of \emph{averaged quantities}, for example the average velocity
+\begin{equation*}
+    \langle \vec{v}\rangle = \frac{1}{N}\int \vec{u}f(\vec{x}, \vec{u}, t)\,\text{d}\vec{u}
+\end{equation*}
+This expression is most useful to decompose the velocity as $\vec{v} = \langle \vec{v}\rangle +\delta \vec{v}$, which is known as Reynolds' decomposition. This decomposition implies $\langle \delta\vec{v}\rangle = 0$.
+\par To build the equations of fluid dynamics, we need to ask ourselves what is it of the distribution function $f$ if we let the system evolve in time?
+\par Liouville's theorem tells us that the six dimensional volume in phase space is conserved $\text{d}^{3}x\text{d}^{3}v \approx \text{d}^{3}x_{0}\text{d}^{3}v_{0}$ up to first order in $\text{d}t$\footnote{Properly speaking, we'd have to consider the transformation $\vec{x} = \vec{x}_{0}+\vec{u}_{0}\,\text{d}t$, $\vec{v} = \vec{v}_{0}+\vec{a}_{0}\,\text{d}t$, which has a Jacobian $\left\|J\right\| = 1+\text{o}(\text{d}t^{2})$.}. This way we can write the initial infinitesimal number of particles in volume $\text{d}^{3}x_{0}\text{d}^{3}v_{0}$ and the number of particles in volume $\text{d}^{3}x\text{d}^{3}v$
+\begin{align*}
+    \text{d}N_{0} &= f(\vec{x}_{0}, \vec{v}_{0}, t)\,\text{d}^{3}x_{0}\text{d}^{3}v_{0}\\
+    \text{d}N &= f(\vec{x}, \vec{v}, t)\,\text{d}^{3}x\text{d}^{3}v
+\end{align*}
+Requesting the number of particles to be conserved $\text{d}N_{0} = \text{d}N$, we end up with 
+\begin{equation*}
+    f(\vec{x}_{0}, \vec{v}_{0}, t) = f(\vec{x}_{0}+\vec{u}_{0}\,\text{d}t, \vec{v}_{0}+\vec{a}_{0}\,\text{d}t, t) \approx f(\vec{x}_{0}, \vec{v}_{0}, t) +\frac{\text{d}f}{\text{d}t}
+\end{equation*}
+which implies $\text{d}f/\text{d}t = 0$. Writing down what this implies component by component we get 
+\begin{equation}
+    \boxed{
+    \partial_{t}f + v^{i}\partial_{x^{i}}f+a^{i}\partial_{v^{i}}f = 0
+    }
+    \label{eq:vlasov}
+\end{equation}
+This is called \emph{Collision-less Boltzmann equation} or \emph{Vlasov's equation}. Please, don't mind askying why of the weird indices placement. Whichever way you put the indices is (here) absolutely irrelevant. 
+\par Collisions may be re-introduced by adding a term of the form $\partial_{t}f_{\text{coll}}$, but in the following we'll assume the detailed balance principle to hold, so that there are as many particles getting kicked out of the volume as those that are pulled in.
+\section{From Boltzmann to Euler}
+Let us consider eq.\ref{eq:vlasov} along with Reynolds's decomposition for the velocity $v_{i} = V_{i}+u_{i}$. We have three different terms to evaluate if we integrate over velocities to calculate the momenta of a given quantity $g(\vec{x}, \vec{v}, t)$
+\begin{equation*}
+    (i)\;\; \partial_{t}f \to \int \text{d}^{3}v \partial_{t}f\,g(\vec{x}, \vec{v}, t) = \int \text{d}^{3}v\left(\partial_{t}(fg)-f\partial_{t}g\right)
+\end{equation*}
+\begin{equation*}
+    (ii)\;\; v_{i}\partial_{i}f \to \int \text{d}^{3}v g\vec{v}\nabla f = \int \text{d}^{3}v \left(\nabla(g\vec{v}f-f\vec{v}\,\nabla g)\right)
+\end{equation*}
+\begin{equation*}
+    (iii)\;\; a_{i}\partial_{v_{i}}f \to -\int \text{d}^{3}v f\dot{\vec{v}}\,\nabla_{\vec{v}}g
+\end{equation*}
+Recalling the definition of the average value of $g$, the three terms above may be cast in the following form 
+\begin{align*}
+    (i)& \quad \partial_{t}(n\langle g\rangle)-n\langle \partial_{t}g\rangle\\
+    (ii)& \quad \nabla(n\langle g\vec{v}\rangle)-n\langle \nabla g\,\vec{v}\rangle\\ 
+    (iii)& -n\langle \nabla_{\vec{v}} g\,\dot{\vec{v}}\rangle
+\end{align*}
+At this point, consider the following expressions for $g$
+\begin{align}
+    g &= 1 \implies \text{Mass conservation}\\
+    \partial_{t}n + \nabla (n\vec{v}) &= 0\\
+    \vec{g} &= m\vec{v} \implies \text{Euler's equation}\\
+    \partial_{t}(\rho\vec{v})+\vec{v}\cdot\nabla(\rho\vec{v}) &= -\nabla p -\rho\vec{F}\\
+    g &= \frac{1}{2}mv^{2} \implies \text{Energy conservation}\\
+    \partial_{t}(\frac{1}{2}\rho v^{2}+\varepsilon) +\nabla(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]) &= \vec{F}\cdot\vec{v}-\nabla(\text{dissipation})
+\end{align}
+which are all nice and dandy. In the following, we'll often use something called the \emph{Lagrangian derivative} which is just
+\begin{equation}
+    \frac{\text{D}}{\text{D}t} = \partial_{t} + \vec{v}\cdot\nabla
+    \label{eq:lagrangiander}
+\end{equation}
+which allows us to rewrite two equations we'll often be using in a more compact form 
+\begin{align}
+    \frac{\text{D}\vec{v}}{\text{D}t} &= -\frac{\nabla p}{\rho}\\
+    \frac{\text{D}\rho}{\text{D}t} &= -\rho\nabla\cdot\vec{v}
+    \label{eq:lagrangianframe}
+\end{align}
+From this form of the continuity equation, we can give a definition of \emph{compressibility}: we'll say that a fluid is \emph{incompressible} if $\nabla\cdot\vec{v} = 0$, otherwise we'll say that it's compressible.
+\par So far we've been ignoring the effects of viscosity, which can be actually retrieved if we include collisions in the otherwise collision-less Boltzmann equation. If we were to do that, we would get the celebrated \emph{Navier-Stokes equation}.
+\par We'll scarcely make explicit use of these notions but it's worth to write those down, at least for the sake of completeness. 
+\par We define \textbf{streamline} the convolution of the tangents to the velocity field and \textbf{streakline} the line traced by all the particles of the fluid that are passing from a specific, fixed point.
+\par Note that the two definitions overlap only if motion is static/stationary.
+\subsection*{Bernoulli's theorem}
+If we neglect for the moment dissipative effects in the equation of conservation of energy, we may write 
+\begin{equation*}
+    \partial_{t}(\frac{1}{2}\rho v^{2}+\varepsilon) +\nabla(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]) - \vec{F}\cdot\vec{v}= 0 
+\end{equation*}
+where $\varepsilon$ is some expression for the internal energy of the fluid. If we consider a stationary, incompressible velocity field and only conservative forces
+\begin{equation*}
+    \nabla \left(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]+\rho\phi\right) = 0
+\end{equation*}
+If we take $p/\rho$ as a measure of the internal energy of the fluid, we obtain \emph{Bernoulli's theorem}
+\begin{equation}
+    \frac{\rho\vec{v}^{2}}{2}+p+\rho\phi = \text{const.}
+    \label{eq:bernoulli}
+\end{equation}
+which is just a restating of conservation of energy. In the following section we'll try examining one simple application of eq.\ref{eq:bernoulli}.
+\subsection{The de Laval nozzle}
+Coming soon.

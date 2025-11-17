@@ -4,48 +4,49 @@ The top-level auxiliary file: apNotes_v1.0.aux
 A level-1 auxiliary file: chapters/chapter1.aux
 A level-1 auxiliary file: chapters/chapter2.aux
 A level-1 auxiliary file: chapters/chapter3.aux
+A level-1 auxiliary file: chapters/chapter4.aux
 The style file: plain.bst
 Database file #1: ref.bib
 Warning--empty publisher in 1986rpa..book.....R
-You've used 3 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            517 strings with 4373 characters,
-and the built_in function-call counts, 726 in all, are:
-= -- 67
-> -- 27
+            527 strings with 4569 characters,
+and the built_in function-call counts, 1158 in all, are:
+= -- 105
+> -- 41
 < -- 0
-+ -- 11
-- -- 8
-* -- 34
-:= -- 134
-add.period$ -- 11
-call.type$ -- 3
-change.case$ -- 10
++ -- 18
+- -- 12
+* -- 50
+:= -- 210
+add.period$ -- 17
+call.type$ -- 5
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 36
-empty$ -- 67
-format.name$ -- 8
-if$ -- 153
+cite$ -- 6
+duplicate$ -- 60
+empty$ -- 111
+format.name$ -- 12
+if$ -- 245
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 6
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 22
+int.to.str$ -- 5
+missing$ -- 10
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 38
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 16
 quote$ -- 0
-skip$ -- 19
+skip$ -- 31
 stack$ -- 0
-substring$ -- 15
-swap$ -- 3
+substring$ -- 26
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 10
 warning$ -- 1
-while$ -- 6
-width$ -- 4
-write$ -- 33
+while$ -- 10
+width$ -- 6
+write$ -- 53
 (There was 1 warning)

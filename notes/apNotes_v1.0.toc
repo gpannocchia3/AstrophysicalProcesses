@@ -27,6 +27,12 @@
 \contentsline {section}{\numberline {3.2}{Random Walks}}{28}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}{Combined scattering and absorption}}{28}{subsection.3.2.1}%
 \contentsline {part}{\numberline {ii}{Fluid dynamics}}{31}{part.2}%
-\contentsline {part}{\numberline {iii}{Gravitation}}{33}{part.3}%
-\contentsline {chapter}{Bibliography}{35}{section*.12}%
+\contentsline {chapter}{\numberline {4}{Fundamentals of Fluid Dynamics}}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}{Physical properties of fluids}}{33}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}{Mechanical equilibrium}}{35}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}{Vlasov equation}}{36}{section.4.2}%
+\contentsline {section}{\numberline {4.3}{From Boltzmann to Euler}}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}{The de Laval nozzle}}{39}{subsection.4.3.1}%
+\contentsline {part}{\numberline {iii}{Gravitation}}{41}{part.3}%
+\contentsline {chapter}{Bibliography}{43}{section*.14}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
