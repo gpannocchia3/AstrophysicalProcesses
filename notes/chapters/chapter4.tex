@@ -191,4 +191,54 @@ If we take $p/\rho$ as a measure of the internal energy of the fluid, we obtain 
 \end{equation}
 which is just a restating of conservation of energy. In the following section we'll try examining one simple application of eq.\ref{eq:bernoulli}.
 \subsection{The de Laval nozzle}
-Coming soon.
+Consider Bernoulli's theorem in the notable absence of an external potential $\phi$, and we shall assume that $\vec{v}\cdot\vec{A}$ is constant. Here $\vec{A}$ is the outwards pointing normal to the section of a nozzle of some kind.
+\input{chapters/nozzle}
+If the fluid is incompressible, Bernoulli's theorem requires that 
+\begin{equation*}
+    \frac{\rho v^{2}}{2} + p = \text{const.}
+\end{equation*}
+which has as a natural consequence that given two sections of areas $A$ and $a$ and velocity $\vec{v}$ at $A$, then upon reaching the point where the section becomes $a$, the velocity becomes 
+\begin{equation*}
+    \vec{V} = \frac{A}{a}\vec{v}
+\end{equation*}
+You may then be wondering what happens if we relax the condition of the fluid to be incompressible. Consider Euler's equation and the continuity equation (\ref{eq:lagrangianframe}) in their 1D and stationary form 
+\begin{align}
+    v\partial_{x}v &= -\frac{1}{\rho}\partial_{x}p\\
+    \partial_{x}(\rho v) &= 0
+\end{align}
+If we integrate the latter and make use of the divergence theorem, we find out that 
+\begin{equation*}
+    \int \rho \vec{v}\,\text{d}\vec{A} = \rho\vec{v}\cdot\vec{A} = \text{const.}
+\end{equation*}
+This can be implicitly differentiated to yield 
+\begin{equation*}
+    \frac{\text{d}\rho}{\text{d}x}\frac{1}{\rho}+\frac{\text{d}v}{\text{d}x}\frac{1}{v}+\frac{\text{d}A}{\text{d}x}\frac{1}{A} = 0
+\end{equation*}
+To properly solve the equations, we need to introduce and Equation of State of some sort. Here (and rather often in the following) we'll assume a barotropic relation between pressure and density 
+\begin{equation}
+    p(\rho) = c_{s}^{2}\rho
+    \label{eq:barotropic}
+\end{equation}
+where $c_{s}$ is the \emph{speed of sound} in the fluid.
+\par Plugging in what we've just found in the 1D equation of motion
+\begin{align*}
+    \rho v \partial_{x}v &= -c_{s}^{2}\rho\\
+    v\partial_{x} &= c_{s}^{2}\left(\frac{\text{d}v}{\text{d}x}\frac{1}{v}+\frac{\text{d}A}{\text{d}x}\frac{1}{A}\right)\\
+    \partial_{x}v\left(v-\frac{c_{s}^{2}}{v}\right) &= \frac{c_{s}^{2}}{A}\partial_{x}A
+\end{align*}
+This can be cast in a slightly more suggestive form 
+\begin{equation}
+    \boxed{
+        \partial_{x}v = \frac{c_{s}^{2}}{Av}\frac{1}{1-\frac{c_{s}^{2}}{v^{2}}}\partial_{x}A
+    }
+    \label{eq:lavallenozzle}
+\end{equation}
+Consider a nozzle with a position decreasing section ($\partial_{x}A < 0$). Two scenarios may arise 
+\begin{itemize}
+    \item (i) the fluid is \emph{subsonic} ($v<c_{s}$). This implies that the fluid accelerates $\partial_{x}v > 0$
+    \item (ii) the fluid is \emph{supersonic} ($v>c_{s}$). This implies that the fluid decelerates $\partial_{x}v < 0$
+\end{itemize}
+If the section gradient is flipped, the implications are reversed. In principle you could then imagine a nozzle with decreasing section up to a certain $x_{*}$ where the fluid becomes supersonic, and with increasing section after that point. 
+\par In such a configuration, the fluid is always accelerating.
+\section{Schwartzchild criterion}
+Coming soon
