@@ -1,4 +1,4 @@
-\chapter{Fundamentals of Fluid Dynamics}
+\chapter{Fundamentals of Fluid Dynamics}\label{ch:iv}
 
 \section{Physical properties of fluids}
 A "simple" fluid might be defined as a material such that the relative positions of the elements that make it change by an amount which is not small when suitably chosen forces are applied. 
@@ -73,8 +73,45 @@ So we find out that equilibrium in a fluid is possible if isochoric and equipote
 which can be suitably rearranged recalling $\nabla\phi = -\nabla p/ \rho$ into (we assume spherical symmetry)
 \begin{equation}
     \frac{1}{r^{2}}\frac{\text{d}}{\text{d}r}\left(\frac{r^{2}}{\rho}\frac{\text{d}p}{\text{d}r}\right) = -4\pi G\rho
+    \label{eq:proto_le}
 \end{equation}
 which is of crucial importance for stellar structure models. Note that this is a prime example of the \emph{closure problem}: To be properly solved (either numerically or analitically) we need to specify an equation of state of some kind.
+\subsection*{Lane-Emden equation}
+\par Assume for example a barotropic relation of the form 
+\begin{align}
+    p(\rho) &= \kappa\rho^{1+1/n}\\
+    \rho(r) &= \rho_{c}\phi^{n}(r)
+\end{align}
+with $\phi$ some adimensional density profile with the following characteristics: $\phi(0) = 1$ and $\partial_{r}\phi|_{r = 0} = 0$.
+\par In terms of an adimensional radius $r = a\eta$, with $a$ constant depending only on $n$
+\begin{equation*}
+    a = \left[\frac{K\rho_{c}^{1/n-1}(n+1)}{4\pi G}\right]^{1/2}
+\end{equation*}
+eq.\ref{eq:proto_le} takes a much simpler and elegant form 
+\begin{equation}
+    \frac{1}{\eta^{2}}\partial_{\eta}(\eta^{2}\partial_{\eta}\phi) = -\phi^{n}
+    \label{eq:lane_emden}
+\end{equation}
+which is the general \emph{Lane-Emden equation}. Solutions for this equation are calculated numerically in Fig.\ref{fig:LE}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/lane_enden}
+    \caption{Numerical solutions to the Lane-Emden equation.}
+    \label{fig:LE}
+\end{figure}
+Albeit not a topic covered by the course, I'd still like to point out that from eq.\ref{eq:lane_emden} it's possible to find the fixed value of mass able to satisfy the equation in the ultrarelativistic limit of degenerate electrons ($n=3$). The mass is given by 
+\begin{equation*}
+    M = \int_{0}^{R} 4\pi r^{2}\rho\,\text{d}r = 4\pi a^{2}\rho_{c}\int_{0}^{\eta_{1}}\eta^{2}\phi^{2}\,\text{d}\eta
+\end{equation*} 
+Note that in the equation above, the integral will evaluate to the same result for all stars with a given $n$. This is the first time we encounter a \emph{self-similar solution}, but we'll have time to get acquaitanted with those in future chapters.
+\par The value of that integral is actually fixed by the original equation itself to $-\eta_{1}^{2}\partial_{\eta}\phi|_{\eta_{1}}$.
+\par If we consider now a specific value of $n$, namely $n=3$, we'd find out that the mass of the star does not depend in any way from the centeral density of the star. That means that in such a regime, only one fixed value of mass is allowed.
+\par Numerically we find that for $n=3$, $|\eta_{1}^{2}\partial_{\eta}\phi|(\eta_{1})|\approx 2.018$, so that the limiting mass is of the order of 
+\begin{equation}
+    M_{Ch} \approx 1.46\left(\frac{2}{\mu_{e}}\right)M_{\odot}
+\end{equation}
+This is the celebrated \emph{Chandrasekhar mass limit} that constrains white dwarves from having larger masses.
+\subsection*{Spherically symmetric rotating objects}
 \par Another most interesting example is what we observe if we consider a rotating spherical fluid with radius $R$ and angular velocity $\vec{\Omega}$. In the comoving frame, there are obviously fictious forces arising to account for the rotation: \emph{Coriolis' force} $\vec{\Omega} \wedge \vec{v}$ and \emph{Centrifugal acceleration} $\vec{\Omega}\wedge(\vec{\Omega}\wedge\vec{r})$. For the time being, we'll neglect the former.
 \par Centrifugal acceleration can be expressed by the gradient of a scalar potential
 \begin{equation}
@@ -93,7 +130,7 @@ which in polar coordinates reads something like
 In conjunction with eq.\ref{eq:poissongrav} we could, at least theoretically, study the deviation from spherical symmetry, given that we're provided an equation of state, that is. But in general it's safe to assume that rotation \textbf{affects the structure of a star}.
 \input{chapters/ellipse}
 Since the star is no longer spherically symmetric, we'll no longer see the same surface temperature everywhere, but it will change from point to point, giving rise to temperature and pressure gradients.
-\par Now, if we are in presence of a temperature gradient, a sensible call would be remembering the existence of \emph{thermal conduction}, which is temperature-gradients driven. This implies the presence of blobs of hot gas (or whatever) moving towards the cooler regions. At this point, we'll no longer be able to neglect the Coriolis force, which will further twist the surface of the star.
+\par Now, if we are in presence of a temperature gradient, a sensible call would be remembering the existence of \emph{thermal conduction}, which is temperature-gradients driven. This implies the presence of blobs of hot gas (or whatever) moving towards the cooler regions (Fig.\ref{fig:ellipse}). At this point, we'll no longer be able to neglect the Coriolis force, which will further twist the surface of the star.
 \par It's clear that hydrostatic equilibrium is not sustainable in these conditions.
 \section{Vlasov equation}
 What we'd like to do in the present section is trying to build a formalism that allows us to connect the microscopical interpretation of matter through statistical mechanics to the macroscopic space.
@@ -157,9 +194,20 @@ At this point, consider the following expressions for $g$
     \vec{g} &= m\vec{v} \implies \text{Euler's equation}\\
     \partial_{t}(\rho\vec{v})+\vec{v}\cdot\nabla(\rho\vec{v}) &= -\nabla p -\rho\vec{F}\\
     g &= \frac{1}{2}mv^{2} \implies \text{Energy conservation}\\
-    \partial_{t}(\frac{1}{2}\rho v^{2}+\varepsilon) +\nabla(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]) &= \vec{F}\cdot\vec{v}-\nabla(\text{dissipation})
+    \partial_{t}(\frac{1}{2}\rho v^{2}+\varepsilon) +\nabla(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]) &= \vec{F}\cdot\vec{v}-\nabla(\vec{\phi}_{H}+p\vec{v})
 \end{align}
-which are all nice and dandy. In the following, we'll often use something called the \emph{Lagrangian derivative} which is just
+which are all nice and dandy\,\footnote{In the last equation, $\vec{\phi}_{H}$ is the heat flux.}. 
+\par Sometimes it is useful to cast the equation of energy conservation in a slightly different form. Called $E$ the total energy, we recall the first law of thermodynamics
+\begin{equation}
+    \frac{\text{d}E}{\text{d}t} = T\frac{\text{d}S}{\text{d}t} + \frac{p}{\rho^{2}}\frac{\text{d}\rho}{\text{d}t}
+    \label{eq:1st_thermo}
+\end{equation}
+because now we have 
+\begin{equation}
+    \partial_{t}(\frac{1}{2}\rho v^{2}+\varepsilon) +\nabla(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]) = \frac{\text{d}E}{\text{d}t}-\rho T\frac{\text{d}S}{\text{d}t} + \Lambda(T,\rho)
+\end{equation}
+where $\Lambda$ includes all energy losses, also the ones not included in Vlasov’s equation.
+\par In the following, we'll often use something called the \emph{Lagrangian derivative} which is just
 \begin{equation}
     \frac{\text{D}}{\text{D}t} = \partial_{t} + \vec{v}\cdot\nabla
     \label{eq:lagrangiander}
@@ -175,6 +223,57 @@ From this form of the continuity equation, we can give a definition of \emph{com
 \par We'll scarcely make explicit use of these notions but it's worth to write those down, at least for the sake of completeness. 
 \par We define \textbf{streamline} the convolution of the tangents to the velocity field and \textbf{streakline} the line traced by all the particles of the fluid that are passing from a specific, fixed point.
 \par Note that the two definitions overlap only if motion is static/stationary.
+\subsection{Viscosity and diffusion}
+So far, we've been blatantly ignoring the collision integral in Vlasov's equation saying that by the detailed equilibrium principle, at equilibrium it's contribution is approximately zero. Clearly, this can't be always the case, even more so in fluids.
+\par Notably, fluids display some kind of friction arising from some microscopic molecular effect. We'll call this "friction" \emph{viscosity}\,\footnote{For this section, I'm following Dott. Ricciardi's notes \cite{ricciardi} and my own notes from the Fluid dynamic class.}.
+We want to understand what happens when a fluid moves. We have to consider:
+\begin{itemize}
+    \item \textbf{Dilatation or Compression}: are changes in the volume of the fluid element that can be thought as \emph{isotropic stresses}. Note that in the incompressible fluids they would be absent. 
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.3\textwidth]{img/dilationcompression}
+        \caption{Sketch of dilation or compression.}
+    \end{figure}
+    \item \textbf{Rotation}: we consider a solid body rotation, hence it will cause no net force on the fluid element
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.3\textwidth]{img/rotation}
+        \caption{Sketch of rotation.}
+    \end{figure}
+    \item \textbf{Shear}: is the most interacting case, in fact this involves relative motion of different sides of the fluid. 
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.3\textwidth]{img/shear.jpeg}
+        \caption{Sketch of shear.}
+        \label{fig:my_label}
+    \end{figure}
+\end{itemize} 
+In principle, we could decompose the (purely spatial) stress tensor as follows
+\begin{equation*}
+    \sigma_{ij} = -p\delta_{ij}+d_{ij}
+\end{equation*}
+Here $d_{ij}$ is the \emph{deviatoric stress tensor}, representing the deviation from isotropy. A phenomenological approach may suggest us to consider the deviatoric stress proportional to the local velocity gradient, regarded then as the principal parameter (read as: The more relevant one). To corroborate this approach, we could recall that if a fluid is stationary, velocity gradients vanish, and so would the $d_{ij}$ tensor.
+\par Generally, the deviatoric stress is expressed by means of a fourth rank tensor
+\begin{equation*}
+    d_{ij} = A_{ijkl}\partial_{l}u_{k}
+\end{equation*}
+Note that since the stress tensor is symmetric, $d_{ij}$ must be as well. This implies that $A_{ijkl}$ must be symmetric in $i,\,j$. After a long and tedious decomposition in symmetric and antisymmetric part, we finally get to the expression for the stress tensor that is customarily used 
+\begin{equation}
+    \sigma_{ij} = -p\delta_{ij}+2\mu(\frac{1}{2}\left[\partial_{j}u_{i}+\partial_{i}u_{j}\right]-\frac{1}{3}\nabla\cdot\vec{u}\delta_{ij})
+    \label{eq:stresstensor}
+\end{equation}
+Here $\mu$ is always positive and it's called the viscosity of the fluid. Generally, we'll be interested in the \emph{kinematic viscosity} of the fluid $\nu =\mu/\rho$.
+\par From eq.\ref{eq:stresstensor} we reckon that if the fluid is uncompressible ($\nabla\cdot\vec{u} = 0$), the Navier-Stokes equation has the form 
+\begin{equation}
+    \rho\frac{\text{D}u_{i}}{\text{D}t} = \rho F_{i} -\partial_{i}p +\mu\partial_{j}^{2}u_{i}
+    \label{eq:incompressible_ns}
+\end{equation}
+hence the viscosity enters the equation with the Laplacian of the velocity, which is often (but definitely not always) negligible. It is often useful to define a quantity called \emph{Reynolds' number}
+\begin{equation}
+    Re = \frac{(\vec{v}\cdot\nabla)\vec{v}}{\nu\nabla^{2}\vec{v}} \approx \frac{U\cdot L}{\nu}
+    \label{eq:reynoldsnumber}
+\end{equation}
+which quantifies the importance of viscous dissipation in respect to inertial forces. Here $U,\,L$ are some characteristic scales of the system.
 \subsection*{Bernoulli's theorem}
 If we neglect for the moment dissipative effects in the equation of conservation of energy, we may write 
 \begin{equation*}
@@ -197,7 +296,7 @@ If the fluid is incompressible, Bernoulli's theorem requires that
 \begin{equation*}
     \frac{\rho v^{2}}{2} + p = \text{const.}
 \end{equation*}
-which has as a natural consequence that given two sections of areas $A$ and $a$ and velocity $\vec{v}$ at $A$, then upon reaching the point where the section becomes $a$, the velocity becomes 
+which has as a natural consequence that given two sections of areas $A$ and $a$ and velocity $\vec{v}$ at $A$ (see Fig.\ref{fig:nozzle}), then upon reaching the point where the section becomes $a$, the velocity becomes 
 \begin{equation*}
     \vec{V} = \frac{A}{a}\vec{v}
 \end{equation*}
@@ -240,5 +339,54 @@ Consider a nozzle with a position decreasing section ($\partial_{x}A < 0$). Two 
 \end{itemize}
 If the section gradient is flipped, the implications are reversed. In principle you could then imagine a nozzle with decreasing section up to a certain $x_{*}$ where the fluid becomes supersonic, and with increasing section after that point. 
 \par In such a configuration, the fluid is always accelerating.
-\section{Schwartzchild criterion}
-Coming soon
+\section{Schwartzschild stability condition}
+Suppose we have a stratified plane parallel atmosphere approximately in hydrostatic equilibrium. Consider now a blob of fluid which as been displaced upwards as shown in the picture below.
+\par Initially, the blob had the same density and pressure as the fluid surrounding, respectively $\rho_{0},\,P$. After the displacement, the external fluid density and pressure are $\rho',\,P'$ which are, in principle, different than density and pressure inside the bubble, $\rho^{*},\,P^{*}$.
+\par However, we'll work under the assumption that the bubble is always in pressure equilibrium with the surrounding fluid and does not exchange energy with it\,\footnote{Typically, pressure imbalances are removed rather quickly by \emph{acoustic waves}, while heat exchange takes more time.}.
+\input{chapters/bubble}
+\par Let's consider the infinitesimal displacement $\varepsilon$, so that the equation of motion is simply just 
+\begin{equation*}
+    \rho\ddot{\varepsilon} = -g(\rho'-\rho)
+\end{equation*}
+We shall now take two independent Taylor expansions: One for the density of the blob, one for the density of the surrounding fluid.
+\begin{align*}
+    \rho^{*} &= \rho_{0} + (\nabla_{ad}\,\rho)\varepsilon\\
+    \rho' &= \rho_{0}+(\nabla_{amb}\,\rho)\varepsilon
+\end{align*}
+Plugging this two equations into the equation of motion yields a rather familiar expression 
+\begin{equation}
+    \rho\ddot{\varepsilon} = -g(\nabla_{ad}\,\rho-\nabla_{amb}\,\rho)\varepsilon
+    \label{eq:bruntvaisala}
+\end{equation}
+which is that of a harmonic oscillator. We identify the quantity 
+\begin{equation*}
+    \omega^{2}_{BV} = g(\nabla_{ad}\,\rho-\nabla_{amb}\,\rho)
+\end{equation*}
+as the \emph{Brunt-Väisälä frequency}, which regulates the buyouancy of the blob. In particular we observe that if $\omega^{2}_{BV} > 0$, the bubble is buyouantly stable. Conversely, if $\omega^{2}_{BV} < 0$ the atmosphere is unstable and \emph{convective instability} will arise.
+\par Up to a factor of $g$ (that would cancel out anyway), studying the sign of $\omega^{2}_{BV}$ for $\rho \propto T^{-1}$ does retrieve the famous \emph{Schwartzchild stability condition}.
+\par How good is the "bubble picture" we've just used? Not much actually, as we'll see in the next chapter, but it stil allows to get a grasp of how convection may work.
+\par One thing we have neglected (but is worth considering when dealing with stars) is that the bubble is likely to be made of hot plasma. That implies that the bubble is able to radiate and affect different layers of the star through means that are not only its physical displacement.
+\subsection{Convection in presence of rotation}
+We've seen that density gradients in a stratified atmosphere are expected to generate convection. What happens if we add rotation to the picture?
+\par To make things a little simpler, we're going to assume that the star rotates with angular velocity $\vec{\Omega}$ \textbf{as a rigid body}. This is a rather poor assumption, that may be true only for the core region of stars; in general, \emph{differential rotation} applies, so $\Omega = \Omega(r,t)$.
+\input{chapters/rotatingconvection}
+As we've already seen, in presence of rotation, the potential of a self-gravitating object must be modified to include the contribution of centrifugal acceleration 
+\begin{equation*}
+    \phi \to \phi+\phi_{C}
+\end{equation*}
+so that when we write down Euler's equation we find 
+\begin{equation}
+    \frac{\text{D}\vec{v}}{\text{D}t} +2\Omega \wedge \vec{v} = -\frac{\nabla p}{\rho}+\vec{F}
+\end{equation}
+Here $2\Omega \wedge \vec{v}$ represents Coriolis' forces\,\footnote{Coriolis' forces arise only in presence of latitudinal motion and imply the presence of shear.}. At this point it's convenient to define a new quantity, the \emph{vorticity} as $ \vec{\omega} = \nabla \wedge \vec{v}$.
+\par In a sense, vorticity represents the amount of angular momentum per unit mass transported by the fluid. If we decompose the stress tensor in a symmetric and antisymmetric part
+\begin{equation*}
+    \sigma_{ij} = \sigma_{ij}^{S}+\sigma_{ij}^{A} = \frac{1}{2}(\partial_{j}v_{i}+\partial_{i}v_{j}) + \frac{1}{2}(\partial_{j}v_{i}-\partial_{i}v_{j})
+\end{equation*}
+where we recognize that the vorticity generates the antisymmetric part.
+\par We can take the curl of Euler's equation, finding a differential equation for the transport of vorticity
+\begin{equation}
+    \frac{\text{D}\vec{\omega}}{\text{D}t} +\nabla\wedge(2\Omega \wedge \vec{v}) = -\frac{1}{\rho^{2}}\nabla p \wedge \nabla \rho +\nabla \wedge \vec{F}
+    \label{eq:vorticity}
+\end{equation}
+Hence, vorticity is always non-zero in presence of rotation. In hydrostatic equilibrium vorticity is always stable and conserved.
