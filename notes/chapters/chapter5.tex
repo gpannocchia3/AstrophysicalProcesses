@@ -180,3 +180,114 @@ as the \emph{speed of sound} in the fluid. Sometimes $c_{s}$ is also said to be 
 \par In a shock relevant fluid quantities change on lengthscales of the order of the mean free path and this is represented as a discontinuity in the fluid.
 \subsection{Rankine-Hugoniot junction conditions}
 \par Since discontinuities are introduced into the picture, we can no longer use differential quantities to describe conservations. The solution to this problem is easily found looking into \emph{integral quantities}.
+\par To do so, it is convenient to choose a reference frame in which the shock is at rest. Since the shock thickness is small, we can regard it as locally plane; moreover, since the fluid flows through the shock so quickly, changes in the fluid conditions cannot affect the details of the transition across the shock, so we can regard the flow into and out of the shock as steady.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.7\textwidth]{img/junctionconditions}
+    \caption{Calculation of the Rankine-Hugoniot junction conditions. \\Credits: Frank, King and Raine.}
+    \label{fig:RH_JC}
+\end{figure}
+\par All we have to do is apply the various conservation laws in their integral form 
+\begin{align}
+    \rho_{1}v_{1} &= \rho_{2}v_{2}\\
+    p_{1}+\rho_{1}v_{1}^{2} &= p_{2}+\rho_{2}v_{2}^{2}\\
+    \frac{1}{2}v_{1}^{2}+\varepsilon_{1} &= \frac{1}{2}v_{2}^{2}+\varepsilon_{2}
+    \label{eq:RH_JC}
+\end{align}
+which are respectively mass flux, momentum flux and energy flux conservation. Especially in the latter, we've assumed radiative losses and thermal conduction, etc., across the shock front to be negligible.
+\par This is the adiabatic assumption, and the resulting junction conditions are known as the adiabatic shock conditions or the \emph{Rankine-Hugoniot junction conditions}.
+\par Keeping Fig.\ref{fig:RH_JC} in mind, we can proceed to find a unique relation connecting the ratio of the downstream density (or velocity) $\rho_{2}$ and upstream density to the pressure
+\begin{equation*}
+    \frac{\rho_{2}}{\rho_{1}} = \frac{v_{1}}{v_{2}} = \frac{(\gamma +1)p_{1}+(\gamma-1)p_{2}}{(\gamma-1)p_{1}+(\gamma+1)p_{2}}
+\end{equation*}
+Note that it is not assured for the adiabatic coefficient $\gamma$ to come out unscathed from the shock, even more so if it is energetic enough to ionize the fluid.
+\par Usually, RH junction conditions are expressed in terms of the \emph{Mach number} $\mathcal{M}_{i} = v_{i}/c_{s,i}$. For a monoatomic gas $\gamma = 5/3$, and the RH junction conditions yield
+\begin{equation*}
+    1+\frac{v_{2}}{v_{1}} = \frac{5}{4}\left[\frac{3}{5\mathcal{M}_{1}^{2}+1}\right]
+\end{equation*}
+In the limit of a strong shock $\mathcal{M}_{1} \gg 1$, we find out that 
+\begin{equation*}
+    \frac{v_{2}}{v_{1}} = \frac{\rho_{1}}{\rho_{2}} = \frac{1}{4}
+\end{equation*}
+i.e. the velocity drops to one-quarter of its upstream value across the shock while the gas is compressed by a factor 4 in a strong shock.
+\par For more general gases, assuming adiabatic compression, the limit compression rate is 
+\begin{equation*}
+    \frac{v_{2}}{v_{1}} = \frac{\rho_{1}}{\rho_{2}} = \frac{\gamma -1}{\gamma +1}
+\end{equation*}
+If the shock is \emph{isothermal} rather than adiabatic, there's no limit to compressibility.
+\par Note that without proper injection of energy, shocks are eventually stalled by viscosity, then degenerating into normal soundwaves. As we have anticipated in the last section, Kolmogorov's spectrum has the same $\kappa$ dependency, but a proportionality to $\mathcal{M}^{8}$ is introduced, meaning that shocks dissipate energy very efficiently.
+\par Most of the times, assuming shocks to be adiabatic is a questionable take \emph{at best} since there's a strong dependence on the cooling timescales through radiative losses.
+\subsection{Sedov-Taylor blastwave solution}
+There's a (arguably) cool and educational application of shockwaves, which incidentally made the fortune of a rather famous film producer.
+\par \emph{Explosions}.
+\par An explosion is essentially a localized injection of a given quantity of energy that induces an adiabatic expansion of the gas (or the fluid). To find a proper description of explosions we're one theorem short, which we'll briefly discuss in the following paragraphs.
+\subsubsection*{Buckingham-Pi theorem}
+Assume to have a set of $n$ variables so that $q_{1}-f(q_{2},...q_{n})=0$. That means we can define a function $g$ that satisfies
+\begin{equation*}
+    g(q_{1},...q_{n}) = 0
+\end{equation*}
+Given a relation like the one above, the independent variables of the system can be reduced to $n-m$ with $m$ typically of the order of the independent dimensions (called $\Pi$).
+\par The theorem then claims that we may pass from function $g(q)=0$ to $G(\Pi)=0$ following this procedure
+\begin{itemize}
+    \item List all parameters describing the system;
+    \item Choose the primary dimensions (e.g. M, L, T and so on);
+    \item Perform dimension analysis of the parameters;
+    \item Choose parameters that contain all the primary dimensions;
+    \item Set dimensional equations and find the explicit relations for the $\Pi$ parameters.
+\end{itemize}
+On top of helping us create a model for explosions, this allows us to cast Euler's equation into a self-similar ODE form which can be solved much more easily (numerically, of course). Defining $\eta \equiv r^{\lambda} t^{-\mu}$, $\lambda$ and $\mu$ will be set by the particular constrains we have, but in general we can express 
+\begin{align*}
+v &= r t^{-1} U(\eta) \\
+\rho &= r^{-3} D(\eta) \\
+p &= r^{-1}t^{-2} \Pi (\eta) \\
+c_S &= r t^{-1} C(\eta)
+\end{align*}
+so that relevant derivatives take the following form 
+\begin{align*}
+    \frac{\partial}{\partial t} &= -\mu \eta t^{-1} \frac{\text{d}}{\text{d}\eta} \\
+\frac{\partial}{\partial r} &= \lambda \eta r^{-1} \frac{\text{d}}{\text{d}\eta}
+\end{align*}
+With this set of equations we can cast Euler's, continuity and energy conservation equations in a self-similar form as anticipated
+\begin{align*}
+    & (\lambda U-\mu) \eta \frac{\text{d}D}{\text{d}\eta}+(n-2)DU+\lambda D\eta \frac{\text{d}U}{\text{d}\eta} = 0 \\
+    & (\lambda U-\mu) \eta \frac{\text{d}D}{\text{d}\eta} = D^{-1}\left(\lambda \eta \frac{\text{d}\Pi}{\text{d}\eta} -\Pi \right) -U(U-1) \\
+    & (\lambda U-\mu) \eta \frac{\text{d}(\Pi D^{-\gamma})}{\text{d}\eta}+((3\gamma -1)U -1)\Pi D^{-\alpha} = 0 
+\end{align*}
+ODEs have the nice convenience of being generally easier to solve than PDEs.
+\par As promised, here comes at long last the description of blastwaves.
+\par The relevant parameters are just three if we assume spherical symmetry
+\begin{equation*}
+    [\rho] = \text{M}\,\text{L}^{-3} \quad [t] = \text{T} \quad [E_{0}] = \text{M}\,\text{L}^{2}\,\text{T}^{-2}  
+\end{equation*}
+which means our $\eta$ parameter is just $\eta = r^{5}t^{-2}$, since $[E_{0}]/[\rho] = \text{L}^{5}\,T^{-2}$. Hence, simply inverting the expression yields
+\begin{equation}
+    R \sim \left(\frac{E_{0}}{\rho_{0}}\right)^{1/5}t^{2/5} \quad v = \dot{R} \sim \frac{2}{5} Rt^{-1}
+    \label{eq:ST_blastwave}
+\end{equation}
+incidentally, the proportionality constant is of order unity. Note that velocity is slowing down. This can be roughly explained recalling the conservation of momentum: As the wavefront expands it "gains" more mass\,\footnote{The proper expression would probably be "entrains more material".} hence needing to slow down to conserve momentum.
+\par So far we've been assuming the process to be adiabatic, but is it actually a sensible guess? It certainly depends on timescales: If the cooling timescale is much larger than the dynamical timescale, than we're good.
+\par On top of that, especially in the first instants of explosions, the medium can be considered \emph{optically thick} thanks to the density compression induced by shockwaves. Since no radiation is coming out of there, we can assume that no energy is lost to radiation and is conserved.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.9\textwidth]{img/trinitytest}
+    \caption{A real photograph portraying the first instants of the Trinity atomic test conducted in 1945 in New Mexico, Alamogordo. \\
+    From the image we see two things: After 1/40 of a second, the blastwave still retains (partial) spherical symmetry and the medium is still optically thick.}
+    \label{fig:trinitytest}
+\end{figure}
+\par We can follow a similar line of reasoning and find out that the pressure of the blastwave scales as\,\footnote{It's even more simple if you recall that pressures are just energy densities. I know. It's disturbing.}
+\begin{equation*}
+    p \sim E_{0}R^{-3}
+\end{equation*}
+That means that there is a radius for which each pressure is reached. That holds until the shockwave's pressure reaches ambient pressure\,\footnote{Which is fated to happen sometime. As the blastwave expands, pressure continues to drop.} and equilibrium is established. When that happens, the shock stalls and propagates with constant velocity, usually some multiple of the sound speed.
+\par As the shock expands, it cools down, hence $E$ is not constant anymore. This causes the shock to slow down and \emph{entrain} material in its course.
+\par Eventually, the expansion will have to become subsonic due the arising of viscous forces, which we had completely ignored about in our model. But that was not without a logic. Viscous forces enter at second order in velocity, so in a first order model they can be initially neglected.
+\par Since $E$ is not conserved anymore, the evolution is governed by conservation of momentum, and the expansion law becomes 
+\begin{equation}
+    R \sim \left(\frac{MV}{\rho} \right)^{1/4} t^{1/4}
+\end{equation}
+this is usually called the \emph{Snowplow phase}.
+\par The expression we've found to describe the Sedov-Taylor blastwave (\ref{eq:ST_blastwave}) also allows us to predict up to a honestly frightening degree the evolution of the expansion of Supernovae explosions. For this highly energetic phenomena, we can consider an initial injection of energy of order $E_{0}\sim 10^{50}\,\text{erg}$ and a typical density of $\rho_{0}\sim 10^{-24}\,\text{g}/\text{cm}^{3}$. This means that the typical radius of the explosion is given by 
+\begin{equation*}
+    R(t)\sim 10^{-0.7}\left(\frac{E_{50}}{\rho_{24}}\right)^{1/5}t_{yr}^{2/5}\,\;[\text{pc}]
+\end{equation*}
+where the subscripts indicate that quantities are to be expressed in terms of the typical order of magnitude for SN events. So for example, assuming a radius of 1 parsec after a 100 years long expansion, you'd get a typical velocity for the wavefront of order $v \sim 10^{3}\,\text{km}\text{s}$, which is a non-negligible fraction of the speed of light.

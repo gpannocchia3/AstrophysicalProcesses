@@ -43,6 +43,9 @@
 \contentsline {subsection}{\numberline {5.2.2}{Kolmogorov's scales}}{50}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}{Sound waves and shocks}}{52}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}{Rankine-Hugoniot junction conditions}}{54}{subsection.5.3.1}%
-\contentsline {part}{\numberline {iii}{Gravitation}}{55}{part.3}%
-\contentsline {chapter}{Bibliography}{57}{section*.24}%
+\contentsline {subsection}{\numberline {5.3.2}{Sedov-Taylor blastwave solution}}{55}{subsection.5.3.2}%
+\contentsline {part}{\numberline {iii}{Gravitation}}{59}{part.3}%
+\contentsline {chapter}{\numberline {6}{Accretion physics}}{61}{chapter.6}%
+\contentsline {section}{\numberline {6.1}{Stellar winds}}{61}{section.6.1}%
+\contentsline {chapter}{Bibliography}{63}{section*.26}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
