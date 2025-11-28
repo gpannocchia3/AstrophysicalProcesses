@@ -1,4 +1,84 @@
 \chapter{Accretion physics}\label{ch:vi}
-Coming soon.
+Everything we've seen in the last few chapters will come into play here.
+\par In this chapter we're considering the two main possibilities for accelerated plasma in presence of a gravitational field: It's either they receive a kick and then fall back on the surface (\emph{accretion}) or just make it out safely from the gravitational field (\emph{stellar winds}). In the next sections, we'll try to give a punctual and precise description so to not underplay the important physical processes lying underneath.
 \section{Stellar winds}
-Coming soon.
+Last century it had become clearer and clearer that an outgoing corpuscolar flow from the Sun was needed to explain certain phenomena, like cometary tail's disruptions. 
+\par Let us approximate the Sun (or a star, in general) as an autogravitating sphere of mass $M$ with spherical symmetry, ignoring whatever drift may be caused by magnetic fields or rotation.
+\par We're going to neglect the self-gravitating potential of the stellar corona hovering around the central star.
+\par Following the original article by Parker \cite{1958ApJ...128..664P} we may first discuss whether the stellar corona can be in hydrostatic equilibrium at all distances. The easy answer is that it (probably) cannot.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/P(r).pdf}
+    \caption{Pressure profile under the assumption of hydrostatic equilibrium.}
+    \label{fig:parker_p_hyeq}
+\end{figure}
+If we were to do the full computation, we'd find a pressure profile like the one in Fig.\ref{fig:parker_p_hyeq}, which presents asymptotic values for both cases considered (neutral and ionized hydrogen). Such asymptotic pressure is much larger than any other source of pressure we may expect finding out there. The pressure exerted by the ISM is about five order or magnitudes less than what is needed to mantain hydrostatic equilirbium at all distances.
+\par Stellar coronas must then be expanding. Whether inwards or outwards that remains to be seen.
+\par Since it is not possible to find a stable solution for the coronal gas to be in hydrostatic equilibrium at large distances from the central star, we now turn our eye towards a \emph{dynamical model} able to describe the process.
+\par The starting point are as always Euler's equation and the continuity equation, both expressed under the assumption of spherical symmetry and \emph{stationarity}, so that we can put all time derivatives to zero. Eq.\ref{eq:incompressible_ns} may be then written as
+\begin{equation}
+    \rho v\frac{\text{d}v}{\text{d}r} = -\frac{\text{d}p}{\text{d}r}-\frac{G\rho M}{r^{2}}
+    \label{eq:eusph}
+\end{equation}
+The continuity equation in spherical symmetry yields
+\begin{equation}
+    \frac{d}{dr}(r^{2}\rho v) = 0
+    \label{eq:cont}
+\end{equation}
+which may be solved exactly
+\begin{equation}
+    \dot{M} = 4\pi r^{2}\rho v(r) = \text{const.}
+\end{equation}
+\par Assuming a barotropic equation of state (\ref{eq:barotropic})\footnote{This is not a bad assumption: The energy transported by the wind is much greater than that transported by heat conduction mechanisms \cite{1953sun..book..207V}. This way we can assume temperature to be negligible beyond a given distance $b$ and constant up to that point.}: 
+\begin{equation*}
+    v^{2}\partial_{r}\log(v) = -c_{s}^{2}\partial_{r}\log(\rho)-\frac{GM}{r^{2}}
+\end{equation*}
+which can be promptly restated as 
+\begin{equation*}
+    (v^{2}-c_{s}^{2})\partial_{r}\log(v) = \frac{2c_{s}^{2}}{r}\left(1-\frac{GM}{2c_{s}^{2}r}\right)
+\end{equation*}
+In this form it's easy to see that if $v>c_{s}$ the fluid must be accelerating.
+\par It may be worth pointing out that the latter equation may be cast in a self-similar fashion. This is easier seen if we assume the plasma to behave like a perfect gas: Under the assumption of constant temperature in the region we're observing, the equation of state is actually barotropic
+\begin{equation*}
+    p = nkT = \frac{kT}{\mu m_{H}}\rho
+\end{equation*}
+where $\mu$ is the mean molecular weight
+\begin{equation*}
+    \mu = \left(2X+\frac{3}{4}Y+\frac{1}{2}Z\right)^{-1}
+\end{equation*}
+\par Expressed in this fashion, the sound speed $c_{s}$ is simply equal to
+\begin{equation*}
+    c_{s} = \left(\frac{\text{d}p}{\text{d}\rho}\right)^{1/2} = \left(\frac{kT}{\mu m_{H}}\right)^{1/2} \approx \left(\frac{kT_{0}}{\mu m_{H}}\right)^{1/2}
+\end{equation*}
+at least to leading order. Plugging all this in the original expression for Euler's equation reads something like
+\begin{equation}
+    \partial_{\xi}\psi\left(1-\frac{\tau}{\psi}\right) = -2\xi^{2}\partial_{\xi}\left(\frac{\tau}{\xi^{2}}\right)-\frac{2\lambda}{\xi^{2}} 
+    \label{eq:vprofile}
+\end{equation}
+\par This last equation was obtained setting $\xi = r/a$, $\tau = T(r)/T_{0}$, $\lambda = GMm_{H}/2kT_{0}a$, $\psi = m_{H}v^{2}/2kT_{0}$\footnote{I do admit that I've pasted the expression I'd obtained when I wrote my Batchelor thesis. I tried to adapt my previous notation to the one of this notes. Please forgive me if there's some subscript not \emph{subscripting} properly.}.
+\par To integrate (\ref{eq:vprofile}) we shall assume that temperature is uniform and equal to $T_{0}$ in the range $r\in(a,b)$, with $b$ a distance beyond which heating mechanism are negligible. 
+\par The interesting physics is in the region $r<b$.
+\par Here temperature is constant, so $\tau = 1$ and the ODE is immediately solved
+\begin{equation}
+    \psi -\ln(\psi) = \psi_{0}-\ln(\psi_{0})+4\ln(\xi)-2\lambda\left(1-\frac{1}{\xi}\right)
+    \label{eq:psi}
+\end{equation}
+where the integration constant has been chosen so that $\psi(\xi = 1) = \psi_{0}$.
+\par Discarding all non-physical solutions (negative magnitudes and complex solutions) requires $\lambda > 2$. Once you've got rid of all the unwanted nasty solutions, the final expression is something like
+\begin{equation}
+    \psi -\ln\psi = -3-4\ln\frac{\lambda}{2}+4\ln\xi+\frac{2\lambda}{\xi}
+    \label{eq:profile}
+\end{equation}
+which is plotted for different values of temperature $T_{0}$ in Fig.\ref{fig:v}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/v_profile.pdf} 
+    \caption{Velocity profile for eq.\ref{eq:profile} for different values of $T_{0}$.}
+    \label{fig:v}
+\end{figure}
+Closed this self-complacent excursus, let's turn back to the expression shown in class 
+\begin{equation*}
+    (v^{2}-c_{s}^{2})\partial_{r}\log(v) = \frac{2c_{s}^{2}}{r}\left(1-\frac{GM}{2c_{s}^{2}r}\right)
+\end{equation*}
+If $v>0$ we have at first bounded motion, pretty much like an oscillation of some sort, but then, as the fluid accelerates, it gets closer and closer to the escape velocity\,\footnote{Note that in this regard, thermal fluctuations of the velocity often give the plasma the needed bump to escape the gravitational pull.} until the fluid finally escapes.
+\par But what if the the fluid is \emph{ingoing} rather than outgoing? We won't have winds, proper, but rather \emph{spherical accretion}, which is discussed in the next section.
