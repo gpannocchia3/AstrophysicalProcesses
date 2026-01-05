@@ -1,6 +1,7 @@
 \chapter{Accretion physics}\label{ch:vi}
 Everything we've seen in the last few chapters will come into play here.
-\par In this chapter we're considering the two main possibilities for accelerated plasma in presence of a gravitational field: It's either they receive a kick and then fall back on the surface (\emph{accretion}) or just make it out safely from the gravitational field (\emph{stellar winds}). In the next sections, we'll try to give a punctual and precise description so to not underplay the important physical processes lying underneath.
+\par In this chapter we're considering the two main possibilities for accelerated plasma in presence of a gravitational field: It's either they receive a kick and then fall back on the surface (\emph{accretion}) or just make it out safely from the gravitational field (\emph{stellar winds}).
+\par In the next sections, we'll try to give a punctual and precise description so to not underplay the important physical processes lying underneath.
 \section{Stellar winds}
 Last century it had become clearer and clearer that an outgoing corpuscolar flow from the Sun was needed to explain certain phenomena, like cometary tail's disruptions. 
 \par Let us approximate the Sun (or a star, in general) as an autogravitating sphere of mass $M$ with spherical symmetry, ignoring whatever drift may be caused by magnetic fields or rotation.
@@ -55,7 +56,7 @@ at least to leading order. Plugging all this in the original expression for Eule
     \partial_{\xi}\psi\left(1-\frac{\tau}{\psi}\right) = -2\xi^{2}\partial_{\xi}\left(\frac{\tau}{\xi^{2}}\right)-\frac{2\lambda}{\xi^{2}} 
     \label{eq:vprofile}
 \end{equation}
-\par This last equation was obtained setting $\xi = r/a$, $\tau = T(r)/T_{0}$, $\lambda = GMm_{H}/2kT_{0}a$, $\psi = m_{H}v^{2}/2kT_{0}$\footnote{I do admit that I've pasted the expression I'd obtained when I wrote my Batchelor thesis. I tried to adapt my previous notation to the one of this notes. Please forgive me if there's some subscript not \emph{subscripting} properly.}.
+\par This last equation was obtained setting $\xi = r/a$, $\tau = T(r)/T_{0}$, $\lambda = GMm_{H}/2kT_{0}a$, $\psi = m_{H}v^{2}/2kT_{0}$\footnote{Please be warned that I tried to adapt the notation I've used for my Batchelor thesis to the one of this notes. Please forgive me if there's some subscript not \emph{subscripting} properly.}.
 \par To integrate (\ref{eq:vprofile}) we shall assume that temperature is uniform and equal to $T_{0}$ in the range $r\in(a,b)$, with $b$ a distance beyond which heating mechanism are negligible. 
 \par The interesting physics is in the region $r<b$.
 \par Here temperature is constant, so $\tau = 1$ and the ODE is immediately solved
@@ -70,15 +71,107 @@ where the integration constant has been chosen so that $\psi(\xi = 1) = \psi_{0}
     \label{eq:profile}
 \end{equation}
 which is plotted for different values of temperature $T_{0}$ in Fig.\ref{fig:v}.
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/v_profile.pdf} 
+    \includegraphics[width=0.8\textwidth]{img/v_profile.pdf} 
     \caption{Velocity profile for eq.\ref{eq:profile} for different values of $T_{0}$.}
     \label{fig:v}
 \end{figure}
-Closed this self-complacent excursus, let's turn back to the expression shown in class 
+\par Closed this self-complacent excursus, let's turn back to the expression shown in class 
 \begin{equation*}
     (v^{2}-c_{s}^{2})\partial_{r}\log(v) = \frac{2c_{s}^{2}}{r}\left(1-\frac{GM}{2c_{s}^{2}r}\right)
 \end{equation*}
 If $v>0$ we have at first bounded motion, pretty much like an oscillation of some sort, but then, as the fluid accelerates, it gets closer and closer to the escape velocity\,\footnote{Note that in this regard, thermal fluctuations of the velocity often give the plasma the needed bump to escape the gravitational pull.} until the fluid finally escapes.
 \par But what if the the fluid is \emph{ingoing} rather than outgoing? We won't have winds, proper, but rather \emph{spherical accretion}, which is discussed in the next section.
+\section{Spherical accretion}
+We consider a star of mass M accreting spherically symmetrically from a large gas cloud. This would be a reasonable approximation to the real situation of an isolated star accreting from the interstellar medium, provided that the angular momentum, magnetic field strength and bulk motion of the interstellar gas with respect to the star could be neglected.
+\par We'll follow the description given by Bondi, Hoyle and Lyttleton \cite{1939PCPS...35..592H}, \cite{1944MNRAS.104..273B} as presented by \cite{Frank_King_Raine_2002}.
+\par Recall now the expression we've found for stellar winds 
+\begin{equation*}
+     (v^{2}-c_{s}^{2})\partial_{r}\log(v) = \frac{2c_{s}^{2}}{r}\left(1-\frac{GM}{2c_{s}^{2}r}\right)
+\end{equation*}
+We'll now cast it a slightly different form that makes more evident the relationships between the various elements interplaying
+\begin{equation}
+    \frac{1}{2}\left(1-\frac{v^{2}}{c_{s}^{2}}\right)\frac{\text{d}(v^{2})}{\text{d}r} = -\frac{GM}{r^{2}}\left[1-\frac{2c_{s}^{2}r^{2}}{GM}\right]
+    \label{eq:bhl}
+\end{equation}
+As we have mentioned at the end of last section, accretion can be considered as a stellar wind process with negative velocity. This means that we can write down an expression for the (constant) accretion rate 
+\begin{equation*}
+    \dot{M} = 4\pi r^{2}\rho (-v) = \text{const.}
+\end{equation*}
+First, we note that at large distances from the star the factor $\left[1-\frac{2c_{s}^{2}r^{2}}{GM}\right]$ on the right hand side must be negative, since $c_{s}^{2}$ approaches some finite asymptotic value $c_{s}^{2}(\infty)$ related to the gas temperature far from the star, while $r$ can increase, in principle, without limit. This means that for large $r$ the right hand side of (\ref{eq:bhl}) is positive. On the left hand side, the factor $\frac{\text{d}(v^{2})}{\text{d}r}$ must be negative, since we want the gas far from the star to be at rest, accelerating as it approaches the star with $r$ decreasing.
+\par Hence, for large values of $r$, the fluid must be \emph{subsonic}. This is, of course, a very reasonable result, as the gas will have a non-zero temperature and hence a non-zero sound speed far from the star.
+\par As made obvious from the equations, as the gas approaches the star, $r$ is decreasing and the expression in square brackets of (\ref{eq:bhl}) must tend to increase, eventually reaching zero.
+\par Such condition is verified when 
+\begin{equation}
+    r_{s} = \frac{GM}{2c_{s}^{2}} \simeq 7.5\cdot 10^{13}\left(\frac{T(r_{*})}{10^{4}\,\text{K}}\right)^{-1}\left(\frac{M}{M_{\odot}}\right)\,\text{cm}
+    \label{eq:fake_schw}
+\end{equation}
+which is oddly resemblant of the Schwartzschild radius. Note that the order of magnitude of $r_{s}$ is about 100 times that of the solar corona, which is much larger than the radius $R_{*}$ of any compact object. Technically, a very high temperature would be needed in order to make $r_{s}<R_{*}$. This condition can be achieved, for example, if we consider a standing shock wave close to the stellar surface.
+\par If we perform a similar analysis of the signs of eq.\ref{eq:bhl}, we find out that near the star the gas must be \emph{supersonic}.
+\par The existence of a point described by (\ref{eq:fake_schw}) is of great importance in characterizing the accretion flow. The direct mathematical consequences are two 
+\begin{align}
+    v^{2} &= c_{s}^{2} \quad r = r_{s} \\
+    \frac{\text{d}(v^{2})}{\text{d}r} &= 0 \quad r = r_{s}
+    \label{eq:sch_cond}
+\end{align}
+so that all solutions of (\ref{eq:bhl}) can be classified by their behaviour at $r_{s}$, given by two expressions above, together with their behaviour at large $r$. This behaviour can be summarized in a (mildly confusing) plot as shown in Fig.\ref{fig:bhl_sol}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/bhl_cond.png}
+    \caption{Mach number squared $\mathcal{M}^{2} = v^{2}(r)/c_{s}^{2}(r)$ as a function of radius $r/r_{s}$ for spherically symmetrical adiabatic gas flows in the gravitational field of a star. Credits: Frank, King and Raine \cite{Frank_King_Raine_2002}.}
+    \label{fig:bhl_sol}
+\end{figure}
+\par An exact description yields six families of solutions, but such precision is beyond the intentions of these notes. The interested reader can refer to \cite{Frank_King_Raine_2002} for a more detailed discussion.
+\par Excluding "unwanted" solutions leaves us with only solutions of the form 
+\begin{equation*}
+    v^{2}(r_{s} = c_{s}^{2}(r_{s})) \quad v^{2}\to 0 \;\text{as}\; r\to\infty (\quad v^{2} < c_{s}^{2},\; r > r_{s};\;v^{2} > c_{s}^{2},\;r < r_{s})
+\end{equation*}
+which allows us to integrate directly Euler's equation and evaluate some nice quantities which, although fairly interesting, we'll skip right away. I'll just point out that such solution allows us in principle to infer that accretion from the interstellar medium is unlikely to be an observable phenomenon.
+\par It should be pretty obvious that, as the gas infalls into the star, it builds up energy. This process is eventually brought to a stop if the star has a \emph{hard boundary} at, say, $r = \bar{r}$. The sheer variation in gravitational potential is (assuming gas starting from infinity) $\Delta\phi = GM/r$.
+\par The energy dissipated, either by radiation or by the gas heating up, if the gas bounces on the surface of the star is $\dot{e} = GM/r$; if the gas doesn't stop the Virial theorem yields $\Delta\phi = GM/2r$.
+\par Let us assume for the moment adiabatic accretion. The internal energy of the gas could then be expressed as 
+\begin{equation*}
+    e = \frac{p}{(\gamma-1)\rho} \quad p = \frac{\rho R T}{\mu}
+\end{equation*}
+After complete energy dissipation, we can use the Virial temperature to write 
+\begin{equation*}
+    T = \frac{1}{2}(\gamma -1) T_{vir}
+\end{equation*}
+\par The \emph{Virial temperature} is defined as the temperature that accreted material would reach if its gravitational potential energy were turned entirely into thermal energy
+\begin{equation}
+    T_{vir} = \frac{GM\mu}{R\bar{r}}
+    \label{eq:virial_temperature}
+\end{equation}
+Since the sound speed of a perfect gas can be written as $c_{s} = (\gamma RT/\mu)^{1/2}$, this implies that at a temperature $T = T_{vir}$, the sound speed is roughly equal to the escape velocity from the star. In this scenario, accretion is not possible, since density fluctuations can escape the gravitational pull. Similarly, if the gas is too hot, accretion stops\footnote{When the temperature raises to or over the virial temperature the sound's speed becomes roughly equal to the escape velocity and so the gas cannot be pulled inward.}. In a sense, accretion is a \emph{self-regulating process}, pretty much like the whole stellar-thermostate stuff.
+\par What if we consider now other mechanisms to dissipate energy?
+\par First and foremost, it's safe to assume that in most scenarios the temperature will always be such that $T\ll T_{vir}$. Still, clearly accretion can't go on for an indefinite amount of time. Eventually it will have to stop.
+\par If we increase the accreting velocity
+\begin{equation*}
+    \dot{M} = -4\pi\rho r^{2} v \quad (v<0)
+\end{equation*}
+the variation of optical depth in respect to the rate of accretion will be positive $\text{d}\tau/\text{d}\dot{M} > 0$, thus there must be a critical accretion rate ($\dot{M}_{c}$) beyond which photons can't escape, making the process of accretion always adiabatic.
+\par Consider a medium with opacity $\kappa_{\nu}$ and flux $F_{\nu}$. The force exerted by photons will approximately be proportional to $\kappa_{\nu}F_{\nu}/c$, and will be the main contribution opposing to accretion. From here we can define an "equilibrium" flux for which gravity is balanced by photon pressure alone
+\begin{equation*}
+    F_{\nu, eq} = \frac{c}{\kappa_{\nu}}\frac{GM}{r^{2}}
+\end{equation*}
+Hence, under the assumption of spherical symmetry, we can define \emph{Eddington's critical luminosity} as 
+\begin{equation}
+    L_{E} = 4\pi r^{2}F_{\nu, eq} = \frac{4\pi c GM}{\kappa_{\nu}}
+    \label{eq:eddingon_lum}
+\end{equation}
+Eddington's luminosity plays a crucial role in accretion processes, for it defines a limiting luminosity beyond which accretion can't take place.
+\par If we assume electrons to play the major contribution to the luminosity, the opacity is entirely dominated by Thomson scattering, and Eddington's luminosity is roughly equal to $L_{E} \simeq 4\cdot10^{4} M/M_{\odot} L_{\odot}$.
+\par Please note, however, that \textbf{accretion is seldom spherically symmetric}. In these cases, is much more convenient defining a Eddington's accretion rate rather than a luminosity. Since the luminosity of an accreting flow can be cast as 
+\begin{equation*}
+    L = \frac{GM\dot{M}}{R}
+\end{equation*}
+Eddington's accretion rate will then be 
+\begin{equation}
+    \dot{M}_{E} = \frac{4\pi R c}{\kappa}
+    \label{eq_eddingon_accrate}
+\end{equation}
+that plays as the boundary between radiation dominated and advection dominated accretion flows (ADAF).
+\par In the next sections, we'll take a closer look as to what happens when we include non-zero angular momentum into the picture.
+\section{Accretion in binary systems}
+Coming soon.
