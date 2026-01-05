@@ -6,15 +6,15 @@
    \end{flushright}
 \end{quote}
 Turbulence is quite an interesting feature arising in fluids. Turbulent flow is fluid motion characterized by chaotic changes in pressure and flow velocity, both spatially and temporally.
-\par Turbulence's ability to transport and mix fluid is unparalleled, comparing it to stardard laminar flows. But it comes with a price: It's bloody difficult to deal with it.
+\par Turbulence's ability to transport and mix fluid is unparalleled, compared to stardard laminar flows. But it comes with a price: It's bloody difficult to deal with it.
 \par There's not a unique definition of when a fluid becomes turbulent rather than staying in a chill (and much less chaotic) laminar flow.
 \par Usually, we say that a flow is turbulent when the Reynolds' number (\ref{eq:reynoldsnumber}) is much larger than 1. Essentially, what happens is that viscosity is no longer able to damp and constrain the fluid motion, which ends up going nuts. It should be clear, however, that for that to happen, you need energy ($\varepsilon$) to be injected in the fluid
 \par Before going through the essential features of turbulence, we shall briefly consider again our naive bubble description, only to find out that what happens is actually much more complex.
 \section{Instabilities}
 Consider the system depicted in Fig.\ref{fig:bubble}. As the bubble rises, it will have a non-zero vertical velocity. Let's see what this implies.
-\par Consider a stratified, ideal, incompressible fluids with no vorticity\,\footnote{Actually, vorticity is divergent on the boundary.} as those shown in Fig.\ref{fig:stratified_fluid}.
+\par Consider a stratified, ideal, incompressible fluid with no vorticity\,\footnote{Actually, vorticity is divergent on the boundary.} as those shown in Fig.\ref{fig:stratified_fluid}.
 \input{chapters/stratified_fluid}
-Given these assumptions, the velocity fields may be written in terms of a scalar potential
+\par Given these assumptions, the velocity fields may be written in terms of a scalar potential
 \begin{equation*}
     \vec{v}_{i} = -\nabla\,\phi_{i}
 \end{equation*}
@@ -97,11 +97,11 @@ is the only possible spherically symmetric solution to the Einstein's equation i
 \par From (\ref{eq:Schwartzschild_metric}) is perhaps even simpler understanding what a self-simlar solution is: Just plug $y = R_{s}/r$ and you'll find that the metric is completely specified up to a factor of $R_{s}$, which contains all the details of the source of the curvature.
 \subsection{Kolmogorov's scales}
 In a revolutionary article of 1941, the Russian physicist A. V. Kolmogorov developed one of the most incredible theories about the structure of turbulence in incompressible fluids \cite{1991RSPSA.434....9K}.
-\par we shall start assuming we're in presence of a fully turbulent flow with $Re = UL/\nu \gg 1$ and Richardson's theory about the "energy cascade" to hold: That means turbulence can be considered to be composed of eddies of different sizes which can be described through the tern of parameters $l,\,u(l),\,\tau(l)=l/u(l)$.
+\par We shall start assuming we're in presence of a fully turbulent flow with $Re = UL/\nu \gg 1$ and Richardson's theory about the "energy cascade" to hold: That means turbulence can be considered to be composed of eddies of different sizes which can be described through the tern of parameters $l,\,u(l),\,\tau(l)=l/u(l)$.
 \par The eddies of the largest scales are characterized by lengthscale $l_{0}$ comparable to $L$ (the dimension of the system housing the turbulent liquid) and have characteristic velocity $u(l_{0}) \approx (2\kappa/3)^{1/2}\approx U$.
-\par Larger eddies are unstable. Pretty much like boybands in the prime of their careers, they end up breaking apart, transferring energt to "smaller" eddies. This \emph{energt cascade} continues until the Reynolds' number $Re(l)$ is sufficiently small that the eddy motion is stable.
+\par Larger eddies are unstable. Pretty much like boybands in the prime of their careers, they end up breaking apart, transferring energy to "smaller" eddies. This \emph{energy cascade} continues until the Reynolds' number $Re(l)$ is sufficiently small that the eddy motion is stable.
 \par The energy dissipation rate $\varepsilon$ is determined by the transfer of energy from the largest eddies and is \textbf{independent of the kinematic viscosity $\nu$}.
-\par Here comes to play Kolmogorov's key hypothesis. Ar sufficiently high $Re$, the small-scale turbulent motions are claimed to be \emph{isotropic}. Let's call $l_{I}$ the lengthscale demarcation between anisotropic large and isotropic small eddies.
+\par Here comes to play Kolmogorov's key hypothesis. At sufficiently high $Re$, the small-scale turbulent motions are claimed to be \emph{isotropic}. Let's call $l_{I}$ the lengthscale demarcation between anisotropic large and isotropic small eddies.
 \par Isotropy in this case means that all directional information is lost, as well as all information about the geometry of larger eddies. In a sense then, the statistics of small-scale motions are in a sense \emph{universal}.
 \subsubsection*{1st hypothesis of self-similarity}
 In every turbulent flow with $Re\gg 1$, the statistics of the small-scale range have a universal form determined by $\varepsilon,\,\nu$ alone. We can define \emph{Kolmogorov's scale} so that $Re=1$
@@ -121,9 +121,9 @@ Since it is not possible to form a non-dimensional quantity with $\varepsilon,\,
 \subsubsection*{2nd hypothesis of self-similarity}
 In every turbulent flow with $Re \gg 1$, the statistics of motion of scale $l$ in the range $l_{0}\gg l \gg \eta $ have a universal form determined by $\varepsilon$ alone, independent of $\nu$
 \input{chapters/kolmogorov}
-which means the effect of viscosity is relevant only when we're dealing with lengthscales smaller than $\eta$. It seems like a honest assumption: a Reynolds' number smaller than 1 (\ref{eq:reynoldsnumber}) requires viscous forces to be greater than the inertial driving. By construction, Kolmogorov's scales identify the conditions for which $Re = 1$, so all is consistent.
+which means the effect of viscosity is relevant only when we're dealing with lengthscales smaller than $\eta$. It seems like a honest assumption: A Reynolds' number smaller than 1 (\ref{eq:reynoldsnumber}) requires viscous forces to be greater than the inertial driving. By construction, Kolmogorov's scales identify the conditions for which $Re = 1$, so all is consistent.
 \par We're not going to show explicitly, but from the two hypothesis of self-similarity we can conclude something really important. In the equilibrium range ($l<l_{EI}$, see Fig.\ref{fig:kolmogorov_scales}) the spectrum is a universal function of $\varepsilon,\,\nu$. But then, the second hypothesis of self-similarity tells us that in the inertial subrange statistics cannot depend on $\nu$. 
-\par If we were to calculate explicitly velocity correlations to plug them into the Wiener-Chinčin's theorem, we'd get an expression for how energy is distributed into modes $\kappa$ (the wavenumber)
+\par If we were to calculate explicitly velocity correlations to plug them into Wiener-Chinčin's theorem, we'd get an expression for how energy is distributed into modes $\kappa$ (the wavenumber)
 \begin{equation}
     E(\kappa) = C \varepsilon^{2/3}\kappa^{-5/3}
     \label{eq:energy_modes}
@@ -169,7 +169,7 @@ which is a hyperbolic equation describing propagating density waves!
 \end{equation*}
 as the \emph{speed of sound} in the fluid. Sometimes $c_{s}$ is also said to be the compressibility of the fluid.
 \par Since $c_{s}$ is the speed at which pressure (or density) perturbations travel through the gas, it limits the rapidity with which the fluid can react to such changes. For example, if the pressure in one part of a region of the fluid of characteristic size $L$ is suddenly changed, the other parts of the region cannot respond to this change until a time of order $L/c_{s}$, the sound crossing time, has elapsed.
-\par In a sense, $c_{s}$ is also the velocity at which causality travels in the fluid. Thus, if we were to consider a \emph{supersonic flow}, then the fluid cannot respond on the flow time $L/\left|\vec{v}\right|$, so pressure gradients have little effect on the flow. At the other extreme, for subsonic flow the fluid can adjust in less than the flow time, so to a first approximation the fluid behaves as if in hydrostatic equilibrium.
+\par In a sense, $c_{s}$ is also the velocity at which causality travels in the fluid. Thus, if we were to consider a \emph{supersonic flow}, then the fluid cannot respond on the flow time $L/\left|\vec{v}\right|$, so pressure gradients have little effect on the flow. At the other extreme, for subsonic flows the fluid can adjust in less than the flow time, so to a first approximation the fluid behaves as if in hydrostatic equilibrium.
 \par The density dependence of the sound speed implies that regions of higher than average density have higher than average sound speeds, a fact which gives rise to the possibility of \emph{shock waves}.
 \begin{figure}[h!]
     \centering 
@@ -177,7 +177,7 @@ as the \emph{speed of sound} in the fluid. Sometimes $c_{s}$ is also said to be 
     \caption{The formation of a shock wave. Credits: Frank, King and Raine.}
     \label{fig:shock_dev}
 \end{figure}
-\par In a shock relevant fluid quantities change on lengthscales of the order of the mean free path and this is represented as a discontinuity in the fluid.
+\par In a shock, relevant fluid quantities change on lengthscales of the order of the mean free path and this is represented as a discontinuity in the fluid.
 \subsection{Rankine-Hugoniot junction conditions}
 \par Since discontinuities are introduced into the picture, we can no longer use differential quantities to describe conservations. The solution to this problem is easily found looking into \emph{integral quantities}.
 \par To do so, it is convenient to choose a reference frame in which the shock is at rest. Since the shock thickness is small, we can regard it as locally plane; moreover, since the fluid flows through the shock so quickly, changes in the fluid conditions cannot affect the details of the transition across the shock, so we can regard the flow into and out of the shock as steady.
@@ -264,7 +264,7 @@ which means our $\eta$ parameter is just $\eta = r^{5}t^{-2}$, since $[E_{0}]/[\
     R \sim \left(\frac{E_{0}}{\rho_{0}}\right)^{1/5}t^{2/5} \quad v = \dot{R} \sim \frac{2}{5} Rt^{-1}
     \label{eq:ST_blastwave}
 \end{equation}
-incidentally, the proportionality constant is of order unity. Note that velocity is slowing down. This can be roughly explained recalling the conservation of momentum: As the wavefront expands it "gains" more mass\,\footnote{The proper expression would probably be "entrains more material".} hence needing to slow down to conserve momentum.
+incidentally, the proportionality constant is of order unity. Note that the velocity is decreasing. This can be roughly explained recalling the conservation of momentum: As the wavefront expands it "gains" more mass\,\footnote{The proper expression would probably be "entrains more material".} hence needing to slow down to conserve momentum.
 \par So far we've been assuming the process to be adiabatic, but is it actually a sensible guess? It certainly depends on timescales: If the cooling timescale is much larger than the dynamical timescale, than we're good.
 \par On top of that, especially in the first instants of explosions, the medium can be considered \emph{optically thick} thanks to the density compression induced by shockwaves. Since no radiation is coming out of there, we can assume that no energy is lost to radiation and is conserved.
 \begin{figure}[h!]
@@ -274,7 +274,7 @@ incidentally, the proportionality constant is of order unity. Note that velocity
     From the image we see two things: After 1/40 of a second, the blastwave still retains (partial) spherical symmetry and the medium is still optically thick.}
     \label{fig:trinitytest}
 \end{figure}
-\par We can follow a similar line of reasoning and find out that the pressure of the blastwave scales as\,\footnote{It's even more simple if you recall that pressures are just energy densities. I know. It's disturbing.}
+\par We can follow a similar line of reasoning and find out that the pressure of the blastwave scales as\,\footnote{You just have to recall that pressures are dimensionally equal to energy densities.}
 \begin{equation*}
     p \sim E_{0}R^{-3}
 \end{equation*}

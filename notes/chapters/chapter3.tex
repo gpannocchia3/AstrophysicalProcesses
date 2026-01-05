@@ -8,7 +8,7 @@ When we've first written down the equation for radiative transport (eq.\ref{eq:r
 \par How do we include it into the picture of radiative transport?
 \par For the present discussion we assume \emph{isotropic} scattering, so that the scattered radiation is emitted equally into equal solid angles. We also assume that the total amount of radiation emitted per unit frequency range is just equal to the total amount absorbed in that same frequency range (\emph{coherent scattering}).
 \par This are some fair requirements if you think about it. Isotropy is most likely assured if the main type of scattering is the (non-relativistic) Thomson scattering on electrons, while coherence of the scattering is just requiring the scattering to be elastic.
-\par Such conditions are not always met, but for the moment we'll turn our heads away from the obviou problem and see where this brings us.
+\par Such conditions are not always met, but for the moment we'll turn our heads away from the obvious problem and see where this brings us.
 \par The emission coefficient for coherent, isotropic scattering can be found simply by equating the power absorbed per unit volume and frequency ranges to the corresponding power emitted. Here we define the \emph{scattering coefficient} $\sigma_{\nu}$ so that 
 \begin{equation*}
     j_{\nu} = \sigma_{\nu}J_{\nu}
@@ -25,13 +25,13 @@ The equation of radiative transport is thus modified\footnote{Note that we're as
 \textbf{Solving this equation is a bloodbath}. The source function is not known a priori and depends on the solution $I_{\nu}$, at all directions through a given point, making this a \emph{integro-differential equation}, also known as "bloody mess".
 \section{Random Walks}
 A particularly useful way of looking at scattering, which leads to important order-of-magnitude estimates, is by means of random walks. We shall now develope a formalism that interprets the processes of absorption, emission, and propagation in probabilistic terms for a single photon rather than the average behavior of large numbers of photons.
-\par Consider a photon emitted in an infinite, homogeneous scattering region. It travels a displacement $\vec{r}_{1}$ before being scattered, then travels in a new direction over a displacement $\vec{r}_{2}$ before being scattered, and so on. After N free paths is, the total displacement will look like 
+\par Consider a photon emitted in an infinite, homogeneous scattering region. It travels a displacement $\vec{r}_{1}$ before being scattered, then travels in a new direction over a displacement $\vec{r}_{2}$ before being scattered, and so on. After N free paths, the total displacement will look like 
 \begin{equation*}
     \vec{R} = \sum_{i=1}^{N}\vec{r}_{i}
 \end{equation*}
 Since this is a vector, the average total displacement will be identically null. Therefore, we must evaluate the mean square of the total displacement which, in the assumption of independent and isotropic scattering, must be expressed as 
 \begin{equation*}
-    l_{*}^{2} = \langle\vec{R}^{2}\rangle = \sum_{i=1}^{N}\langle\vec{r}_{i}^{2}\rangle
+    l_{*}^{2} = \langle\vec{R}^{2}\rangle = \sum_{i=1}^{N}\langle\vec{r}_{i}^{\,2}\rangle
 \end{equation*}
 The quantity $l_{*}^{2}$ is the root mean square net displacement of the photon, while $l^{2}$ denotes the mean square of the free path of a photon, which within a factor of order unity, it's simply the mean free path of a photon.
 \par Since the mean square displacements of each scattering iteration have no reason to be different, we'll just write 
@@ -71,7 +71,7 @@ so that the mean free path will be just $l_{\nu} = (\alpha_{\nu}+\sigma_{\nu})^{
 \begin{equation*}
     \epsilon_{\nu} = \frac{\alpha_{\nu}}{\alpha_{\nu}+\sigma_{\nu}}
 \end{equation*}
-The probability of for scattering will then be $1-\epsilon_{\nu}$, which is known as \emph{single-scattering albedo}. In terms of $\epsilon_{\nu}$, the source function becomes 
+The probability for scattering not to end with a true absorption will then be $1-\epsilon_{\nu}$, which is known as \emph{single-scattering albedo}. In terms of $\epsilon_{\nu}$, the source function becomes 
 \begin{equation*}
     S_{\nu} = (1-\epsilon_{\nu})J_{\nu}+\epsilon_{\nu}B_{\nu}
 \end{equation*}
@@ -81,7 +81,7 @@ Let us consider first an infinite homogeneous medium. A random walk starts with 
     l_{*} \approx \left[\alpha_{\nu}(\alpha_{\nu}+\sigma_{\nu})\right]^{-1/2}
 \end{equation*}
 This length represents a measure of the net displacement between the points of creation and destruction of a typical photon; it often goes by the name of \emph{diffusion length}, \emph{thermalization length}, or \emph{effective mean path}. Usually it is also frequency dependent.
-\par Essentially, it is the average length over which emitting and absorbing elements are radiatevely coupled.
+\par Essentially, it is the average length over which emitting and absorbing elements are radiatively coupled.
 \par The behavior of a finite medium can be explained in terms of what we've been creating so far. Its properties will depend (strongly) on whether its linear extension $L$ is larger or smaller than the effective free path.
 \par In terms of the effective optical depth $\tau_{*} = L/l_{*}$, we can restate its definition as follows
 \begin{equation*}
