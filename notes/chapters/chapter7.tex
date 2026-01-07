@@ -123,7 +123,107 @@ with $H = c_{s}/\Omega_{0}$ the disk's scale height and $c_{s} = (TR/\mu)^{1/2}$
 \end{equation}
 we conclude that the gas in the disk must be supersonic\footnote{For $\Omega_{0}r$ can be considered the tangential velocity to the (circular) orbit.}. Thus, the disk is pretty much a continuum of Keplerian orbits along which the gas has different velocities.
 \par Now, if we move to the comoving frame and recall Fig.\ref{fig:stratified_fluid}, we may notice that we are in the exact conditions for shear instability to arise. But since angular momentum is \emph{fixed} for any given orbit, each displacement caused by shear instabilities will be simply ignored, for angular momentum conservation will eventually bring back the displaced element to its original position.
+\par In fact, as long as 
+\begin{equation*}
+    \frac{\partial J}{\partial r} < 0
+\end{equation*}
+the disk is stable against small element-displacement.
 \par If that's the case, how can accretion be possible? Viscosity.
 \par Although we have no clues (sorta\footnote{As for many other things in the Universe, it is probably turbulence's doing. We'll take a look at it in the next section.}\,) of how the viscosity gets high enough to allow the rings of gas to migrate towards the center and lose angular momentum, it's clear that if that is the case, then accretion may indeed be possible.
 \section{The Shakura-Sunyaev model}
-Coming soon.
+As we have mentioned \emph{en passant} at the end of the last section, in a differentially rotating medium (like our Keplerian-continuum) must develope tangential stresses between adjacent layers, which are usually belived to be connected to the presence of magnetic fields, turbulence and molecular and/or radiative viscosity as the primary mechanisms of transport of angular momentum.
+\par In the conditions that are of interest to us, nor molecular nor radiative viscosity can be able to lead to accretion. So that leaves us with only magnetic fields and turbulence. As noticed by Shakura and Sunyaev \cite{1973A&A....24..337S}, the magnetic field flowing into the disk may have a regular structure at the distances comparable to the outer radius of the disk. But since $\nabla\cdot\vec{H} = 0$, the radial component of the magnetic field must have alternating sign, hence differential rotation leads to division of the large magnetic loops into smaller ones.
+\par Within the disk is then most probable for the field to be chaotic and on the small scales. The energy density in the magnetic field cannot possibly exceed the thermal energy of matter 
+\begin{equation*}
+    \frac{H^{2}}{8\pi} < \rho\frac{c_{s}^{2}}{2}
+\end{equation*}
+Although we have no complete theory of turbulence, we have observational checks of its existence in accretion disks, so we can assume turbulence to be indeed present.
+\par In fact, as computed by \cite{Frank_King_Raine_2002} (§4.7), a safe estimate of the Reyndolds' number evaluates roughly at $\text{Re} > 10^{14}$. Hence, molecular viscosity is far too weak to bring about the viscous dissipation and angular momentum transport we require. We may then conjecture that the gas flow in accretion discs is also turbulent, although there is, as yet, no proof that this is so.
+\par Although we know pretty much nothing, we can still make some sensible claims on the quantities limiting the onset of turbulence: First, the typical size of the largest turbulent eddies cannot exceed the disc thickness $H$; second, it is unlikely that the turnover velocity $v_{turb}$ is supersonic, for, in this case, the turbulent motions would probably be thermalized by shocks. Thus, we can write 
+\begin{equation}
+    \nu = \alpha c_{s}H 
+    \label{eq:alpha_presc}
+\end{equation}
+and can probably expect with a certain degree of confidence that $\alpha$ will turn out to be less than 1.
+\par Another way to see this is by considering two adjacent elements of the disk that are going to generate eddies of, say, size $l$. The stress tensor $\sigma$ is going to be roughly equal to 
+\begin{equation*}
+    \sigma \sim r\partial_{r}\Omega \sim -\frac{3}{2}\Omega \implies v \sim \sigma l
+\end{equation*}
+\par Since the velocity of the gas can't get as high as being causality-breaking, $v_{max}\sim c_{s}$. Hence
+\begin{equation*}
+    l \sim \frac{c_{s}}{\sigma} \sim H \implies \nu \sim H^{2}\Omega \sim \implies \alpha \sim 1
+\end{equation*}
+\par This is the celebrated \emph{Shakura-Sunyaev $\alpha$-prescription}. Note how this is but a mere parametrization: We have simply dumped everything we don't know about turbulence in the $\alpha$ parameter and then adjusted the remaining quantities on the basis of dimensional analysis only.
+\subsection{The structure of the disk}
+Let's assume the accretion disk to be geometrically thin (along the vertical axis) with cylindrical symmetry. All calculations will be carried out with Newtonian mechanics. It is necessary to take into account GR corrections only in the region $r<3R_{s}$, where no stable circular orbits are possible\footnote{You can see \cite{carroll} §5, for more details.}.
+\par We can define the surface density of the disk $\Sigma(r)$ as 
+\begin{equation}
+    \Sigma(r) = -\int_{-\infty}^{+\infty} \rho(z,r)\,\text{d}z \approx 2H\rho_{0}
+\end{equation}
+with $\rho_{0}$ the density on the plane of the disk\footnote{We have plugged in the $\rho(z)$ behavior we have hand-wavingly pulled out of the cylinder in the last section.}.
+\par We shall now consider the conservation equations 
+\begin{align}
+    \partial_{t}(r\Sigma) + \partial_{r}(r\Sigma v_{r}) &= 0\\
+    v_{\phi}^{2} &= \frac{GM}{r}
+    \label{eq:cons_sh-su}
+\end{align}
+while the equation of conservation of angular momentum will be 
+\begin{equation}
+    \partial_{t}(v_{\phi}\rho) + v_{r}\partial_{r}(\rho v_{\phi}) = F_{\phi}
+\end{equation}
+with $F_{\phi}$ the viscous "forces". Integrating over the vertical direction yields 
+\begin{equation}
+    \partial_{t}(r\Sigma\Omega r^{2}) + \partial_{r}(r\Sigma v_{r}\Omega r^{2}) = \partial_{r}(S r^{3}\partial_{r}\Omega)
+\end{equation}
+with 
+\begin{equation*}
+    S = \int_{-\infty}^{+\infty} \rho\nu\,\text{d}z \approx \Sigma \nu
+\end{equation*}
+if we assume $\nu$ weakly dependent on $z$. Under the assumption of a \emph{isothermal disk} $\alpha \neq \alpha(z),\,\Omega \propto r^{-3/2}$ we obtain the \emph{thin disk equation}
+\begin{equation}
+    r\partial_{t}\Sigma = 3\partial_{r}\left(r^{1/2}\partial_{r}\left(\nu \Sigma r^{1/2}\right)\right)
+    \label{eq:thin_disk}
+\end{equation}
+This is the basic equation governing the time evolution of surface density in a Keplerian disc. In general, it is a nonlinear diffusion equation for $\Sigma$, because $\nu$ may be a function of local variables in the disc.
+\par Given a solution of this equation, we can backtrack and find a solution for $v_{r}$, which will simply be 
+\begin{equation*}
+    v_{r} = -\frac{3}{\Sigma r^{1/2}}\partial_{r}\left(\nu\Sigma r^{1/2}\right)
+\end{equation*}
+Clearly, to make further progress we need some prescription for $\nu$.
+\par Let's see what happens if we allow the disk to settle into a steady-state structure and set all $\partial_{t} = 0$ in the conservation equations. From here it's clear that the mass transfer rate $\dot{M}$ is given by
+\begin{equation*}
+    \dot{M} = -2\pi\Sigma |v_{r}| r \quad (v_{r}<0)
+\end{equation*}
+which is also equal to 
+\begin{equation*}
+    \dot{M} = 6\pi r^{1/2} \partial_{r}\left(\nu\Sigma r^{1/2}\right)
+\end{equation*}
+by means of substituting the backtracked value of $v_{r}$ we've written down a few lines above. From the conservation of angular momentum we get 
+\begin{equation*}
+    -\nu\Sigma r^{3}\partial_{r}\Omega = -|v_{r}|\Sigma\Omega r^{3} + C
+\end{equation*}
+with $C$ an arbitrary constant of integration, related to the rate at which angular momentum flows into the compact star, or equivalently, the couple exerted by the star on the inner edge of the disc.
+\par If the system is stationary, all the properties of the disk are determined by the (constant) accretion rate alone 
+\begin{equation}
+    \nu\Sigma = \frac{1}{3\pi}\dot{M}\left(1-\beta\left(\frac{R_{*}}{r}\right)^{1/2}\right)
+    \label{eq:stationary_viscosity}
+\end{equation}
+where $\beta$ is an integration constant and $R_{*}$ is the inner radius of the disk. From here we deduce that the flux of angular momentum going in the accretor is 
+\begin{equation*}
+    F_{J} = -\dot{M}\beta\Omega_{Kepl}(R_{*})R_{*}^{2}
+\end{equation*}
+\par For example, let us suppose that the disc extends all the way down to the surface $r = R_{*}$ of the central star\footnote{As we already mentioned, this can't be the case if the central object is a BH. The minimum radius permitted in that case is that of the ISCO, the Innermost Stable Circular Orbit predicted by Schwarzschild.}. Hence, there must exist a radius $\tilde{R} > R_{*}$ where $\partial_{r}\Omega = 0$. In a realistic situation, the star must rotate more slowly than break-up speed at its equator
+\begin{equation*}
+    \Omega(R_{*}) < \Omega_{Kepl}(R_{*})
+\end{equation*}
+this implies $\beta = 1$. This means there will be an inward flux of angular momentum; accretion is therefore going to speed up the rotation of the central object. This is in particular the case of objects commonly known as "recycled pulsars".
+\par These objects are thought to be related to low-mass X-ray binary systems. It is speculated that X-rays emissions in these systems are generated by the accretion disk of a neutron star. The transfer of angular momentum from this accretion event can increase the rotation rate of the pulsar to hundreds of times per second, as is observed in millisecond pulsars.
+\par This category of object is particularly relevant because of their extreme regularity: They have very short periods (typically of the order of the millisecond) with very low rate of change in time\footnote{The interested reader can refer, for example, to \cite{1991ApJ...366..501D}.}. As such, it has become customary to use such pulsars to "build" a PTA (\emph{Pulsar Timing Array}\footnote{basically, a set of galactic pulsars that is monitored and analyzed to search for correlated signatures in the pulse arrival times on Earth.}) in order to detect correlations of the pulses of the pulsars due to the transit of a gravitational wave.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/gwb.svg.png}
+    \caption{Plot of the correlations observed by NANOGrav (2023) vs angular separation between pulsars, compared with a theoretical model (dashed purple) and if there were no gravitational wave background (solid green).}
+    \label{fig:gwb}
+\end{figure}
+\par This is particularly true when the wavelength of the GW is comparable with the relative distance between the pulsars.
+\par This way, it has been possible to gather evidence of a stochastic background of gravitational waves, as depicted in Fig.\ref{fig:gwb} and predicted by Hellings and Downs \cite{1983ApJ...265L..39H}.
