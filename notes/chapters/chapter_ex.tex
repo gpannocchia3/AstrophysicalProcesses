@@ -247,4 +247,64 @@ The temperature at each point in a static nebula is then determined by imposing 
     G = L_{R}+L_{FF}+L_{C}
 \end{equation*}
 \subsection{Recombination Lines}
-Coming soon.
+Why is it important talking about the lines originating from the occurence of recombination processes?
+\par The radiation emitted by each element of volume in a gaseous nebula depends upon the abundances of the elements, determined by the previous evolutionary history of
+the gas, and on the local ionization, density, and temperature, determined by the radiation ﬁeld and the abundances.
+\par Hence, it would be safe to assume that we'd have plenty to gain from studying these lines. Once again, we're going to turn our attention to a nebula whose composition is Hydrogen-dominated.
+\par The equation of statistical equilibrium for any level $nL$ may be written as 
+\begin{equation}
+    n_{p}n_{e}\alpha_{nL}(T)+\sum_{n'>n}^{\infty}\sum_{L'}n_{n'L'}A_{n'L',nL} = n_{nL}\sum_{n''=1}^{n-1}\sum_{L''}A_{nL,n''L''}
+    \label{eq:stat_eq}
+\end{equation}
+Note that, in general, selection rules impose $A_{n'L',n''L''}\neq 0$ only if $L'=L''\pm 1$. 
+\par It is usually convenient to express the population in terms  of the dimensionless factors $b_{nl}$ to account for departure from LTE at a given temperature, electron density and proton density. In LTE Saha's equation must hold 
+\begin{equation*}
+    \frac{n_{p}n_{e}}{n_{1s}} = \left(\frac{2\pi m kT}{h^{2}}\right)^{3/2}\exp(-h\nu_{0}/kT)
+\end{equation*}
+as well as the Boltzmann equation for occupation numbers 
+\begin{equation*}
+    \frac{n_{nL}}{n_{1s}} = (2L+1)\exp(-\chi_{n}/kT)
+\end{equation*}
+where the factor $2L+1$ is the ratio of statistical weighs of the $nL$ and $1s$ levels. Then the population in the $nL$ level may be written 
+\begin{equation*}
+    n_{nL} = b_{nL}(2L+1)\left(\frac{h^{2}}{2\pi m kT}\right)^{3/2}\exp(X_{n}/kT)n_{p}n_{e}
+\end{equation*}
+where $b_{nl}=1$ in LTE and 
+\begin{equation*}
+    X_{n} = h\nu_{0}-\chi_{n} = \frac{h\nu_{0}}{n^{2}}
+\end{equation*}
+is the ionization potential of the $nL$ level. We can plug this expression back into the equation for statistical equilibrium (\ref{eq:stat_eq}) and find out that the $b_{nL}$ coefficients are \emph{not} a function of the density as long as recombination and downward—radiative transitions are the only relevant processes
+\begin{align*}
+    \alpha_{nL}&\frac{1}{2L+1}\left(\frac{2\pi mkT}{h^{2}}\right)^{3/2}\exp(-X_{n}/kT)\\
+    &+ \sum_{n'>n}^{\infty}\sum_{L''}b_{n'L'}A_{n'L', nL}\left(\frac{2L'+1}{2L+1}\right)\exp\left[(X_{n'}-X_{n})/kT\right]\\
+    &= b_{nL}\sum_{n''= 1}^{n-1}\sum_{L''}A_{nL,n''L''}
+\end{align*}
+Note that the equations above can be solved by working downward in $n$, for if the $b_{nL}$ are known for all $n\geq n_{k}$, then the $n$ equations with given $L$ each contain a single unknown $b_{nL}$. Solution is thus immediate.
+\par It's convenient to express the solutions as a \emph{cascade matrix} $C(nL,n'L')$ which is the probability to go from level $nL$ to $nL'$ regardless of the route that is taken\footnote{In a sense, it is a marginalized probability over the trajectories in the $nL$ space.}. Starting from the probability matrix $P(nL, n'L')$
+\begin{equation*}
+    P_{nL,n'L'} = \frac{A_{nL,n'L'}}{\sum_{n''=1}^{n-1}\sum_{L''}A_{nL, n''L''}}
+\end{equation*}
+which is zero unless $L' = L\pm 1$ (recall the usual selection rules from the Wigner-Eckart's theorem).
+\par For example, if $n'=n-1$, the cascade matrix has the form
+\begin{equation*}
+    C_{nL, n-1L'} = P_{nL,n-1L'}
+\end{equation*}
+and so on, so that if we define 
+\begin{equation*}
+    C_{nL, nL''} = \delta_{LL''}
+\end{equation*}
+then in general the cascade matrix has the form 
+\begin{equation*}
+    C_{nL, n'L'} = \sum_{n''>n'}^{n}\sum_{L'' = L'\pm 1}C_{nL, n''L''}P_{n''L'', n'L'}
+\end{equation*}
+Once the populations $n_{nL}$ have been found, we can calculate the emssion coefficient in each line 
+\begin{equation*}
+    j_{nn'} = \frac{h\nu_{nn'}}{4\pi}\sum_{L=0}^{n-1}\sum_{L'=L\pm 1}n_{nL}A_{nL,n'L'}
+\end{equation*}
+All the machination we've built until now works pretty well as an approximation for the diffuse spectrum in optically thin nebulae, assuming absorption events are absent.
+\par Unfortunately, for pure Hydrogen all of this works rather poorly. $\text{H}$-nebulae tends to be optically thick, especially in the Lyman lines\footnote{the Lyman series is a Hydrogen spectral series of transitions and resulting UV emission lines as an electron goes from $n\geq 2$ to $n = 1$.}. For those, the equation for the central line-absorption cross section is 
+\begin{equation*}
+    a_{0}(\text{Ly}_{n}) = \frac{3\lambda_{n1}^{3}}{8\pi}\left(\frac{m_{\text{H}}}{2\pi kT}\right)^{1/2}A_{nP,1s}
+\end{equation*}
+where $\lambda_{n1}$ is the wavelength of the line. At a typical temperature for a stellar atmosphere $T\sim 10^{4}\,\text{K}$, and the optical depth in the Lyman-$\alpha$ ($\text{Ly}_{\alpha}$) is about $10^{4}$ times the optical depth at the Lyman limit $\nu = \nu_{0}$ of the ionizing continuum. Thus the optical depth will be of order $\tau \sim 1-10^{4}$ and the nebula will be much likely optically thick.
+\par The resulting spectrum will be that of a continuum (due to Bremsstrahlung) superposed with some emission lines.
