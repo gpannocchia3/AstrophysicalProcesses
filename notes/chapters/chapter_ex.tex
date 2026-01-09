@@ -112,4 +112,139 @@ Clearly, we should try to understand how the new ionization stages enter the pic
 \par For once, photons coming from Helium recombinations can ionize Hydrogen, but the same can't be said if we switch the roles. If then we start including also heavier elements (metals) it gets even crazier. But, alas, their presence makes pressure gradients even more relevant.
 \par One concluding note, of these regions we do see lines in emission and not a continuum as expected because LTE doesn't hold. Collisions aren't frequent enough to allow LTE to settle and thus energy levels with long lifetimes become observable due to the lack of de-exciting collisions.
 \section{N-LTE radiation transfer}
+As we may have guessed from last section. the temperature in a static nebula is fixed by th e equilibrium between photoionization-heating and cooling by recombination and radiation.
+\input{chapters/photionization.tex}
+Consider for example a photon of energy $h\nu$ bumping on a neutral Hydrogen atom as shown in Fig.\ref{fig:photoionization}.The photoelectron that will be thus produced will have an energy 
+\begin{equation*}
+    \frac{1}{2}mu^{2} = h(\nu-\nu_{0})
+\end{equation*}
+where $h\nu_{0}$ is the ionization threshold potential. For these electrons we expect to see some distribution for their velocity, not necessarily thermal (\ref{maxwell}). Only a part of the electrons will be recombining, namely those with low energy; high-energy electrons will instead collide with ions, exciting them. In either of those scenarios, the net result is that for each captured electron $mu^{2}/2$ disappears from the total energy balance.
+\par It's simplest to begin by considering what happens in a pure Hydrogen nebula. At any given point within the nebula, the photoionization rate is
+\begin{equation}
+    G(\text{H}) = \int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu}}{h\nu} n(\text{H}^{0})h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu
+    \label{eq:photoionization_rate}
+\end{equation}
+This gives pretty much the expected value of the energy over the whole photon distribution. If we assume photoionization-equilibrium, we can use (\ref{eq:ionization_eq}) to eliminate $n(\text{H}^{0})$
+\begin{align*}
+    G(\text{H}) &= n_{e}n_{p}\alpha(\text{H}^{0}, T)\frac{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu}}{h\nu} h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu}{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu}}{h\nu}a_{\nu}\,\text{d}\nu}\\
+    &= n_{e}n_{p}\alpha(\text{H}^{0}, T)\frac{3}{2}kT_{i}
+\end{align*}
+From this equation we can see that the mean energy of a newly created photoelectron depends on the form of the ionizing radiation ﬁeld, but not on the absolute strength of the radiation. The quantity $3kT_{i}/2$ represents the initial temperature of the photo-generated electron.
+\par If we assume blackbody behavior $J_{\nu}\approx B_{\nu}(T_{*})$ with temperature $T_{*}$, it's easy to show that $T_{i}\approx T_{*}$ as long as $kT_{*}<h\nu_{0}$.
+\par We now turn to find a description for the kinetic energy that is lost during recombination processes. It can be given the following form 
+\begin{equation}
+    L_{R} = n_{e}n_{p}kT\beta(\text{H}^{0}, T)
+    \label{eq:recombination_loss}
+\end{equation}
+where 
+\begin{equation}
+    \beta(\text{H}^{0}, T) = \sum_{n = 1}^{\infty}\beta_{n}(\text{H}^{0}, T) = \sum_{n=1}^{\infty}\sum_{L=0}^{n-1}\beta_{nL}(\text{H}^{0}, T)
+    \label{eq:k_recombination_coeff}
+\end{equation}
+with
+\begin{equation}
+    \beta_{nL}(\text{H}^{0}, T) = \frac{1}{kT}\int_{0}^{\infty} u\sigma_{nl}(\text{H}^{0}, T)\frac{1}{2}mu^{2}f(u)\,\text{d}u
+    \label{eq:averaged_kinetic_recombination_coeff}
+\end{equation}
+The left-hand side of (\ref{eq:averaged_kinetic_recombination_coeff}) is thus effectively a kinetic energy averaged recombination coefﬁcient. Note that since the recombination cross sections are approximately proportional to $u^{-2}$, the electrons of lower kinetic energy are preferentially captured, and the mean energy of the captured electrons is somewhat less than $3kT/2$.
+\par If radiation losses are negligible, then the thermal equilibrium equation would be 
+\begin{equation*}
+    G(\text{H}) = L_{R}(\text{H})
+\end{equation*}
+and the solution for the nebular temperature would give $T > T_{i}$ because of the “heating" due to the preferential capture of the slower electrons.
+\par Clearly, in presence of radiative losses, the nebula is going to further cool down. As we've already done in the last section, we're going to split $J_{\nu}$ into two contributions, the diffuse radiation and the stellar radiation modiﬁed by absorption. Then, by means of the \emph{on the spot} approximation, we can neglect contributions to the balance coming from $n=1$ and rewrite the luminosity
+\begin{equation*}
+    L_{R} = n_{p}n_{e}\beta_{B}(\text{H}, T)kT
+\end{equation*}
+with 
+\begin{equation*}
+    \beta_{B}(\text{H}, T) = \sum_{n=2}^{\infty}\beta_{n}
+\end{equation*}
+\par The photoionization factor becomes 
+\begin{align*}
+    G(\text{H})_{OTS} &= n(\text{H}^{0})\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu, S}}{h\nu} h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu\\
+    &= n_{e}n_{p}\alpha_{B}(\text{H}^{0}, T)\frac{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu, S}}{h\nu} h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu}{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu, S}}{h\nu}a_{\nu}\,\text{d}\nu}\
+\end{align*}
+For high-energy electrons, it's given another cooling channel, which does not involve recombinations and in most circumstances is far more important. A minor contributor to the cooling rate, which nevertheless is important, is free—free (FF) radiation or Bremsstrahlung, in which a continuous spectrum is emitted.
+\par The luminosity by Bremsstrahlung is given by 
+\begin{align}
+    &= \frac{2^{5}\pi e^{6}Z^{2}}{3^{3/2}hmc^{3}}\left(\frac{2\pi kT}{m}\right)^{1/2}g_{ff}n_{e}n_{+}
+    L_{FF}(Z) &= 4\pi j_{ff}\\
+    \label{eq:Bremsstrahlung}
+\end{align}
+where $n_{+}$ is the number density of the ions. The numerical factor $g_{ff}$ goes by the name of \emph{Gaunt factor} for free-free emission; it is a slowly varying function of $n_{e}$ and $T$. Generally for nebular conditions is in the range $1.0<g_{ff}<1.5$, and usually an average $g_{ff}\approx 1.3$ is adopted.
+\subsection{Loss by Collisions}
+A far more important source of radiative cooling is collisional excitation of heavier species. These ions make
+a signiﬁcant contribution in spite of their low abundance because they have energy levels with excitation potentials of the order of $kT$, but all the levels of Hydrogen and Helium have much higer excitation potentials, therefore rendering them less important in this regard.
+\par Let's therefore examine how an ion is excited to a higher level by electron collisions with ions in a lower level. The cross section for this reaction is 
+\begin{equation*}
+    \sigma_{12}(u) = \frac{\pi\hbar^{2}}{m^{2}u^{2}}\frac{\Omega(1,2)}{\omega_{1}} \;\text{for}\;\frac{1}{2}mu^{2} > \chi
+\end{equation*}
+where $\Omega(1,2)$ is the energy-specific collision strength and $\omega_{1}$ is the statistical weight of the electron. Note that the cross section for excitation is zero below the threshold $\chi = h\nu_{21}$.
+\par There is a relation between the cross section for de-excitation and the cross section for excitation coming from the principle of detailed balance\footnote{Check Chapter \ref{ch:2} for the definition.}
+\begin{equation*}
+    \omega_{1}u_{1}^{2}\sigma_{12}(u_{1}) = \omega_{2}u_{2}^{2}\sigma_{21}(u_{2})
+\end{equation*}
+where $u_{1}$ and $u_{2}$ are related by the conservation of energy
+\begin{equation*}
+    \frac{1}{2}mu_{1}^{2} = \frac{1}{2}mu_{2}^{2}+\chi
+\end{equation*}
+The collisional de-excitation cross section has, not surprisingly, the same functional form as that of the excitation cross section (apart from a permutation $1\leftrightarrow 2$). The total collisional de-excitation rate per unit volume per unit time is then 
+\begin{align}
+    n_{e}n_{2}q_{21} &= n_{e}n_{2}\int_{0}^{ma\infty} u\sigma_{21}f(u)\,\text{d}u \\
+    &= n_{e}n_{2}\left(\frac{2\pi}{kT}\right)^{1/2}\frac{\hbar^{2}}{m^{3/2}}\frac{\Gamma(1,2)}{\omega_{2}}\\
+    &= n_{e}n_{2}\frac{8.629\cdot 10^{-6}}{T^{1/2}}\frac{\Gamma(1,2)}{\omega_{2}}
+    \label{eq:total_de-ex}
+\end{align}
+where $\Gamma(1,2)$ is the velocity-averaged collision strength
+\begin{equation*}
+    \Gamma(1,2) = \int_{0}^{\infty} \Omega(1,2; E)\exp(-E/kT)\, \text{d}\left(\frac{E}{kT}\right)
+\end{equation*}
+with $E = mu_{2}^{2}/2$. These coefficients must be calculated quantum-mechanically. Similarly, the collisional excitation rate is $n_{e}n_{2}q_{12}$, where 
+\begin{equation*}
+    q_{12} = \frac{8.629\cdot 10^{-6}\Gamma(1,2)}{T^{1/2}\omega_{1}}\exp(-\chi/kT)
+\end{equation*}
+\par Although this wasn't discussed in class, I shall point out that, as shown by \cite{1977MNRAS.179..433B} §3.5, there exists a simple relation for the collision strengths between a term consisting of a single level and a term consisting of various levels, namely
+\begin{equation}
+    \Gamma(SLJ, S'L'J') = \frac{(2J'+1)}{(2S'+1)(2L'+1)}\Gamma(SL, S'L')
+    \label{eq:collision_strength_rel}
+\end{equation}
+if either $S = 0$ or $L = 0$. The factors $(2J' + 1)$ and $(2L' + 1) (2L' + 1)$ are the statistical weights of the level and of the term, respectively.
+\par For very low electron densities, every collisional excitation is followed by the emission of a photon, thus the cooling rate is simply 
+\begin{equation*}
+    L_{C} = n_{e}n_{1}q_{12}h\nu_{21}
+\end{equation*}
+For general electron densities we can write 
+\begin{align*}
+    n_{e}n_{1}q_{12} &= n_{e}n_{2}q_{21}+n_{2}A_{21}\\
+    \implies \frac{n_{2}}{n_{1}} &= \frac{n_{e}q_{12}}{A_{21}}\left[1+\frac{n_{e}q_{21}}{A_{21}}\right]^{-1}
+\end{align*}
+so that the total cooling rate becomes 
+\begin{equation}
+    L_{C} = n_{2}A_{21}h\nu_{21} = n_{e}n_{1}q_{21}h\nu_{21}\left[1+\frac{n_{e}q_{21}}{A_{21}}\right]^{-1}
+    \label{eq:total_collision_luminosity}
+\end{equation}
+Note that in the limit $n_{e}\to 0$ we recover the old expression we've written earlier, while in the $n_{e}\to\infty$ limit
+\begin{equation*}
+    L_{C} = n_{1}\frac{\omega_{2}}{\omega_{1}}\exp(-\chi/kT)A_{21}h\nu_{21}
+\end{equation*}
+we retrieve the thermodynamic-equilibrium cooling rate.
+\par Some ions have many more levels than just two; for those, our simple formalism doesn't work very well. What we can do, however, is fine-tuning it so to include the fact that collisional and radiative transitions can occur between any of the levels, and excitation and deexcitation cross sections and collision strengths exist between all pairs of the levels.
+\par The equilibrium equations for each of the levels $i$ becomes 
+\begin{equation*}
+    \sum_{j\neq i} n_{j}n_{e}q_{ij} + \sum_{j>i}n_{j}A_{ji} = \sum_{j\neq i}n_{i}n_{e}q_{ij} + \sum_{j<i}n_{i}A_{ij}
+\end{equation*}
+This, together with the total number of ions 
+\begin{equation*}
+    \sum_{j}n_{j} = n
+\end{equation*}
+can be solved for the relative population in each level and then for the cooling rate
+\begin{equation*}
+    L_{C} = \sum_{i}n_{i}\sum_{j<i}A_{ij}h\nu_{ij}
+\end{equation*}
+The temperature at each point in a static nebula is then determined by imposing the equilibrium between the heating and cooling rates we've found 
+\begin{equation*}
+    G = L_{R}+L_{FF}+L_{C}
+\end{equation*}
+\subsection{Recombination Lines}
 Coming soon.
