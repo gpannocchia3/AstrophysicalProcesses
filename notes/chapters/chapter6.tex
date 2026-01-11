@@ -3,8 +3,8 @@ Everything we've seen in the last few chapters will come into play here.
 \par In this chapter we're considering the two main possibilities for accelerated plasma in presence of a gravitational field: It's either they receive a kick and then fall back on the surface (\emph{accretion}) or just make it out safely from the gravitational field (\emph{stellar winds}).
 \par In the next sections, we'll try to give a punctual and precise description so to not underplay the important physical processes lying underneath.
 \section{Stellar winds}
-Last century it had become clearer and clearer that an outgoing corpuscolar flow from the Sun was needed to explain certain phenomena, like cometary tail's disruptions. 
-\par Let us approximate the Sun (or a star, in general) as an autogravitating sphere of mass $M$ with spherical symmetry, ignoring whatever drift may be caused by magnetic fields or rotation.
+Starting from last century it had become clearer and clearer that an outgoing, corpuscolar flow from the Sun was needed to explain certain phenomena, like cometary tail's disruptions and Earth's magnetic storms. 
+\par In order to start approaching this subject, let us approximate the Sun (or a star, in general) as an autogravitating sphere of mass $M$ with spherical symmetry, ignoring whatever drift may be caused by magnetic fields or rotation.
 \par We're going to neglect the self-gravitating potential of the stellar corona hovering around the central star.
 \par Following the original article by Parker \cite{1958ApJ...128..664P} we may first discuss whether the stellar corona can be in hydrostatic equilibrium at all distances. The easy answer is that it (probably) cannot.
 \begin{figure}[h!]
@@ -13,7 +13,7 @@ Last century it had become clearer and clearer that an outgoing corpuscolar flow
     \caption{Pressure profile under the assumption of hydrostatic equilibrium.}
     \label{fig:parker_p_hyeq}
 \end{figure}
-If we were to do the full computation, we'd find a pressure profile like the one in Fig.\ref{fig:parker_p_hyeq}, which presents asymptotic values for both cases considered (neutral and ionized hydrogen). Such asymptotic pressure is much larger than any other source of pressure we may expect finding out there. The pressure exerted by the ISM is about five order or magnitudes less than what is needed to mantain hydrostatic equilirbium at all distances.
+If we were to do the full computation, we'd find a pressure profile like the one in Fig.\ref{fig:parker_p_hyeq}, which presents asymptotic values for both cases considered (neutral and ionized hydrogen). Such asymptotic pressure is much larger than any other source of pressure we may expect finding out there. The pressure exerted by the ISM, the only sensible and suitable candidate, is about five order or magnitudes less than what is needed to mantain hydrostatic equilibrium at all distances.
 \par Stellar coronas must then be expanding. Whether inwards or outwards that remains to be seen.
 \par Since it is not possible to find a stable solution for the coronal gas to be in hydrostatic equilibrium at large distances from the central star, we now turn our eye towards a \emph{dynamical model} able to describe the process.
 \par The starting point are as always Euler's equation and the continuity equation, both expressed under the assumption of spherical symmetry and \emph{stationarity}, so that we can put all time derivatives to zero. Eq.\ref{eq:incompressible_ns} may be then written as
@@ -125,7 +125,7 @@ so that all solutions of (\ref{eq:bhl}) can be classified by their behaviour at 
 \par An exact description yields six families of solutions, but such precision is beyond the intentions of these notes. The interested reader can refer to \cite{Frank_King_Raine_2002} for a more detailed discussion.
 \par Excluding "unwanted" solutions leaves us with only solutions of the form 
 \begin{equation*}
-    v^{2}(r_{s} = c_{s}^{2}(r_{s})) \quad v^{2}\to 0 \;\text{as}\; r\to\infty (\quad v^{2} < c_{s}^{2},\; r > r_{s};\;v^{2} > c_{s}^{2},\;r < r_{s})
+    v^{2}(r_{s}) = c_{s}^{2}(r_{s}) \quad v^{2}\to 0 \;\text{as}\; r\to\infty \quad  (v^{2} < c_{s}^{2},\; r > r_{s};\;v^{2} > c_{s}^{2},\;r < r_{s})
 \end{equation*}
 which allows us to integrate directly Euler's equation and evaluate some nice quantities which, although fairly interesting, we'll skip right away. I'll just point out that such solution allows us in principle to infer that accretion from the interstellar medium is unlikely to be an observable phenomenon.
 \par It should be pretty obvious that, as the gas infalls into the star, it builds up energy. This process is eventually brought to a stop if the star has a \emph{hard boundary} at, say, $r = \bar{r}$. The sheer variation in gravitational potential is (assuming gas starting from infinity) $\Delta\phi = GM/r$.
@@ -153,11 +153,11 @@ Since the sound speed of a perfect gas can be written as $c_{s} = (\gamma RT/\mu
 the variation of optical depth in respect to the rate of accretion will be positive $\text{d}\tau/\text{d}\dot{M} > 0$, thus there must be a critical accretion rate ($\dot{M}_{c}$) beyond which photons can't escape, making the process of accretion always adiabatic.
 \par Consider a medium with opacity $\kappa_{\nu}$ and flux $F_{\nu}$. The force exerted by photons will approximately be proportional to $\kappa_{\nu}F_{\nu}/c$, and will be the main contribution opposing to accretion. From here we can define an "equilibrium" flux for which gravity is balanced by photon pressure alone
 \begin{equation*}
-    F_{\nu, eq} = \frac{c}{\kappa_{\nu}}\frac{GM}{r^{2}}
+    F_{\nu, \,eq} = \frac{c}{\kappa_{\nu}}\frac{GM}{r^{2}}
 \end{equation*}
 Hence, under the assumption of spherical symmetry, we can define \emph{Eddington's critical luminosity} as 
 \begin{equation}
-    L_{E} = 4\pi r^{2}F_{\nu, eq} = \frac{4\pi c GM}{\kappa_{\nu}}
+    L_{E} = 4\pi r^{2}F_{\nu, \,eq} = \frac{4\pi c GM}{\kappa_{\nu}}
     \label{eq:eddingon_lum}
 \end{equation}
 Eddington's luminosity plays a crucial role in accretion processes, for it defines a limiting luminosity beyond which accretion can't take place.
