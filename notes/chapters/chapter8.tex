@@ -226,4 +226,177 @@ system.
 \par The case of asymmetric SNs is more complicated and usually characterized by kicks of order $10^{2}\,\text{km}/\text{s}$. More precisely, the natal
 kick distribution is typically modelled by a Maxwellian probability distribution with velocity dispersion $\sigma_{v} = 190\,\text{km}/\text{s}$, even though, a bimodal distribution may be somewhat more appropriate, especially when describing neutron stars' kicks. For SBHs the situation is less clear and the problem of binary disruption due to SN kicks might be less severe. In this case, there is no hard surface to bounce onto and, as a consequence, the kicks might be smaller, typically of order of $50\,\text{km}/\text{s}$, which is, however, of the order of the the escape velocity for the most of the globular clusters in the Milky Way.
 \section{Common Envelope}
+Giant stars are composed of a core and an envelope, and a good decomposition may be $M_{\text{gs}} = M_{\text{core}} + M_{\text{env}}$. In the core, Hydrogen has been fully converted into Helium and the nuclear reactions (momentarily) stop, causing a core contraction under the action of gravity. The envelope, on the other hand, is mainly made out of Hydrogen. It is then safe to assume, and treat, the two objects as well separated objects.
+\par When the giant star overﬁlls its Roche lobe, mass transfer is allowed and, depending on the mass of the two stars, the orbit may shrink causing even more material to overﬂow the Roche lobe. This eventually leads to the runaway process of dynamically unstable mass transfer. It is therefore possible that the
+mass transfer rate from the mass-losing star is so high that the SBH cannot accommodate all the accreting matter. In this situation, the envelope continues to expand engulﬁng the companion
+SBH, leading to the formation of a \emph{common envelope}. The common envelope can extract energy from the orbit of the binary system, formed by the SBH and
+the core of the massive star, via dynamical friction, eventually unbinding itself from the system.
+\par We can calculate the initital binding energy of the stellar envelope 
+\begin{equation*}
+    E_{\text{env},\,i} = -\frac{GM_{\text{gs}}M_{\text{env}}}{\lambda R_{L}}
+\end{equation*}
+where $R_{L}$ is the typical Roche lobe's radius, while $\lambda$ is the concentration parameter that depends on the desinty profile of the envelope. Usually, the density of the envelope may be well-described as a power law $\rho(r) \propto r^{-\gamma},\,\gamma > 0$. If we assume that, at the end of the common envelope stage, the envelope unbinds
+formally reaching infinity with zero velocity
+\begin{equation*}
+    \Delta E_{\text{env}} = -E_{\text{env},\,i} = \frac{GM_{\text{gs}}M_{\text{env}}}{\lambda R_{L}}
+\end{equation*}
+The more concentrated the envelope is the more
+binding energy is possible to extract from it. As a consequence, the separation between the SBH and the core of the giant star decreases. By computing the
+variation of the binary orbital energy
+\begin{equation}
+    \Delta E_{\text{orb}} = \alpha_{ce}\left[-\frac{GM_{\text{core}}M_{\text{BH}}}{2a_{f}}-\left(-\frac{G(M_{\text{core}}+M_{\text{env}})M_{\text{BH}}}{2a_{i}}\right)\right]
+    \label{eq:boe_var}
+\end{equation}
+where $\alpha_{ce}$ is the common envelope parameter describing the efficiency of the expenditure of orbital energy upon expulsion of the envelope.
+\par Since conservation of energy implies 
+\begin{equation*}
+    \Delta E_{\text{orb}}+\Delta E_{\text{env}} = 0
+\end{equation*}
+if we use the core-envelope decomposition, we can calculate the ratio between the initial and final semi-major axes of the orbit 
+\begin{equation}
+    \frac{a_{f}}{a_{i}} = \frac{M_{\text{core}}}{M_{\text{gs}}}\left(1+\frac{2}{\lambda\alpha_{ce}}\frac{a_{i}}{R_{L}}\frac{M_{\text{env}}}{M_{\text{BH}}}\right)^{-1} = \frac{M_{\text{core}}}{M_{\text{gs}}}\left(\frac{M_{\text{BH}}}{M_{\text{BH}} + \frac{2M_{\text{env}}}{\lambda\alpha_{ce}}\frac{a_{i}}{R_{L}}}\right)
+    \label{eq:sma_ratio}
+\end{equation}
+Usually, despite the often overbearing uncertainties, it is possible to estimate the product $\lambda\alpha_{ce}$ by modelling speciﬁc systems or well-deﬁned samples of objects corrected for observational selection eﬀects. In general, the envelope is quite concentrated and typical values are of the order $\lambda\alpha_{ce}\ll 1$ and $M_{\text{core}}/M_{\text{gs}} \approx 0.2-0.3$. Thus, the order of magnitude approximation of (\ref{eq:sma_ratio}) is 
+\begin{equation*}
+    \frac{a_{f}}{a_{i}} \sim 10^{-3}-10^{-2}
+\end{equation*}
+\par This process takes about $10^{2}-10^{3}$ years and upon completion the system has shrunk to $a_{f}\approx R_{\odot}$, close enough to merge in a Hubble time due to GW emission.
+\par What we've described so far works particularly well to predict what happens when all other gravitational sources are absent. Assume that the average stellar mass density in the Universe is of order $\rho_{*} \approx 3\cdot10^{8}\,M_{\odot}/\text{Mpc}^{3}$; from Salpeter's initial mass function (IMF) we know that $n\sim M^{-2.35}$. This implies that roughly 0.3\% of the total stars in the Universe are over $30M_{\odot}$, thus leaving a SBH as relic. Since 70\% of the massive stars are observed in binaries, and we need two stars to form a binary, we estimate about $3\cdot 10^{5}$ massive binary stars per cubic megaparsec. We can make the extreme assumption that those binaries are produced in
+a continuous, steady state star formation process over about 10 Gyr, thus resulting in a formation rate of $3\cdot 10^{-5}\,\text{yr}^{-1}\,\text{Mpc}^{-3}$; assuming that all those massive binaries give rise to SBHBs that merge in a short timescale, then we get a SBHB merger rate of $3\cdot 10^{4}\,\text{yr}^{-1}\,\text{Gpc}^{-3}$\footnote{Note that this doesn't take into account the binary systems that get disrupted by SN kicks, so the number of mergers will be rather lower. On top of that, we also assumed a constant star formation rate across cosmic time, although it's known that it peaks at about $z\approx 1.5$.}.
+\section{BH Binaries in Globular Clusters}
+Another channel to form SBHBs is via dynamical processes; this is closely related to the fact that most stars are observed to form in clusters and associations. However, the vast majority of the stars we observe today in the MW\footnote{Milky Way.} are ﬁeld stars and therefore do not belong to stellar associations\footnote{A "stellar association" is a group of more than $10^{3}$ stars, like globular clusters, young massive star clusters and
+open clusters.}
+\par In order to understand the dynamical formation scenario, it is therefore important to start from the physics of star cluster formation and
+evolution. Let's start with the basics.
+\subsection{Jeans' mass}
+Consider a cloud of gass. The virial theorem states that in order to achieve and maintain hydrostatic equilibrium the following relation must hold 
+\begin{equation}
+    -2\langle K\rangle = \langle U\rangle
+    \label{eq:virial_th}
+\end{equation}
+where brackets denote time-averaged quantities. From here it's clear that the condition for gravitational collapse is simply 
+\begin{equation*}
+    2\langle K\rangle < \langle |U|\rangle
+\end{equation*}
+Under the assumption of spherical symmetry, we can write the infinitesimal gravitational potential energy over a thin shell of mass $\text{d}m$
+\begin{equation*}
+    \text{d}U = -\frac{GM(r)\text{d}m}{r} = -GM(r)4\pi\rho r\text{d}r
+\end{equation*}
+If density is constant, then $M(r) = 4\pi\rho r^{3}/3$ and the mass of a globular molecular cloud of given radius $R$ is $M = 4\pi\rho R^{3}/3$. Integrating the potential energy yields 
+\begin{equation*}
+    U = -\frac{3}{5}\frac{GM^{2}}{R}
+\end{equation*}
+The total internal energy of the cloud is $K = 3NkT/2$. We can define the mean molecular weight as 
+\begin{equation*}
+    \mu = \frac{\langle m \rangle}{m_{H}}
+\end{equation*}
+so that $N = N/\mu m_{H}$. The condition for gravitational collapse can therefore be rewritten as 
+\begin{equation*}
+    \frac{3MkT}{\mu m_{H}} < \frac{3}{5}\frac{GM^{2}}{R}
+\end{equation*}
+Solving for $M$ and plugging back the expression for the radius of a spherical and constant distribution of matter, we obtain 
+\begin{align}
+    M > M_{J} &= \left[\frac{375}{4}\left(\frac{k}{Gm_{H}}\right)^{3}\frac{T^{3}}{\mu^{3}\rho}\right]^{1/2} \\
+    &\approx 3\cdot 10^{3}M_{\odot}\left[\frac{1}{\mu^{4}}\left(\frac{T}{100\,\text{K}}\right)^{3}\left(\frac{10^{3}\,\text{cm}^{-3}}{n}\right)\right]^{1/2}
+    \label{eq:jeans_mass}
+\end{align}
+where we've used $\rho = n\langle m \rangle = n\mu m_{H}$. If the mass of the cloud exceeds the Jeans' mass, the cloud will be unstable against gravitational collapse.
+\subsection{Free-fall timescale}
+Let's consider a spherical cloud with constant density. In presence of gravity alone, we can wrote 
+\begin{equation*}
+    (\dot{r})\ddot{r} = -\frac{GM}{r^{2}}(\dot{r})
+\end{equation*}
+which can be immediately integrated to yield 
+\begin{align*}
+    \frac{1}{2}\dot{r}^{2} &= \frac{GM}{r}+\text{const.}\\
+    &= \frac{GM}{r}-\frac{GM}{R}
+\end{align*}
+where we have set the initial conditions for $t=0$: $r=R$ and $\dot{r} = 0$.
+\par The free-fall timescale can be thus obtained by committing a mathematical atrocity, but I (and for extension, we) don't care 
+\begin{align*}
+    \tau_{ff} &= \int_{0}^{t_{ff}} \text{d}t = \int_{R}^{0}\frac{1}{\dot{r}}\,\text{d}r \\
+    &= \int_{0}^{R} \frac{\text{d}r}{\sqrt{2GM\left(\frac{1}{r}-\frac{1}{R}\right)}} = \frac{\pi}{2\sqrt{2}}\sqrt{\frac{R^{3}}{GM}}
+\end{align*}
+thus, if we use $R^{3}/GM = 3/4\pi G\rho$
+\begin{equation}
+    \tau_{ff} = \sqrt{\frac{3\pi}{32G\rho}} \approx 1.63\,\text{Myr}\cdot\left(\frac{10^{3}\,\text{cm}^{-3}}{\mu n}\right)^{1/2}
+    \label{eq:ff_timescale}
+\end{equation}
+It shouldn't surprise you that under this approximation, all points get to the center at the same time, and density \emph{at all points} increases at the same rate. This is clearly unphysical, but serves well as a tentative solution to understand what's going on in our system.
+\par Similarly, we can calculate the explosion time, or sound time, as 
+\begin{equation}
+    \tau_{\text{sound}} = \frac{R}{c_{s}} \approx 0.5\,\text{Myr}\,\left(\frac{R}{0.1\,\text{pc}}\right)\left(\frac{0.2\,\text{km}\,\text{s}^{-1}}{c_{s}}\right)
+    \label{eq:sound_time}
+\end{equation}
+If $\tau_{ff}>\tau_{\text{sound}}$ the system returns to a stable equilibrium as the pressure forces can overcome gravity. Conversely, for $\tau_{ff}<\tau_{\text{sound}}$ gravitational collapse takes place.
+\par We can define the Jeans' length as the distance over which (in spherical symmetry) is containted a Jeans' mass 
+\begin{equation*}
+    R = \lambda_{J} = c_{s}\sqrt{\frac{3\pi}{32G\rho}}
+\end{equation*}
+More precisely, if we were to involve relativistic corrections, the Jeans' length is 
+\begin{equation*}
+    \lambda_{J} =  c_{s}\sqrt{\frac{\pi}{G\rho}}
+\end{equation*}
+\subsection{Cloud fragmentation}
+The Jeans instability plays a very important role in star formation, because it is responsible for the fragmentation of the molecular cloud. We've seen that the Jeans' mass depends on the temperature and the density 
+\begin{equation*}
+    M_{J}\propto \left(\frac{T^{3}}{\rho}\right)^{1/2}
+\end{equation*}
+Suppose that the cloud is big and massive enough that potential energy overcomes internal energy and the cloud starts to collapse. During the collapse, $R$
+decreases and $T$ increases. The process can be either \emph{isothermal} or \emph{adiabatic}, depending on whether the gas can eﬃciently cool or not, which is ultimately
+related to the metallicity content of the gas.
+\par Whether a cloud can cool eﬃciently or not depends on its metallicity. This is because at typical temperatures ($T \approx 100\,\text{K}$), collisions in the gas cannot excite the atomic levels of Hydrogen and Helium ($T > 103\,\text{K}$ is needed). Heavier elements, however, have much smaller energy gaps between atomic states. So, also at low temperatures, collisions in the gas excite atomic/molecular levels that return to the ground state by emitting photons that can effectively escape, thus cooling the cloud. Such cooling is possible if the metallicity $Z > Z_{\text{crit}}$ with $10^{-4}\lesssim Z_{\text{crit}}/Z_{\odot}\lesssim 10^{-3}$.
+\subsubsection*{Adiabatic collapse}
+If the metallicity is below the critical threshold, the cloud cannot cool efficiently and the collapse is approximately adiabatic. So 
+\begin{equation}
+    pV^{\gamma} = \text{const.} \quad \text{or}\quad  p = K\rho^{\gamma}
+    \label{eq:adiabatic_relation}
+\end{equation}
+with $\gamma$ the adiabatic index of the gas and $K$ a constant. Using the ideal gas EoS we find a relation between temperature and density
+\begin{equation*}
+    T \propto \rho^{-1}
+\end{equation*}
+so the Jeans' mass is 
+\begin{equation*}
+    M_{J} \propto \left(\frac{T^{3}}{\rho}\right)^{1/2}= \rho^{3\gamma/2-2}
+\end{equation*}
+For atomic Hydrogen $\gamma = 5/3$ and $M_{J}\propto \rho^{1/2}$, so that the Jeans' mass increases as the density increases. As a consequence, the cloud cannot fragment and the collapse is approximately \emph{monolithic}; in other words, during an adiabatic collapse, the cloud contracts without fragmenting,  thus potentially forming a single massive protostar of the order of $10^{3}M_{\odot}$. The reason for this upper limit comes from the fact that, when the cloud collapses adiabatically, the temperature eventually increases up to $T\approx 10^{2}\,\text{K}$ ($M_{J}\approx 10^{3}M_{\odot}$); at that point, molecular hydrogen transitions start to cool the cloud, and the Jeans' mass does not increase anymore.
+\par Adiabatic collapse is held responsible as one of the main formation channels of IMBHs. Remarkably, early on in structure formation, at redshift $20 < z < 15$, the gas metallicity was very low, so the ﬁrst protostellar clouds likely collapsed with little fragmentation, leaving behind a ﬁrst generation of stars (PopIII stars) that were very massive and could potentially evolve into IMBHs characterized by mass of the order of $10^{2}-10^{3}M_{\odot}$.
+\subsubsection*{Isothermal collapse}
+Conversely to what we've seen in the last section, for $Z$ over the critical threshold the collapse is essentially isothermal: Temperature remains approximately constant and the mass limit for instability decreases when the density of the cloud increases as $M_{J}\propto \rho^{-1/2}$. Any initial density perturbations will then cause individual regions within the cloud to cross the instability threshold independently and collapse locally, forming a large number of smaller objects: Isothermal
+collapse naturally leads to \emph{fragmentation}.
+\par It is obvious, however, that in order for protostars to \emph{actually} form, the processes cannot remain isothermal indefinitely, for temperatures of order $T\sim 10^{7}\,\text{K}$ are needed to turn on nuclear reactions.
+\par This happens when the clump density becomes high enough that gas becomes opaque to infrared photons. At this point, the cloud cannot cool eﬃciently, the isothermal approximation breaks down and further evolution is approximately adiabatic. As a consequence, temperature increases
+and so does $M_{J}$, thus leading to a minimum fragment size into which the cloud can break up. This is know as the \emph{opacity limit}.
+\subsubsection*{Opacity limit}
+The energy released during the collapse of the protostellar cloud obeys the virial theorem (\ref{eq:virial_th}), so 
+\begin{equation*}
+    \langle E \rangle = \langle U \rangle + \langle K \rangle = \frac{\langle U \rangle}{2}
+\end{equation*}
+Only half the change in gravitational potential energy can be radiated away. Since (assuming spherical symmetry)
+\begin{equation*}
+    U = -\frac{3}{5}\frac{GM^{2}}{R}
+\end{equation*}
+the energy released is $\Delta E_{g}=3GM^{2}/10R$, from which we can calculate the emitted (average) luminosity over the free-fall time 
+\begin{equation}
+    L_{ff} = \frac{\Delta E_{g}}{\tau_{ff}} = \frac{3}{10}\frac{GM^{2}}{R}\left(\frac{3\pi}{32G\rho}\right)^{-1/2} = \frac{3\sqrt{2}}{5\pi}G^{3/2}\left(\frac{M}{R}\right)^{5/2}
+    \label{eq_luminosity_opacitylimit}
+\end{equation}
+This is the power that, in the opacity limit, is absorbed by the gas. For the sake of simplicity, we're going to assume that the gas emits radiation as a grey-body, thus the cloud can radiate away energy at a rate given by 
+\begin{equation*}
+    L_{\text{rad}} = 4\pi R^{2}e_{f}\sigma T^{4}
+\end{equation*}
+where we have introduced the eﬃciency factor $e_{f}$ ($0 < e_{f} < 1$), because the collapsing cloud is not in thermodynamic equilibrium. The gas will start to
+heat up (becoming adiabatic) as soon as the cooling becomes slower than the heating rate
+\begin{equation*}
+    L_{rad} \lesssim L_{ff}
+\end{equation*}
+The isothermal approximation than breaks down where the two luminosities are equal 
+\begin{equation}
+    M^{5}\lesssim M^{5}_{\text{crit}} = \frac{200}{9}\frac{\pi^{4}\sigma^{2}}{G^{3}}e_{f}^{2}R^{9}T^{8}
+    \label{eq:isothermal_breakdown}
+\end{equation}
+This gives us a further constraint on the mass of the cluster: $M_{J}<M<M_{\text{crit}}$. The opacity limit is reached when $M_{J} = M_{\text{crit}}$. For typical values of $\mu = 1$, $e_{f} = 0.1$, $T = 10^{3}\,\text{K}$ we have a mass for the single fragment of order $M_{\text{frag}} \approx 0.2M_{\odot}$. Hence, fragmentation ceases when individual fragments are approximately solar-mass objects.
+\section{Evolution of Star Clusters}
 Coming soon.
