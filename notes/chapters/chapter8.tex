@@ -6,7 +6,7 @@ This last part of the notes will focus on (Astrophysical) Black Holes, going thr
 \par It is common to identify astrophysical black holes according to their mass
 \begin{itemize}
     \item \emph{Stellar-mass Black Holes} (SBHs); they have masses in the range $M_{\odot}\lesssim M \lesssim 10^{2} M_{\odot}$. SBHs are what remains of stars with initial mass of the order $M\gtrsim 20M_{\odot}$.
-    \item \emph{Intermediate-mass Black Holes} (IMBHs); they have masses in the range of $10^{2}M_{\odot}\lesssim M \lesssim 10^{6}M_{\odot}$. Since we have only scarce observative evidence about these guys, they're the ones we know the least about. We know that they can form at high redshift\footnote{See the next subsection for a short debrief about redshift.} either from PopIII star remnants\footnote{"Population III stars are a hypothetical population of extremely massive, luminous and hot stars with virtually no "metals", except possibly for intermixing ejecta from other nearby, early population III supernovae. Such stars are likely to have existed in the very early universe (i.e., at high redshift) and may have started the production of chemical elements heavier than hydrogen, which are needed for the later formation of planets and life as we know it." Definition from \href{https://en.wikipedia.org/wiki/Stellar_population}{Wikipedia}.} or via direct collapse from a marginally stable protogalactic disc or quasistar, or at lower redshifts via dynamical processes in massive star clusters.
+    \item \emph{Intermediate-mass Black Holes} (IMBHs); they have masses in the range of $10^{2}M_{\odot}\lesssim M \lesssim 10^{6}M_{\odot}$. Since we have only scarce observative evidence about these guys, they're the ones we know the least about. We know that they can form at high redshift either from PopIII star remnants\footnote{"Population III stars are a hypothetical population of extremely massive, luminous and hot stars with virtually no "metals", except possibly for intermixing ejecta from other nearby, early population III supernovae. Such stars are likely to have existed in the very early universe (i.e., at high redshift) and may have started the production of chemical elements heavier than hydrogen, which are needed for the later formation of planets and life as we know it." Definition from \href{https://en.wikipedia.org/wiki/Stellar_population}{Wikipedia}.} or via direct collapse from a marginally stable protogalactic disc or quasistar, or at lower redshifts via dynamical processes in massive star clusters.
     \item \emph{(Super) Massive Black Holes} (MBHs or SMBHs); they have masses in the range of $10^{6}M_{\odot}\lesssim M \lesssim 10^{10}M_{\odot}$. They are observed at the center of almost all galaxies, AGNs and Quasars.
 \end{itemize}
 \begin{figure}[h!]
@@ -566,4 +566,363 @@ energy from the internal energy of the binary systems.
 \end{equation*}
 from which we see that the kinetic energy after the interaction is larger than the initial kinetic energy of the three stars. Therefore, the formation of binaries can pump kinetic energy into single stars crossing the core of the cluster (where most of the binaries form). Those stars then share the acquired extra kinetic energy with other stars through two-body relaxation, heating up the cluster.
 \subsection{Mass Segregation and Spitzer's instability}
-Coming tomorrow or I'll get crazy.
+All we've gone through up until now works decently for any stellar population, given they have the same mass. In reality, not surprisingly, not all the stars in a cluster will have the same mass, and will rather sit somewhere into a spectrum ranging from $\sim 0.5M_{\odot}$ to $ \sim 150M_{\odot}$.
+\par First of all, as we'll see in the next sections, massive-above-than-average stars are expected to go through a process called \emph{dynamical friction}. This means that a massive star walking through a sea of lighter stars feels a drag force, which decelerates its motion. The timescale of dynamical friction for a star of mass $M$ is approximately
+\begin{equation*}
+    \tau_{\text{segr}} = \frac{\langle m \rangle}{M_{tot}}\tau_{rlx}
+\end{equation*}
+where $\langle m \rangle$ is the average star mass and $\tau_{rlx}$ the two-body relaxation timescale. The eﬀect of dynamical friction is that the most massive stars in a star cluster lose kinetic energy in favor of the light stars and segregate toward the centre of the star cluster. This generates the phenomenon called \emph{mass segregation}: The radial distribution of massive stars tends to be more centrally concentrated than the average stellar distribution in dense star clusters. Notice how such a process may be able to bring two stars close enough to form a binary system.
+\par At equilibrium, energy is shared equally by all masses
+\begin{equation}
+    \frac{1}{2}m_{i}\langle v^{2}_{i} \rangle = \frac{1}{2}m_{j}\langle v^{2}_{j} \rangle
+    \label{eq:equipartition_cond}
+\end{equation} 
+If the velocities of all stars are initially drawn from the same distribution, massive stars are thus expected to transfer kinetic energy to lighter stars and slow down, till they reach equipartition. But can equilbrium always be reached?
+\par Consider the case of a cluster composed by $N_{1}$ stars of mass $m_{1}$ and $N_{2}$ of mass $m_{2}$ so that $m_{2}\gg m_{1}$ and $N_{2}\ll N_{1}$, in a way that, if we define $M_{i} = N_{i}m_{i}$, then $M_{2}\ll M_{1}$. Let $\rho_{i}$ be the local desnity of stars of mass $m_{i}$. From the virial theorem
+\begin{equation*}
+    \langle v^{2}_{1} \rangle = \alpha\frac{GM_{1}}{r_{1}}+\frac{G}{M_{1}}\int_{0}^{\infty}\rho_{1}\frac{M_{2}(r)}{r}4\pi r^{2}\,\text{d}r
+\end{equation*}
+where the first term describes the self-gravity of the population (with $\alpha$ a parameter that describes the density distribution throughout the
+cluster) and the second describes the gravitational energy that comes through the interaction of the two popolations; $r_{1}$ is the half-mass radius of population.
+\par As a consequence of segregation, the more massive
+stars become centrally concentrated compared to the distribution of low-mass stars. We can thus assume that the density of lighter stars is constant $\rho_{1}(r)\approx\rho_{1}(0)$ throughout the region occupied by the heavier stars, so that 
+\begin{equation*}
+    M_{1}(r) = \frac{4\pi}{3}r^{3}\rho_{cl}
+\end{equation*}
+where $\rho_{cl}$ is the central density of stars of mass $m_{1}$. Under these assumptions, the equations for the RMS-velocities is simplified
+\begin{align*}
+    \langle v^{2}_{1} \rangle &= \frac{\alpha GM_{1}}{r_{1}}\\
+    \langle v^{2}_{2} \rangle = \frac{\alpha GM_{2}}{r_{2}}+\frac{4\pi G}{3}\rho_{cl,1}R_{sp,2}^{2}
+\end{align*}
+where we've defined Spitzer's radius as
+\begin{equation}
+    R_{sp,2} = \frac{1}{M_{2}}\int_{0}^{\infty}r^{2}\rho_{2}4\pi r^{2}\,\text{d}r
+    \label{eq:spitzerradius}
+\end{equation}
+We can express the half-mass radius in terms of the density of the $i$-th population, so that substituting into the equipartition condition (\ref{eq:equipartition_cond}) yields
+\begin{equation}
+    \chi = \frac{M_{2}}{M_{1}}\left(\frac{m_{2}}{m_{1}}\right)^{3/2} = \left(\frac{\rho_{1}}{\rho_{2}}\right)^{1/2}\left[1+\beta\left(\frac{\rho_{1}}{\rho_{2}}\right)\right]^{-3/2} \quad \beta = \frac{\rho_{c,1}}{\rho_{c,2}}\frac{1}{2\alpha}\left(\frac{R_{sp,1}}{R_{sp,2}}\right)^{2}
+    \label{eq:spitzer_gen}
+\end{equation}
+The expression above has the maximum value
+\begin{equation*}
+    \frac{\rho_{1}}{\rho_{2}} = (2\beta)^{-1} \implies \chi_{\text{max}} = \sqrt{\frac{4}{27\beta}}
+\end{equation*}
+A realistic value for $\beta$ is $\approx 5.8$, so that $\chi_{\text{max}}\approx 0.16$. So, Spitzer's condition (\ref{eq:spitzer_gen}) predicts equilibrium against mass segregation only if 
+\begin{equation}
+    \frac{M_{2}}{M_{1}}\left(\frac{m_{2}}{m_{1}}\right)^{3/2} < 0.16
+    \label{eq:spitzer_cond}
+\end{equation}
+For a realistic cluster, $m_{2}\approx 10m_{1}$ and $M_{2}\approx 0.03M_{1}$. This implies $\chi \approx 1 > \chi_{\text{max}}$, so there's no reaching equilibrium and massive stars are dragged towards the center as a result of mass segregation. This system will thus be prone to the formation of tight SBH binaries via capture and other processes.
+\section{Stellar and BH Binaries Hardening}
+Recall that the internal energy of a binary is 
+\begin{equation*}
+    E_{\text{bin}} = -\frac{GM_{1}M_{2}}{2a}
+\end{equation*}
+Consider now a 3-body interaction between the binary and a third object $m_{3}$ ("intruder"). If the original binary is preserved in the encounter, there are two possibilities
+\begin{itemize}
+    \item the single body extracts internal energy from the binary, so that the final kinetic energy of center of mass of the intruder and of the binary is higher than the initial one;
+    \item the single body loses a fraction of its kinetic energy, which is converted into internal energy of the binary.
+\end{itemize}
+In the first case, the object and the binary acquire recoil velocity and the binding energy increases
+\begin{equation*}
+    K_{i}-E_{b,i} = K_{f}-E_{b,f} \implies E_{b,f}-E_{b,i} = K_{f}-K_{i}
+\end{equation*}
+for $K_{f}>K_{i}$\footnote{Note that this are the total kinetic energies of the 3-body system.}
+\begin{equation*}
+    E_{b,f} = \frac{GM_{1}M_{2}}{2a_{f}} > \frac{GM_{1}M_{2}}{2a_{i}} = E_{b,i} \implies a_{f}<a_{i}
+\end{equation*}
+The result is flipped in the other case.
+\par Another possibility for the binary to increase the binding energy during a 3-body interaction is the exchange, for example if the intruder replaces one of the members of the binary. This usually happens when $M_{2}<m_{3}<M_{1}$ ("exchange"), in which case, after the exchange the binary is formed by $M_{1}$ and $m_{3}$
+\begin{equation*}
+    E_{b,f} = \frac{GM_{1}m_{3}}{2a} > \frac{GM_{1}M_{2}}{2a} = E_{b,i}
+\end{equation*}
+The ﬁnal binary can also becomes less bound and can even be "ionized" if its velocity at inﬁnity exceeds the critical velocity $v_{c}$. In fact
+\begin{equation*}
+    E_{f} = \frac{1}{2}\frac{m_{3}(M_{1}+ M_{2})}{(M_{1}+M_{2}+m_{3})}v^{2}-\frac{GM_{1}M_{2}}{2a}
+\end{equation*}
+and the system is unbound if $E_{f}=0$, so if
+\begin{equation}
+    v_{c} = \sqrt{\frac{GM_{1}M_{2}(M_{1}+M_{2}+m_{3})}{am_{3}(M_{1}+M_{2})}}
+    \label{eq:critical_velocity}
+\end{equation}
+We define \emph{hard binaries} those with a binding energy greater than $\langle m \rangle \sigma^{2}/2$, where $\sigma$ is the average velocity of the stars and $\langle m \rangle$ the average mass. Conversely, \emph{soft binaries} satisfies the inverse relation.
+\par \emph{Heggie's law} states that hard (soft) binaries only tend to get harder (softer).
+\subsubsection*{Cross Section for 3-body Encounters}
+To deﬁne the cross section for 3-body encounters, let us consider the maximum impact parameter $b_{\text{max}}$ for a non-zero energy exchange between the single object $m_{3}$ and the binary. To estimate the impact parameter, we need to consider gravitational focusing, that is the fact that the trajectory of the intruder is signiﬁcantly deﬂected by the presence of the binary, thus approaching it with an eﬀective pericentre $p$ much smaller than the formal impact parameter $b$ at inﬁnity.
+\par Conservation of energy implies 
+\begin{equation*}
+    \Delta E = 0 = \frac{m_{3}(M_{1}+M_{2})}{M_{1}+M_{2}+m_{3}}(v^{2}_{f}-v^{2}_{i})+Gm_{3}(M_{1}+M_{2})\left(\frac{1}{D}-\frac{1}{p}\right)
+\end{equation*}
+where $D$ is the initial distance between the single object and the binary, and for the initial velocity of the single object we consider $v_{i} = \sigma$. Assuming $D\ll p$ (the periastron), the equation simplifies to 
+\begin{equation*}
+    \frac{1}{2}\frac{\sigma^{2}}{M_{1}+M_{2}+m_{3}} = \frac{1}{2}\frac{v^{2}_{f}}{M_{1}+M_{2}+m_{3}}-\frac{G}{p}
+\end{equation*}
+On the other hand, we also have to consider angular momentum conservation
+\begin{equation*}
+    \Delta J = 0 = (pv_{f}-b\sigma)\frac{m_{3}(M_{1}+ M_{2})}{(M_{1}+M_{2}+m_{3})}
+\end{equation*}
+so that $pv_{f}=b\sigma$. Combining the two conservation equations and solving for $p$
+\begin{equation*}
+    p = \frac{G(M_{1}+M_{2}+m_{3})}{\sigma^{2}}\left[\sqrt{1+\frac{b^{2}\sigma^{4}}{G^{2}(M_{1}+M_{2}+M_{3})^{2}}}-1\right]
+\end{equation*}
+which can be Taylor expanded for 
+\begin{equation*}
+    \frac{b^{2}\sigma^{4}}{G^{2}(M_{1}+M_{2}+M_{3})^{2}} \ll 1
+\end{equation*}
+to finally yield 
+\begin{equation}
+    p \simeq \frac{b^{2}\sigma^{2}}{2G(M_{1}+M_{2}+M_{3})}
+    \label{eq:periastron}
+\end{equation}
+The 3-body cross section is then defined just as 
+\begin{equation*}
+    \Sigma = \pi b^{2}_{\text{max}} \simeq \pi \left[\frac{2G(M_{1}+M_{2}+m_{3})}{\sigma^{2}}\right]p_{max} \simeq \frac{2\pi G(M_{1}+M_{2}+m_{3})a}{\sigma^{2}}
+\end{equation*}
+where we have approximated $p_{\text{max}}\simeq a$, which holds only for very energetic 3-body encounters.
+\subsection{3-body Hardening}
+Since we now have an expression for the 3-body cross section, we can estimate the interaction rate
+\begin{equation*}
+    \frac{\text{d}N}{\text{d}t} = n\Sigma\sigma = \frac{2\pi G(M_{1}+M_{2}+m_{3})na}{\sigma}
+\end{equation*}
+We now make a series of simplifying assumptions that characterize those binaries that will eventually become GW sources. Importantly, those assumptions are
+relevant for SBHs and SMBHs alike, thus providing a useful description to the dynamics of SBH binaries and MBH binaries. We assume that
+\begin{enumerate}
+    \item the binary is hard;
+    \item the effective pericentre satisfies $p \lesssim 2a$;
+    \item the mass of the intruder is small in respect to the binary $m_{3}\ll M_{1},\,M_{2}$.
+\end{enumerate}
+This way, the average binding energy variation per encounter reads something like 
+\begin{equation*}
+    \langle \Delta E_{b} \rangle = \xi \frac{m_{3}}{M_{1}+M_{2}}E_{b} = \xi\frac{m_[3]}{M_{1}+M_{2}}\frac{GM_{1}M_{2}}{2a}
+\end{equation*}
+where $\xi \approx 0.2-1$ is a parameter that can be extracted from 3-body scattering experiments. The rate of binding energy exchange for a hard binary is
+\begin{equation*}
+    \frac{\text{d}E_{b}}{\text{d}t} = \langle \Delta E_{b} \rangle \frac{\text{d}N}{\text{d}t} = 2\pi\xi \frac{M_{1}M_{2}m_{3}(M_{1}+M_{2}+m_{3})}{M_{1}+M_{2}}\frac{G^{2}n}{\sigma}
+\end{equation*}
+Supposing a single mass population of intruders
+characterized by $m_{3} = \langle m \rangle$, we can write the rate of binding energy exchange in terms of the local mass density $\rho = n\langle m \rangle$. Exploiting the mass "hierarchy" condition
+\begin{equation*}
+    \frac{\text{d}E_{b}}{\text{d}t} = \frac{2\pi\xi G^{2}M_{1}M_{2}\rho}{\sigma}
+\end{equation*}
+Therefore, hard binaries harden at a constant rate!
+\par Expressing $a$ in terms of $E_{b}$ the hardening rate is given by 
+\begin{equation*}
+    \frac{\text{d}}{\text{d}t}\left(\frac{1}{a}\right) = \frac{2}{GM_{1}M_{2}}\frac{\text{d}E_{b}}{\text{d}t} = 4\pi G\xi\frac{\rho}{\sigma} = \frac{GH\rho}{\sigma^{2}}
+\end{equation*}
+which can be written as
+\begin{equation}
+      \frac{\text{d}a}{\text{d}t} = -\frac{GH\rho}{\sigma}a^{2}
+      \label{eq:hardening_rate}
+\end{equation}
+where we've defined $H\approx 15-20$\footnote{The lower bound is for circular orbits, while 20 is for very eccentric orbits.} as a dimensionless hardening rate.
+\subsection{Hardening and GWs}
+How is all this stuff connected to GWs?
+\par From (\ref{eq:hardening_rate}) we can see that hardening in a given stellar background proceeds at a constant rate determined by the properties of the background. The evolution of semi-major axis can be thought as composed of two contributions
+\begin{equation*}
+    \frac{\text{d}a}{\text{d}t} = \frac{\text{d}a}{\text{d}t}|_{3b}+ \frac{\text{d}a}{\text{d}t}|_{GW} = -Aa^{2}-Ba^{-3}
+\end{equation*}
+where we have expliticted the dependence on $a$ of both terms and defined
+\begin{equation*}
+    A = \frac{GH\rho}{\sigma} \quad B = \frac{64}{5}\frac{G^{3}}{c^{5}}M_{1}M_{2}(M_{1}+M_{2})F(e)
+\end{equation*}
+Since stellar hardening is $\propto a^{2}$ and the GW hardening is $\propto a^{-3}$, binaries spend most of their time at the transition speparation obtained by imposing $(\text{d}a/\text{d}t)_{3b} = (\text{d}a/\text{d}t)_{GW}$
+\begin{equation*}
+    \bar{a} = \left[\frac{64G^{2}\sigma M_{1}M_{2}(M_{1}+M_{2})F(e)}{5c^{5}H\rho}\right]^{1/5}
+\end{equation*} 
+and their lifetime can be written as 
+\begin{equation*}
+    \tau(\bar{a}) =\frac{\sigma}{GH\rho\bar{a}} \approx 3\,\text{Gyr}\left(\frac{\sigma}{10\,\text{km}\,\text{s}^{-1}}\right)^{1/5}\left(\frac{\rho}{10^{5}M_{\odot}\,\text{pc}^{-3}}\frac{\bar{a}}{0.15\,\text{AU}}\right)^{-1}
+\end{equation*}
+Given this expression, is it possible to enter the GW hardening regime in less than a Hubble time? Yes!
+\par For typical\footnote{Typical as long as massive SBH binaries are concerned.} values ($M_{1}+M_{2}\approx 60M_{\odot}$, $\sigma = 10\,\text{km}\,\text{s}^{-1}$, $\rho = 10^{5}M_{\odot}\,\text{pc}^{-3}$) you can get a hardening time $\tau(\bar{a})\approx 3\,\text{Gyr}<t_{\text{Hubble}}$.
+\par Moreover, the mechanism eﬃciency increases with the BHB mass\footnote{Recall that $\bar \propto M_{1}M_{2}(M_{1}+M_{2})$, while $\tau(\bar{a})\propto \bar{a}^{-1}$.}. If
+IMBHs can indeed form in star clusters, stellar hardening provides an eﬃcient mechanism to merge them with SBHs or with a companion IMBH. 
+\section{Supermassive Black Holes}
+We now turn to discuss some relevant astrophysical aspects of (S)MBHs. Those objects has been observed at the centre of massive galaxies, and inhabit virtually all nuclei of galaxies with $M_{*} > 10^{11}M_{\odot}$, whereas their ubiquity in lighter galaxies is much debated. Our discussion will be mainly classical (Newtonian), although some results of GR will be implemented when necessary.
+\subsection{Bondi accretion}
+In order to accrete, a MBH needs to capture gas from its surroundings at a suﬃcient rate. We've already discussed about this in Chapter \ref{ch:vi}, but a brief refresher won't do much harm.
+\par The model assumes an object (a black hole in our case) of mass $M$ surrounded by an inﬁnite cloud of gas, accreting with stationary and spherically
+symmetric motion. The model neglects any self-gravity eﬀects of the cloud, magnetic ﬁelds, angular momentum and viscosity due to the accretion mechanism.
+\par The gas is assumed to be perfect and polytropic
+\begin{equation*}
+    p = p_{\infty}\left(\frac{\rho}{\rho_{\infty}}\right)^{\gamma}
+\end{equation*}
+with $\gamma$ the polytropic index. Because of stationarity and conservation of mass $D_{\mu}(\rho u^{\mu}) = 0$ implies a constant accretion rate
+\begin{equation*}
+    \dot{M} = 4\pi r^{2}\rho v = \text{const.}
+\end{equation*}
+where $r$ is the radial coordinate and $v$ in the inward velocity of the gas. We can also define the sound speed of the gas $c^{2}_{s} = \gamma p_{\infty}/\rho_{\infty}$ at infinity and a characteristic lengthscale of the problem, called \emph{Bondi radius}
+\begin{equation*}
+    r_{B} = \frac{GM}{c^{2}_{s}}
+\end{equation*}
+I hope all these things are actually ringing some bells, no matter how out of tune.
+\par We can the rescale the variables
+\begin{align*}
+    r &= xr_{B}\\
+    v &= yc_{s}\\
+    \rho &= z\rho_{\infty}
+\end{align*}
+All the dynamic of the system can be thus summarized in just two equations
+\begin{align*}
+    x^{2}yz &= \lambda \\
+    \frac{y^{2}}{2} + \frac{z^{\gamma-1}-1}{\gamma -1}-\frac{1}{x} &= 0
+\end{align*}
+where the dimensionless accretion rate parameter $\lambda$ is just
+\begin{equation*}
+    \lambda = \frac{\dot{M}_{B}}{4\pi r^{2}_{B}c_{s}\rho_{\infty}} = \frac{\dot{M}c^{3}_{s}}{4\pi G^{2}M^{2}\rho_{\infty}}
+\end{equation*}
+For $\lambda = 1$, we get Bondi's accretion rate
+\begin{equation*}
+    \dot{M}_{B} \approx 2.5\cdot 10^{2}\left(\frac{c_{s}}{100\,\text{km}\,\text{s}^{-1}}\right)^{-3}\left(\frac{M}{10^{8}M_{\odot}}\right)^{2}M_{\odot}\,\text{yr}
+\end{equation*}
+Therefore $\dot{M}_{B}\propto c^{-3}_{s}M^{2}$. The mass dependence, in particular, implies that the mass of the compact object diverges to infinity in a finite amount of time for an infinite "fuel" supply. \par It should not surprise you that this is largely unphysical, for once we're assuming \emph{perfect} spherical symmetry and neglecting all feedbacks due to the radiation emitted by the accretion flow.
+\subsection{The Eddington Limit}
+Once again, here's something we've already got acquainted with back in Chapter \ref{ch:vi}. 
+\par The radiation reaction onto the accretion ﬂow is the physical rationale behind the Eddington accretion limit, and sets the maximum luminosity $L$ that an AGN
+(or, in fact, any astrophysical object) can emit when the radiation force acting outward equals the gravitational force acting inward. Beyond this limit, the radiation force overwhelms the gravitational force and the accretion process is considerably softened or halted.
+\par Let's assume a spherically symmetric cloud of fully ionized Hydrogen around our BH, so that the main channel of interaction for photons is the Thomson scattering.
+\par The flux of energy through a spherical surface of radius $r$ is 
+\begin{equation*}
+    \Phi = \frac{L}{4\pi r^{2}}
+\end{equation*}
+and since the momentum flux (pressure) is
+\begin{equation*}
+    p_{\text{rad}} = \frac{\Phi}{c} = \frac{L/c}{4\pi r^{2}}
+\end{equation*}
+Therefore, the force exerted by the radiation on a single electron is given by
+\begin{equation*}
+    F_{\text{rad}} = p_{\text{rad}}\sigma_{Th} = \frac{L}{4\pi r^{2}c}\frac{8\pi}{3}\left(\frac{e^{2}}{m_{e}c^{2}}\right)^{2}
+\end{equation*}
+The dependence of the cross section on the particle mass justifies our assumption to neglect scattering with heavier particles, namely protons.
+\par We can write the gravitational force too
+\begin{equation*}
+    F_{g} = \frac{GM(m_{e}+m_{p})}{r^{2}}\approx \frac{GMm_{p}}{r^{2}}
+\end{equation*}
+Equating the two forces and solving for $L$ gives us our longed for Eddington's luminosity
+\begin{equation}
+    L_{\text{Edd}} = \frac{3GMm_{p}c}{2}\left(\frac{m_{e}c^{2}}{e^{2}}\right)^{2}\approx 1.26\cdot 10^{28}\left(\frac{M}{M_{\odot}}\right)\,\text{erg}\,\text{s}^{-1}
+    \label{eq:eddingtonluminosity}
+\end{equation}
+Now, assume that the accretion process occurs at a given rate $\dot{M}$,and that only a fraction $\epsilon$\footnote{The fraction $\epsilon$ is the radiative eﬃciency of the accretion process and can be estimated from the energy loss of the accreted material.} of the rest mass energy of the accreted matter is radiated away. Then, the luminosity can be expressed as
+\begin{equation*}
+    L = \epsilon \dot{M} c^{2}
+\end{equation*}
+thus setting a limit on the accretion rate
+\begin{equation*}
+    \dot{M}_{\text{Edd}} = \frac{4\pi GMm_{p}}{c\sigma_{th}}\frac{M}{\epsilon}\approx 2.2\cdot 10^{-8}\left(\frac{\epsilon}{0.1}\right)\left(\frac{M}{M_{\odot}}\right)M_{\odot}\,\text{yr}
+\end{equation*}
+For a gas element in a wide initial orbit, we can safely assume $E_{i} = 0$, while upon reaching the inner rim of the accretion disk in an (approximately) circular orbit, its energy is given by $E_{\text{rim}}=-GMm/2r_{\text{rim}}$. We can then evaluate the luminosity of the disk as
+\begin{equation*}
+    L = -\frac{\text{d}E}{\text{d}t} = \frac{G\dot{m}M}{2r_{\text{rim}}}
+\end{equation*}
+where $\dot{m} = -\text{d}m/\text{d}t$ it the mass accretion rate. At this point we can identify $r_{\text{rim}}$ with the ISCO (Innermost Stable Circular Orbit) whose expression is a pretty standard GR result\footnote{As usual, at least for Schwartzschild BHs, you can try calculate $r_{\text{ISCO}}$ as an exercise. The reader too lazy to do it him/herself can see \cite{carroll}, §5 and §6.}
+\begin{equation*}
+    r_{\text{rim}} = r_{\text{ISCO}} = \beta\frac{2GM}{c^{2}} = \beta R_{s}
+\end{equation*}
+so that
+\begin{equation*}
+    L = \frac{1}{4\beta} \dot{M}c^{2} = \epsilon \dot{M}c^{2} \implies \epsilon = 4\beta
+\end{equation*}
+The value of $\beta$ depends on the particular specimen of BH: For Schwartzschild's BHs $\beta = 3$, while for Kerr's extremal (maximally spinning) BHs $\beta = 1$.
+\subsection{MBH Growth}
+Our most recent understanding of MBHs involves the existence of BH \emph{seeds} at high redshift that had become supermassive as they accreted gas, stars and possibly even merged with other compact objects.
+\par The need to start from seeds with $M<10^{6}M_{\odot}$ is dictated by the fact that no physical mechanism able to monolithically form a billion stellar-mass compact object is known at present day.
+\par From Eddington's luminosity (\ref{eq:eddingtonluminosity}) we can define Eddington's timescale
+\begin{equation}
+    \tau_{\text{Edd}} = \frac{Mc^{2}}{L_{\text{Edd}}} = \frac{\sigma_{th}c}{4\pi Gm_{p}} \approx 0.45\,\text{Gyr}
+    \label{eq:eddington_timescale}
+\end{equation}
+We can then write down the evolution equation for the mass of the MBH as
+\begin{equation*}
+    \dot{M} = (1-\epsilon)\dot{M}_{acc} = \frac{1-\epsilon}{\epsilon}f_{\text{Edd}}\frac{M}{\tau_{\text{Edd}}}
+\end{equation*}
+where $f_{\text{Edd}} = L/L_{\text{Edd}}$ is the fraction of the Eddington luminosity being radiated. The last equation can be integrated right away
+\begin{equation*}
+    M(t) = M(0)\exp\left(\frac{1-\epsilon}{\epsilon}\frac{f_{\text{Edd}}}{\tau_{\text{Edd}}}(t-t_{0})\right)
+\end{equation*}
+where $M_{0}$ is the initial mass of the MBH at time $t_{0}$. In the limit $f_{\text{Edd}}\to 1$, 
+\begin{equation*}
+    M(t) = M(0)\exp\left(\frac{1-\epsilon}{\epsilon}\frac{t-t_{0}}{\tau_{\text{Edd}}}\right)
+\end{equation*}
+we can now see what is the fastest rate at which a MBH can grow. This evidently depends on the eﬃciency parameter $\epsilon$, which, we've seen, is closely related to the spin parameter of the BH $\beta$
+\begin{itemize}
+    \item $\epsilon = 1/12$ (S) $\to M \propto M_{0}\exp(\frac{t}{3\cdot 10^{7}\,\text{yr}})$
+    \item $\epsilon = 1/4$ (K) $\to M \propto M_{0}\exp(\frac{t}{3\cdot 10^{8}\,\text{yr}})$
+\end{itemize}
+Therefore, in both scenarios, continuous Eddington limited accretion allows 50-to-500 $e$-folds in mass, depending on the BH's spin: This is more than enough to grow a $10^{9}M_{\odot}$ BH starting from any reasonable $M_{0}$ in less than a Hubble time.
+\subsubsection*{Seeding Mechanisms}
+We've shown how, given the existence of a seed, we're able to accrete a BH up to a MBH, but we've never discussed about what actually are these seeds we're talking about.
+\par In a very Hegelian way\footnote{Or "PokéMon"-ian way, if you're more inclined towards modern times.}, seeds mainly comes in three "flavors":
+\begin{itemize}
+    \item \emph{PopIII Remnant}: This scenario relies on the fact that the ﬁrst generation of essentially metal free stars is expected to have a very top-heavy mass function. As we've seen, the absence of metal disfavours fragmentation and massive stars can form. The natural relics of such massive stars are BHs of several hundred solar masses. The viability of popIII remnant as seeds of the most massive MBHs have recently called into questions;
+    \item \emph{Runaway PopIII Mergers}: f clusters of massive stars are a common occurrence at high redshifts, runaway mergers might still result in the formation of a metal free star with mass high enough to leave behind a $10^{3}M_{\odot}$ BH remnant;
+    \item \emph{Direct Collapse}: The key idea is that in the most massive protogalactic halos at $z \approx 15$, gas accreted from the cosmic web can be supplied to the very centre at a rate of $\approx 1M_{\odot}\,\text{yr}^{-1}$. Such extreme conditions can prompt the formation of a seed BH with mass in the range $10^{4}-10^{5}M_{\odot}$ either via collective infall from a marginally stable massive disk or via the formation of a quasi star or via direct collapse.
+\end{itemize}
+\par One challenge to this simple picture is that billion-solar-masses MBHs are not observed only in the local Universe (i.e., low redshift), but also at high redshift, which issues serious questions since they would have had really short times to accrete to such huge masses (assuming the model we've described is actually correct, that is).
+\par This is a problem because prolonged accretion inevitably results in highly spinning MBHs after about an $e$-fold in
+mass growth. It seems therefore unlikely that the highest redshift quasars grew by Eddington limited, prolonged accretion, independently on the seeding model.
+\par Now, this problem is somewhat mitigated with an argument the interested reader can find in \cite{celoria2018lecturenotesblackhole} (pag. 59).
+\subsection{Massive BH Binaries}
+We start this new subsection with a question: Can Supermassive BHs really merge?
+\par Turns out, they probably can. Despite growing most of their mass through accretion along the cosmic history, in the hierarchical structure formation framework MBHs will also acquire some mass because of mergers with other MBHs. Galaxies are in fact observed to merge quite regularly, with massive galaxies experiencing at least a major merger. If each of the progenitor galaxies host a MBH, the outcome of a galaxy merger will be the formation of a MBHBs that eventually coalesces due to GW emission.
+\par The evolution of the system is pictorially represented in Fig.\ref{fig:smbhb}.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/smbhb.png}
+    \caption{Different phases of the evolution of a MBH binary after a galaxy merger. Credits:\cite{celoria2018lecturenotesblackhole}}
+    \label{fig:smbhb}
+\end{figure}
+\par We already had a look at some of the processes that can reduce the distance under the pc separation and at GW emission, that lead to swift coalescence at sub-parsec sepratation. What we're missing is a process able to bring two BHs from kpc to pc separation. An effective process to do so is \emph{dynamical friction}, and we're going to take a look at it in the next (and last) subsection.
+\subsection{Dynamical Friction}
+Consider a lonely massive object of mass $M$ and velocity $V$ wandering in a sea of particles of mass $m$ and velocity $v$\footnote{The velocity of the massive object is to be considered with respect to the Center of Mass of the sea of particles.}. The idea is having these small particles interacting with the massive intruder through a collective force that goes under the name of \emph{dynamical friction}.
+\par A first detailed calculation was carried out by Chandrasekhar
+\begin{equation}
+    \frac{\text{d}\vec{V}}{\text{d}t} = -16\pi^{2}\ln(\Lambda)G^{2}m(M+m)\frac{\vec{V}}{V^{3}}\int_{0}^{V}f(v)v^{2}\,\text{d}v
+    \label{eq:chandrasekhar_eq}
+\end{equation}
+where $f(v)$ is the velocity distribution function of the light particles and $\ln\Lambda$ is the Coulomb logarithm $\Lambda = b_{\text{max}}/b_{\text{min}}$.
+\par In the limit $V \to 0$, we can approximate $f(v)$ roughly as constant, and the expression in (\ref{eq:chandrasekhar_eq}) evaluates to
+\begin{equation*}
+     \frac{\text{d}\vec{V}}{\text{d}t} = -\frac{16\pi^{2}}{3}\ln(\Lambda)G^{2}m(M+m)f_{0}\vec{V}
+\end{equation*}
+which has the form typical of a viscous friction $\text{d}V/\text{d}t \propto -V$.
+\par Conversely, in the limit $V \gg \bar{v}$, with $\bar{v}$ the typical velocity of the distribution, the integral is performed over the whole distribution, thus returning the number density $n/4\pi$. Thus
+\begin{equation*}
+    \frac{\text{d}\vec{V}}{\text{d}t} = -4\pi\ln(\Lambda)G^{2}M\rho\frac{\vec{V}}{V^{3}}
+\end{equation*}
+where we've made use of $\rho = nm$ and $M \gg m$. At high velocities we see that $\text{d}V/\text{d}t \propto -V^{-2}$ and DF quickly becomes ineffective.
+\par Note that, due to the proportionality with $M$, the force $F \propto M^{2}$; this is usually interpreted as the pull of a wake formed by DF behind the massive object.
+\par Given these two limits, it's evident that DF is most efficient when $V \approx \bar{v}$.
+\par Let us now consider the ideal situation of an isothermal sphere of particles. If we assume the massive object in circular orbit, we can calculate the frictional force by explicitly solving Chandrasekhar's equation (\ref{eq:chandrasekhar_eq})\footnote{We're assuming a Maxwellian distribution $f(v)$.}, finding
+\begin{equation*}
+    F \approx -0.428 \ln(\Lambda)\frac{GM^{2}}{r^{2}}
+\end{equation*}
+The angular momentum of the circular object is simply $J = Vr$, so that
+\begin{equation*}
+    \frac{\text{d}J}{\text{d}t} = \frac{\text{d}V}{\text{d}t}r + V\frac{\text{d}r}{\text{d}t}
+\end{equation*}
+Now, we're going to perform what may look like a magic trick. Since, instantaneously, DF does not act on $r$ and only changes the velocity of the massive object, we can write $\text{d}J/\text{d}t = (\text{d}V/\text{d}t)r = (F/M)r$. On the other hand, the massive object is in circular orbit in an isothermal sphere. Under the approximation that the orbit remains circular, $V$ cannot change so that the actual result of the interaction would be to move the object onto a tighter orbit, thus shrinking $r$. In practice, DF does not change the kinetic energy of $M$, but it eventually extracts its potential energy,
+so that we can write
+\begin{equation*}
+     \frac{\text{d}J}{\text{d}t} = \frac{F}{M}r = V \frac{\text{d}r}{\text{d}t}
+\end{equation*}
+We can plug in the expression for the force we've found earlier 
+\begin{equation*}
+    V \frac{\text{d}r}{\text{d}t} = -0.428 \ln(\Lambda)\frac{GM^{2}}{r^{2}}
+\end{equation*}
+that we can integrate by parts to get
+\begin{equation}
+    \tau_{f} = \frac{1.17}{\ln\Lambda}\frac{r^{2}_{i}v_{c}}{GM} = \frac{19}{\ln\Lambda}\,\text{Gyr}\left(\frac{r_{i}}{5\,\text{kpc}}\right)^{2}\frac{\sigma}{200\,\text{km}\,\text{s}^{-1}}\frac{10^{8}M_{\odot}}{M}
+    \label{eq:df_timescale}
+\end{equation}
+where $r_{i}$ is an integration constant we can identify with some kind of initial distance. For typical $\ln\Lambda\approx 10-15$, MBHs can inspiral in the centre of the stellar remnant from a $10\,\text{kpc}$ initial distance in less than a Gyr (which is less than a Hubble time!).
+\par This is the time it takes to bring a single MBH to the centre of an isothermal distribution of stars. It can be applied to the two MBHs inspiralling in the aftermath of a galaxy merger so long as they evolve independently of each other as individual objects interacting with the stellar distribution. This is no longer true when the two MBHs start to "see each other."
+\par For an isothermal sphere this amounts to a mutual separation of 
+\begin{equation*}
+    a \approx 30\,\text{pc} \left(\frac{M}{10^{8}M_{\odot}}\right)^{1/2}
+\end{equation*}
+Once the two BHs overlap with the cloud's center of mass, DF cannot bring them any closer. To do so, we need Stellar Hardening and all the other nice processes we've discussed earlier.
+\begin{flushright}
+    \emph{The End?}
+\end{flushright}
