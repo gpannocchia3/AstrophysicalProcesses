@@ -7,7 +7,7 @@ A "simple" fluid might be defined as a material such that the relative positions
 \par We know that in the real world an abstract concept like a continuum cannot possibly exists: Matter is discrete and discrete only. However, it may have occurred to you that normally we don't exactly see matter broken down to its fundamental components.
 \par It looks rather smooth and continuous to me, not at all discrete.
 \par We're able to regard a fluid as a continuum when the measured fluid property is constant for sensitive volumes small on the macroscopic scale but large in respect to the microscopic ones.
-\par When looking at a fluid, we can fairly distinguish two kinds of forces that act on matter in bulk
+\par When looking at a fluid, we can distinguish two kinds of forces\footnote{Note that the forces proposed are to be intended \emph{per unit mass}.} that act on matter in bulk
 \begin{itemize}
     \item long-range forces or \emph{body forces} (like gravity): $\delta\vec{F}_{v} = \vec{F}(\vec{x}, t)\rho\delta V$
     \item short-range forces that arise from reactions with matter
@@ -29,7 +29,7 @@ The calculation is rather tedious but at least straightforward. At the end of it
     \sigma^{i} = \sigma^{ij}n_{j}
 \end{equation*}
 where the index placement is quite the overkill, but we'll be clearer in a moment. Here and in the following, we'll be often adopting Einstein convention for summation over repeated indices.
-\par It is customary to bestow a name on $\sigma^{ij}$: the \emph{stress tensor}. Curiously enough, the conservation of total angular momentum implies that the the stress tensor must be \emph{symmetric}. These rather nice properties should possibly be ringing a bell. 
+\par It is customary to bestow a name on $\sigma^{ij}$: the \emph{stress tensor}. Curiously enough, the conservation of total angular momentum implies that the the stress tensor must be \emph{symmetric}. These rather nice properties might be ringing a bell in your memory. 
 \par If we put ourselves in the fluid's rest frame, where there's no net flux of any of the components of momentum in any of the three orthogonal directions, it's not a far stretch to be claiming that the fluid must, indeed, be isotropic at rest.
 \par Isotropy implies that, at least in this reference frame, the stress tensor must be diagonal. Since the symmetry of the system is essentially spherical, all the spatial components $\sigma^{ii}$ must therefore be equal. The most general form for the 4-dimensional stress tensor is simply the energy-momentum tensor for a perfect fluid (as far as special relativity is concerned)
 \begin{equation}
@@ -143,7 +143,7 @@ To be properly defined, $f$ must meet the usual requirements for distribution fu
 \begin{equation}
     f \geqslant 0 \quad \int f\,\text{d}\vec{x} < +\infty \quad \int f\,\text{d}\vec{v} < +\infty
 \end{equation}
-Thanks to this properties we can easily define the number and mass density 
+Thanks to these properties we can easily define the number and mass density 
 \begin{equation*}
     n(\vec{x}, t) = \int f(\vec{x}, \vec{v}, t)\,\text{d}\vec{v} \implies \rho(\vec{x}, t) = Am_{H}n(\vec{x}, t)
 \end{equation*}
@@ -153,7 +153,7 @@ as well as the concept of \emph{averaged quantities}, for example the average ve
 \end{equation*}
 This expression is most useful to decompose the velocity as $\vec{v} = \langle \vec{v}\rangle +\delta \vec{v}$, which is known as Reynolds' decomposition. This decomposition implies $\langle \delta\vec{v}\,\rangle = 0$.
 \par To build the equations of fluid dynamics, we need to ask ourselves what is it of the distribution function $f$ if we let the system evolve in time.
-\par Liouville's theorem tells us that the six dimensional volume in phase space is conserved $\text{d}^{3}x\text{d}^{3}v \approx \text{d}^{3}x_{0}\text{d}^{3}v_{0}$ up to first order in $\text{d}t$\footnote{Properly speaking, we'd have to consider the transformation $\vec{x} = \vec{x}_{0}+\vec{u}_{0}\,\text{d}t$, $\vec{v} = \vec{v}_{0}+\vec{a}_{0}\,\text{d}t$, which has a Jacobian $\left\|J\right\| = 1+\text{o}(\text{d}t^{2})$.}. This way we can write the initial infinitesimal number of particles in volume $\text{d}^{3}x_{0}\text{d}^{3}v_{0}$ and the number of particles in volume $\text{d}^{3}x\text{d}^{3}v$
+\par Liouville's theorem tells us that the six dimensional volume in phase space is conserved $\text{d}^{3}x\text{d}^{3}v \approx \text{d}^{3}x_{0}\text{d}^{3}v_{0}$ up to first order\footnote{Properly speaking, we'd have to consider the transformation $\vec{x} = \vec{x}_{0}+\vec{u}_{0}\,\text{d}t$, $\vec{v} = \vec{v}_{0}+\vec{a}_{0}\,\text{d}t$, which has a Jacobian $\left\|J\right\| = 1+\text{o}(\text{d}t^{2})$.} in $\text{d}t$. This way we can write the initial infinitesimal number of particles in volume $\text{d}^{3}x_{0}\text{d}^{3}v_{0}$ and the number of particles in volume $\text{d}^{3}x\text{d}^{3}v$
 \begin{align*}
     \text{d}N_{0} &= f(\vec{x}_{0}, \vec{v}_{0}, t)\,\text{d}^{3}x_{0}\text{d}^{3}v_{0}\\
     \text{d}N &= f(\vec{x}, \vec{v}, t)\,\text{d}^{3}x\text{d}^{3}v
@@ -215,7 +215,7 @@ where $\Lambda$ includes all energy losses, also the ones not included in Vlasov
 \end{equation}
 which allows us to rewrite two equations we'll often be using in a more compact form 
 \begin{align}
-    \frac{\text{D}\vec{v}}{\text{D}t} &= -\frac{\nabla p}{\rho}\\
+    \frac{\text{D}\vec{v}}{\text{D}t} &= -\frac{\nabla p}{\rho}-\vec{F}\\
     \frac{\text{D}\rho}{\text{D}t} &= -\rho\nabla\cdot\vec{v}
     \label{eq:lagrangianframe}
 \end{align}
@@ -225,7 +225,7 @@ From this form of the continuity equation, we can give a definition of \emph{com
 \par Note that the two definitions overlap only if motion is static/stationary.
 \par We'll scarcely make explicit use of these notions but it's worth to write those down, at least for the sake of completeness. 
 \subsection{Viscosity and diffusion}
-So far, we've been blatantly ignoring the collision integral in Vlasov's equation saying that by the detailed equilibrium principle, at equilibrium it's contribution is approximately zero. Clearly, this can't be always the case, even more so in fluids.
+So far, we've been blatantly ignoring the collision integral in Vlasov's equation saying that by the detailed equilibrium principle, at equilibrium its contribution is approximately zero. Clearly, this can't be always the case, even more so in fluids.
 \par Notably, fluids display some kind of friction arising from some microscopic molecular effect. We'll call this "friction" \emph{viscosity}\,\footnote{For this section, I'm following Dott. Ricciardi's notes \cite{ricciardi} and my own notes from the Fluid dynamic class.}.
 We want to understand what happens when a fluid moves. We have to consider:
 \begin{itemize}
@@ -235,7 +235,7 @@ We want to understand what happens when a fluid moves. We have to consider:
         \includegraphics[width=0.3\textwidth]{img/dilationcompression}
         \caption{Sketch of dilation or compression.}
     \end{figure}
-    \item \textbf{Rotation}: we consider a solid body rotation, hence it will cause no net force on the fluid element
+    \item \textbf{Rotation}: we consider a solid body rotation, hence it will cause no net force on the fluid element.
     \begin{figure}[h!]
         \centering
         \includegraphics[width=0.3\textwidth]{img/rotation}
@@ -286,10 +286,10 @@ where $\varepsilon$ is some expression for the internal energy of the fluid. If 
 \end{equation*}
 If we take $p/\rho$ as a measure of the internal energy of the fluid, we obtain \emph{Bernoulli's theorem}
 \begin{equation}
-    \frac{\rho\vec{v}^{2}}{2}+p+\rho\phi = \text{const.}
+    \frac{\rho\vec{v}\,^{2}}{2}+p+\rho\phi = \text{const.}
     \label{eq:bernoulli}
 \end{equation}
-which is just a restating of conservation of energy. In the following section we'll try examining one simple application of eq.\ref{eq:bernoulli}.
+which is just a restating of conservation of energy. In the following section we'll try examining one simple application of (\ref{eq:bernoulli}).
 \subsection{The de Laval nozzle}
 Consider Bernoulli's theorem in the notable absence of an external potential $\phi$, and we shall assume that $\vec{v}\cdot\vec{A}$ is constant. Here $\vec{A}$ is the outwards pointing normal to the section of a nozzle of some kind.
 \input{chapters/nozzle}
@@ -342,10 +342,10 @@ If the section gradient is flipped, the implications are reversed. In principle 
 \par In such a configuration, the fluid is always accelerating.
 \section{Schwartzschild stability condition}
 Suppose we have a stratified plane parallel atmosphere approximately in hydrostatic equilibrium. Consider now a blob of fluid which has been displaced upwards as shown in the picture below.
-\par Initially, the blob had the same density and pressure as the surrounding fluid, respectively $\rho_{0},\,P$. After the displacement, the external fluid density and pressure are $\rho',\,P'$ which are, in principle, different from density and pressure inside the bubble, $\rho^{*},\,P^{*}$.
-\par However, we'll work under the assumption that the bubble is always in pressure equilibrium with the surrounding fluid and does not exchange energy with it\,\footnote{Typically, pressure imbalances are removed rather quickly by \emph{acoustic waves}, while heat exchange takes more time.}.
+\par Initially, the blob has the same density and pressure as the surrounding fluid, respectively $\rho_{0},\,P$. After the displacement, the external fluid density and pressure are $\rho',\,P'$ which are, in principle, different from density and pressure inside the bubble, $\rho^{*},\,P^{*}$.
+\par However, we'll work under the assumption that the bubble is always in pressure equilibrium with the surrounding fluid and does not exchange energy with it\,\footnote{Typically, pressure imbalances are removed rather quickly by \emph{acoustic waves}, while heat exchange takes more time. In short, we'll assume $P^{*}=P'$.}.
 \input{chapters/bubble}
-\par Let's consider the infinitesimal displacement $\varepsilon$, so that the equation of motion is simply just 
+\par Let's consider the infinitesimal displacement $\varepsilon$, so that the equation of motion is
 \begin{equation*}
     \rho\ddot{\varepsilon} = -g(\rho'-\rho)
 \end{equation*}
@@ -365,7 +365,7 @@ which is that of a harmonic oscillator. We identify the quantity
 \end{equation*}
 as the \emph{Brunt-Väisälä frequency}, which regulates the buyouancy of the blob. In particular we observe that if $\omega^{2}_{BV} > 0$, the bubble is buyouantly stable. Conversely, if $\omega^{2}_{BV} < 0$ the atmosphere is unstable and \emph{convective instability} will arise.
 \par Up to a factor of $g$ (that would cancel out anyway), studying the sign of $\omega^{2}_{BV}$ for $\rho \propto T^{-1}$ does retrieve the famous \emph{Schwartzchild stability condition}.
-\par How good is the "bubble picture" we've just used? Not much actually, as we'll see in the next chapter, but it stil allows to get a grasp of how convection may work.
+\par How good is the "bubble picture" we've just used? Not much actually, as we'll see in the next chapter, but it still allows to get a grasp of how convection may work.
 \par One thing we have neglected (but is worth considering when dealing with stars) is that the bubble is likely to be made of hot plasma. That implies that the bubble is able to radiate and affect different layers of the star through means that are not only its physical displacement.
 \subsection{Convection in presence of rotation}
 We've seen that density gradients in a stratified atmosphere are expected to generate convection. What happens if we add rotation to the picture?
@@ -377,9 +377,9 @@ As we've already seen, in presence of rotation, the potential of a self-gravitat
 \end{equation*}
 so that when we write down Euler's equation we find 
 \begin{equation}
-    \frac{\text{D}\vec{v}}{\text{D}t} +2\Omega \wedge \vec{v} = -\frac{\nabla p}{\rho}+\vec{F}
+    \frac{\text{D}\vec{v}}{\text{D}t} +2\vec{\Omega} \wedge \vec{v} = -\frac{\nabla p}{\rho}+\vec{F}
 \end{equation}
-Here $2\Omega \wedge \vec{v}$ represents Coriolis' forces\,\footnote{Coriolis' forces arise only in presence of latitudinal motion and imply the presence of shear.}. At this point it's convenient to define a new quantity, the \emph{vorticity} as $ \vec{\omega} = \nabla \wedge \vec{v}$.
+Here $2\vec{\Omega} \wedge \vec{v}$ represents Coriolis' forces\,\footnote{Coriolis' forces arise only in presence of latitudinal motion and imply the presence of shear.}. At this point it's convenient to define a new quantity, the \emph{vorticity} as $ \vec{\omega} = \nabla \wedge \vec{v}$.
 \par In a sense, vorticity represents the amount of angular momentum per unit mass transported by the fluid. If we decompose the stress tensor in a symmetric and antisymmetric part
 \begin{equation*}
     \sigma_{ij} = \sigma_{ij}^{S}+\sigma_{ij}^{A} = \frac{1}{2}(\partial_{j}v_{i}+\partial_{i}v_{j}) + \frac{1}{2}(\partial_{j}v_{i}-\partial_{i}v_{j})

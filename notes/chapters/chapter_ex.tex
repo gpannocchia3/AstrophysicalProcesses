@@ -5,7 +5,7 @@ The subject of interest of this chapter will follow closely the description give
 \par At any given point, the ionization equilibrium will be given by the balance of photoionization and recombination processes of electrons with the ions.
 \input{chapters/hcloud.tex}
 \par Now, since Hydrogen's the most abundant element in the Universe, we start considering a pure H-cloud surrounding a very hot star (Fig.\ref{fig:hcloud}), where "very" is going to be quantified in a moment.
-\par As we've briefly shown in Chapter \ref{ch:2}, §2.3, Quantum Mechanics predicts for Hydrogen an energetic spectum as such 
+\par As we've briefly shown in Chapter \ref{ch:2}, §2.3, Quantum Mechanics predicts for Hydrogen an energetic spectrum as such 
 \begin{equation*}
     E_{n} = -\frac{\text{Ry}}{n^{2}}
 \end{equation*}
@@ -114,7 +114,7 @@ Clearly, we should try to understand how the new ionization stages enter the pic
 \section{N-LTE radiation transfer}
 As we may have guessed from last section, the temperature in a static nebula is fixed by the equilibrium between photoionization-heating and cooling by recombination and radiation.
 \input{chapters/photionization.tex}
-Consider for example a photon of energy $h\nu$ bumping on a neutral Hydrogen atom as shown in Fig.\ref{fig:photoionization}.The photoelectron that will be thus produced will have an energy 
+Consider for example a photon of energy $h\nu$ bumping on a neutral Hydrogen atom as shown in Fig.\ref{fig:photoionization}. The photoelectron that will be thus produced will have an energy 
 \begin{equation*}
     \frac{1}{2}mu^{2} = h(\nu-\nu_{0})
 \end{equation*}
@@ -124,7 +124,7 @@ where $h\nu_{0}$ is the ionization threshold potential. For these electrons we e
     G(\text{H}) = \int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu}}{h\nu} n(\text{H}^{0})h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu
     \label{eq:photoionization_rate}
 \end{equation}
-This gives pretty much the expected value of the energy over the whole photon distribution. If we assume photoionization-equilibrium, we can use (\ref{eq:ionization_eq}) to eliminate $n(\text{H}^{0})$
+This gives the expected value of the energy over the whole photon distribution. If we assume photoionization-equilibrium, we can use (\ref{eq:ionization_eq}) to eliminate $n(\text{H}^{0})$
 \begin{align*}
     G(\text{H}) &= n_{e}n_{p}\alpha(\text{H}^{0}, T)\frac{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu}}{h\nu} h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu}{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu}}{h\nu}a_{\nu}\,\text{d}\nu}\\
     &= n_{e}n_{p}\alpha(\text{H}^{0}, T)\frac{3}{2}kT_{i}
@@ -209,7 +209,7 @@ with $E = mu_{2}^{2}/2$. These coefficients must be calculated quantum-mechanica
     \Gamma(SLJ, S'L'J') = \frac{(2J'+1)}{(2S'+1)(2L'+1)}\Gamma(SL, S'L')
     \label{eq:collision_strength_rel}
 \end{equation}
-if either $S = 0$ or $L = 0$. The factors $(2J' + 1)$ and $(2L' + 1) (2L' + 1)$ are the statistical weights of the level and of the term, respectively.
+if either $S = 0$ or $L = 0$. The factors $(2J' + 1)$ and $(2S' + 1) (2L' + 1)$ are the statistical weights of the level and of the term, respectively.
 \par For very low electron densities, every collisional excitation is followed by the emission of a photon, thus the cooling rate is simply 
 \begin{equation*}
     L_{C} = n_{e}n_{1}q_{12}h\nu_{21}
@@ -221,18 +221,18 @@ For general electron densities we can write
 \end{align*}
 so that the total cooling rate becomes 
 \begin{equation}
-    L_{C} = n_{2}A_{21}h\nu_{21} = n_{e}n_{1}q_{21}h\nu_{21}\left[1+\frac{n_{e}q_{21}}{A_{21}}\right]^{-1}
+    L_{C} = n_{2}A_{21}h\nu_{21} = n_{e}n_{1}q_{12}h\nu_{21}\left[1+\frac{n_{e}q_{21}}{A_{21}}\right]^{-1}
     \label{eq:total_collision_luminosity}
 \end{equation}
-Note that in the limit $n_{e}\to 0$ we recover the old expression we've written earlier, while in the $n_{e}\to\infty$ limit
+Note that in the limit $n_{e}\to 0$ we recover the expression we've written earlier, while in the $n_{e}\to\infty$ limit
 \begin{equation*}
     L_{C} = n_{1}\frac{\omega_{2}}{\omega_{1}}\exp(-\chi/kT)A_{21}h\nu_{21}
 \end{equation*}
 we retrieve the thermodynamic-equilibrium cooling rate.
-\par Some ions have many more levels than just two; for those, our simple formalism doesn't work very well. What we can do, however, is fine-tuning it so to include the fact that collisional and radiative transitions can occur between any of the levels, and excitation and deexcitation cross sections and collision strengths exist between all pairs of the levels.
+\par Some ions have many more levels than just two; for those, our simple formalism doesn't work very well. What we can do, however, is fine-tuning it so to include the fact that collisional and radiative transitions can occur between any of the levels, and excitation and de-excitation cross sections and collision strengths exist between all pairs of the levels.
 \par The equilibrium equations for each of the levels $i$ becomes 
 \begin{equation*}
-    \sum_{j\neq i} n_{j}n_{e}q_{ij} + \sum_{j>i}n_{j}A_{ji} = \sum_{j\neq i}n_{i}n_{e}q_{ij} + \sum_{j<i}n_{i}A_{ij}
+    \sum_{j\neq i} n_{j}n_{e}q_{ji} + \sum_{j>i}n_{j}A_{ji} = \sum_{j\neq i}n_{i}n_{e}q_{ij} + \sum_{j<i}n_{i}A_{ij}
 \end{equation*}
 This, together with the total number of ions 
 \begin{equation*}
@@ -297,7 +297,7 @@ then in general the cascade matrix takes the form
 \begin{equation*}
     C_{nL, n'L'} = \sum_{n''>n'}^{n}\sum_{L'' = L'\pm 1}C_{nL, n''L''}P_{n''L'', n'L'}
 \end{equation*}
-Once the populations $n_{nL}$ have been found, we can calculate the emssion coefficient in each line 
+Once the populations $n_{nL}$ have been found, we can calculate the emission coefficient in each line 
 \begin{equation*}
     j_{nn'} = \frac{h\nu_{nn'}}{4\pi}\sum_{L=0}^{n-1}\sum_{L'=L\pm 1}n_{nL}A_{nL,n'L'}
 \end{equation*}
