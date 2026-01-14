@@ -4,12 +4,12 @@
 
 \section{Transport through scattering}
 
-When we've first written down the equation for radiative transport (eq.\ref{eq:rt}) we've neglected the effects of a possibly much relevant source of photons, which is \emph{scattering}, another fairly common emission process. Scattering depends completely on the amount of radiation falling on the spacetime element we're considering.
+When we've first written down the equation for radiative transport (\ref{eq:rt}) we've neglected the effects of a possibly much relevant source of photons, which is \emph{scattering}, another fairly common emission process. Scattering depends completely on the amount of radiation falling on the spacetime element we're considering.
 \par How do we include it into the picture of radiative transport?
 \par For the present discussion we assume \emph{isotropic} scattering, so that the scattered radiation is emitted equally into equal solid angles. We also assume that the total amount of radiation emitted per unit frequency range is just equal to the total amount absorbed in that same frequency range (\emph{coherent scattering}).
-\par This are some fair requirements if you think about it. Isotropy is most likely assured if the main type of scattering is the (non-relativistic) Thomson scattering on electrons, while coherence of the scattering is just requiring the scattering to be elastic.
+\par These are some fair requirements if you think about it. Isotropy is most likely assured if the main type of scattering is the (non-relativistic) Thomson scattering on electrons, while coherence of the scattering is just requiring the scattering to be elastic.
 \par Such conditions are not always met, but for the moment we'll turn our heads away from the obvious problem and see where this brings us.
-\par The emission coefficient for coherent, isotropic scattering can be found simply by equating the power absorbed per unit volume and frequency ranges to the corresponding power emitted. Here we define the \emph{scattering coefficient} $\sigma_{\nu}$ so that 
+\par The emission coefficient for coherent, isotropic scattering can be found equating the power absorbed per unit volume and frequency ranges to the corresponding power emitted. Here we define the \emph{scattering coefficient} $\sigma_{\nu}$ so that 
 \begin{equation*}
     j_{\nu} = \sigma_{\nu}J_{\nu}
 \end{equation*}
@@ -22,23 +22,23 @@ The equation of radiative transport is thus modified\footnote{Note that we're as
     \frac{\text{d}I_{\nu}}{\text{d}s} = -\sigma_{\nu}(I_{\nu}-J_{\nu}) = -\sigma_{\nu}(I_{\nu}-\frac{1}{4\pi}\int_{\Omega} I_{\nu}\,\text{d}\Omega)
     \label{eq:rtscattering}
 \end{equation}
-\textbf{Solving this equation is a bloodbath}. The source function is not known a priori and depends on the solution $I_{\nu}$, at all directions through a given point, making this a \emph{integro-differential equation}, also known as "bloody mess".
+\textbf{Solving this equation is a bloodbath}. The source function is not known a priori and depends on the solution $I_{\nu}$ at all directions through a given point, making this a \emph{integro-differential equation}, also known as "bloody mess".
 \section{Random Walks}
 A particularly useful way of looking at scattering, which leads to important order-of-magnitude estimates, is by means of random walks. We shall now develope a formalism that interprets the processes of absorption, emission, and propagation in probabilistic terms for a single photon rather than the average behavior of large numbers of photons.
 \par Consider a photon emitted in an infinite, homogeneous scattering region. It travels a displacement $\vec{r}_{1}$ before being scattered, then travels in a new direction over a displacement $\vec{r}_{2}$ before being scattered, and so on. After N free paths, the total displacement will look like 
 \begin{equation*}
     \vec{R} = \sum_{i=1}^{N}\vec{r}_{i}
 \end{equation*}
-Since this is a vector, the average total displacement will be identically null. Therefore, we must evaluate the mean square of the total displacement which, in the assumption of independent and isotropic scattering, must be expressed as 
+The average total displacement will be identically null. Therefore, we must evaluate the mean square of the total displacement which, in the assumption of independent and isotropic scattering, must be expressed as 
 \begin{equation*}
     l_{*}^{2} = \langle\vec{R}^{2}\rangle = \sum_{i=1}^{N}\langle\vec{r}_{i}^{\,2}\rangle
 \end{equation*}
-The quantity $l_{*}^{2}$ is the root mean square net displacement of the photon, while $l^{2}$ denotes the mean square of the free path of a photon, which within a factor of order unity, it's simply the mean free path of a photon.
+The quantity $l_{*}$ is the root-mean-square net displacement of the photon, while $l^{2}$ denotes the mean square of the free path of a photon, which within a factor of order unity, it's simply the mean free path of a photon.
 \par Since the mean square displacements of each scattering iteration have no reason to be different, we'll just write 
 \begin{equation*}
     l_{*} = \sqrt{N}l
 \end{equation*}
-Said $L$ the linear dimension of the object photons are trying to "escape" from, for regions of large optical depth the number of scatterings required to actually escape is roughly determined by setting $l_{*} \approx L$. Then $N \sim L^{2}/l^{2}$. But since the optical thickness of the medium $\tau$ is of order $L/l$, our previous results yield
+Said $L$ the linear dimension of the object photons are trying to "escape" from, for regions of large optical depth the number of scatterings events required to actually escape is roughly determined by setting $l_{*} \approx L$. Then $N \sim L^{2}/l^{2}$. But since the optical thickness of the medium $\tau$ is of order $L/l$, our previous results yield
 \begin{equation*}
     \tau^{2} \approx N \quad \tau \gg 1
 \end{equation*}
@@ -51,7 +51,7 @@ which has the evident perk of well-behaving in the two limits we've discussed.
 \subsection{Combined scattering and absorption}
 What happens if we had both scattering and absorption? We'd have two terms on the right hand side of the tranfer equation 
 \begin{equation}
-    \frac{\text{d}I_{\nu}}{\text{d}s} = -\alpha_{\nu}(I_{\nu}-B_{\nu}) -\sigma_{\nu}(I_{\nu}-\frac{1}{4\pi}\int_{\Omega} I_{\nu}\,\text{d}\Omega)
+    \frac{\text{d}I_{\nu}}{\text{d}s} = -\alpha_{\nu}(I_{\nu}-B_{\nu}) -\sigma_{\nu}\left(I_{\nu}-\frac{1}{4\pi}\int_{\Omega} I_{\nu}\,\text{d}\Omega \right)
     \label{eq:rtcomplete}
 \end{equation}
 Please note that we're assuming Kirchhoff's law to hold, and the medium to be optically thick, so that $j_{\nu} = \alpha_{\nu}B_{\nu}$. In terms of a suitably defined source function $S_{\nu}$
@@ -62,7 +62,7 @@ we can rewrite eq.\ref{eq:rtcomplete} as
 \begin{equation*}
      \frac{\text{d}I_{\nu}}{\text{d}s} = -(\alpha_{\nu}+\sigma_{\nu})(I_{\nu}-S_{\nu})
 \end{equation*}
-We may then define an \emph{effective optical depth}\footnote{Also called \emph{extinction coefficient}.} $\tau_{*}$ so that 
+We may then define an \emph{effective optical depth}\footnote{Also called \emph{extinction coefficient}.} $\tau_{*}$ 
 \begin{equation*}
     \text{d}\tau_{*} = (\alpha_{\nu}+\sigma_{\nu})\,\text{d}s
 \end{equation*}
@@ -75,8 +75,9 @@ The probability for scattering not to end with a true absorption will then be $1
 \begin{equation*}
     S_{\nu} = (1-\epsilon_{\nu})J_{\nu}+\epsilon_{\nu}B_{\nu}
 \end{equation*}
-Let us consider first an infinite homogeneous medium. A random walk starts with the thermal emission of a photon (creation) and ends, possibly after a number of scatterings, with a true absorption (destruction). Since the walk can be terminated with probability $\epsilon$ at the end of each free path, the mean number of free paths is $N = \epsilon^{-1}$. We then have $l_{*} = l \epsilon^{-1/2}$. 
-\par So if we were to substitute in the definition of $l_{\nu}$, we'd get 
+Let's consider first an infinite homogeneous medium.
+\par A random walk starts with the thermal emission of a photon (creation) and ends, possibly after a number of scatterings, with a true absorption (destruction). Since the walk can be terminated with probability $\epsilon$ at the end of each free path, the mean number of free paths is $N = \epsilon^{-1}$. We then have $l_{*} = l \epsilon^{-1/2}$. 
+\par So if we were to substitute in the definition of $l_{\nu}$ into $l$ and use the definition of $\epsilon_{\nu}$, we'd get 
 \begin{equation*}
     l_{*} \approx \left[\alpha_{\nu}(\alpha_{\nu}+\sigma_{\nu})\right]^{-1/2}
 \end{equation*}

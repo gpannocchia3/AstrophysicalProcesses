@@ -1,7 +1,7 @@
 \chapter{Ionization and n-LTE processes} \label{ch:extra}
 \section{Introduction}
 The subject of interest of this chapter will follow closely the description given by \cite{2006agna.book.....O} regarding objects called \emph{emission nebulae}.
-\par Emission nebulae are the result of the photoionization of a diffuse gas cloud by ultraviolet photons from a hot “exciting” star or from a cluster of exciting stars.
+\par Emission nebulae are the result of the photoionization of a diffuse gas cloud by ultraviolet photons from a hot, “exciting” star or from a cluster of exciting stars.
 \par At any given point, the ionization equilibrium will be given by the balance of photoionization and recombination processes of electrons with the ions.
 \input{chapters/hcloud.tex}
 \par Now, since Hydrogen's the most abundant element in the Universe, we start considering a pure H-cloud surrounding a very hot star (Fig.\ref{fig:hcloud}), where "very" is going to be quantified in a moment.
@@ -9,15 +9,15 @@ The subject of interest of this chapter will follow closely the description give
 \begin{equation*}
     E_{n} = -\frac{\text{Ry}}{n^{2}}
 \end{equation*}
-where $\text{Ry}\approx 13.6\,\text{eV}$ is the energy needed to make the single electron of Hydrogen jump to the continuum, or, properly speaking, the energy needed to ionize such electron. It's clear then that our central source of radiation must be able to emit photons of energy at least 13.6$\,\text{eV}$, which are, not surprisingly, called \emph{ionizing photons}.
-\par Clearly, a ﬁnite source of ultraviolet photons cannot ionize an inﬁnite volume, and therefore, if the star is in a sufﬁciently large gas cloud, there must be an outer edge to the ionized material. The thickness of this transition zone between ionized and neutral gas, since it is due to absorption, is approximately one mean free path of an ionizing photon.
+where $\text{Ry}\approx 13.6\,\text{eV}$ is the energy needed to make the single electron of Hydrogen jump to the continuum, or, properly speaking, the energy needed to ionize Hydrogen. It's clear then that our central source of radiation must be able to emit photons of energy at least equal to 13.6$\,\text{eV}$; those responding to this characteristic will be, not surprisingly, called \emph{ionizing photons}.
+\par Clearly, a ﬁnite source of ultraviolet photons cannot ionize an inﬁnite volume, and therefore, if the star is in a sufﬁciently large gas cloud, there must be an outer edge to the ionized material. The thickness of this transition zone between ionized and neutral gas, since it is due to absorption, is approximately one mean free path of a ionizing photon.
 \par Let's then try to write down an equation for ionization equilibrium
 \begin{align}
     n(\text{H}^{0})\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu}}{h\nu}a_{\nu}(\text{H}^{0})\,\text{d}\nu &= n(\text{H}^{0})\int_{\nu_{0}}^{\infty} \phi_{\nu}a_{\nu}(\text{H}^{0})\,\text{d}\nu = n(\text{H}^{0})\Gamma(\text{H}^{0})\\
     &= n_{e}n_{p}\alpha(\text{H}^{0}, T)\,[\text{cm}^{-3}\,\text{s}^{-1}]
     \label{eq:ionization_eq}
 \end{align}
-where $J_{\nu}$ is the familiar mean intensity of radiation at the point. Thus, $\phi_{\nu} = 4\pi J_{\nu}/h\nu$ is the number of incident photons per unit area, per unit time, per unit frequency interval, and $a_{\nu}(\text{H}^{0})$ is the ionization cross section for Hydrogen by photons with energy $h\nu$; $\Gamma(\text{H}^{0})$ therefore represents the number of photoionizations per Hydrogen atom per unit time.
+where $J_{\nu}$ is the familiar mean intensity of radiation at the point. Thus, $\phi_{\nu} = 4\pi J_{\nu}/h\nu$ is the number of incident photons per unit area, per unit time, per unit frequency interval, and $a_{\nu}(\text{H}^{0})$ is the ionization cross section for Hydrogen by photons with energy $h\nu$; $\Gamma(\text{H}^{0})$ therefore represents the number of photoionizations events per Hydrogen atom per unit time.
 \par The neutral atom, electron, and proton densities per unit volume are $n$, $n_{e}$ and $n_{p}$, while $\alpha$ is a tabulated recombination coefficient.
 \par For a single point-like source, to a first approximation, the mean intensity $J_{\nu}$ is simply 
 \begin{equation*}
@@ -35,7 +35,7 @@ As anticipated, only radiation with frequency $\nu \geq \nu_{0}$ so that $h\nu_{
     I_{\nu} = I_{\nu, S} + I_{\nu, D}
     \label{eq:stellar-diffused-intensity}
 \end{equation}
-\par Let's focus on the strictly stellar radiation. Because of geometrical dilution ($r^{-2}$ behavior) and absorption, this contribution to the total intensity decreases outwards\footnote{Remember that all spontaneous emissions are supposed to occur in the cloud.}
+\par Let's focus on the strictly stellar radiation. Because of geometrical dilution ($r^{-2}$ suppression) and absorption, this contribution to the total intensity decreases outwards\footnote{Remember that all spontaneous emissions are supposed to occur in the cloud.}
 \begin{equation}
     4\pi J_{\nu, S} = \pi F_{\nu, S}(r) = \pi F_{\nu, S}(R)\frac{R^{2}\exp(-\tau_{\nu})}{r^{2}}
     \label{eq:stellar_mean_intensity}
@@ -57,7 +57,7 @@ which is strongly peaked around the threshold. This means that more often than n
     4\pi\int_{\nu_{0}}^{\infty}\frac{j_{\nu}}{h\nu}\,\text{d}\nu = n_{p}n_{e}\alpha_{1}(\text{H}^{0}, T)
     \label{eq:recombination_eq}
 \end{equation}
-where $\alpha_{1}(\text{H}^{0}, T)$ is the ground-state recombination coefficient. In principle we can write down the recombination coefficient as 
+where $\alpha_{1}(\text{H}^{0}, T)$ is the ground-state recombination coefficient. In principle we can write down the (total) recombination coefficient as 
 \begin{equation}
     \alpha(\text{H}^{0}, T) = \sum_{n=1}^{+\infty}\alpha_{n}
     \label{eq:recombination_coeff}
@@ -65,7 +65,7 @@ where $\alpha_{1}(\text{H}^{0}, T)$ is the ground-state recombination coefficien
 with $n$ the principal quantum number. It is clear then that $\alpha_{1}<\alpha$ and therefore $J_{\nu, D}<J_{\nu, S}$ on average.
 \par For an optically thin nebula, a good approximation is to take $J_{\nu, D} \approx 0$, while for an optically thick nebula, since no ionizing photons can escape, we assume that every diffuse radiation-ﬁeld photon generated in such a nebula is absorbed elsewhere in the nebula
 \begin{equation*}
-    4\pi\int \frac{j_{\nu}}{h\nu}\,\text{d}V = 4\pi\int n(\text{H}^{0})\frac{a_{\nu}J_{\nu, D}}{h\nu}\,\text{d}\nu
+    4\pi\int \frac{j_{\nu}}{h\nu}\,\text{d}V = 4\pi\int n(\text{H}^{0})\frac{a_{\nu}J_{\nu, D}}{h\nu}\,\text{d}V
 \end{equation*}
 but we can also give a similar relation assuming it to hold locally (this is sometimes called the "\emph{on the spot}" approximation)
 \begin{equation}
@@ -83,7 +83,7 @@ where
 \begin{equation*}
     \alpha_{B}(\text{H}^{0}, T) = \sum_{n = 2}^{\infty} \alpha_{n}
 \end{equation*}
-This is because in optically thick nebulae, the inization caused by (strictly) stellar radiation-field photons are balanced by recombinations to excited levels of Hydrogen, while reeombinations to the ground level generate ionizing photons that are absorbed elsewhere in the nebula but have no net effect on the overall ionization balance.
+This is because in optically thick nebulae, the ionization caused by (strictly) stellar radiation-field photons is balanced by recombinations to excited levels of Hydrogen, while recombinations to the ground level generate ionizing photons that are absorbed elsewhere in the nebula but have no net effect on the overall ionization balance.
 \par Properly solving eq.\ref{eq:pure_h_ionieq} gives us an estimate of the size of the fully ionized region ($\text{H}_{\text{II}}$), of which we can get a grasp by looking at Fig.\ref{fig:stromgren}.
 \begin{figure}[h!]
     \centering 
@@ -97,22 +97,22 @@ This is because in optically thick nebulae, the inization caused by (strictly) s
 \end{equation*}
 back into eq.\ref{eq:pure_h_ionieq} and integrating over $r$
 \begin{align*}
-    R^{2}\int_{\nu_{0}}^{\infty} \frac{\pi F_{\nu}(R)}{h\nu}\,\text{d}\nu \int_{O}^{\infty}\text{d}\left[-\exp(-\tau_{\nu})\right] &= \int_{0}^{\infty} n_{p}n_{e}\alpha_{B}(\text{H}^{0}, T) r^{2}\,\text{d}r\\
+    R^{2}\int_{\nu_{0}}^{\infty} \frac{\pi F_{\nu}(R)}{h\nu}\,\text{d}\nu \int_{0}^{\infty}\text{d}\left[-\exp(-\tau_{\nu})\right] &= \int_{0}^{\infty} n_{p}n_{e}\alpha_{B}(\text{H}^{0}, T) r^{2}\,\text{d}r\\
     &= R^{2} \int_{\nu_{0}}^{\infty} \frac{\pi F_{\nu}(R)}{h\nu}\,\text{d}\nu
 \end{align*}
-\par If we define $r_{1}$ as the radius of complete ionization, we have that within this radius $n_{p}=n_{e}\approx n(\text{H})$ and nearly zero outside, the last equation then becomes 
+\par If we define $r_{1}$ as the radius of complete ionization, we have that within this radius $n_{p}=n_{e}\approx n(\text{H})$ and nearly zero outside; last equation then becomes 
 \begin{align}
     4\pi R^{2}\int_{\nu_{0}}^{\infty}\frac{\pi F_{\nu}(R)}{h\nu} &= \int_{\nu_{0}}^{\infty}\frac{L_{\nu}}{h\nu}\\
     &= \frac{4\pi}{3}r_{1}^{3}n_{\text{H}}^{2}\alpha_{B}
     \label{eq:stromgren_sphere}
 \end{align}
-The physical meaning of this is that the total number of ionizing photons emitted by the star just balances the total number of recombinations to excited levels within the ionized volume $4\pi r_{1}^{3}/3$ which goes by the name of \emph{Strömgren's sphere}. To give an idea about the side of this sphere, O-type stars can fully ionize Hydrogen up to distances of the order of the parsec.
+The physical meaning of this is that the total number of ionizing photons emitted by the star balances the total number of recombinations to excited levels within the ionized volume $4\pi r_{1}^{3}/3$, which goes by the name of \emph{Strömgren's sphere}. To give an idea about the size of this sphere, O-type stars can fully ionize Hydrogen up to distances of the order of the parsec.
 \par What if we start including more species, for example Helium?
 Clearly, we should try to understand how the new ionization stages enter the picture, even more so since Helium has two different ionized variations ($\text{He}_{\text{II}}$, $\text{He}_{\text{III}}$) with higher ionization thresholds.
-\par For once, photons coming from Helium recombinations can ionize Hydrogen, but the same can't be said if we switch the roles. If then we start including also heavier elements (metals) it gets even crazier. But, alas, their presence makes pressure gradients even more relevant.
-\par One concluding note, of these regions we do see lines in emission and not a continuum as expected because LTE doesn't hold. Collisions aren't frequent enough to allow LTE to settle and thus energy levels with long lifetimes become observable due to the lack of de-exciting collisions.
+\par For once, photons coming from Helium recombinations can ionize Hydrogen, but the same can't be said if we flip the roles. If then we start including also heavier elements (metals) it gets even crazier. But, alas, their presence makes pressure gradients even more relevant.
+\par One concluding note, of these regions we do see lines in emission and not a continuum as expected. This is because LTE doesn't hold; collisions aren't frequent enough to allow LTE to settle and thus energy levels with long lifetimes become observable due to the lack of de-exciting collisions.
 \section{N-LTE radiation transfer}
-As we may have guessed from last section. the temperature in a static nebula is fixed by th e equilibrium between photoionization-heating and cooling by recombination and radiation.
+As we may have guessed from last section, the temperature in a static nebula is fixed by the equilibrium between photoionization-heating and cooling by recombination and radiation.
 \input{chapters/photionization.tex}
 Consider for example a photon of energy $h\nu$ bumping on a neutral Hydrogen atom as shown in Fig.\ref{fig:photoionization}.The photoelectron that will be thus produced will have an energy 
 \begin{equation*}
@@ -130,7 +130,7 @@ This gives pretty much the expected value of the energy over the whole photon di
     &= n_{e}n_{p}\alpha(\text{H}^{0}, T)\frac{3}{2}kT_{i}
 \end{align*}
 From this equation we can see that the mean energy of a newly created photoelectron depends on the form of the ionizing radiation ﬁeld, but not on the absolute strength of the radiation. The quantity $3kT_{i}/2$ represents the initial temperature of the photo-generated electron.
-\par If we assume blackbody behavior $J_{\nu}\approx B_{\nu}(T_{*})$ with temperature $T_{*}$, it's easy to show that $T_{i}\approx T_{*}$ as long as $kT_{*}<h\nu_{0}$.
+\par If we assume blackbody behavior $J_{\nu}\approx B_{\nu}(T_{*})$ with temperature $T_{*}$, it's possible to show that $T_{i}\approx T_{*}$ as long as $kT_{*}<h\nu_{0}$.
 \par We now turn to find a description for the kinetic energy that is lost during recombination processes. It can be given the following form 
 \begin{equation}
     L_{R} = n_{e}n_{p}kT\beta(\text{H}^{0}, T)
@@ -152,7 +152,7 @@ The left-hand side of (\ref{eq:averaged_kinetic_recombination_coeff}) is thus ef
     G(\text{H}) = L_{R}(\text{H})
 \end{equation*}
 and the solution for the nebular temperature would give $T > T_{i}$ because of the “heating" due to the preferential capture of the slower electrons.
-\par Clearly, in presence of radiative losses, the nebula is going to further cool down. As we've already done in the last section, we're going to split $J_{\nu}$ into two contributions, the diffuse radiation and the stellar radiation modiﬁed by absorption. Then, by means of the \emph{on the spot} approximation, we can neglect contributions to the balance coming from $n=1$ and rewrite the luminosity
+\par In presence of radiative losses, the nebula is going to further cool down. As we've already done in the last section, we're going to split $J_{\nu}$ into two contributions, the diffuse radiation and the stellar radiation modiﬁed by absorption. Then, using the \emph{on the spot} approximation, we can neglect contributions to the balance coming from $n=1$ and rewrite the luminosity
 \begin{equation*}
     L_{R} = n_{p}n_{e}\beta_{B}(\text{H}, T)kT
 \end{equation*}
@@ -165,14 +165,14 @@ with
     G(\text{H})_{OTS} &= n(\text{H}^{0})\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu, S}}{h\nu} h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu\\
     &= n_{e}n_{p}\alpha_{B}(\text{H}^{0}, T)\frac{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu, S}}{h\nu} h(\nu-\nu_{0})a_{\nu}\,\text{d}\nu}{\int_{\nu_{0}}^{\infty} \frac{4\pi J_{\nu, S}}{h\nu}a_{\nu}\,\text{d}\nu}\
 \end{align*}
-For high-energy electrons, it's given another cooling channel, which does not involve recombinations and in most circumstances is far more important. A minor contributor to the cooling rate, which nevertheless is important, is free—free (FF) radiation or Bremsstrahlung, in which a continuous spectrum is emitted.
+For high-energy electrons, it's given another cooling channel, which does not involve recombinations and in most circumstances is far more important. A minor contributor to the cooling rate, which nevertheless is important, is free-free (FF) radiation or Bremsstrahlung, in which a continuous spectrum is emitted.
 \par The luminosity by Bremsstrahlung is given by 
 \begin{align}
-    &= \frac{2^{5}\pi e^{6}Z^{2}}{3^{3/2}hmc^{3}}\left(\frac{2\pi kT}{m}\right)^{1/2}g_{ff}n_{e}n_{+}
     L_{FF}(Z) &= 4\pi j_{ff}\\
+    &= \frac{2^{5}\pi e^{6}Z^{2}}{3^{3/2}hmc^{3}}\left(\frac{2\pi kT}{m}\right)^{1/2}g_{ff}n_{e}n_{+}
     \label{eq:Bremsstrahlung}
 \end{align}
-where $n_{+}$ is the number density of the ions. The numerical factor $g_{ff}$ goes by the name of \emph{Gaunt factor} for free-free emission; it is a slowly varying function of $n_{e}$ and $T$. Generally for nebular conditions is in the range $1.0<g_{ff}<1.5$, and usually an average $g_{ff}\approx 1.3$ is adopted.
+where $n_{+}$ is the number density of the ions. The numerical factor $g_{ff}$ goes by the name of \emph{Gaunt factor} for free-free emission; it is a slowly varying function of $n_{e}$ and $T$. Generally, for nebular conditions is in the range $1.0<g_{ff}<1.5$, and usually an average $g_{ff}\approx 1.3$ is adopted.
 \subsection{Loss by Collisions}
 A far more important source of radiative cooling is collisional excitation of heavier species. These ions make
 a signiﬁcant contribution in spite of their low abundance because they have energy levels with excitation potentials of the order of $kT$, but all the levels of Hydrogen and Helium have much higer excitation potentials, therefore rendering them less important in this regard.
@@ -191,7 +191,7 @@ where $u_{1}$ and $u_{2}$ are related by the conservation of energy
 \end{equation*}
 The collisional de-excitation cross section has, not surprisingly, the same functional form as that of the excitation cross section (apart from a permutation $1\leftrightarrow 2$). The total collisional de-excitation rate per unit volume per unit time is then 
 \begin{align}
-    n_{e}n_{2}q_{21} &= n_{e}n_{2}\int_{0}^{ma\infty} u\sigma_{21}f(u)\,\text{d}u \\
+    n_{e}n_{2}q_{21} &= n_{e}n_{2}\int_{0}^{\infty} u\sigma_{21}f(u)\,\text{d}u \\
     &= n_{e}n_{2}\left(\frac{2\pi}{kT}\right)^{1/2}\frac{\hbar^{2}}{m^{3/2}}\frac{\Gamma(1,2)}{\omega_{2}}\\
     &= n_{e}n_{2}\frac{8.629\cdot 10^{-6}}{T^{1/2}}\frac{\Gamma(1,2)}{\omega_{2}}
     \label{eq:total_de-ex}
@@ -273,7 +273,7 @@ where $b_{nl}=1$ in LTE and
 \begin{equation*}
     X_{n} = h\nu_{0}-\chi_{n} = \frac{h\nu_{0}}{n^{2}}
 \end{equation*}
-is the ionization potential of the $nL$ level. We can plug this expression back into the equation for statistical equilibrium (\ref{eq:stat_eq}) and find out that the $b_{nL}$ coefficients are \emph{not} a function of the density as long as recombination and downward—radiative transitions are the only relevant processes
+is the ionization potential of the $nL$ level. We can plug this expression back into the equation for statistical equilibrium (\ref{eq:stat_eq}) and find out that the $b_{nL}$ coefficients are \emph{not} a function of the density as long as recombination and downward-radiative transitions are the only relevant processes
 \begin{align*}
     \alpha_{nL}&\frac{1}{2L+1}\left(\frac{2\pi mkT}{h^{2}}\right)^{3/2}\exp(-X_{n}/kT)\\
     &+ \sum_{n'>n}^{\infty}\sum_{L''}b_{n'L'}A_{n'L', nL}\left(\frac{2L'+1}{2L+1}\right)\exp\left[(X_{n'}-X_{n})/kT\right]\\
@@ -284,7 +284,7 @@ Note that the equations above can be solved by working downward in $n$, for if t
 \begin{equation*}
     P_{nL,n'L'} = \frac{A_{nL,n'L'}}{\sum_{n''=1}^{n-1}\sum_{L''}A_{nL, n''L''}}
 \end{equation*}
-which is zero unless $L' = L\pm 1$ (recall the usual selection rules from the Wigner-Eckart's theorem).
+which is zero unless $L' = L\pm 1$ (recall the usual selection rules from Wigner-Eckart's theorem).
 \par For example, if $n'=n-1$, the cascade matrix has the form
 \begin{equation*}
     C_{nL, n-1L'} = P_{nL,n-1L'}
@@ -293,7 +293,7 @@ and so on, so that if we define
 \begin{equation*}
     C_{nL, nL''} = \delta_{LL''}
 \end{equation*}
-then in general the cascade matrix has the form 
+then in general the cascade matrix takes the form 
 \begin{equation*}
     C_{nL, n'L'} = \sum_{n''>n'}^{n}\sum_{L'' = L'\pm 1}C_{nL, n''L''}P_{n''L'', n'L'}
 \end{equation*}
@@ -302,9 +302,10 @@ Once the populations $n_{nL}$ have been found, we can calculate the emssion coef
     j_{nn'} = \frac{h\nu_{nn'}}{4\pi}\sum_{L=0}^{n-1}\sum_{L'=L\pm 1}n_{nL}A_{nL,n'L'}
 \end{equation*}
 All the machination we've built until now works pretty well as an approximation for the diffuse spectrum in optically thin nebulae, assuming absorption events are absent.
-\par Unfortunately, for pure Hydrogen all of this works rather poorly. $\text{H}$-nebulae tends to be optically thick, especially in the Lyman lines\footnote{the Lyman series is a Hydrogen spectral series of transitions and resulting UV emission lines as an electron goes from $n\geq 2$ to $n = 1$.}. For those, the equation for the central line-absorption cross section is 
+\par Unfortunately, for pure Hydrogen all of this works rather poorly.
+\par $\text{H}$-nebulae tends to be optically thick, especially in the Lyman lines\footnote{The Lyman series is a Hydrogen spectral series of transitions and resulting UV emission lines as an electron goes from $n\geq 2$ to $n = 1$.}. For those, the equation for the central line-absorption cross section is 
 \begin{equation*}
     a_{0}(\text{Ly}_{n}) = \frac{3\lambda_{n1}^{3}}{8\pi}\left(\frac{m_{\text{H}}}{2\pi kT}\right)^{1/2}A_{nP,1s}
 \end{equation*}
-where $\lambda_{n1}$ is the wavelength of the line. At a typical temperature for a stellar atmosphere $T\sim 10^{4}\,\text{K}$, and the optical depth in the Lyman-$\alpha$ ($\text{Ly}_{\alpha}$) is about $10^{4}$ times the optical depth at the Lyman limit $\nu = \nu_{0}$ of the ionizing continuum. Thus the optical depth will be of order $\tau \sim 1-10^{4}$ and the nebula will be much likely optically thick.
+where $\lambda_{n1}$ is the wavelength of the line. At a typical temperature for a stellar atmosphere $T\sim 10^{4}\,\text{K}$, the optical depth in the Lyman-$\alpha$ ($\text{Ly}_{\alpha}$) is about $10^{4}$ times the optical depth at the Lyman limit $\nu = \nu_{0}$ of the ionizing continuum. Thus the optical depth will be of order $\tau \sim 1-10^{4}$ and the nebula will be optically thick.
 \par The resulting spectrum will be that of a continuum (due to Bremsstrahlung) superposed with some emission lines.
