@@ -8,11 +8,11 @@
 Turbulence is quite an interesting feature arising in fluids. Turbulent flow is fluid motion characterized by chaotic changes in pressure and flow velocity, both spatially and temporally.
 \par Turbulence's ability to transport and mix fluid is unparalleled, compared to stardard laminar flows. But it comes with a price: It's bloody difficult to deal with it.
 \par There's not a unique definition of when a fluid becomes turbulent rather than staying in a chill (and much less chaotic) laminar flow.
-\par Usually, we say that a flow is turbulent when the Reynolds' number (\ref{eq:reynoldsnumber}) is much larger than 1. Essentially, what happens is that viscosity is no longer able to damp and constrain the fluid motion, which ends up going nuts. It should be clear, however, that for that to happen, you need energy ($\varepsilon$) to be injected in the fluid
+\par Usually, we say that a flow is turbulent when the Reynolds' number (\ref{eq:reynoldsnumber}) is much larger than 1. Essentially, what happens is that viscosity is no longer able to damp and constrain the fluid motion, which ends up going nuts. It should be clear, however, that for that to happen, you need energy ($\varepsilon$) to be injected in the fluid.
 \par Before going through the essential features of turbulence, we shall briefly consider again our naive bubble description, only to find out that what happens is actually much more complex.
 \section{Instabilities}
-Consider the system depicted in Fig.\ref{fig:bubble}. As the bubble rises, it will have a non-zero vertical velocity. Let's see what this implies.
-\par Consider a stratified, ideal, incompressible fluid with no vorticity\,\footnote{Actually, vorticity is divergent on the boundary.} as those shown in Fig.\ref{fig:stratified_fluid}.
+Consider the bubble system depicted in Fig.\ref{fig:bubble}. As the bubble rises, it will have a non-zero vertical velocity. Let's see what this implies.
+\par Consider a stratified, ideal, incompressible fluid with no vorticity\,\footnote{Actually, vorticity is divergent on the boundary.} moving with constant velocity along the $x$ axis as shown in Fig.\ref{fig:stratified_fluid}.
 \input{chapters/stratified_fluid}
 \par Given these assumptions, the velocity fields may be written in terms of a scalar potential
 \begin{equation*}
@@ -45,6 +45,12 @@ we're able to find a dispersion relation for the system
 \end{equation}
 Unless $v_{1} = v_{2}$, the argument of the square root is always negative, so the oscillation frequency has a purely imaginary component. When you plug that into the plane wave solution, you get an exponentially increasing amplitude for the wave, meaning that the system is unstable.
 \par This is called \emph{Kelvin-Helmoltz instability}. The KH instability has characteristic vortices arising, which normally are damped at some point by viscosity, stopping the endless formation of vortices.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width = 0.8\textwidth]{img/kh.jpg}
+    \caption{Vortices formation due to KH instability. Note that the process is self-similar. Credits: \href{https://www.youtube.com/watch?v=cTRQP6DSaqA}{this video}.}
+    \label{fig:kh}
+\end{figure}
 \par If we introduce a gravitational field in the vertical direction, we introduce a stabilizing factor in eq.\ref{eq:KHi}
 \begin{equation}
     \frac{\omega}{k} = \frac{\rho_{1}v_{1}+\rho_{2}v_{2}}{\rho_{1}+\rho_{2}} \pm \left[\frac{g}{k}\frac{\rho_{2}-\rho_{1}}{\rho_{1}+\rho_{2}}-\frac{\rho_{1}\rho_{2}(v_{1}-v_{2})^{2}}{(\rho_{1}+\rho_{2})}\right]^{1/2}
@@ -52,10 +58,16 @@ Unless $v_{1} = v_{2}$, the argument of the square root is always negative, so t
 \end{equation}
 Please note that even if $v_{1}=v_{2}$, the system may still be unstable. In fact, in such a scenario, the system is stable only if $\rho_{1}<\rho_{2}$ (referring to Fig.\ref{fig:stratified_fluid}), which actually makes sense: The less dense fluid must float over the denser fluid.
 \par Conversely, the fluid is unstable if $\rho_{1}>\rho_{2}$ (\emph{Rayleigh-Taylor instability}). The RT instability presents characteristic "fingers" (or jets) extending from the less dense layer to the denser one.
+\begin{figure}[h!]
+    \centering 
+    \includegraphics[width = 0.9\textwidth]{img/rt.png}
+    \caption{Jet formation due to RT instability. Credits: \cite{article}.}
+    \label{fig:rt}
+\end{figure}
 \section{Properties of Turbulence}
 To try giving a description of turbulence, we'll often perform a Reynolds' decomposition
 \begin{equation*}
-    \vec{v} = \langle\vec{v}\rangle +\delta\vec{v}
+    \vec{v} = \langle\vec{v}\,\rangle +\delta\vec{v}
 \end{equation*}
 This allows us to write down an "averaged" version of the Navier-Stokes equation (\ref{eq:incompressible_ns}), in which a new term is coming out 
 \begin{equation*}
@@ -68,9 +80,9 @@ The last term $\langle\delta v_{i}\delta v_{j} \rangle$ representing correlation
 The term containing the pressure is the \emph{isotropic stress}, the term containing the gradients of $v$ is the \emph{viscous stress} while the third new term is the \emph{Reynolds stress}, caused by fluctuations.
 \par Making use of Wiener-Chinčin's theorem, we can link velocity fluctuations to fluctuations in kinetic energy. Usually the Reynolds' stress term is unpacked in a symmetric and an antisymmetric part defining the \emph{turbulent kinetic energy tensor}
 \begin{equation*}
-    \kappa(\vec{x},t) = \frac{1}{2}\langle \delta v_{i}\delta v_{i} \rangle
+    \kappa(\vec{x},t) = \frac{1}{2}\langle \delta v_{i}\,\delta v_{i} \rangle
 \end{equation*}
-representing the mean kinetic energy (per unit mass) in the fluctuating velocity field. The \emph{deviatoric anisotropic part} is 
+representing the mean kinetic energy (per unit mass) in the fluctuating velocity field. The \emph{deviatoric anisotropic part} is thus
 \begin{equation*}
     a_{ij} = \langle\delta v_{i}\delta v_{j}\rangle-\frac{2}{3}\kappa\delta_{ij}
 \end{equation*}
@@ -80,7 +92,7 @@ Suppose to have a quantity dependent on two independent variables $Q(x,y)$. Char
 \begin{equation*}
     \xi = \frac{y}{\delta(x)} \quad \tilde{Q}(\xi, x)=\frac{Q(x,\xi)}{Q_{0}(x)}
 \end{equation*}
-If the scaled dependent varibale is independent of $x$, i.e.
+If the scaled dependent variable is independent of $x$, i.e.
 \begin{equation*}
     \exists\hat{Q}(\xi): \tilde{Q}(\xi, x) = \hat{Q}(\xi)
 \end{equation*}
@@ -93,16 +105,16 @@ then $Q(x,y)$ is self-similar.
     \text{d}s^{2} = -\left(1-\frac{R_{s}}{r}\right)\text{d}t^{2}+\left(1-\frac{R_{s}}{r}\right)^{-1}\text{d}r^{2}+r^{2}\text{d}\Omega_{(2)}^{2}
     \label{eq:Schwartzschild_metric}
 \end{equation}
-is the only possible spherically symmetric solution to the Einstein's equation in vacuum\,\footnote{Please note that we're using Carroll's \cite{carroll} convention for the signature of the metric, which, incidentally, isn't the same used in the GR course.} (well, assuming there actually \emph{is} something somewhere in space-time inducing this metric).
+is the only possible spherically symmetric solution to the Einstein's equation in vacuum\,\footnote{Please note that we're using Carroll's \cite{carroll} convention for the signature of the metric, which, incidentally, isn't the same used in the GR course. Moreover, I've set $c=1$.} (well, assuming there actually \emph{is} something somewhere in space-time inducing this metric).
 \par From (\ref{eq:Schwartzschild_metric}) is perhaps even simpler understanding what a self-simlar solution is: Just plug $y = R_{s}/r$ and you'll find that the metric is completely specified up to a factor of $R_{s}$, which contains all the details of the source of the curvature.
 \subsection{Kolmogorov's scales}
 In a revolutionary article of 1941, the Russian physicist A. V. Kolmogorov developed one of the most incredible theories about the structure of turbulence in incompressible fluids \cite{1991RSPSA.434....9K}.
 \par We shall start assuming we're in presence of a fully turbulent flow with $Re = UL/\nu \gg 1$ and Richardson's theory about the "energy cascade" to hold: That means turbulence can be considered to be composed of eddies of different sizes which can be described through the tern of parameters $l,\,u(l),\,\tau(l)=l/u(l)$.
 \par The eddies of the largest scales are characterized by lengthscale $l_{0}$ comparable to $L$ (the dimension of the system housing the turbulent liquid) and have characteristic velocity $u(l_{0}) \approx (2\kappa/3)^{1/2}\approx U$.
-\par Larger eddies are unstable. Pretty much like boybands in the prime of their careers, they end up breaking apart, transferring energy to "smaller" eddies. This \emph{energy cascade} continues until the Reynolds' number $Re(l)$ is sufficiently small that the eddy motion is stable.
+\par Larger eddies are unstable and, like boybands in the prime of their careers, they end up breaking apart, transferring energy to "smaller" eddies. This \emph{energy cascade} continues until the Reynolds' number $Re(l)$ is sufficiently small that the eddy motion is stable.
 \par The energy dissipation rate $\varepsilon$ is determined by the transfer of energy from the largest eddies and is \textbf{independent of the kinematic viscosity $\nu$}.
 \par Here comes to play Kolmogorov's key hypothesis. At sufficiently high $Re$, the small-scale turbulent motions are claimed to be \emph{isotropic}. Let's call $l_{I}$ the lengthscale demarcation between anisotropic large and isotropic small eddies.
-\par Isotropy in this case means that all directional information is lost, as well as all information about the geometry of larger eddies. In a sense then, the statistics of small-scale motions are in a sense \emph{universal}.
+\par Isotropy in this case means that all directional information is lost, as well as all information about the geometry of larger eddies. In a sense then, the statistics of small-scale motions are \emph{universal}.
 \subsubsection*{1st hypothesis of self-similarity}
 In every turbulent flow with $Re\gg 1$, the statistics of the small-scale range have a universal form determined by $\varepsilon,\,\nu$ alone. We can define \emph{Kolmogorov's scale} so that $Re=1$
 \begin{align*}
@@ -111,17 +123,17 @@ In every turbulent flow with $Re\gg 1$, the statistics of the small-scale range 
     \tau_{\eta} &= \left(\frac{\nu}{\varepsilon}\right)^{1/2}
 \end{align*}
 characterizing the smallest dissipative eddies.
-\par The implications are astounding. Consider a point $\vec{x}_{0}$ at a time $t_{0}$ for a fully-developed turbulent flow. In terms of Kolmogorov's scales, we can define adimensional coordinates and velocities
+\par The implications are remarkable. Consider a point $\vec{x}_{0}$ at a time $t_{0}$ for a fully-developed turbulent flow. In terms of Kolmogorov's scales, we can define adimensional coordinates and velocities
 \begin{align*}
     \vec{y} &= \frac{\vec{x}-\vec{x}_{0}}{\eta} \\
     \omega(\vec{y}) &= \frac{\vec{U}(\vec{x},t_{0})-\vec{U}(\vec{x}_{0},t_{0})}{u_{\eta}}
 \end{align*}
-Since it is not possible to form a non-dimensional quantity with $\varepsilon,\,\nu$, the universal form of the statistics of the non-dimensional field $\omega(\vec{y})$ \textbf{cannot depend on $\varepsilon,\,\nu$}. That means that on not-too-large scales, $\omega(\vec{y})$ is statistically isotropic and identical at all points.
+Since it is not possible to form a non-dimensional quantity with $\varepsilon,\,\nu$, the universal form of the statistics of the non-dimensional field $\omega(\vec{y}\,)$ \textbf{cannot depend on $\varepsilon,\,\nu$}. That means that on not-too-large scales, $\omega(\vec{y}\,)$ is statistically isotropic and identical at all points.
 \par That implies that all fully-developed turbulent flows have velocity fields statistically similar.
 \subsubsection*{2nd hypothesis of self-similarity}
-In every turbulent flow with $Re \gg 1$, the statistics of motion of scale $l$ in the range $l_{0}\gg l \gg \eta $ have a universal form determined by $\varepsilon$ alone, independent of $\nu$
+In every turbulent flow with $Re \gg 1$, the statistics of motion of scale $l$ in the range $l_{0}\gg l \gg \eta $ have a universal form determined by $\varepsilon$ alone, independent of $\nu$,
 \input{chapters/kolmogorov}
-which means the effect of viscosity is relevant only when we're dealing with lengthscales smaller than $\eta$. It seems like a honest assumption: A Reynolds' number smaller than 1 (\ref{eq:reynoldsnumber}) requires viscous forces to be greater than the inertial driving. By construction, Kolmogorov's scales identify the conditions for which $Re = 1$, so all is consistent.
+which means that the effect of viscosity is relevant only when we're dealing with lengthscales smaller than $\eta$. It seems like a honest assumption: A Reynolds' number smaller than 1 (\ref{eq:reynoldsnumber}) requires viscous forces to be greater than the inertial driving. By construction, Kolmogorov's scales identify the conditions for which $Re = 1$, so everything is consistent.
 \par We're not going to show explicitly, but from the two hypothesis of self-similarity we can conclude something really important. In the equilibrium range ($l<l_{EI}$, see Fig.\ref{fig:kolmogorov_scales}) the spectrum is a universal function of $\varepsilon,\,\nu$. But then, the second hypothesis of self-similarity tells us that in the inertial subrange statistics cannot depend on $\nu$. 
 \par If we were to calculate explicitly velocity correlations to plug them into Wiener-Chinčin's theorem, we'd get an expression for how energy is distributed into modes $\kappa$ (the wavenumber)
 \begin{equation}
@@ -137,13 +149,13 @@ introducing a non-thermal broadening in the spectrum lines (see "Line Broadening
 \par To actually resolve the spatial structure of turbulence we require a resolution of astrophysical proportions (pun intended), at least proportional to $Re^{-1}$.
 \par As a concluding note, in the presence of magnetic fields, eq.\ref{eq:energy_modes} is modified $E_{M} \propto \kappa^{-2}$. In principle, both dependencies can be present at once, allowing us to differentiate between neutral and magnetized phases.
 \section{Sound waves and shocks}
-At this point, it should come to no surprise to you that we're coming back once more to our initial, easy rising-bubble model to further complicate it. We've already seen that as a consequence of its vertical motion, instabilities arise (\ref{eq:KH_RTi}), tranforming our cool little bubble in a swirly mess. 
-\par Another fairly important consequence of the bubble's motion is the arising of pressure differences between the material itself and the wake\footnote{\emph{N.d.T.}: in Italian, it should sound something like "scia".} coming after the bubble.
+At this point, it should come to no surprise that we're coming back once more to our initial, easy rising-bubble model to further complicate it. We've already seen that as a consequence of its vertical motion, instabilities arise (\ref{eq:KH_RTi}), transforming our cool little bubble in a swirly mess. 
+\par Another fairly important consequence of the bubble's motion is the arising of pressure inbalances between the material itself and the wake\footnote{\emph{N.d.T.}: in Italian, it should sound something like "scia".} coming after the bubble.
 \par For this section (and many more in the Gravitation Part) I'll be following \cite{Frank_King_Raine_2002}. Relevant paragraphs for this section are §2.4 and §3.8.
 \par Let's write Euler's equation and the continuity equation (\ref{eq:lagrangianframe}) in a conservative form 
 \begin{align*}
-    \partial_{t}(\rho\vec{v}) + (\vec{v}\cdot\nabla)(\rho\vec{v}) &= -\nabla\, p\\
-    \partial_{t}\rho +\nabla(\rho\vec{v}) &= 0
+    \partial_{t}(\rho\vec{v}\,) + (\vec{v}\cdot\nabla)(\rho\vec{v}\,) &= -\nabla\, p\\
+    \partial_{t}\rho +\nabla(\rho\vec{v}\,) &= 0
 \end{align*}
 and look for perturbations around the equilibrium solution.
 \begin{align*}
@@ -157,7 +169,7 @@ Since Euler's equation (and by extension, Navier-Stokes' equation) is invariant 
     \partial_{t}\rho_{1}+\rho_{0}\partial_{x}v_{1} &= 0\\
     \rho_{0}\partial_{t}v_{1} +\left(\frac{\partial p}{\partial \rho}\right)_{0}\frac{\partial\rho_{1}}{\partial x} &=0
 \end{align*}
-Cross derivating the two equations and plugging in one equation into the other, we end up with 
+Cross derivating the two equations and plugging one equation into the other, we end up with 
 \begin{equation}
     \partial^{2}_{t}\rho_{1}-\left(\frac{\partial p}{\partial \rho}\right)_{0}\partial^{2}_{x}\rho_{1} = 0
     \label{eq:soundwaves}
@@ -169,7 +181,7 @@ which is a hyperbolic equation describing propagating density waves!
 \end{equation*}
 as the \emph{speed of sound} in the fluid. Sometimes $c_{s}$ is also said to be the compressibility of the fluid.
 \par Since $c_{s}$ is the speed at which pressure (or density) perturbations travel through the gas, it limits the rapidity with which the fluid can react to such changes. For example, if the pressure in one part of a region of the fluid of characteristic size $L$ is suddenly changed, the other parts of the region cannot respond to this change until a time of order $L/c_{s}$, the sound crossing time, has elapsed.
-\par In a sense, $c_{s}$ is also the velocity at which causality travels in the fluid. Thus, if we were to consider a \emph{supersonic flow}, then the fluid cannot respond on the flow time $L/\left|\vec{v}\right|$, so pressure gradients have little effect on the flow. At the other extreme, for subsonic flows the fluid can adjust in less than the flow time, so to a first approximation the fluid behaves as if in hydrostatic equilibrium.
+\par In a sense, $c_{s}$ is also the velocity at which causality travels in the fluid. Thus, if we were to consider a \emph{supersonic flow}, then the fluid wouldn't be able to respond on the flow time $L/\left|\vec{v}\right|$, so pressure gradients have little effect on the flow. At the other extreme, for subsonic flows the fluid can adjust in less than the flow time, so to a first approximation the fluid behaves as if in hydrostatic equilibrium.
 \par The density dependence of the sound speed implies that regions of higher than average density have higher than average sound speeds, a fact which gives rise to the possibility of \emph{shock waves}.
 \begin{figure}[h!]
     \centering 
@@ -194,18 +206,18 @@ as the \emph{speed of sound} in the fluid. Sometimes $c_{s}$ is also said to be 
     \frac{1}{2}v_{1}^{2}+\varepsilon_{1} &= \frac{1}{2}v_{2}^{2}+\varepsilon_{2}
     \label{eq:RH_JC}
 \end{align}
-which are respectively mass flux, momentum flux and energy flux conservation. Especially in the latter, we've assumed radiative losses and thermal conduction, etc., across the shock front to be negligible.
-\par This is the adiabatic assumption, and the resulting junction conditions are known as the adiabatic shock conditions or the \emph{Rankine-Hugoniot junction conditions}.
+which are respectively mass flux, momentum flux and energy flux conservation. Especially in the latter, we've assumed radiative losses, thermal conduction, etc., across the shock front to be negligible.
+\par This is the adiabatic assumption, and the resulting junction conditions are known as the adiabatic shock conditions or \emph{Rankine-Hugoniot junction conditions}.
 \par Keeping Fig.\ref{fig:RH_JC} in mind, we can proceed to find a unique relation connecting the ratio of the downstream density (or velocity) $\rho_{2}$ and upstream density to the pressure
 \begin{equation*}
     \frac{\rho_{2}}{\rho_{1}} = \frac{v_{1}}{v_{2}} = \frac{(\gamma +1)p_{1}+(\gamma-1)p_{2}}{(\gamma-1)p_{1}+(\gamma+1)p_{2}}
 \end{equation*}
 Note that it is not assured for the adiabatic coefficient $\gamma$ to come out unscathed from the shock, even more so if it is energetic enough to ionize the fluid.
-\par Usually, RH junction conditions are expressed in terms of the \emph{Mach number} $\mathcal{M}_{i} = v_{i}/c_{s,i}$. For a monoatomic gas $\gamma = 5/3$, and the RH junction conditions yield
+\par Usually, RH junction conditions are expressed in terms of the \emph{Mach number} $\mathcal{M}_{i} = v_{i}/c_{s,i}^{\text{ad}} = (3\rho v^{2}/5p)^{1/2}$. For a monoatomic gas $\gamma = 5/3$, the RH junction conditions yield
 \begin{equation*}
-    1+\frac{v_{2}}{v_{1}} = \frac{5}{4}\left[\frac{3}{5\mathcal{M}_{1}^{2}+1}\right]
+    1+\frac{v_{2}}{v_{1}} = \frac{5}{4}\left[\frac{3}{5\mathcal{M}_{1}^{2}}+1\right]
 \end{equation*}
-In the limit of a strong shock $\mathcal{M}_{1} \gg 1$, we find out that 
+In the limit of a strong shock $\mathcal{M}_{1} \gg 1$\footnote{Here $\mathcal{M}$ is the upstream Mach number.}, we find out that 
 \begin{equation*}
     \frac{v_{2}}{v_{1}} = \frac{\rho_{1}}{\rho_{2}} = \frac{1}{4}
 \end{equation*}
@@ -215,7 +227,7 @@ i.e. the velocity drops to one-quarter of its upstream value across the shock wh
     \frac{v_{2}}{v_{1}} = \frac{\rho_{1}}{\rho_{2}} = \frac{\gamma -1}{\gamma +1}
 \end{equation*}
 If the shock is \emph{isothermal} rather than adiabatic, there's no limit to compressibility.
-\par Note that without proper injection of energy, shocks are eventually stalled by viscosity, then degenerating into normal soundwaves. As we have anticipated in the last section, Kolmogorov's spectrum has the same $\kappa$ dependency, but a proportionality to $\mathcal{M}^{8}$ is introduced, meaning that shocks dissipate energy very efficiently.
+\par Note that without proper injection of energy, shocks are eventually stalled by viscosity, then degenerating into normal soundwaves. As we have anticipated in the last section, Kolmogorov's spectrum has the same $\kappa$ dependency, but a proportionality to $\mathcal{M}^{8}$ is introduced, meaning that shocks dissipate energy very efficiently\footnote{I tried looking for an article or something talking about this, but found none. Or, at least, I found none that convinced me. If you were to find something, please contact me so I can reference it.}.
 \par Most of the times, assuming shocks to be adiabatic is a questionable take \emph{at best} since there's a strong dependence on the cooling timescales through radiative losses.
 \subsection{Sedov-Taylor blastwave solution}
 There's a (arguably) cool and educational application of shockwaves, which incidentally made the fortune of a rather famous film producer.
@@ -230,7 +242,7 @@ Given a relation like the one above, the independent variables of the system can
 \par The theorem then claims that we may pass from function $g(q)=0$ to $G(\Pi)=0$ following this procedure
 \begin{itemize}
     \item List all parameters describing the system;
-    \item Choose the primary dimensions (e.g. M, L, T and so on);
+    \item Choose the primary dimensions (e.g.\,: M, L, T and so on);
     \item Perform dimension analysis of the parameters;
     \item Choose parameters that contain all the primary dimensions;
     \item Set dimensional equations and find the explicit relations for the $\Pi$ parameters.
@@ -261,17 +273,17 @@ ODEs have the nice convenience of being generally easier to solve than PDEs.
 \end{equation*}
 which means our $\eta$ parameter is just $\eta = r^{5}t^{-2}$, since $[E_{0}]/[\rho] = \text{L}^{5}\,T^{-2}$. Hence, simply inverting the expression yields
 \begin{equation}
-    R \sim \left(\frac{E_{0}}{\rho_{0}}\right)^{1/5}t^{2/5} \quad v = \dot{R} \sim \frac{2}{5} Rt^{-1}
+    R \sim \left(\frac{E_{0}}{\rho_{0}}\right)^{1/5}t^{2/5} \quad \quad v = \dot{R} \sim \frac{2}{5} Rt^{-1}
     \label{eq:ST_blastwave}
 \end{equation}
-incidentally, the proportionality constant is of order unity. Note that the velocity is decreasing. This can be roughly explained recalling the conservation of momentum: As the wavefront expands it "gains" more mass\,\footnote{The proper expression would probably be "entrains more material".} hence needing to slow down to conserve momentum.
+incidentally, the proportionality constant is of order unity. Note that the velocity is decreasing, since the acceleration $\ddot{R}<0$. This can be roughly explained recalling the conservation of momentum: As the wavefront expands it "gains" more mass\,\footnote{The proper expression would probably be "entrains more material".} hence needing to slow down to conserve momentum.
 \par So far we've been assuming the process to be adiabatic, but is it actually a sensible guess? It certainly depends on timescales: If the cooling timescale is much larger than the dynamical timescale, then we're good.
-\par On top of that, especially in the first instants of explosions, the medium can be considered \emph{optically thick} thanks to the density compression induced by shockwaves. Since no radiation is coming out of there, we can assume that no energy is lost to radiation and is conserved.
+\par On top of that, especially in the first instants of explosions, the medium can be considered \emph{optically thick} thanks to the density compression induced by shockwaves. Since no radiation is coming out of there, we can assume that no energy is lost to radiation and is conserved (see Fig.\ref{fig:trinitytest}).
 \begin{figure}[h!]
     \centering 
-    \includegraphics[width=0.9\textwidth]{img/trinitytest}
+    \includegraphics[width=0.8\textwidth]{img/trinitytest}
     \caption{A real photograph portraying the first instants of the Trinity atomic test conducted in 1945 in New Mexico, Alamogordo. \\
-    From the image we see two things: After 1/40 of a second, the blastwave still retains (partial) spherical symmetry and the medium is still optically thick.}
+    Note how, after 1/40 of a second, the blastwave still retains (partial) spherical symmetry and the medium is still optically thick.}
     \label{fig:trinitytest}
 \end{figure}
 \par We can follow a similar line of reasoning and find out that the pressure of the blastwave scales as\,\footnote{You just have to recall that pressures are dimensionally equal to energy densities.}
@@ -286,8 +298,10 @@ That means that there is a radius for which each pressure is reached. That holds
     R \sim \left(\frac{MV}{\rho} \right)^{1/4} t^{1/4}
 \end{equation}
 this is usually called the \emph{Snowplow phase}.
-\par The expression we've found to describe the Sedov-Taylor blastwave (\ref{eq:ST_blastwave}) also allows us to predict up to a honestly frightening degree the evolution of the expansion of Supernovae explosions. For this highly energetic phenomena, we can consider an initial injection of energy of order $E_{0}\sim 10^{50}\,\text{erg}$ and a typical density of $\rho_{0}\sim 10^{-24}\,\text{g}/\text{cm}^{3}$. This means that the typical radius of the explosion is given by 
+\par The expression we've found to describe the Sedov-Taylor blastwave (\ref{eq:ST_blastwave}) also allows us to predict quite accurately the evolution of the expansion of Supernovae explosions. For this highly energetic phenomena, we can consider an initial injection of energy of order $E_{0}\sim 10^{50}\,\text{erg}$ and a typical density of $\rho_{0}\sim 10^{-24}\,\text{g}/\text{cm}^{3}$. This means that the typical radius of the explosion is given by 
 \begin{equation*}
     R(t)\sim 10^{-0.7}\left(\frac{E_{50}}{\rho_{24}}\right)^{1/5}t_{yr}^{2/5}\,\;[\text{pc}]
 \end{equation*}
-where the subscripts indicate that quantities are to be expressed in terms of the typical order of magnitude for SN events. So for example, assuming a radius of 1 parsec after a 100 years long expansion, you'd get a typical velocity for the wavefront of order $v \sim 10^{3}\,\text{km}\text{s}^{-1}$, which is a non-negligible fraction of the speed of light.
+where the subscripts indicate that quantities are to be expressed in terms of the typical order of magnitude for SN events. So for example, assuming a radius of 1 parsec after a 100 years long expansion, you'd get a typical velocity for the wavefront of order $v \sim 10^{3}\,\text{km}\,\text{s}^{-1}$, which is a non-negligible fraction of the speed of light.
+\par What have we learned from this section?
+\par If you (really) have to test a new bomb (and you're supposed to keep it a secret), don't go around showing images of the explosion with convenient space and time references.
