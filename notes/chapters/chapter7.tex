@@ -1,10 +1,10 @@
 \chapter{Accretion in binary systems} \label{ch:vii}
 \section{Introduction}
-Binary systems of stars (or black holes, as we'll see in the next chapter) are one of the most common configurations were we take a good look at the sky (that is, assuming we're able to indeed resolve the binary system).
+Binary systems of stars (or black holes, as we'll see in the next chapter) are one of the most common configurations, were we take a good look at the sky (that is, assuming we're able to indeed resolve the binary system).
 \par On top of that, differently from their single counterpart, binaries reveal more about themselves, notably their masses and dimensions, than do other astronomical objects; this is particularly true in the case of \emph{eclipsing binaries}.
 \par It may come as no surprise hearing that angular momentum is going to play a major role in the study of accretion in binary systems. For example, in many cases, the transferred material cannot land on the accreting star until it has rid itself of most of its angular momentum, leading to the formation of \emph{accretion disks}, which we'll be the focus of quite a few sections among the following.
 \section{Interacting binaries}
-As always, I'm referring to \cite{Frank_King_Raine_2002} for this part.
+As for last chapter, I'll be referring to \cite{Frank_King_Raine_2002} for this part as well.
 \par There are two main reasons many binaries transfer matter at some stage of their
 evolutionary lifetimes:
 \begin{itemize}
@@ -45,9 +45,9 @@ where $\vec{r_{1}}$, $\vec{r_{2}}$ are the position vectors of the centres of th
     \caption{Sections in the orbital plane of the Roche potential $\phi$. The five Lagrange point where the potential is zero are marked in the picture with a $L_{i}$. The saddle point $L_{1}$ is said "inner Lagrange point" and forms a "pass" from the two Roche lobes (\textbf{3}). Credits: Frank, King and Raine.}
     \label{fig:roche}
 \end{figure}
-\par What if one of the two stars external layer bloates up and steps out of its Roche lobe? Since the lobes are essentially demarcation lines between the two (single star) potentials, once a Roche lobe is overflown, material will fall on the other object, captured by the gravitational potential of the other star.
-\par This type of mass transfer is called \emph{Roche lobe overflow}. Since mass is removed from the star quite readily when the lobe is filled, the star cannot never grow significantly larger than its Roche lobe\footnote{Clearly, this only applies to binary systems whose Roche lobes are smaller than the radius of the object after its expansion.}. The star losing mass is typically named \emph{donor}, while the one gaining mass is called \emph{accretor}.
-\par Generally, there's a non-zero pressure gradient near the $L_{1}$ Lagrange point, with material often flowing at supersonic speeds\footnote{For those who may be interested in the subject, I do suggest reading into something of I. S. Shklovskii, for example \cite{1972SvA....15..886S} or \href{https://ui.adsabs.harvard.edu}{here}.}. Clearly, if we introduce angular momentum back into the picture, Coriolis' forces will arise, deviating the trajectory of said gas until it settles into a ring.
+\par What if one of the two stars' external layer bloates up and steps out of its Roche lobe? Since the lobes are essentially demarcation lines between the two (single star) potentials, once a Roche lobe is overflown, material will fall on the other object, captured by the gravitational potential of the other star.
+\par This type of mass transfer is called \emph{Roche lobe overflow}. Since mass is removed from the star quite readily when the lobe is filled, the star cannot never grow significantly larger than its Roche lobe\footnote{This only applies to binary systems whose Roche lobes are smaller than the radius of the object after its expansion.}. The star losing mass is typically named \emph{donor}, while the one gaining mass is called \emph{accretor}.
+\par Generally, there's a non-zero pressure gradient near the $L_{1}$ Lagrange point, with material often flowing at supersonic speeds\footnote{For those who may be interested in the subject, I do suggest reading into something of I. S. Shklovskii, for example \cite{1972SvA....15..886S} or search for something \href{https://ui.adsabs.harvard.edu}{here}.}. If we introduce angular momentum back into the picture, Coriolis' forces will arise, deviating the trajectory of said gas until it settles into a ring.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{img/disk_form.png}
@@ -55,7 +55,7 @@ where $\vec{r_{1}}$, $\vec{r_{2}}$ are the position vectors of the centres of th
     \label{fig:spiral_gas}
 \end{figure}
 \par To a good approximation we can take the stream trajectory as the orbit of a test particle released from rest at $L_{1}$, and thus with a given angular momentum, falling in the gravitational field of the accreter alone. This would give an elliptical orbit lying in the binary plane: The presence of the donor causes this to precess slowly. A continuous stream trying to follow this orbit will therefore intersect itself, resulting in dissipation of energy via shocks.
-\par On the other hand, the gas has little opportunity to rid itself of the angular momentum it had on leaving $L_{1}$, so it will tend to the orbit of lowest energy for a given angular momentum, a circular orbit. We thus expect the gas initially to orbit the accretor in the binary plane at a radius $R_{c}$ such that the Kepler orbit at $R_{c}$ has the same specific angular momentum as the transferring gas had on passing through $L_{1}$.
+\par On the other hand, the gas has little opportunity to rid itself of the angular momentum it had upon leaving $L_{1}$, so it will tend to the orbit of lowest energy for a given angular momentum, a circular orbit. We thus expect the gas to initially orbit the accretor in the binary plane at a radius $R_{c}$ such that the Kepler orbit at $R_{c}$ has the same specific angular momentum as the transferring gas had on passing through $L_{1}$.
 \par If we consider Euler's equation for the vorticity in presence of viscosity
 \begin{equation*}
     \frac{\text{D}\vec{\omega}}{\text{D}t} = \nu \nabla^{2}\vec{\omega}
@@ -67,9 +67,10 @@ we discover that a sensible solution may be of the form
 so that material diffuses all over until eventually forms a \emph{disk}, which will be the focus of the next section.
 \subsection*{AGNs and BEBs (Big Energetic Bros)}
 Jokes aside, as we'll have the pleasure to discuss in the next few sections, accretion is not limited only to "small" objects with hard boundaries\footnote{The notion of "hard" for something made of hot plasma may be somewhat deceptive, but we'll stick with the notation.} like stars.
-\par As far as our understanding goes, the very things at the center of galaxies are constantly accreting the nearby matter, thus depleting gravitational energy in (often) spectacular forms which we're able to detect! On top of that, we're aware of the existence of binary systems made of a "small" black holes and something else; this is the case, for example of the Sco-X1 binary system.
-\par AGNs (\emph{Active Galactic Nucleus}) are particularly relevant in the picture of accretion since they've been observed to be able to accrete both spherically (no angular momentum) and non-spherically (non-zero angular momentum), with the formation of a disk. Our common understanding of AGNs relies on the (fairly tested) belif that they're powered by supermassive black holes in the range of $10^{5}-10^{8}\,M_{\odot}$.
-\par To give the world the illusion that we're really understanding what's going on in there, AGNs have been given a nice classification based on the type of galaxy they're found in and on their spectral features (when needed):
+\par As far as our understanding goes, the very things at the center of galaxies are constantly accreting the nearby matter, depleting in the process gravitational energy in (often) spectacular forms which we're able to detect!
+\par On top of that, we're aware of the existence of binary systems made of a "small" black holes and something else; this is the case, for example of the Sco-X1 binary system.
+\par AGNs (\emph{Active Galactic Nuclei}) are particularly relevant in the picture of accretion since they've been observed to be able to accrete both spherically (no angular momentum) and non-spherically (non-zero angular momentum), with the formation of a disk. Our common understanding of AGNs relies on the (fairly tested) belif that they're powered by supermassive black holes with masses lying in the range of $10^{5}-10^{8}\,M_{\odot}$.
+\par To give the world the illusion that we're really understanding what's going on in there, AGNs have been given a nice classification based on the type of galaxy they're found in and based on their spectral features (when needed):
 \begin{itemize}
     \item Blazers $\to$ Elliptical galaxies
     \item Type I Seyfert $\to$ (Late type) Spiral Galaxies with narrow absorption lines
@@ -77,21 +78,21 @@ Jokes aside, as we'll have the pleasure to discuss in the next few sections, acc
     \item Radio Loud Quasars $\to$ (Early type) Elliptical galaxies
     \item Radio Quiet Quasars $\to$ (Early type) Elliptical galaxies
 \end{itemize}
-\par It may be worth pointing out that this classification is pretty much a hand-wavingly way to present the same object from different points of view. In fact, all points in the previous list represent pretty much the same objects, with the relative tilt from the observation direction the only thing that is really changing.
+\par It may be worth pointing out that this classification is a hand-wavingly way to present the same object from different points of view. In fact, all points in the previous list represent essentially the same object, with the relative tilt from the observation direction the only thing that is really changing.
 \begin{figure}[h!]
     \centering
     \includegraphics[width = 0.8\textwidth]{img/agn_class.png}
-    \caption{Explicative pictorial representation of the unfied model of AGNs. Credits: \cite{Urry_1995}}
+    \caption{Explicative pictorial representation of the unfied model of AGNs.\\
+    Credits: \cite{Urry_1995}}
     \label{fig:agn_class}
 \end{figure}
-\par But this should not surprise you. Relativistic beaming is heavily frequency-dependent and direction-dependent, so, depending on the direction you're looking from, you're going to have really different results.
-\par As you can easily cross-check in your favorite book of electrodynamics (for example \cite{Jackson:100964}), the angular distribution of radiation emitted by an accelerated charge can be calculated starting from the relativistic-adjusted Poynting's vector.
+\par But this should not surprise you: Relativistic beaming is heavily frequency dependent and direction dependent, so the direction you're looking from will impact significantly on what you're going to see, leading to really different results. As you can easily cross-check in your favorite book of electrodynamics (for example \cite{Jackson:100964}\,), the angular distribution of radiation emitted by an accelerated charge can be calculated starting from the relativistic-adjusted Poynting's vector.
 \par Doing this, you'll find out that when the velocity and the acceleration of the emitting particle are parallel, the emitted power per solid angle is given by 
 \begin{equation*}
     \frac{\text{d}P}{\text{d}\Omega} = \frac{e^{2}\dot{v}^{2}}{4\pi c^{3}}\frac{\sin^{2}\theta}{(1-\beta\cos\theta)^{5}}
 \end{equation*}
 where $\theta$ is the angle of observation measured from the direction of $\vec{\beta}$. From this expression it's clear the heavy direction-dependence; to find the frequency spectrum you need to put in some more work.
-\par Although not entirely nor strictly related to this, I think you can get an idea of what's going on by watching \href{https://www.youtube.com/shorts/RCSNL0lop8I}{this short clip} by Kip Thorne.
+\par Although not entirely nor strictly related to this, I think you can get an idea of how perspective affects what we'll be able to see by watching \href{https://www.youtube.com/shorts/RCSNL0lop8I}{this short clip} by Kip Thorne.
 \par Another interesting fact is that most of these systems present powerful jets which may remain coherent for \emph{kiloparsecs}.
 \par How? Now, that's a good question. The most accredited theory has been developed by R. D. Blandford and R. L. Znajek in 1977 \cite{1977MNRAS.179..433B}; we won't go much deeper than this here\footnote{To quote a book I've studied from: "The author of this notes does not claim to have any particular insight on the subject."} but they have essentially speculated the formation of magnetic funnels around spinning black holes.
 \par When you start considering spinning black holes, a whole other handful of problems arises. For once, you can no longer use the nice and simple Schwarzschild metric to describe the BH, but you have to use Kerr's. Even then, it has been shown that in presence of Kerr's black holes, if the accretion disk is (somehow) tilted in respect to the rotation axis of the BH, an effect called \emph{Bardeen precession} \cite{1975ApJ...195L..65B} arises, leading to a considerable part of the radiation emitted in the central part of the disk to be reabsorbed, inducing observable changes in the X-ray spectrum.
@@ -125,11 +126,11 @@ which gives raise to a non-negligible velocity dispersion along the vertical dir
 \end{equation*}
 with $H = c_{s}/\Omega_{0}$ the disk's scale height and $c_{s} = (TR/\mu)^{1/2}$ the sound speed. If we define the \emph{aspect ratio} $\delta$ of the disk as 
 \begin{equation}
-    \delta = \frac{H}{r} = \frac{c_{s}}{Hr} = \left(\frac{T}{T_{vir}}\right)^{1/2}= \frac{1}{M} < 1
+    \delta = \frac{H}{r} = \frac{c_{s}}{\Omega_{0}r} = \left(\frac{T}{T_{vir}}\right)^{1/2}= \frac{1}{M} < 1
     \label{eq:aspect_ratio}
 \end{equation}
 we conclude that the gas in the disk must be supersonic\footnote{For $\Omega_{0}r$ can be considered the tangential velocity to the (circular) orbit.}. Thus, the disk is pretty much a continuum of Keplerian orbits along which the gas has different velocities.
-\par Now, if we move to the comoving frame and recall Fig.\ref{fig:stratified_fluid}, we may notice that we are in the exact conditions for shear instability to arise. But since angular momentum is \emph{fixed} for any given orbit, each displacement caused by shear instabilities will be simply ignored, for angular momentum conservation will eventually bring back the displaced element to its original position.
+\par Now, if we switch to the comoving frame and recall Fig.\ref{fig:stratified_fluid}, we may notice that we are in the exact conditions for shear instability to arise. But since angular momentum is \emph{fixed} for any given orbit, each displacement caused by shear instabilities will be simply ignored, for angular momentum conservation will eventually bring back the displaced element to its original position.
 \par In fact, as long as 
 \begin{equation*}
     \frac{\partial J}{\partial r} < 0
@@ -138,15 +139,16 @@ the disk is stable against small element-displacement.
 \par If that's the case, how can accretion be possible? Viscosity.
 \par Although we have no clues (sorta\footnote{As for many other things in the Universe, it is probably turbulence's doing. We'll take a look at it in the next section.}\,) of how the viscosity gets high enough to allow the rings of gas to migrate towards the center and lose angular momentum, it's clear that if that is the case, then accretion may indeed be possible.
 \section{The Shakura-Sunyaev model}
-As we have mentioned \emph{en passant} at the end of the last section, in a differentially rotating medium (like our Keplerian-continuum) must develope tangential stresses between adjacent layers, which are usually belived to be connected to the presence of magnetic fields, turbulence and molecular and/or radiative viscosity as the primary mechanisms of transport of angular momentum.
+As we have mentioned \emph{en passant} at the end of the last section, a differentially rotating medium (like our Keplerian-continuum) must develope tangential stresses between adjacent layers, which are belived to be connected to the presence of magnetic fields, turbulence and molecular and/or radiative viscosity acting as the primary mechanisms of transport of angular momentum.
 \par In the conditions that are of interest to us, nor molecular nor radiative viscosity can be able to lead to accretion. So that leaves us with only magnetic fields and turbulence. As noticed by Shakura and Sunyaev \cite{1973A&A....24..337S}, the magnetic field flowing into the disk may have a regular structure at the distances comparable to the outer radius of the disk. But since $\nabla\cdot\vec{H} = 0$, the radial component of the magnetic field must have alternating sign, hence differential rotation leads to division of the large magnetic loops into smaller ones.
-\par Within the disk is then most probable for the field to be chaotic and on the small scales. The energy density in the magnetic field cannot possibly exceed the thermal energy of matter 
+\par Within the disk is then most probable for the field to be chaotic and on the small scales. The energy density in the magnetic field cannot exceed the thermal energy of matter 
 \begin{equation*}
-    \frac{\left\|\vec{H}\right\|^{2}}{8\pi} < \rho\frac{c_{s}^{2}}{2}
+    \frac{|\vec{H}\,|^{2}}{8\pi} < \rho\frac{c_{s}^{2}}{2}
 \end{equation*}
 Although we have no complete theory of turbulence, we have observational checks of its existence in accretion disks, so we can assume turbulence to be indeed present.
 \par In fact, as computed by \cite{Frank_King_Raine_2002} (§4.7), a safe estimate of the Reyndolds' number evaluates roughly at $\text{Re} > 10^{14}$. Hence, molecular viscosity is far too weak to bring about the viscous dissipation and angular momentum transport we require. We may then conjecture that the gas flow in accretion discs is also turbulent, although there is, as yet, no proof that this is so.
-\par Although we know pretty much nothing, we can still make some sensible claims on the quantities limiting the onset of turbulence: First, the typical size of the largest turbulent eddies cannot exceed the disc thickness $H$; second, it is unlikely that the turnover velocity $v_{turb}$ is supersonic, for, in this case, the turbulent motions would probably be thermalized by shocks. Thus, we can write 
+\par What we're going to do is invoking Boussinesq and treat turbulence as a source of viscosity\footnote{For more details about this you may check the Fluid Dynamics class or \cite{Pope_2000}.}.
+\par Although we know pretty much nothing, we can still make some sensible claims on the quantities limiting the onset of turbulence: First, the typical size of the largest turbulent eddies cannot exceed the disc thickness $H$; second, it is unlikely that the turnover velocity (that is, the velocity beyond which the fluid can be considered turbulent) $v_{turb}$ is supersonic, for, in this case, the turbulent motions would probably be thermalized by shocks. Thus, we can write 
 \begin{equation}
     \nu = \alpha c_{s}H 
     \label{eq:alpha_presc}
@@ -165,7 +167,7 @@ and can probably expect with a certain degree of confidence that $\alpha$ will t
 Let's assume the accretion disk to be geometrically thin (along the vertical axis) with cylindrical symmetry. All calculations will be carried out with Newtonian mechanics. It is necessary to take into account GR corrections only in the region $r<3R_{s}$, where no stable circular orbits are possible\footnote{You can see \cite{carroll} §5, for more details.}.
 \par We can define the surface density of the disk $\Sigma(r)$ as 
 \begin{equation}
-    \Sigma(r) = -\int_{-\infty}^{+\infty} \rho(z,r)\,\text{d}z \approx 2H\rho_{0}
+    \Sigma(r) = \int_{-\infty}^{+\infty} \rho(z,r)\,\text{d}z \approx 2H\rho_{0}
 \end{equation}
 with $\rho_{0}$ the density on the plane of the disk\footnote{We have plugged in the $\rho(z)$ behavior we have hand-wavingly pulled out of the cylinder in the last section.}.
 \par We shall now consider the conservation equations 
@@ -244,7 +246,7 @@ On the left hand side we have the variation of entropy, while on the right hand 
 \begin{equation*}
      \rho T \frac{\text{d}S}{\text{d}t} \approx 0 \;\text{for}\; t>t_{D}
 \end{equation*}
-Note that this condition is automatically satisfied if LTE holds, since it assures energetic equilirbium. This way we can integrate over the vertical direction the 1st principle above and find
+Note that this condition is automatically satisfied if LTE holds, since it assures energetic equilibrium. This way we can integrate over the vertical direction the 1st principle above and find
 \begin{equation*}
     \int_{-\infty}^{+\infty}(-\nabla\cdot\vec{F})\,\text{d}z + \int_{-\infty}^{+\infty}Q_{\nu}\,\text{d}z \approx 0
 \end{equation*}
@@ -254,11 +256,11 @@ Because of the thin disc approximation, the disc medium is essentially "plane-pa
     \sigma T_{s}^{4} = \int_{-\infty}^{+\infty}Q_{\nu}\,\text{d}z = D(r)
 \end{equation*}
 \par What this equation is saying is just that all energy dissipated by viscosity is radiated away. At this point we may write down the 8 equations for the disk structure, but, in the interest of time, I won't. The interested reader may refer, once again, to \cite{Frank_King_Raine_2002}, §5.4, equation(s) 5.41.
-\par If we evaluate the dissipation rate 
+\par Let's write down the dissipation rate 
 \begin{equation*}
     D(r) = \frac{G\partial_{r}\Omega}{4\pi r} = \frac{1}{2}\nu\Sigma(r\partial_{r}\Omega)^{2}
 \end{equation*}
-If we consider where the angular frequency has the Keplerian form
+and evaluate it where the angular frequency has the Keplerian form
 \begin{equation*}
     D(r) = \frac{9}{8}\nu\Sigma\frac{GM}{r^{3}} = \frac{9}{8}\nu\Sigma\Omega^{2}
 \end{equation*}
@@ -300,14 +302,14 @@ and assume that $\rho$ and $T_{c}$ (a.k.a. the central temperature) are such tha
 \begin{equation*}
     \kappa_{R} = 5\cdot 10^{24} \rho T_{c}^{-7/2}\,\text{cm}^{2}\,\text{g}^{-1}
 \end{equation*}
-With these choices for $\nu$ and $\kappa_{R}$ the system of equations for the disk is algebraic and can be solved straightforwardly. The Shakura-Sunyaev disk solution is
+With these choices for $\nu$ and $\kappa_{R}$, the system of equations for the disk is algebraic and can be solved straightforwardly. The Shakura-Sunyaev disk solution is
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{img/ss_disk_eq.png}
     \caption{Disk equations for the Shakura-Sunyaev model. You'll pardon me if I didn't write this down. Credits: Frank, King and Raine.}
     \label{fig:sha-sun_eq}
 \end{figure}
-A number of interesting remarks can be made just by observing these equations. First of all, in none of the equations the $\alpha$-parameter we know pretty much nothing about enters with a high power. This means that all these quantities are not particularly sensitive to the actual value of $\alpha$. Though this also means that we cannot expect to discover the typical size of $\alpha$ by direct comparison of steady-state disc theory with observations.
+A number of interesting remarks can be made just by observing these equations. First of all, in none of the equations above the $\alpha$-parameter (that we know pretty much nothing about) enters with a high power. This means that all these quantities are not particularly sensitive to the actual value of $\alpha$. Note, however, that this also means that we cannot expect to discover the typical size of $\alpha$ by direct comparison of steady-state disc theory with observations.
 \par If we compute the aspect ratio $\delta$
 \begin{equation}
     \delta = \frac{H}{r} = \left(\frac{R}{\mu}\right)^{2/5}\left(\frac{3}{64\pi^{2}\sigma}\right)^{1/10}\left(\frac{\kappa}{\alpha}\right)^{1/10}GM^{-7/10}r^{1/20}(f\dot{M})^{1/5}

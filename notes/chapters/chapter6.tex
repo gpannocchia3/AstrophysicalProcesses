@@ -3,9 +3,8 @@ Everything we've seen in the last few chapters will come into play here.
 \par In this chapter we're considering the two main possibilities for accelerated plasma in presence of a gravitational field: It's either they receive a kick and then fall back on the surface (\emph{accretion}) or just make it out safely from the gravitational field (\emph{stellar winds}).
 \par In the next sections, we'll try to give a punctual and precise description so to not underplay the important physical processes lying underneath.
 \section{Stellar winds}
-Starting from last century it had become clearer and clearer that an outgoing, corpuscolar flow from the Sun was needed to explain certain phenomena, like cometary tail's disruptions and Earth's magnetic storms. 
-\par In order to start approaching this subject, let us approximate the Sun (or a star, in general) as an autogravitating sphere of mass $M$ with spherical symmetry, ignoring whatever drift may be caused by magnetic fields or rotation.
-\par We're going to neglect the self-gravitating potential of the stellar corona hovering around the central star.
+Starting from last century it had become clearer and clearer that an outgoing, corpuscolar flow from the Sun was needed to explain certain phenomena, like cometary tail's disruptions and Earth's geomagnetic storms. 
+\par In order to start approaching this subject, let us approximate the Sun (or a star, in general) as an autogravitating sphere of mass $M$ with spherical symmetry, ignoring whatever drift may be caused by magnetic fields or rotation. We're also going to neglect the self-gravitating potential of the stellar corona hovering around the central star.
 \par Following the original article by Parker \cite{1958ApJ...128..664P} we may first discuss whether the stellar corona can be in hydrostatic equilibrium at all distances. The easy answer is that it (probably) cannot.
 \begin{figure}[h!]
     \centering
@@ -13,7 +12,7 @@ Starting from last century it had become clearer and clearer that an outgoing, c
     \caption{Pressure profile under the assumption of hydrostatic equilibrium.}
     \label{fig:parker_p_hyeq}
 \end{figure}
-If we were to do the full computation, we'd find a pressure profile like the one in Fig.\ref{fig:parker_p_hyeq}, which presents asymptotic values for both cases considered (neutral and ionized hydrogen). Such asymptotic pressure is much larger than any other source of pressure we may expect finding out there. The pressure exerted by the ISM, the only sensible and suitable candidate, is about five order or magnitudes less than what is needed to mantain hydrostatic equilibrium at all distances.
+If we were to do the full computation, we'd find a pressure profile like the one in Fig.\ref{fig:parker_p_hyeq}, which presents asymptotic values for both cases considered (neutral and ionized hydrogen). Such asymptotic pressure is much larger than any other source of pressure we may expect finding out there. For example, the pressure exerted by the ISM, the only sensible and suitable candidate, is about five orders of magnitudes less than what would be needed to mantain hydrostatic equilibrium at all distances.
 \par Stellar coronas must then be expanding. Whether inwards or outwards that remains to be seen.
 \par Since it is not possible to find a stable solution for the coronal gas to be in hydrostatic equilibrium at large distances from the central star, we now turn our eye towards a \emph{dynamical model} able to describe the process.
 \par The starting point are as always Euler's equation and the continuity equation, both expressed under the assumption of spherical symmetry and \emph{stationarity}, so that we can put all time derivatives to zero. Eq.\ref{eq:incompressible_ns} may be then written as
@@ -30,7 +29,7 @@ which may be solved exactly
 \begin{equation}
     \dot{M} = 4\pi r^{2}\rho v(r) = \text{const.}
 \end{equation}
-\par Assuming a barotropic equation of state (\ref{eq:barotropic})\footnote{This is not a bad assumption: The energy transported by the wind is much greater than that transported by heat conduction mechanisms \cite{1953sun..book..207V}. This way we can assume temperature to be negligible beyond a given distance $b$ and constant up to that point.}: 
+\par Assuming a barotropic equation of state (\ref{eq:barotropic})\footnote{This is not a bad assumption: The energy transported by the wind is much greater than that transported by heat conduction mechanisms \cite{1953sun..book..207V}. We can thus assume temperature to be negligible beyond a given distance $b$ and constant up to that point.}: 
 \begin{equation*}
     v^{2}\partial_{r}\log(v) = -c_{s}^{2}\partial_{r}\log(\rho)-\frac{GM}{r^{2}}
 \end{equation*}
@@ -38,8 +37,8 @@ which can be promptly restated as
 \begin{equation*}
     (v^{2}-c_{s}^{2})\partial_{r}\log(v) = \frac{2c_{s}^{2}}{r}\left(1-\frac{GM}{2c_{s}^{2}r}\right)
 \end{equation*}
-In this form it's easy to see that if $v>c_{s}$ the fluid must be accelerating.
-\par It may be worth pointing out that the latter equation may be cast in a self-similar fashion. This is easier seen if we assume the plasma to behave like a perfect gas: Under the assumption of constant temperature in the region we're observing, the equation of state is actually barotropic
+In this form it's easy to see that if $v>c_{s}$ the fluid must be accelerating\footnote{It dawned on me that stellar winds are much similar to a spherically symmetric de Lavalle's nozzle (Fig.\ref{fig:nozzle}) with increasing section (the spherical shells). I'm pretty sure this was mentioned during class, though.}.
+\par It may be worth pointing out that the latter equation may be cast in a self-similar fashion. This is easier seen if we assume the plasma to behave like a perfect gas: Under the assumption of constant temperature in the region we're observing, the equation of state is barotropic
 \begin{equation*}
     p = nkT = \frac{kT}{\mu m_{H}}\rho
 \end{equation*}
@@ -48,9 +47,10 @@ where $\mu$ is the mean molecular weight
     \mu = \left(2X+\frac{3}{4}Y+\frac{1}{2}Z\right)^{-1}
 \end{equation*}
 \par Expressed in this fashion, the sound speed $c_{s}$ is simply equal to
-\begin{equation*}
+\begin{equation}
     c_{s} = \left(\frac{\text{d}p}{\text{d}\rho}\right)^{1/2} = \left(\frac{kT}{\mu m_{H}}\right)^{1/2} \approx \left(\frac{kT_{0}}{\mu m_{H}}\right)^{1/2}
-\end{equation*}
+    \label{eq:sound_speed_ideal}
+\end{equation}
 at least to leading order. Plugging all this in the original expression for Euler's equation reads something like
 \begin{equation}
     \partial_{\xi}\psi\left(1-\frac{\tau}{\psi}\right) = -2\xi^{2}\partial_{\xi}\left(\frac{\tau}{\xi^{2}}\right)-\frac{2\lambda}{\xi^{2}} 
@@ -90,24 +90,24 @@ We consider a star of mass M accreting spherically symmetrically from a large ga
 \begin{equation*}
      (v^{2}-c_{s}^{2})\partial_{r}\log(v) = \frac{2c_{s}^{2}}{r}\left(1-\frac{GM}{2c_{s}^{2}r}\right)
 \end{equation*}
-We'll now cast it a slightly different form that makes more evident the relationships between the various elements interplaying
+We'll now cast it in a slightly different form that makes more evident the relationships between the various elements interplaying
 \begin{equation}
-    \frac{1}{2}\left(1-\frac{v^{2}}{c_{s}^{2}}\right)\frac{\text{d}(v^{2})}{\text{d}r} = -\frac{GM}{r^{2}}\left[1-\frac{2c_{s}^{2}r^{2}}{GM}\right]
+    \frac{1}{2}\left(1-\frac{c_{s}^{2}}{v^{2}}\right)\frac{\text{d}(v^{2})}{\text{d}r} = -\frac{GM}{r^{2}}\left[1-\frac{2c_{s}^{2}r}{GM}\right]
     \label{eq:bhl}
 \end{equation}
 As we have mentioned at the end of last section, accretion can be considered as a stellar wind process with negative velocity. This means that we can write down an expression for the (constant) accretion rate 
 \begin{equation*}
     \dot{M} = 4\pi r^{2}\rho (-v) = \text{const.}
 \end{equation*}
-First, we note that at large distances from the star the factor $\left[1-\frac{2c_{s}^{2}r^{2}}{GM}\right]$ on the right hand side must be negative, since $c_{s}^{2}$ approaches some finite asymptotic value $c_{s}^{2}(\infty)$ related to the gas temperature far from the star, while $r$ can increase, in principle, without limit. This means that for large $r$ the right hand side of (\ref{eq:bhl}) is positive. On the left hand side, the factor $\frac{\text{d}(v^{2})}{\text{d}r}$ must be negative, since we want the gas far from the star to be at rest, accelerating as it approaches the star with $r$ decreasing.
-\par Hence, for large values of $r$, the fluid must be \emph{subsonic}. This is, of course, a very reasonable result, as the gas will have a non-zero temperature and hence a non-zero sound speed far from the star.
+First, we note that at large distances from the star the factor $\left[1-\frac{2c_{s}^{2}r}{GM}\right]$ on the right hand side must be negative, since $c_{s}^{2}$ approaches some finite asymptotic value $c_{s}^{2}(\infty)$ related to the gas temperature far from the star, while $r$ can increase, in principle, without limit. This means that for large $r$ the right hand side of (\ref{eq:bhl}) is positive. On the left hand side, the factor $\frac{\text{d}(v^{2})}{\text{d}r}$ must be negative, since we want the gas far from the star to be at rest, accelerating as it approaches the star with $r$ decreasing.
+\par Hence, for large values of $r$, the fluid must be \emph{subsonic}. This is, of course, a very reasonable result, as the gas will have a non-zero temperature and hence a non-zero sound speed far from the star (\ref{eq:sound_speed_ideal}).
 \par As made obvious from the equations, as the gas approaches the star, $r$ is decreasing and the expression in square brackets of (\ref{eq:bhl}) must tend to increase, eventually reaching zero.
 \par Such condition is verified when 
 \begin{equation}
     r_{s} = \frac{GM}{2c_{s}^{2}} \simeq 7.5\cdot 10^{13}\left(\frac{T(r_{*})}{10^{4}\,\text{K}}\right)^{-1}\left(\frac{M}{M_{\odot}}\right)\,\text{cm}
     \label{eq:fake_schw}
 \end{equation}
-which is oddly resemblant of the Schwartzschild radius. Note that the order of magnitude of $r_{s}$ is about 100 times that of the solar corona, which is much larger than the radius $R_{*}$ of any compact object. Technically, a very high temperature would be needed in order to make $r_{s}<R_{*}$. This condition can be achieved, for example, if we consider a standing shock wave close to the stellar surface.
+which is curiously resemblant of the Schwartzschild radius. Note that the order of magnitude of $r_{s}$ is about 100 times that of the solar corona, which is much larger than the radius $R_{*}$ of any compact object. Technically, a very high temperature would be needed in order to make $r_{s}<R_{*}$. This condition can be achieved, for example, if we consider a standing shock wave close to the stellar surface.
 \par If we perform a similar analysis of the signs of eq.\ref{eq:bhl}, we find out that near the star the gas must be \emph{supersonic}.
 \par The existence of a point described by (\ref{eq:fake_schw}) is of great importance in characterizing the accretion flow. The direct mathematical consequences are two 
 \begin{align}
@@ -115,7 +115,7 @@ which is oddly resemblant of the Schwartzschild radius. Note that the order of m
     \frac{\text{d}(v^{2})}{\text{d}r} &= 0 \quad r = r_{s}
     \label{eq:sch_cond}
 \end{align}
-so that all solutions of (\ref{eq:bhl}) can be classified by their behaviour at $r_{s}$, given by two expressions above, together with their behaviour at large $r$. This behaviour can be summarized in a (mildly confusing) plot as shown in Fig.\ref{fig:bhl_sol}.
+so that all solutions of (\ref{eq:bhl}) can be classified by their behavior at $r_{s}$, given by two expressions above, together with their behaviour at large $r$. This behaviour can be summarized in a (mildly confusing) plot as shown in Fig.\ref{fig:bhl_sol}.
 \begin{figure}[h!]
     \centering 
     \includegraphics[width=0.8\textwidth]{img/bhl_cond.png}
@@ -123,13 +123,13 @@ so that all solutions of (\ref{eq:bhl}) can be classified by their behaviour at 
     \label{fig:bhl_sol}
 \end{figure}
 \par An exact description yields six families of solutions, but such precision is beyond the intentions of these notes. The interested reader can refer to \cite{Frank_King_Raine_2002} for a more detailed discussion.
-\par Excluding "unwanted" solutions leaves us with only solutions of the form 
+\par Excluding "unwanted" solutions leaves us with solutions of the form 
 \begin{equation*}
     v^{2}(r_{s}) = c_{s}^{2}(r_{s}) \quad v^{2}\to 0 \;\text{as}\; r\to\infty \quad  (v^{2} < c_{s}^{2},\; r > r_{s};\;v^{2} > c_{s}^{2},\;r < r_{s})
 \end{equation*}
 which allows us to integrate directly Euler's equation and evaluate some nice quantities which, although fairly interesting, we'll skip right away. I'll just point out that such solution allows us in principle to infer that accretion from the interstellar medium is unlikely to be an observable phenomenon.
 \par It should be pretty obvious that, as the gas infalls into the star, it builds up energy. This process is eventually brought to a stop if the star has a \emph{hard boundary} at, say, $r = \bar{r}$. The sheer variation in gravitational potential is (assuming gas starting from infinity) $\Delta\phi = GM/r$.
-\par The energy dissipated, either by radiation or by the gas heating up, if the gas bounces on the surface of the star is $\dot{e} = GM/r$; if the gas doesn't stop the Virial theorem yields $\Delta\phi = GM/2r$.
+\par The energy dissipated, either by radiation or by the gas heating up, if the gas bounces on the surface of the star is $\dot{e} = GM/r$; if the gas doesn't stop, the Virial theorem yields $\Delta\phi = GM/2r$.
 \par Let us assume for the moment adiabatic accretion. The internal energy of the gas could then be expressed as 
 \begin{equation*}
     e = \frac{p}{(\gamma-1)\rho} \quad p = \frac{\rho R T}{\mu}
@@ -143,9 +143,9 @@ After complete energy dissipation, we can use the Virial temperature to write
     T_{vir} = \frac{GM\mu}{R\bar{r}}
     \label{eq:virial_temperature}
 \end{equation}
-Since the sound speed of a perfect gas can be written as $c_{s} = (\gamma RT/\mu)^{1/2}$, this implies that at a temperature $T = T_{vir}$, the sound speed is roughly equal to the escape velocity from the star. In this scenario, accretion is not possible, since density fluctuations can escape the gravitational pull. Similarly, if the gas is too hot, accretion stops\footnote{When the temperature raises to or over the virial temperature the sound's speed becomes roughly equal to the escape velocity and so the gas cannot be pulled inward.}. In a sense, accretion is a \emph{self-regulating process}, pretty much like the whole stellar-thermostate stuff.
+Since the sound speed of a perfect gas can be written as $c_{s} = (\gamma RT/\mu)^{1/2}$, this implies that at a temperature $T = T_{vir}$, the sound speed is roughly equal to the escape velocity from the star. In this scenario, accretion is not possible, since density fluctuations can escape the gravitational pull. Similarly, if the gas is too hot, accretion stops\footnote{When the temperature raises to or over the virial temperature the sound's speed becomes roughly equal to the escape velocity and so the gas cannot be pulled inward.}. In a sense, accretion is a \emph{self-regulating process}.
 \par What if we consider now other mechanisms to dissipate energy?
-\par First and foremost, it's safe to assume that in most scenarios the temperature will always be such that $T\ll T_{vir}$. Still, clearly accretion can't go on for an indefinite amount of time. Eventually it will have to stop.
+\par First and foremost, it's safe to assume that in most scenarios the temperature will always be such that $T\ll T_{vir}$. Still, accretion can't go on for an indefinite amount of time. Eventually it will have to stop.
 \par If we increase the accreting velocity
 \begin{equation*}
     \dot{M} = -4\pi\rho r^{2} v \quad (v<0)
@@ -162,7 +162,7 @@ Hence, under the assumption of spherical symmetry, we can define \emph{Eddington
 \end{equation}
 Eddington's luminosity plays a crucial role in accretion processes, for it defines a limiting luminosity beyond which accretion can't take place.
 \par If we assume electrons to play the major contribution to the luminosity, the opacity is entirely dominated by Thomson scattering, and Eddington's luminosity is roughly equal to $L_{E} \simeq 4\cdot10^{4} M/M_{\odot} L_{\odot}$.
-\par Please note, however, that \textbf{accretion is seldom spherically symmetric}. In these cases, is much more convenient defining a Eddington's accretion rate rather than a luminosity. Since the luminosity of an accreting flow can be cast as 
+\par Please note, however, that \textbf{accretion is seldom spherically symmetric}. In these cases, is much more convenient defining a Eddington's accretion rate rather than a luminosity. Since the luminosity of an accreting flow can be written as 
 \begin{equation*}
     L = \frac{GM\dot{M}}{R}
 \end{equation*}
