@@ -17,19 +17,19 @@ Dividing by the scattering coefficient, we find that the source function for pur
 \begin{equation*}
     S_{\nu} = J_{\nu} = \frac{1}{4\pi}\int_{\Omega} I_{\nu}\,\text{d}\Omega
 \end{equation*}
-The equation of radiative transport is thus modified\footnote{Note that we're assuming for the scattering version of RT a similar form of the absorption version (\ref{eq:rt}).}
+The equation of radiative transport is thus modified\footnote{Note that we're assuming for the scattering version of RT a similar form of the purely radiative version (\ref{eq:rt}).}
 \begin{equation}
     \frac{\text{d}I_{\nu}}{\text{d}s} = -\sigma_{\nu}(I_{\nu}-J_{\nu}) = -\sigma_{\nu}(I_{\nu}-\frac{1}{4\pi}\int_{\Omega} I_{\nu}\,\text{d}\Omega)
     \label{eq:rtscattering}
 \end{equation}
-\textbf{Solving this equation is a bloodbath}. The source function is not known a priori and depends on the solution $I_{\nu}$ at all directions through a given point, making this a \emph{integro-differential equation}, also known as "bloody mess".
+\textbf{Solving this equation is a bloodbath}. The source function is not known a priori and depends on the solution $I_{\nu}$ at all directions through a given point, making this a \emph{integro-differential equation}, or, in short, a "bloody mess".
 \section{Random Walks}
 A particularly useful way of looking at scattering, which leads to important order-of-magnitude estimates, is by means of random walks. We shall now develope a formalism that interprets the processes of absorption, emission, and propagation in probabilistic terms for a single photon rather than the average behavior of large numbers of photons.
 \par Consider a photon emitted in an infinite, homogeneous scattering region. It travels a displacement $\vec{r}_{1}$ before being scattered, then travels in a new direction over a displacement $\vec{r}_{2}$ before being scattered, and so on. After N free paths, the total displacement will look like 
 \begin{equation*}
     \vec{R} = \sum_{i=1}^{N}\vec{r}_{i}
 \end{equation*}
-The average total displacement will be identically null. Therefore, we must evaluate the mean square of the total displacement which, in the assumption of independent and isotropic scattering, must be expressed as 
+The average total displacement will be identically null. Therefore, we must evaluate the mean square of the total displacement, which, in the assumption of independent and isotropic scattering, must be expressed as 
 \begin{equation*}
     l_{*}^{2} = \langle\vec{R}^{2}\rangle = \sum_{i=1}^{N}\langle\vec{r}_{i}^{\,2}\rangle
 \end{equation*}
@@ -38,7 +38,7 @@ The quantity $l_{*}$ is the root-mean-square net displacement of the photon, whi
 \begin{equation*}
     l_{*} = \sqrt{N}l
 \end{equation*}
-Said $L$ the linear dimension of the object photons are trying to "escape" from, for regions of large optical depth the number of scatterings events required to actually escape is roughly determined by setting $l_{*} \approx L$. Then $N \sim L^{2}/l^{2}$. But since the optical thickness of the medium $\tau$ is of order $L/l$, our previous results yield
+Said $L$ the linear dimension of the object photons are trying to "escape" from, the number of scatterings events required to actually escape from regions of large optical depth is roughly determined by setting $l_{*} \approx L$. Then $N \sim L^{2}/l^{2}$. But since $l$ is of the order of the mean free path, the optical thickness of the medium $\tau$ is of order $L/l$, our previous results yield
 \begin{equation*}
     \tau^{2} \approx N \quad \tau \gg 1
 \end{equation*}
@@ -49,7 +49,7 @@ small, so that we can approximate $N\approx \tau$. For most order-of-magnitude e
 \end{equation*}
 which has the evident perk of well-behaving in the two limits we've discussed.
 \subsection{Combined scattering and absorption}
-What happens if we had both scattering and absorption? We'd have two terms on the right hand side of the tranfer equation 
+What happens if we had both scattering and absorption? We'd have two terms on the right hand side of the transfer equation 
 \begin{equation}
     \frac{\text{d}I_{\nu}}{\text{d}s} = -\alpha_{\nu}(I_{\nu}-B_{\nu}) -\sigma_{\nu}\left(I_{\nu}-\frac{1}{4\pi}\int_{\Omega} I_{\nu}\,\text{d}\Omega \right)
     \label{eq:rtcomplete}
@@ -67,23 +67,23 @@ We may then define an \emph{effective optical depth}\footnote{Also called \emph{
     \text{d}\tau_{*} = (\alpha_{\nu}+\sigma_{\nu})\,\text{d}s
 \end{equation*}
 so that the mean free path will be just $l_{\nu} = (\alpha_{\nu}+\sigma_{\nu})^{-1}$.
-\par In our random walk approximation, the probability of a scattering process to end in a true absorption will be 
+\par During the random walk the probability that a free path will end with a true absorption event is 
 \begin{equation*}
     \epsilon_{\nu} = \frac{\alpha_{\nu}}{\alpha_{\nu}+\sigma_{\nu}}
 \end{equation*}
-The probability for scattering not to end with a true absorption will then be $1-\epsilon_{\nu}$, which is known as \emph{single-scattering albedo}. In terms of $\epsilon_{\nu}$, the source function becomes 
+while the corresponding probability for scattering being $1-\epsilon_{\nu}$, which is known as \emph{single-scattering albedo}. In terms of $\epsilon_{\nu}$, the source function becomes 
 \begin{equation*}
     S_{\nu} = (1-\epsilon_{\nu})J_{\nu}+\epsilon_{\nu}B_{\nu}
 \end{equation*}
 Let's consider first an infinite homogeneous medium.
 \par A random walk starts with the thermal emission of a photon (creation) and ends, possibly after a number of scatterings, with a true absorption (destruction). Since the walk can be terminated with probability $\epsilon$ at the end of each free path, the mean number of free paths is $N = \epsilon^{-1}$. We then have $l_{*} = l \epsilon^{-1/2}$. 
-\par So if we were to substitute in the definition of $l_{\nu}$ into $l$ and use the definition of $\epsilon_{\nu}$, we'd get 
+\par So, if we were to substitute the definition of $l_{\nu}$ into $l$ and use the definition of $\epsilon_{\nu}$, we'd get 
 \begin{equation*}
     l_{*} \approx \left[\alpha_{\nu}(\alpha_{\nu}+\sigma_{\nu})\right]^{-1/2}
 \end{equation*}
 This length represents a measure of the net displacement between the points of creation and destruction of a typical photon; it often goes by the name of \emph{diffusion length}, \emph{thermalization length}, or \emph{effective mean path}. Usually it is also frequency dependent.
 \par Essentially, it is the average length over which emitting and absorbing elements are radiatively coupled.
-\par The behavior of a finite medium can be explained in terms of what we've been creating so far. Its properties will depend (strongly) on whether its linear extension $L$ is larger or smaller than the effective free path.
+\par The behavior of a finite medium can be explained with what we've been creating so far. Its properties will depend (strongly) on whether its linear extension $L$ is larger or smaller than the effective free path.
 \par In terms of the effective optical depth $\tau_{*} = L/l_{*}$, we can restate its definition as follows
 \begin{equation*}
     \tau_{*} \approx \left[\tau_{a}(\tau_{a}+\tau_{s})\right]^{1/2} \quad \tau_{a} = \alpha_{\nu}L \quad \tau_{s}=\sigma_{\nu}L

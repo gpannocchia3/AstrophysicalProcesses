@@ -60,7 +60,7 @@ which means that the number of transitions per unit time per unit volume out of 
 \end{equation}
 In thermodynamic equilibrium we can use eq.\ref{boltmann-occ} to relate the occupation numbers
 \begin{equation*}
-    \frac{n_{1}}{n_{2}} = \frac{g_{1}}{g_{2}}\frac{\exp\left(-E/kT\right)}{\exp\left[-(E+h\nu_{0})/kT\right]} = \frac{g_{1}}{g_{2}}\exp\left(-h\nu_{0}/kT\right)
+    \frac{n_{1}}{n_{2}} = \frac{g_{1}}{g_{2}}\frac{\exp\left(-E/kT\right)}{\exp\left[-(E+h\nu_{0})/kT\right]} = \frac{g_{1}}{g_{2}}\exp\left(h\nu_{0}/kT\right)
 \end{equation*}
 but in thermodynamic equilibrium we know that $J_{\nu} = B_{\nu}$, so if $B_{\nu}$ varies slowly on the scale of $\Delta\nu$ we can assume $\overline{J}\approx B_{\nu}(\nu_{0})$.
 \par That means the following relations must simultaneously hold
@@ -86,12 +86,12 @@ From here follows immediately the \emph{true absorption coefficient}
 \begin{equation}
     \alpha_{\nu} = \frac{h\nu_{0}}{4\pi}n_{1}B_{12}\phi(\nu) 
 \end{equation}
-Note that since stimulated emission is proportional to the specific intensity $I_{\nu}$ and only affects the photons along the given beam, it's not a big stretch to claim that it behaves pretty in a way that is akin to true absorption. We shall then define the \emph{absorption coefficient, corrected for stimulated emission} as
+Note that since stimulated emission is proportional to the specific intensity $I_{\nu}$ and only affects the photons along the given beam, it's not a big stretch to claim that it behaves in a way that is akin to true absorption. We shall then define the \emph{absorption coefficient, corrected for stimulated emission} as
 \begin{equation}
     \alpha_{\nu} = \frac{h\nu_{0}}{4\pi}\phi(\nu)(n_{1}B_{12}-n_{2}B_{21})
     \label{eq:alphacorrected}
 \end{equation}
-in which we're regarding stimulated emission kinda like a \emph{negative absorption}.
+in which we're regarding stimulated emission like a \emph{negative absorption}.
 \par In terms of the newly defined emission and absorption coefficients, the equation of radiative transfer takes a new look 
 \begin{equation}
     \frac{\text{d}I_{\nu}}{\text{d}s} = -\frac{h\nu_{0}}{4\pi}\phi(\nu)(n_{1}B_{12}-n_{2}B_{21})+\frac{h\nu_{0}}{4\pi}n_{2}A_{21}\phi(\nu) 
@@ -121,9 +121,9 @@ which is quite the odd configuration, if you think about it. We're basically say
 \par Your typical molecular cloud has a density a bit shy of $10^{9}$ particles per $\text{m}^{3}$ and temperature in the range of $10-30\,\text{K}$, so kinda chilly.
 \par If those "abnormal" sources were assumed to be optically thick in the spectral lines and the specific intensity was equated to $B_{\nu}$, you'd probably roll down you chair reading on your computer that those sources should have temperatures as high as $10^{9}\,\text{K}$.
 \par Not so chilly anymore, huh?
-\par The favored explaination for this weird phenomenon (and most likely the correct one) makes use exacly of what we've just shown: Maser action.
+\par The favored explanation for this weird phenomenon (and most likely the correct one) makes use exacly of what we've just shown: Maser action.
 \par If you want to read something (slightly) more rigorous, you can look at \cite{choudhuri}, §6.6.3.
-\par For those among you that, like me, were particularly invested in TV shows like \emph{X-Files} and similar, may be interested to know that one of the most likely explainations for the so-called \href{https://en.wikipedia.org/wiki/Wow!_signal}{Wow! Signal}\footnote{This was brought to my attention by a fellow colleague of the Aerospace Engineering department, and I thought it was well-worth sharing it with you. Thanks, Monta.} is in fact attributed to MASER action on a Hydrogen cloud.
+\par For those among you that, like me, were particularly invested in TV shows like \emph{X-Files} and similar, may be interested to know that one of the most likely explanations for the so-called \href{https://en.wikipedia.org/wiki/Wow!_signal}{Wow! Signal}\footnote{This was brought to my attention by a fellow colleague of the Aerospace Engineering department, and I thought it was well-worth sharing it with you. Thanks, Monta.} is in fact attributed to MASER action on a Hydrogen cloud.
 \section{Hydrogenoid Atoms}
 Fairly interesting objects to study are \emph{hydrogenoid atoms}, that is atoms with $Z$ protons but that had ended up (no matter how) with only one $e^{-}$. For this type of atoms, Quantum Mechanics predicts energy levels distributed as such 
 \begin{equation*}
@@ -131,7 +131,7 @@ Fairly interesting objects to study are \emph{hydrogenoid atoms}, that is atoms 
 \end{equation*}
 \par If we were to introduce relativistic corrections through perturbation theory, the expression would get a bit more complicated
 \begin{equation*}
-    E(n,\,j) = -\frac{Z^{2}\,\text{Ry}}{n^{2}}\left(1+\frac{Z^{2}\alpha^{2}}{n^{2}}\left[\frac{n}{j+1/2}-3/4\right]\right)
+    E(n,\,j) = -\frac{Z^{2}\,\text{Ry}}{n^{2}}\left(1+\alpha^{2}\left[\frac{n}{j+1/2}-3/4\right]\right)
 \end{equation*}
 introducing \emph{fine splitting} of the energy levels, that now depend on the value of the angular momentum. It is probably worth pointing out that the energy levels are still degenerate in the magnetic quantum number $m$. Given a problem with spherical symmetry, it would be beneath us to claim that a scalar perturbation could be able to completely solve the degeneracy\footnote{The system is still invariant under rotations.}. Degeneracy is solved completely only if we introduce in the system a preferred direction\footnote{cfr. \emph{Stark-Lo Surdo Effect} and the \emph{Zeeman effect}.}.
 \par Depending on the value of the orbital angular momentum eigenvalue $l$ we can assign a name to distinguish them:
@@ -143,14 +143,14 @@ introducing \emph{fine splitting} of the energy levels, that now depend on the v
     \item $l = 3 \to$ $f$-orbitals
 \end{itemize}
 This way, transitions may be represented in a \emph{Grotrian diagram} (Fig.\ref{fig:grotrian}), where the energy of a given level is plotted in function of the $l$ eigenvalue, through which selection rules are made most evident.
+\par What happens if we are to consider atoms with more than one electron? Will our model still work? Nope, not a chance.
+\par On top of getting stupidly difficult to evaluate even the non relativistic limit, there are \emph{many more ways} to couple interactions, resulting in more and more sources of opacity. It is actually elements with $Z>1$ and $\#e^{-} > 1$ that make the greatest contributions to opacity, especially \emph{metals} ($Z\geqslant 3$).
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{img/Grotrian_H.png}
     \caption{Example of Grotrian Diagram for Hydrogen. Credits: Wikipedia.}
     \label{fig:grotrian}
 \end{figure}
-\par What happens if we are to consider atoms with more than one electron? Will our model still work? Nope, not a chance.
-\par On top of getting stupidly difficult to even evaluate the non relativistic limit, there are \emph{many more ways} to couple interactions, resulting in more and more sources of opacity. It is actually elements with $Z>1$ and $\#e^{-} > 1$ that make the greatest contributions to opacity, especially \emph{metals} ($Z\geqslant 3$).
 \par Sometimes it is useful to express the electron configuration by means of the \emph{Russel-Saunders notation}. Said $S$, $L$, $J$ respectively the spin, the orbital angular momentum and the total angular momentum eigenvalues, we can express a given electron configuration in such a fashion
 \begin{equation*}
     \,^{2S+1}L_{J}
@@ -158,12 +158,7 @@ This way, transitions may be represented in a \emph{Grotrian diagram} (Fig.\ref{
 where $L$ is usually written in spectroscopic notation, that is the symbol associated to the orbital with that $L$ value.
 \subsection{Hyperfine Transition}
 What we'll be most interested in considering, however, is the hyperfine splitting that arises if we consider the coupling between the spin of the nucleus and the electron.
-\par If we were to consider such interaction, we'd find a hyperfine splitting of the lowest energy state. We'll be interested in the energy of the radiation coming from an electron spin flip: The system will transition from a state with total spin $F = 1$ to a one with $F=0$, resulting in the emission of radiation.
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{img/hlineflip.png}
-    \caption{Schematic representation of the spin flip and the resulting emission.\\ Credits: Wikipedia.}
-\end{figure}
+\par If we were to consider such interaction, we'd find a hyperfine splitting of the lowest energy state. We'll be interested in the energy of the radiation coming from an electron spin flip: The system will transition from a state with total spin $F = 1$ to a one with $F=0$, resulting in the emission of radiation (Fig.\ref{fig:spinflip}).
 Ignoring higher order corrections to the Hamiltonian, the radiation resulting from the spin flip will have a wavelength 
 \begin{equation}
     \lambda_{hf} = \frac{3\pi\hbar^{5}m_{p}c^{3}}{g_{e}g_{p}m_{e}^{2}e^{8}}\approx 21.106114054160(30)\,\text{cm}
@@ -171,8 +166,14 @@ Ignoring higher order corrections to the Hamiltonian, the radiation resulting fr
 \end{equation}
 where the expression is in CGS units and $g_{e}$, $g_{p}$ are respectively the electron and the proton spin g-factors ($\approx 2$ for the electron, $\approx 5.59$ for the proton).
 \par Unfortunately, such a transition cannot be observed in lab-experiments. The extimated half-life time of the transition from the Einstein $A$ coefficient\footnote{Remember that $A$ has the dimensions of the inverse of a time, so $\tau_{HL}\approx A^{-1}$.} is of the order of a few Myrs. Which means that unless you have \emph{a lot} of time to spare to fight against death, you'll probably never record even a single one of these transitions. And that is ignoring the possibility of Hydrogen getting collisionally de-excited, which is unfathomably more probable.
-\par This, however, has a strikingly beautiful consequence: Although "rare", we should be able to detect the 21-cm emission line if we were to look somewhere where the transition may have happened millions of years ago, namely somewhere in the sky.
-\par That is exactly the case. If you were to steal a radiotelescope\footnote{Do not recommend. They get awfully big if you want to see something cool.} and point it towards the Galactic plane, you'll see a really sharp line in proximity to the 21-cm line ($\sim 1420\,\text{MHz}$), as shown in Fig.\ref{fig:21cm}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/hlineflip.png}
+    \caption{Schematic representation of the spin flip and the resulting emission.\\ Credits: Wikipedia.}
+    \label{fig:spinflip}
+\end{figure}
+\par This, however, has a strikingly beautiful consequence: Although "rare", we should be able to detect the 21-cm emission line if we were to look somewhere where the transition may have happened millions of years ago.
+\par If you were to steal a radiotelescope\footnote{Do not recommend. They get awfully big if you want to see something cool.} and point it towards the Galactic plane, you'll see a really sharp line in proximity to the 21-cm line ($\sim 1420\,\text{MHz}$), as shown in Fig.\ref{fig:21cm}.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{img/hydrogenspec.png}
@@ -188,7 +189,7 @@ For this one, you'll have to recall some of the basics results of Quantum Mechan
 \begin{equation*}
     \Gamma = \sum_{m} A_{nm}
 \end{equation*}
-where the sum is over all states $m$ of lower energy (which may quite a few). If radiation is present, we should add the induced rates to this. The coefficient of the wave function of state $n$, therefore, is of the form $e^{-\Gamma t/2}$ and leads to a decay of the electric field by the same factor. We have an emitted spectrum determined by the decaying sinusoid type of electric field, so the line profile must be a \emph{Lorentz or Natural profile}
+where the sum is over all states $m$ of lower energy (which may be quite a few). If radiation is present, we should add the induced rates to this. The coefficient of the wave function of state $n$, therefore, is of the form $e^{-\Gamma t/2}$ and leads to a decay of the electric field by the same factor. We have an emitted spectrum determined by the decaying sinusoid type of electric field, so the line profile must be a \emph{Lorentz or Natural profile}\footnote{Fun fact: The Lorentzian distribution (also known as Cauchy distribution among mathematicians) is a classical example of a pathological distribution. In fact the Cauchy distribution  has no mean, variance or higher momenta defined. Its mode and median are well defined and are both equal to $\nu_{0}$.}
 \begin{equation*}
     \phi(\nu) = \frac{\Gamma}{4\pi^{2}}\frac{1}{(\nu-\nu_{0})^{2}+\left(\frac{\Gamma}{4\pi}\right)^{2}}
 \end{equation*}
@@ -201,12 +202,11 @@ Consider an atom in thermal motion, so that by simple relativistic consideration
 \end{equation}
 Here $\nu_{0}$ is the rest frequency. Note that this can be extended to \emph{bulk motion} as well. We can decompose the velocity as
 \begin{equation*}
-    \vec{v} = \langle\vec{v}\rangle + \delta\vec{v}
+    \vec{v} = \langle\vec{v}\,\rangle + \delta\vec{v}
 \end{equation*}
 which goes by the name of \emph{Reynolds' decomposition} in Fluid-dynamics books. Generally, an ensemble of atoms will have different $\delta\vec{v}$, so each atom will absorb photons at different frequencies.
-\par What we have to do is then convolute the Doppler effect over some velocity distribution. Assuming LTE to hold, such distribution will be the Maxwellian distribution. Switching into a reference frame where $\langle\vec{v}\rangle = 0$ (which is always possible), then the small fluctuations $\delta\vec{v}$ shall follow the Maxwellian distribution.
-\par Please note that the one dimensional version of the Maxwellian distribution must be used, which is a Gaussian distribution with $\mu = 0$ and a given variance.
-\par The convoluted line profile will then be 
+\par What we have to do is then convolute the Doppler effect over some velocity distribution. Assuming LTE to hold, such distribution will be the Maxwellian distribution. Switching into a reference frame where $\langle\vec{v}\,\rangle = 0$ (which is always possible), then the small fluctuations $\delta\vec{v}$ shall follow the Maxwellian distribution.
+\par Please note that the one dimensional version of the Maxwellian distribution must be used, which is a Gaussian distribution with $\mu = 0$ and a given variance. The convoluted line profile will then be 
 \begin{equation*}
     \phi(\nu) = \int \delta(\nu-\nu_{0})\nu_{0}\left(1+\frac{v}{c}\right)\exp\left(-\frac{m_{a}v^{2}}{2kT}\right)\,\text{d}v
 \end{equation*}
