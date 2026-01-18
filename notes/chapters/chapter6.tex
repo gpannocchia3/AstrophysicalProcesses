@@ -56,9 +56,8 @@ at least to leading order. Plugging all this in the original expression for Eule
     \partial_{\xi}\psi\left(1-\frac{\tau}{\psi}\right) = -2\xi^{2}\partial_{\xi}\left(\frac{\tau}{\xi^{2}}\right)-\frac{2\lambda}{\xi^{2}} 
     \label{eq:vprofile}
 \end{equation}
-\par This last equation was obtained setting $\xi = r/a$, $\tau = T(r)/T_{0}$, $\lambda = GMm_{H}/2kT_{0}a$, $\psi = m_{H}v^{2}/2kT_{0}$\footnote{Please be warned that I tried to adapt the notation I've used for my Batchelor thesis to the one of this notes. Please forgive me if there's some subscript not \emph{subscripting} properly.}.
-\par To integrate (\ref{eq:vprofile}) we shall assume that temperature is uniform and equal to $T_{0}$ in the range $r\in(a,b)$, with $b$ a distance beyond which heating mechanism are negligible. 
-\par The interesting physics is in the region $r<b$.
+\par This last equation was obtained setting $\xi = r/a$, $\tau = T(r)/T_{0}$, $\lambda = GMm_{H}/2kT_{0}a$, $\psi = m_{H}v^{2}/2kT_{0}$, where we also assumed the corona to be made of (ionized) Hydrogen only $\mu\approx 2$\footnote{Please be warned that I tried to adapt the notation I've used for my Batchelor thesis to the one of these notes. Please forgive me if there's some subscript not \emph{subscripting} properly.}.
+\par To integrate (\ref{eq:vprofile}) we shall assume that temperature is uniform and equal to $T_{0}$ in the range $r\in(a,b)$, with $b$ a distance beyond which heating mechanism are negligible. The interesting physics is in the region $r<b$.
 \par Here temperature is constant, so $\tau = 1$ and the ODE is immediately solved
 \begin{equation}
     \psi -\ln(\psi) = \psi_{0}-\ln(\psi_{0})+4\ln(\xi)-2\lambda\left(1-\frac{1}{\xi}\right)
@@ -132,7 +131,7 @@ which allows us to integrate directly Euler's equation and evaluate some nice qu
 \par The energy dissipated, either by radiation or by the gas heating up, if the gas bounces on the surface of the star is $\dot{e} = GM/r$; if the gas doesn't stop, the Virial theorem yields $\Delta\phi = GM/2r$.
 \par Let us assume for the moment adiabatic accretion. The internal energy of the gas could then be expressed as 
 \begin{equation*}
-    e = \frac{p}{(\gamma-1)\rho} \quad p = \frac{\rho R T}{\mu}
+    e = \frac{p}{(\gamma-1)\rho} \quad p = \frac{\rho R T}{\mu m_{H}}
 \end{equation*}
 After complete energy dissipation, we can use the Virial temperature to write 
 \begin{equation*}

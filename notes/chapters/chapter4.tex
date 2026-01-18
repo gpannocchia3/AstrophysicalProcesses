@@ -27,8 +27,8 @@ The calculation is rather tedious but at least straightforward. At the end of it
 \begin{equation*}
     \sigma^{i} = \sigma^{ij}n_{j}
 \end{equation*}
-where the index placement is quite the overkill, but we'll be clearer in a moment. Here and in the following, we'll be often adopting Einstein convention for summation over repeated indices.
-\par It is customary to bestow a name on $\sigma^{ij}$: the \emph{stress tensor}. Curiously enough, the conservation of total angular momentum implies that the the stress tensor must be \emph{symmetric}. These rather nice properties might be ringing a bell in your memory. 
+where the index placement is definitely overkill, but we'll be clearer in a moment. Here and in the following, we'll be often adopting Einstein convention for summation over repeated indices.
+\par It is customary to bestow a name on $\sigma^{ij}$: The \emph{stress tensor}. Curiously enough, the conservation of total angular momentum implies that the the stress tensor must be \emph{symmetric}. This might be ringing a bell in your memory. 
 \par If we put ourselves in the fluid's rest frame, where there's no net flux of any of the components of momentum in any of the three orthogonal directions, it's not a far stretch to be claiming that the fluid must, indeed, be isotropic at rest.
 \par Isotropy implies that, at least in this reference frame, the stress tensor must be diagonal. Since the symmetry of the system is essentially spherical, all the spatial components $\sigma^{ii}$ must therefore be equal. The most general form for the 4-dimensional stress tensor is simply the energy-momentum tensor for a perfect fluid (as far as special relativity is concerned)
 \begin{equation}
@@ -44,10 +44,10 @@ where the index placement is quite the overkill, but we'll be clearer in a momen
         0 & 0 & 0 & p\\
     \end{pmatrix}
 \end{equation*}
-Note that we'll be using the same metric convention of \cite{carroll}, which is $\eta_{\mu\nu} = \text{diag}(-1,1,1,1)$ and we will work in units $c=1$\footnote{To properly reintroduce $c$ factors, you have to look carefully at the definition of $u^{\mu}$. Here, and only here, with $\rho$ we're referring to an \emph{energy density} and not to a \emph{matter density}.}. The 4-vector $u^{\mu}$ is the 4-velocity $u^{\mu} = \text{d}x^{\mu}/\text{d}s$. Please note that requiring the energy-momentum tensor to be locally conserved $\partial_{\mu}T^{\mu\nu} = 0$ would allow us to deduce the three fundamental equations of fluid dynamics: The mass conservation, the energy conservation and Euler's equation. We will, however, get to those equation taking another route, passing briefly from statistical mechanics. For those interested, you can see \cite{carroll}, §1.9.
+Note that we'll be using the same metric convention of \cite{carroll}, which is $\eta_{\mu\nu} = \text{diag}(-1,1,1,1)$ and we will work in units $c=1$\footnote{To properly reintroduce $c$ factors, you have to look carefully at the definition of $u^{\mu}$. Here, and only here, with $\rho$ we're referring to an \emph{energy density} and not to a \emph{matter density}.}. The 4-vector $u^{\mu}$ is the 4-velocity $u^{\mu} = \text{d}x^{\mu}/\text{d}s$. Please note that requiring the energy-momentum tensor to be locally conserved $\partial_{\mu}T^{\mu\nu} = 0$ allows us in principle to deduce the three fundamental equations of fluid dynamics: The mass conservation, the energy conservation and Euler's equation. We will, however, get to those equation taking another route, passing briefly from statistical mechanics. For those interested, you can see \cite{carroll}, §1.9.
 \par The stress tensor we've been discussing so far is the solely spatial component of $T^{\mu\nu}$, which is $\sigma^{ij}=T^{ij} = p\delta^{i}_{j}$. Since the stress tensor is isotropic, all its diagonal elements are equal and then we may just take 
 \begin{equation*}
-    p = -\frac{1}{3}\sigma^{i}_{i}
+    p = -\frac{1}{3}\sigma^{i}_{\;\;i}
 \end{equation*}
 as a definition of \emph{static fluid pressure}.
 \subsection{Mechanical equilibrium}
@@ -92,7 +92,7 @@ eq.\ref{eq:proto_le} takes a much simpler and elegant form
     \frac{1}{\eta^{2}}\partial_{\eta}(\eta^{2}\partial_{\eta}\phi) = -\phi^{n}
     \label{eq:lane_emden}
 \end{equation}
-which is the general \emph{Lane-Emden equation}. Solutions for this equation are calculated numerically in Fig.\ref{fig:LE}.
+which is the general \emph{Lane-Emden equation}. Solutions for this equation have been calculated numerically in Fig.\ref{fig:LE}.
 \begin{figure}[h!]
     \centering 
     \includegraphics[width=0.9\textwidth]{img/lane_enden}
@@ -134,7 +134,7 @@ Since the star is no longer spherically symmetric, we'll no longer see the same 
 \par It's clear that hydrostatic equilibrium is not sustainable in these conditions.
 \section{Vlasov equation}
 What we'd like to do in the present section is trying to build a formalism that allows to connect the microscopical interpretation of matter through statistical mechanics to the macroscopic space.
-\par To do so, we'll define a distribution function $f = f(\vec{x}, \vec{v}, t)$ so that the number of particles in range $[\vec{x}, \vec{x}+\text{d}\vec{x}]$ and $[\vec{v}, \vec{v}+\text{d}\vec{v}]$ is given by 
+\par To do so, we'll define a distribution function $f = f(\vec{x}, \vec{v}, t)$ so that the number of particles in range $[\vec{x}, \vec{x}+\text{d}\vec{x}\,]$ and $[\vec{v}, \vec{v}+\text{d}\vec{v}\,]$ is given by 
 \begin{equation}
     \text{d}n(t) = f(\vec{x}, \vec{v}, t)\,{d}\vec{x}\,\text{d}\vec{v}
 \end{equation}
@@ -173,10 +173,10 @@ This is called \emph{Collision-less Boltzmann equation} or \emph{Vlasov's equati
 \section{From Boltzmann to Euler}
 Let us consider eq.\ref{eq:vlasov} along with Reynolds's decomposition for the velocity $v_{i} = V_{i}+u_{i}$. We have three different terms to evaluate if we integrate over velocities to calculate the momenta of a given quantity $g(\vec{x}, \vec{v}, t)$
 \begin{equation*}
-    (i)\;\; \partial_{t}f \to \int \text{d}^{3}v \partial_{t}f\,g(\vec{x}, \vec{v}, t) = \int \text{d}^{3}v\left(\partial_{t}(fg)-f\partial_{t}g\right)
+    (i)\;\; \partial_{t}f \to \int \text{d}^{3}v \,\partial_{t}f\,g(\vec{x}, \vec{v}, t) = \int \text{d}^{3}v\left(\partial_{t}(fg)-f\partial_{t}g\right)
 \end{equation*}
 \begin{equation*}
-    (ii)\;\; v_{i}\partial_{i}f \to \int \text{d}^{3}v g\vec{v}\nabla f = \int \text{d}^{3}v \left(\nabla(g\vec{v}f-f\vec{v}\,\nabla g)\right)
+    (ii)\;\; v_{i}\partial_{i}f \to \int \text{d}^{3}v g\vec{v}\,\nabla f = \int \text{d}^{3}v \left(\nabla(g\vec{v}f-f\vec{v}\,\nabla g)\right)
 \end{equation*}
 \begin{equation*}
     (iii)\;\; a_{i}\partial_{v_{i}}f \to -\int \text{d}^{3}v f\dot{\vec{v}}\,\nabla_{\vec{v}}g
@@ -184,17 +184,17 @@ Let us consider eq.\ref{eq:vlasov} along with Reynolds's decomposition for the v
 Recalling the definition of the average value of $g$, the three terms above may be cast in the following form 
 \begin{align*}
     (i)& \quad \partial_{t}(n\langle g\rangle)-n\langle \partial_{t}g\rangle\\
-    (ii)& \quad \nabla(n\langle g\vec{v}\rangle)-n\langle \nabla g\,\vec{v}\rangle\\ 
-    (iii)& -n\langle \nabla_{\vec{v}} g\,\dot{\vec{v}}\rangle
+    (ii)& \quad \nabla(n\langle g\vec{v}\,\rangle)-n\langle \nabla g\,\vec{v}\,\rangle\\ 
+    (iii)& -n\langle \nabla_{\vec{v}} g\,\dot{\vec{v}}\,\rangle
 \end{align*}
 At this point, consider the following expressions for $g$
 \begin{align}
     g &= 1 \implies \text{Mass conservation}\\
-    \partial_{t}n + \nabla (n\vec{v}) &= 0\\
+    \partial_{t}n + \nabla (n\vec{v}\,) &= 0\\
     \vec{g} &= m\vec{v} \implies \text{Euler's equation}\\
-    \partial_{t}(\rho\vec{v})+\vec{v}\cdot\nabla(\rho\vec{v}) &= -\nabla p -\rho\vec{F}\\
+    \partial_{t}(\rho\vec{v}\,)+\vec{v}\cdot\nabla(\rho\vec{v}\,) &= -\nabla p -\rho\vec{F}\\
     g &= \frac{1}{2}mv^{2} \implies \text{Energy conservation}\\
-    \partial_{t}\left(\frac{1}{2}\rho v^{2}+\varepsilon \right) +\nabla\left(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]\right) &= \vec{F}\cdot\vec{v}-\nabla(\vec{\phi}_{H}+p\vec{v})
+    \partial_{t}\left(\frac{1}{2}\rho v^{2}+\varepsilon \right) +\nabla\left(\rho\vec{v}\left[\frac{v^{2}}{2}+\varepsilon\right]\right) &= \vec{F}\cdot\vec{v}-\nabla(\vec{\phi}_{H}+p\vec{v}\,)
 \end{align}
 which are all nice and dandy\,\footnote{In the last equation, $\vec{\phi}_{H}$ is the heat flux.}. 
 \par Sometimes it is useful to cast the equation of energy conservation in a slightly different form. Called $E$ the total energy, we recall the first law of thermodynamics
@@ -321,8 +321,8 @@ To properly solve the equations, we need to introduce an Equation of State\footn
 where $c_{s}$ is the \emph{speed of sound} in the fluid.
 \par Plugging in what we've just found in the 1D equation of motion
 \begin{align*}
-    \rho v \partial_{x}v &= -c_{s}^{2}\rho\\
-    v\partial_{x} &= c_{s}^{2}\left(\frac{\text{d}v}{\text{d}x}\frac{1}{v}+\frac{\text{d}A}{\text{d}x}\frac{1}{A}\right)\\
+    \rho v \partial_{x}v &= -c_{s}^{2}\partial_{x}\rho\\
+    v\partial_{x}v &= c_{s}^{2}\left(\frac{\text{d}v}{\text{d}x}\frac{1}{v}+\frac{\text{d}A}{\text{d}x}\frac{1}{A}\right)\\
     \partial_{x}v\left(v-\frac{c_{s}^{2}}{v}\right) &= \frac{c_{s}^{2}}{A}\partial_{x}A
 \end{align*}
 This can be cast in a slightly more suggestive form 
@@ -342,7 +342,7 @@ If the section gradient is flipped, the implications are reversed. In principle 
 \section{Schwartzschild stability condition}
 Suppose we have a stratified plane parallel atmosphere approximately in hydrostatic equilibrium. Consider now a blob of fluid which has been displaced upwards as shown in the picture below.
 \par Initially, the blob has the same density and pressure as the surrounding fluid, respectively $\rho_{0},\,P$. After the displacement, the external fluid density and pressure are $\rho',\,P'$ which are, in principle, different from density and pressure inside the bubble, $\rho^{*},\,P^{*}$.
-\par However, we'll work under the assumption that the bubble is always in pressure equilibrium with the surrounding fluid and does not exchange energy with it\,\footnote{Typically, pressure imbalances are removed rather quickly by \emph{acoustic waves}, while heat exchange takes more time. In short, we'll assume $P^{*}=P'$.}.
+\par However, we'll work under the assumption that the bubble is always in pressure equilibrium with the surrounding fluid and does not exchange energy with it\,\footnote{Typically, pressure imbalances are quickly removed by \emph{acoustic waves}, while heat exchange takes more time. In short, we'll assume $P^{*}=P'$.}.
 \input{chapters/bubble}
 \par Let's consider the infinitesimal displacement $\varepsilon$, so that the equation of motion is
 \begin{equation*}
@@ -353,7 +353,7 @@ We shall now take two independent Taylor expansions: One for the density of the 
     \rho^{*} &= \rho_{0} + (\nabla_{ad}\,\rho)\varepsilon\\
     \rho' &= \rho_{0}+(\nabla_{amb}\,\rho)\varepsilon
 \end{align*}
-Plugging this two equations into the equation of motion yields a rather familiar expression 
+Plugging this two equations into the equation of motion yields a familiar expression 
 \begin{equation}
     \rho\ddot{\varepsilon} = -g(\nabla_{ad}\,\rho-\nabla_{amb}\,\rho)\varepsilon
     \label{eq:bruntvaisala}

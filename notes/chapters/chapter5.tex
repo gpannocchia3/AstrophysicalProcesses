@@ -22,7 +22,7 @@ Plugging this definition in Euler's equation yields (for example for fluid 1)
 \begin{equation*}
     -\nabla(\partial_{t}\phi_{1}) +\nabla\left(\frac{v^{2}}{2}\right) = -\frac{\nabla \,p}{\rho}
 \end{equation*}
-Let's assume that the scalar potentials are composed of a constant term (temporally speaking) and a small space and time dependent fluctuation
+Let's assume that the scalar potentials are composed of a constant term (temporally speaking) and of a small space and time dependent fluctuation
 \begin{equation*}
     \phi_{i} = -v_{i}x +\delta\phi_{i}
 \end{equation*}
@@ -140,7 +140,7 @@ which means that the effect of viscosity is relevant only when we're dealing wit
     E(\kappa) = C \varepsilon^{2/3}\kappa^{-5/3}
     \label{eq:energy_modes}
 \end{equation}
-Here $C$ is a universal constant. What's most fascinating about (\ref{eq:energy_modes}) is that not only it has been tested to be actually true for many types of different fluids, but it is also valid if we relax the condition of incompressibility\footnote{The $\kappa$ dependence is unchanged, but a dependence on the \emph{Mach number} $M$ is introduced.}.
+Here $C$ is a universal constant. What's most fascinating about (\ref{eq:energy_modes}) is that not only it has been tested to be actually true for many types of different fluids, but it is also valid if we relax the condition of incompressibility\footnote{The $\kappa$ dependence is unchanged, but a dependence on the \emph{Mach number} $\mathcal{M}$ is introduced.}.
 \par The typical velocity fluctuation in a fluid can be evaluated from the root mean square 
 \begin{equation*}
     \delta \bar{v} = \sqrt{\langle\delta v^{2}\rangle} > 0
@@ -150,7 +150,7 @@ introducing a non-thermal broadening in the spectrum lines (see "Line Broadening
 \par As a concluding note, in the presence of magnetic fields, eq.\ref{eq:energy_modes} is modified $E_{M} \propto \kappa^{-2}$. In principle, both dependencies can be present at once, allowing us to differentiate between neutral and magnetized phases.
 \section{Sound waves and shocks}
 At this point, it should come to no surprise that we're coming back once more to our initial, easy rising-bubble model to further complicate it. We've already seen that as a consequence of its vertical motion, instabilities arise (\ref{eq:KH_RTi}), transforming our cool little bubble in a swirly mess. 
-\par Another fairly important consequence of the bubble's motion is the arising of pressure inbalances between the material itself and the wake\footnote{\emph{N.d.T.}: in Italian, it should sound something like "scia".} coming after the bubble.
+\par Another fairly important consequence of the bubble's motion is the arising of pressure imbalances between the material itself and the wake\footnote{\emph{N.d.T.}: in Italian, it should sound something like "scia".} coming after the bubble.
 \par For this section (and many more in the Gravitation Part) I'll be following \cite{Frank_King_Raine_2002}. Relevant paragraphs for this section are §2.4 and §3.8.
 \par Let's write Euler's equation and the continuity equation (\ref{eq:lagrangianframe}) in a conservative form 
 \begin{align*}
@@ -228,7 +228,7 @@ i.e. the velocity drops to one-quarter of its upstream value across the shock wh
 \end{equation*}
 If the shock is \emph{isothermal} rather than adiabatic, there's no limit to compressibility.
 \par Note that without proper injection of energy, shocks are eventually stalled by viscosity, then degenerating into normal soundwaves. As we have anticipated in the last section, Kolmogorov's spectrum has the same $\kappa$ dependency, but a proportionality to $\mathcal{M}^{8}$ is introduced, meaning that shocks dissipate energy very efficiently\footnote{I tried looking for an article or something talking about this, but found none. Or, at least, I found none that convinced me. If you were to find something, please contact me so I can reference it.}.
-\par Most of the times, assuming shocks to be adiabatic is a questionable take \emph{at best} since there's a strong dependence on the cooling timescales through radiative losses.
+\par Most of the times, assuming shocks to be adiabatic is questionable \emph{at best} since there's a strong dependence on the cooling timescales through radiative losses.
 \subsection{Sedov-Taylor blastwave solution}
 There's a (arguably) cool and educational application of shockwaves, which incidentally made the fortune of a rather famous film producer.
 \par \emph{Explosions}.
@@ -276,9 +276,10 @@ which means our $\eta$ parameter is just $\eta = r^{5}t^{-2}$, since $[E_{0}]/[\
     R \sim \left(\frac{E_{0}}{\rho_{0}}\right)^{1/5}t^{2/5} \quad \quad v = \dot{R} \sim \frac{2}{5} Rt^{-1}
     \label{eq:ST_blastwave}
 \end{equation}
-incidentally, the proportionality constant is of order unity. Note that the velocity is decreasing, since the acceleration $\ddot{R}<0$. This can be roughly explained recalling the conservation of momentum: As the wavefront expands it "gains" more mass\,\footnote{The proper expression would probably be "entrains more material".} hence needing to slow down to conserve momentum.
+incidentally, the proportionality constant is of order unity. Note that the velocity is decreasing, since the acceleration $\ddot{R}<0$. This can be roughly explained recalling the conservation of momentum: As the wavefront expands it "gains" more mass\,\footnote{The proper expression would probably be "entrains more material".} hence the need to slow down to conserve momentum.
 \par So far we've been assuming the process to be adiabatic, but is it actually a sensible guess? It certainly depends on timescales: If the cooling timescale is much larger than the dynamical timescale, then we're good.
-\par On top of that, especially in the first instants of explosions, the medium can be considered \emph{optically thick} thanks to the density compression induced by shockwaves. Since no radiation is coming out of there, we can assume that no energy is lost to radiation and is conserved (see Fig.\ref{fig:trinitytest}).
+\par On top of that, especially in the first instants of explosions, the medium can be considered \emph{optically thick} thanks to the density compression induced by shockwaves (for this, you might want to recall that $\text{d}\tau_{\nu} = \alpha_{\nu}\,\text{d}s$ and the absorption coefficient can be expressed in terms of the density and the opacity of the system as $\alpha_{\nu}= \rho\kappa_{\nu}$, hence the conclusion).
+\par Since no radiation is coming out of there, we can assume that no energy is lost to radiation and is conserved (see Fig.\ref{fig:trinitytest}).
 \begin{figure}[h!]
     \centering 
     \includegraphics[width=0.8\textwidth]{img/trinitytest}
@@ -290,7 +291,7 @@ incidentally, the proportionality constant is of order unity. Note that the velo
 \begin{equation*}
     p \sim E_{0}R^{-3}
 \end{equation*}
-That means that there is a radius for which each pressure is reached. That holds until the shockwave's pressure reaches ambient pressure\,\footnote{Which is fated to happen sometime. As the blastwave expands, pressure continues to drop.} and equilibrium is established. When that happens, the shock stalls and propagates with constant velocity, usually some multiple of the sound speed.
+That means that there is a radius for which every pressure is reached. That holds until the shockwave's pressure reaches ambient pressure\,\footnote{Which is fated to happen sometime. As the blastwave expands, pressure continues to drop.} and equilibrium is established. When that happens, the shock stalls and propagates with constant velocity, usually some multiple of the sound speed.
 \par As the shock expands, it cools down, hence $E$ is not constant anymore. This causes the shock to slow down and \emph{entrain} material in its course.
 \par Eventually, the expansion will have to become subsonic due the arising of viscous forces, which we had completely ignored about in our model. But that was not without a logic. Viscous forces enter at second order in velocity, so in a first order model they can be initially neglected.
 \par Since $E$ is not conserved anymore, the evolution is governed by conservation of momentum, and the expansion law becomes 
@@ -302,6 +303,6 @@ this is usually called the \emph{Snowplow phase}.
 \begin{equation*}
     R(t)\sim 10^{-0.7}\left(\frac{E_{50}}{\rho_{24}}\right)^{1/5}t_{yr}^{2/5}\,\;[\text{pc}]
 \end{equation*}
-where the subscripts indicate that quantities are to be expressed in terms of the typical order of magnitude for SN events. So for example, assuming a radius of 1 parsec after a 100 years long expansion, you'd get a typical velocity for the wavefront of order $v \sim 10^{3}\,\text{km}\,\text{s}^{-1}$, which is a non-negligible fraction of the speed of light.
+where the subscripts indicate that quantities are to be expressed in terms of the typical order of magnitude for SN events. So for example, assuming a radius of 1 parsec after a 100 years long expansion, you'd get a typical velocity for the wavefront of order $v \sim 10^{3}\,\text{km}\,\text{s}^{-1}$.
 \par What have we learned from this section?
 \par If you (really) have to test a new bomb (and you're supposed to keep it a secret), don't go around showing images of the explosion with convenient space and time references.
