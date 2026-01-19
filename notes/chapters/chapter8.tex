@@ -1,12 +1,12 @@
 \chapter{Black Holes Binaries and Coalescence}
 \section{Introduction}
 This last part of the notes will focus on (Astrophysical) Black Holes, going through the formation of BH binaries and all the processes that make possible the formation of such systems.
-\par I'll closely follow my own notes, as well as those made available by Professor M. Crisostomi \cite{celoria2018lecturenotesblackhole}. However, I won't fail to suggest books and/or article for those who may be interested.
+\par I'll closely follow my own notes, as well as those made available by Professor M. Crisostomi \cite{celoria2018lecturenotesblackhole}.
 \vspace{0.5cm}
 \par It is common to identify astrophysical black holes according to their mass
 \begin{itemize}
     \item \emph{Stellar-mass Black Holes} (SBHs); they have masses in the range $M_{\odot}\lesssim M \lesssim 10^{2} M_{\odot}$. SBHs are what remains of stars with initial mass of the order $M\gtrsim 20M_{\odot}$.
-    \item \emph{Intermediate-mass Black Holes} (IMBHs); they have masses in the range of $10^{2}M_{\odot}\lesssim M \lesssim 10^{6}M_{\odot}$. Since we have only scarce observative evidence about these guys, they're the ones we know the least about. We know that they can form at high redshift either from PopIII star remnants\footnote{"Population III stars are a hypothetical population of extremely massive, luminous and hot stars with virtually no "metals", except possibly for intermixing ejecta from other nearby, early population III supernovae. Such stars are likely to have existed in the very early universe (i.e., at high redshift) and may have started the production of chemical elements heavier than hydrogen, which are needed for the later formation of planets and life as we know it." Definition from \href{https://en.wikipedia.org/wiki/Stellar_population}{Wikipedia}.} or via direct collapse from a marginally stable protogalactic disc or quasistar, or at lower redshifts via dynamical processes in massive star clusters.
+    \item \emph{Intermediate-mass Black Holes} (IMBHs); they have masses in the range of $10^{2}M_{\odot}\lesssim M \lesssim 10^{6}M_{\odot}$. Since we have only scarce observative evidence about these guys, they're the ones we know the least about. We know that they can form at high redshift either from PopIII star remnants\footnote{"Population III stars are a hypothetical population of extremely massive, luminous and hot stars with virtually no "metals", except possibly for intermixing ejecta from other nearby, early population III supernovae. Such stars are likely to have existed in the very early universe (i.e., at high redshift) and may have started the production of chemical elements heavier than hydrogen, which are needed for the later formation of planets and life as we know it." Definition from \href{https://en.wikipedia.org/wiki/Stellar_population}{Wikipedia}.} or via direct collapse from a marginally stable protogalactic disk or quasistar, or at lower redshifts via dynamical processes in massive star clusters.
     \item \emph{(Super) Massive Black Holes} (MBHs or SMBHs); they have masses in the range of $10^{6}M_{\odot}\lesssim M \lesssim 10^{10}M_{\odot}$. They are observed at the center of almost all galaxies, AGNs and Quasars.
 \end{itemize}
 \begin{figure}[h!]
@@ -14,11 +14,11 @@ This last part of the notes will focus on (Astrophysical) Black Holes, going thr
     \includegraphics[width=0.8\textwidth]{img/bh_massdistrib.png}
     \caption{Pictorial representation of the mass ranges of known black holes.\\ Credits: \cite{Colpi_2017}.}
 \end{figure}
-\par Most of the objects of astrophysical interest (stars, neutron stars, BHS etc.) are typically observed in binary systems. For example, half of the total amount of stars and, more interesting, 70\% of the stars with mass greater than ten solar masses, that are relevant to the formation of compact objects, are in binaries. On top of that, as shown in any GR course, two compact objects bound in a binary system have a non-zero quadrupole moment and are thus able to emit GWs.
-\par After a short digression about redshift, more for the sake of completeness than anything, we'll start turning our attention to the physical features of binary systems. In particular, we'll consider the Keplerian motion of the binary, where two compact objects can be regarded as point masses and, as long as the orbital velocities are small compared to the speed of light.
-\par In short, unless pointed out otherwise, our discussion will be mainly classical.
+\par Most of the objects of astrophysical interest (stars, neutron stars, BHS etc.) are typically observed in binary systems. For example, half of the total amount of stars and, more interesting, 70\% of the stars with mass greater than ten solar masses, that are relevant to the formation of compact objects, live in binaries. On top of that, as shown in any GR course, two compact objects bound in a binary system have a non-zero quadrupole moment and are thus able to emit GWs.
+\par After a short digression about redshift, more for the sake of completeness than anything, we'll start turning our attention to the physical features of binary systems. In particular, we'll consider the Keplerian motion of the binary, where two compact objects can be regarded as point masses and as long as the orbital velocities are small compared to the speed of light.
+\par In short, unless pointed out otherwise, our diskussion will be classical.
 \subsubsection{A short detour on redshift}
-In our description of the Universe we'd like to observationally determine a number of quantities to try to infer which of the models proposed by the FRW metric\footnote{As per any GR subject in this notes, I'll follow \cite{carroll}. You can find this discussion at §8.5.}
+In our description of the Universe we'd like to observationally determine a number of quantities to try to infer which of the models proposed by the FRW metric\footnote{As per any GR subject in this notes, I'll follow \cite{carroll}. You can find this diskussion at §8.5.}
 \begin{equation}
     \text{d}s^{2} = -\text{d}t^{2}+a(t)^{2}\left(\frac{\text{d}r^{2}}{1-kr^{2}}+r^{2}\text{d}\Omega_{(2)}^{2}\right)
     \label{eq:FRW}
@@ -94,20 +94,20 @@ Let us consider two point-like objects of mass $M_{1}$, $M_{2}$ moving along ell
 The velocities relative to the center of mass can be obtained straightforwardly by deriving the expression above in respect to time.
 \par The total energy of the system is 
 \begin{equation*}
-    E = \frac{M_{1}v_{1}^{2}}{2}+\frac{M_{2}v_{2}^{2}}{2} -\frac{GM_{1}M_{2}}{r} = \frac{\mu v^{2}}{2}-\frac{GM\mu}{r} = -\frac{GM\mu}{2a}
+    E = \frac{M_{1}v_{1}^{2}}{2}+\frac{M_{2}v_{2}^{2}}{2} -\frac{GM_{1}M_{2}}{r} = \frac{\mu v^{2}}{2}-\frac{GM_{tot}\mu}{r} = -\frac{GM_{tot}\mu}{2a}
 \end{equation*}
 In the last step, we have used the conservation of energy along the orbit and wrote the energy in terms of the semi-major axis $a$. Hence, the binary system is equivalent to considering a single body with mass $\mu$ moving in an effective external gravitational potential. The orbital frequency is given by Kepler's third law 
 \begin{equation*}
-    \omega = \frac{2\pi}{T} = \sqrt{\frac{GM}{a^{3}}}
+    \omega = \frac{2\pi}{T} = \sqrt{\frac{GM_{tot}}{a^{3}}}
 \end{equation*}
-which is, incidentally, the same result you obtain considering the (proper time) orbital period of a test-body in the gravitational potential induced by a Schwartzschild metric\footnote{It's not difficult to show. You have to make use of the various conserved quantities the Killing vectors kindly gift you and then calculate $\text{d}\phi/\text{d}\tau$ with $\tau$ the proper time of the particle.}.
+which is, incidentally, the same result you obtain considering the (proper time) orbital period of a test-mass in the gravitational potential induced by a Schwartzschild metric\footnote{It's not difficult to show. You have to make use of the various conserved quantities the Killing vectors kindly gift you and then calculate $\text{d}\phi/\text{d}\tau$ with $\tau$ the proper time of the particle.}.
 \par It is useful to calculate the orbital angular momentum $J_{orb} = \vec{r}\wedge\mu\vec{v}$, which has magnitude
 \begin{equation*}
-    J_{orb} = \mu\sqrt{GMa(1-e^{2})}
+    J_{orb} = \mu\sqrt{GM_{tot}a(1-e^{2})}
 \end{equation*}
 where $e$ is the eccentricity of the orbit. Thus, for a circular orbit ($e = 0$) the magnitude of the angular momentum is just 
 \begin{equation*}
-    J_{orb, C} = \mu\sqrt{GMr_{C}}
+    J_{orb, C} = \mu\sqrt{GM_{tot}r_{C}}
 \end{equation*}
 hence the tangential velocity is
 \begin{equation*}
@@ -124,7 +124,7 @@ where the brackets stand for average over the solid angle and the tensor $I_{ij}
 \begin{equation*}
     I_{ij}(t) = \int_{\text{source}} \text{d}^{3}r\,\left(r_{i}r_{j}-\frac{1}{3}\delta_{ij}r^{2}\right)T_{00}
 \end{equation*}
-\par For binary systems, it is easy to prove that the averaged power emitted can be expressed as 
+\par For binary systems, it is possible to prove that the averaged power emitted can be expressed as 
 \begin{equation*}
      \frac{\text{d}E_{rad}}{\text{d}t} = \frac{32}{5}\frac{G^{4}}{c^{5}}\frac{\mu^{2}M^{3}}{a^{5}}F(e)\
 \end{equation*}
@@ -137,7 +137,7 @@ depends only on the eccentricity and shows that highly eccentric binaries are mu
 \begin{equation*}
     \frac{\text{d}J_{rad}}{\text{d}t} = \frac{32}{5}\frac{G^{7/2}}{c^{5}}\frac{M_{1}^{2}M_{2}^{2}(M_{1}+M_{2})^{1/2}}{a^{7/2}}(1-e^{2})^{-2}\left(1+\frac{7}{8}e^{2}\right)
 \end{equation*}
-So GWs extract both energy and angular momentum out of the binary. As a consequence, the two masses are drawn closer, spiraling around each other until they eventually merge.
+From these equations we see that GWs extract both energy and angular momentum out of the binary; as a consequence, the two masses are drawn closer, spiraling around each other until they eventually merge.
 \par From the previous equations is possible to show that 
 \begin{align}
     \frac{\text{d}a}{\text{d}t} &= -\frac{64}{5}\frac{G^{3}}{c^{5}}\frac{M_{1}M_{2}(M_{1}+M_{2})}{a^{3}}F(e)\\
@@ -154,7 +154,7 @@ We can then rewrite the initial separation $a_{0}$ as
 \begin{equation*}
     a_{0} = 1.6R_{\odot}\left(\frac{M_{1}}{M_{\odot}}\right)^{3/4}\left[q(1+q)F(e)\left(\frac{t_{\text{coal}}}{1\,\text{Gyr}}\right)\right]^{1/4}
 \end{equation*}
-where $q = M_{2}/M_{1}$. From the expression above it's immediate to see that the initial separation required for two objects bound in a binary to merge within an Hubble time\footnote{The Hubble time, if you recall, is $t_{H} = H_{0}^{-1}\approx 14.4\,\text{Gyr}$ and is a decent approximation of the age of the Universe.} is $a_{0}\approx 10^{11}\,\text{cm}\approx 0.01\,\text{AU}$, which is quite the narrow range, actually.
+where $q = M_{2}/M_{1}$. From the expression above it's immediate to see that the initial separation required for two objects bound in a binary to merge within a Hubble time\footnote{The Hubble time, if you recall, is $t_{H} = H_{0}^{-1}\approx 14.4\,\text{Gyr}$ and is a decent approximation of the age of the Universe.} is $a_{0}\approx 10^{11}\,\text{cm}\approx 0.01\,\text{AU}$, which is quite the narrow range, actually.
 \par This is also quite problematic if you think about it. For once, during their evolution, stars may undergo a giant phase characterized by $R_{G} \approx 10^{14}\,\text{cm}$, so stars with initial separation $a_{0}<R_{G}$ would simply engulf each other during their giant phase and merge in a single star \emph{before} forming our nice binary of compact objects.
 \par The scope of the next sections is trying to find a way to have our compact objects come sufficiently close so that they can get bound in a binary system and then, eventually, merge.
 \section{Common Evolution Channel (SBHs)}
@@ -173,7 +173,7 @@ where $s_{i}$ is the distance of a test-mass $m$ from mass $M_{i}$ and $r_{CM}$ 
 \begin{equation*}
     \vec{F} = -m\nabla\,\phi = 0
 \end{equation*}
-There exists a critical equipotential surface, forming a two-lobed ﬁgure-of-eight, with one of the two object at the centre of each lobe and intersecting itself at the $L_{1}$ Lagrangian point, known as Roche lobes. An approximate formula for the radius of the Roche lobe around $M_{1}$ was derived by Eggleton 
+There exists a critical equipotential surface, forming a two-lobed ﬁgure-of-eight, with one of the two object at the centre of each lobe and intersecting itself at the $L_{1}$ Lagrangian point, known as Roche lobes (see Fig.\ref{fig:roche}). An approximate formula for the radius of the Roche lobe around $M_{1}$ was derived by Eggleton 
 \begin{equation*}
     \frac{R_{1}}{a} = \frac{0.49q^{2/3}}{0.6q^{2/3}+\ln(1+q^{1/3})}
 \end{equation*}
@@ -186,7 +186,7 @@ When one of the two objects fills its Roche lobe, matter may overflow the lobe a
 \end{equation*}
 Clearly, if $\beta = 0$, then all the mass lost by $M_{2}$ is captured by $M_{1}$ and the mass transfer is fully conservative. Keeping it as a free parameter, we are instead considering the more
 general case in which a fraction of the mass can be lost and escape the system, as may be the case, for example, in the presence of stellar winds.
-\par The angular momentum was $J = \mu\sqrt{GMa}$; if we now differentiate it in respect to time and use $\dot{M}_{1}+\dot{M}_{2} = \dot{M} = \beta\dot{M}_{2}$, we obtain 
+\par The angular momentum was $J = \mu\sqrt{GMa}$; if we now differentiate it with respect to time and use $\dot{M}_{1}+\dot{M}_{2} = \dot{M} = \beta\dot{M}_{2}$, we obtain 
 \begin{equation}
     \frac{\dot{a}}{a} = -2\left(1-\frac{M_{2}}{M_{1}}\right)\frac{\dot{M}_{2}}{\dot{M}_{1}}
 \end{equation}
@@ -221,6 +221,7 @@ If the SN-explosion is perfectly spherically symmetric, isotropy leads to having
 \begin{equation*}
     \Delta M \leq \frac{M_{1}+M_{2}}{2}
 \end{equation*}
+as it's required from imposing $E_{f}<0$ under the assumption of $v_{i}=v_{f}$.
 Even in absence of kicks, a binary can be disrupted due to mass loss only, if the SN explosion ejects more than half of the initial mass of the binary
 system.
 \par The case of asymmetric SNs is more complicated and usually characterized by kicks of order $10^{2}\,\text{km}/\text{s}$. More precisely, the natal
@@ -261,7 +262,7 @@ Despite the large uncertainties, it is possible to estimate the product $\lambda
 \par This process takes about $10^{2}-10^{3}$ years and upon completion the system has shrunk to $a_{f}\approx R_{\odot}$, close enough to merge in a Hubble time due to GW emission.
 \par What we've described so far works particularly well to predict what happens when all other gravitational sources are absent.
 \par Let's assume that the average stellar mass density in the Universe is of order $\rho_{*} \approx 3\cdot10^{8}\,M_{\odot}/\text{Mpc}^{3}$; from Salpeter's initial mass function (IMF) we know that $n\sim M^{-2.35}$. This implies that roughly 0.3\% of the total stars in the Universe are over $30M_{\odot}$, thus leaving a SBH as relic at the end of their life. Since 70\% of the massive stars are observed in binaries, and we need two stars to form a binary, we can give an estimate and claim that there are about $3\cdot 10^{5}$ massive binary stars per cubic megaparsec.
-\par We can make the (extreme) assumption that those binaries are produced in a continuous, steady-state star formation process over about 10 Gyr, thus resulting in a formation rate of $3\cdot 10^{-5}\,\text{yr}^{-1}\,\text{Mpc}^{-3}$; assuming that all those massive binaries give rise to SBHBs that merge in a short timescale, then we get a SBHB merger rate of\footnote{Note that this doesn't take into account the binary systems that get disrupted by SN kicks, so the number of mergers will be rather lower. On top of that, we also assumed a constant star formation rate across cosmic time, although it's known that it peaks at about $z\approx 1.5$.} $3\cdot 10^{4}\,\text{yr}^{-1}\,\text{Gpc}^{-3}$.
+\par We can make the (extreme) assumption that those binaries are produced in a continuous, steady-state star formation process over about 10 Gyr, thus resulting in a formation rate of $3\cdot 10^{-5}\,\text{yr}^{-1}\,\text{Mpc}^{-3}$; assuming that all those massive binaries give rise to SBHBs that merge in a short timescale, then we get a SBHB merger rate\,\footnote{Note that this doesn't take into account the binary systems that get disrupted by SN kicks, so the number of mergers will be rather lower. On top of that, we also assumed a constant star formation rate across cosmic time, although it's known that it peaks at about $z\approx 1.5$.} of $3\cdot 10^{4}\,\text{yr}^{-1}\,\text{Gpc}^{-3}$.
 \section{BH Binaries in Globular Clusters}
 Another channel to form SBH binaries is via dynamical processes; this is closely related to the fact that most stars are observed to form in clusters and associations. However, the vast majority of the stars we observe today in the MW\footnote{Short for Milky Way.} are ﬁeld stars and therefore do not belong to stellar associations\footnote{A "stellar association" is a group of more than $10^{3}$ stars, like globular clusters, young massive star clusters and open clusters.}.
 \par In order to understand the dynamical formation scenario, it is therefore important to start from the physics of star cluster formation and
@@ -738,9 +739,9 @@ Given this expression, is it possible to enter the GW hardening regime in less t
 \par For typical\footnote{Typical as long as massive SBH binaries are concerned.} values, $M_{1}+M_{2}\approx 60M_{\odot}$, $\sigma = 10\,\text{km}\,\text{s}^{-1}$, $\rho = 10^{5}M_{\odot}\,\text{pc}^{-3}$, you can get a hardening time $\tau(\bar{a})\approx 3\,\text{Gyr}<t_{\text{Hubble}}$.
 \par Moreover, the mechanism eﬃciency increases with the BH binary mass\footnote{Recall that $\bar{a} \propto M_{1}M_{2}(M_{1}+M_{2})$, while $\tau(\bar{a})\propto \bar{a}^{-1}$.}. If IMBHs can indeed form in star clusters, stellar hardening provides an eﬃcient mechanism to merge them with SBHs or with a companion IMBH. 
 \section{Supermassive Black Holes}
-We now turn to discuss some relevant astrophysical aspects of (S)MBHs. Those objects has been observed at the centre of massive galaxies, and inhabit virtually all nuclei of galaxies with $M_{*} > 10^{11}M_{\odot}$, whereas their ubiquity in lighter galaxies is much debated. Our discussion will be mainly classical (Newtonian), although some results of GR will be implemented when necessary.
+We now turn to diskuss some relevant astrophysical aspects of (S)MBHs. Those objects has been observed at the centre of massive galaxies, and inhabit virtually all nuclei of galaxies with $M_{*} > 10^{11}M_{\odot}$, whereas their ubiquity in lighter galaxies is much debated. Our diskussion will be mainly classical (Newtonian), although some results of GR will be implemented when necessary.
 \subsection{Bondi accretion}
-In order to accrete, a MBH needs to capture gas from its surroundings at a suﬃcient rate. We've already discussed about this in Chapter \ref{ch:vi}, but a brief refresher won't do much harm.
+In order to accrete, a MBH needs to capture gas from its surroundings at a suﬃcient rate. We've already diskussed about this in Chapter \ref{ch:vi}, but a brief refresher won't do much harm.
 \par The model assumes an object (a black hole in our case) of mass $M$ surrounded by an inﬁnite cloud of gas, accreting with stationary and spherically
 symmetric motion. The model neglects any self-gravity eﬀects of the cloud, magnetic ﬁelds, angular momentum and viscosity due to the accretion mechanism.
 \par The gas is assumed to be perfect and polytropic
@@ -850,7 +851,7 @@ we can now see what is the fastest rate at which a MBH can grow. This evidently 
 \end{itemize}
 Therefore, in both scenarios, continuous Eddington-limited accretion allows 50-to-500 $e$-folds in mass, depending on the BH's spin: This is more than enough to grow a $10^{9}M_{\odot}$ BH starting from any reasonable $M_{0}$ in less than a Hubble time.
 \subsubsection*{Seeding Mechanisms}
-We've shown how, given the existence of a seed, we're able to accrete a BH up to a MBH, but we've never discussed about what actually are these seeds we're talking about.
+We've shown how, given the existence of a seed, we're able to accrete a BH up to a MBH, but we've never diskussed about what actually are these seeds we're talking about.
 \par In a very Hegelian way\footnote{Or PokéMon-ian kind of way, if you're more inclined towards a modern time comparison.}, seeds mainly comes in three "flavors":
 \begin{itemize}
     \item \emph{PopIII Remnant}: This scenario relies on the fact that the ﬁrst generation of essentially metal free stars is expected to have a very top-heavy mass function. As we've seen, the absence of metal disfavors fragmentation and massive stars can form. The natural relics of such massive stars are BHs of several hundred solar masses. The viability of popIII remnant as seeds of the most massive MBHs has been recently questioned;
@@ -920,7 +921,7 @@ where $r_{i}$ is an integration constant we can identify with some kind of initi
 \begin{equation*}
     a \approx 30\,\text{pc} \left(\frac{M}{10^{8}M_{\odot}}\right)^{1/2}
 \end{equation*}
-Once the two BHs overlap with the cloud's center of mass, DF cannot bring them any closer. To do so, we need Stellar Hardening and all the other nice processes we've discussed earlier.
+Once the two BHs overlap with the cloud's center of mass, DF cannot bring them any closer. To do so, we need Stellar Hardening and all the other nice processes we've diskussed earlier.
 \begin{flushright}
     \emph{The End?}
 \end{flushright}

@@ -114,16 +114,18 @@ this way Euler's equation can be restated in terms of adimensional quantities on
 \begin{equation*}
     \frac{\partial \tilde{v}}{\partial \tilde{t}} + (\tilde{v}\cdot \tilde{\nabla})\cdot \tilde{v} = -\frac{T}{T_{vir}}\tilde{\nabla}\log(p)-\frac{1}{\tilde{r}^{2}}\hat{r}
 \end{equation*}
-\par From this last equation we're learning something important already: If $T \ll T_{vir}$ there's no feedback from the gas, and so the disk's geometry will be determined by gravity alone.
+\par From this last equation we're learning something important already: If $T \ll T_{vir}$ there's no feedback from the gas, and so the disk's geometry will be determined by gravity alone. 
 \par Assuming that there's little pressure pushing on the "vertical" direction, we may deduce that the vertical size will be "geometrically thin", and its dynamic will be dominated by gravity alone. In fact, at first order, the vertical component of the acceleration can be assumed to be
 \begin{equation*}
     g_{z} = -\Omega_{0}^{2}z
 \end{equation*}
 which gives raise to a non-negligible velocity dispersion along the vertical direction. In short: Particles start oscillating.
 \par Although we'd be contradicting ourselves, we're going to assume hydrostatic equilibrium to hold along the vertical direction. This allows us to find an analytic expression for the density profile along the vertical axis 
-\begin{equation*}
-    \rho(z) = \rho_{0}\exp\left(-\frac{z^{2}}{2H^{2}}\right)
-\end{equation*}
+\begin{align*}
+    \frac{1}{\rho}\frac{\partial p}{\partial z} &= -\frac{\partial}{\partial z}\left[\frac{GM}{(r^{2}+z^{2})^{1/2}}\right]\approx -\frac{GMz}{r^{3}} \quad \quad p = c^{2}_{s}\rho\\
+    \partial_{z}\rho &= -\frac{1}{H^{2}}z\rho\\
+    \implies \rho(z) &= \rho_{0}\exp\left(-\frac{z^{2}}{2H^{2}}\right)
+\end{align*}
 with $H = c_{s}/\Omega_{0}$ the disk's scale height and $c_{s} = (TR/\mu)^{1/2}$ the sound speed. If we define the \emph{aspect ratio} $\delta$ of the disk as 
 \begin{equation}
     \delta = \frac{H}{r} = \frac{c_{s}}{\Omega_{0}r} = \left(\frac{T}{T_{vir}}\right)^{1/2}= \frac{1}{\mathcal{M}} < 1
@@ -139,7 +141,7 @@ the disk is stable against small element-displacement.
 \par If that's the case, how can accretion be possible? Viscosity.
 \par Although we have no clues (sorta\footnote{As for many other things in the Universe, it is probably turbulence's doing. We'll take a look at it in the next section.}\,) of how the viscosity gets high enough to allow the rings of gas to migrate towards the center and lose angular momentum, it's clear that if that is the case, then accretion may indeed be possible.
 \section{The Shakura-Sunyaev model}
-As we have mentioned \emph{en passant} at the end of the last section, a differentially rotating medium (like our Keplerian-continuum) must develope tangential stresses between adjacent layers, which are believed to be connected to the presence of magnetic fields, turbulence and molecular and/or radiative viscosity acting as the primary mechanisms of transport of angular momentum.
+As we have mentioned \emph{en passant} at the end of the last section, a differentially rotating medium (like our Keplerian-continuum) must develope tangential stresses between adjacent layers, which are believed to be connected to the presence of magnetic fields, turbulence, molecular and/or radiative viscosity acting as the primary mechanisms of transport of angular momentum.
 \par In the conditions that are of interest to us, nor molecular nor radiative viscosity can lead to accretion. So that leaves us with only magnetic fields and turbulence. As noticed by Shakura and Sunyaev \cite{1973A&A....24..337S}, the magnetic field flowing into the disk may have a regular structure at the distances comparable to the outer radius of the disk. But since $\nabla\cdot\vec{H} = 0$, the radial component of the magnetic field must have alternating sign, hence differential rotation leads to division of the large magnetic loops into smaller ones.
 \par Within the disk is then most probable for the field to be chaotic and on the small scales. The energy density in the magnetic field cannot exceed the thermal energy of matter 
 \begin{equation*}
@@ -148,7 +150,7 @@ As we have mentioned \emph{en passant} at the end of the last section, a differe
 Although we have no complete theory of turbulence, we have observational checks of its existence in accretion disks, so we can assume turbulence to be indeed present.
 \par In fact, as computed by \cite{Frank_King_Raine_2002} (§4.7), a safe estimate of the Reyndolds' number evaluates roughly at $\text{Re} > 10^{14}$. Hence, molecular viscosity is far too weak to bring about the viscous dissipation and angular momentum transport we require. We may then conjecture that the gas flow in accretion disks is also turbulent, although there is, as yet, no proof that this is so.
 \par What we're going to do is invoking Boussinesq approximation and treat turbulence as a source of viscosity\footnote{For more details about this you may check the Fluid Dynamics class or \cite{Pope_2000}.}.
-\par Although we know pretty much nothing, we can still make some sensible claims on the quantities limiting the onset of turbulence: First, the typical size of the largest turbulent eddies cannot exceed the disk thickness $H$; second, it is unlikely that the turnover velocity (that is, the velocity beyond which the fluid can be considered turbulent) $v_{turb}$ is supersonic, for, in this case, the turbulent motions would probably be thermalized by shocks. Thus, we can write 
+\par Although we know pretty much nothing, we can still make some sensible claims on the quantities limiting the onset of turbulence: First, the typical size of the largest turbulent eddies cannot exceed the disk thickness $H$; second, it is unlikely that the turnover velocity (that is, the velocity beyond which the fluid can be considered turbulent) $v_{t}$ is supersonic, for, in this case, the turbulent motions would probably be thermalized by shocks. Thus, we can write 
 \begin{equation}
     \nu = \alpha c_{s}H 
     \label{eq:alpha_presc}
@@ -170,7 +172,7 @@ Let's assume the accretion disk to be geometrically thin (along the vertical axi
 \begin{equation}
     \Sigma(r) = \int_{-\infty}^{+\infty} \rho(z,r)\,\text{d}z \approx 2H\rho_{0}
 \end{equation}
-with $\rho_{0}$ the density on the plane of the disk\footnote{We have plugged in the Gaussian $\rho(z)$ behavior we have hand-wavingly pulled out of the cylinder in the last section.}.
+with $\rho_{0}$ the density on the plane of the disk\footnote{We have plugged in the Gaussian $\rho(z)$ behavior we have obtained in the last section.}.
 \par We shall now consider the conservation equations 
 \begin{align}
     \partial_{t}(r\Sigma) + \partial_{r}(r\Sigma v_{r}) &= 0\\
@@ -218,7 +220,7 @@ which is also equal to
 \end{equation*}
 by means of substituting the backtracked value of $v_{r}$ we've written down a few lines above. From the conservation of angular momentum we get 
 \begin{equation*}
-    -\nu\Sigma r^{3}\partial_{r}\Omega = -|v_{r}|\Sigma\Omega r^{3} + C
+    -\nu\Sigma r^{3}\partial_{r}\Omega = -|v_{r}|\Sigma\Omega r^{3} + \frac{C}{2\pi}
 \end{equation*}
 with $C$ an arbitrary constant of integration, related to the rate at which angular momentum flows into the compact star, or equivalently, the couple exerted by the star on the inner edge of the disk.
 \par If the system is stationary, all the properties of the disk are determined by the (constant) accretion rate alone 
@@ -226,11 +228,11 @@ with $C$ an arbitrary constant of integration, related to the rate at which angu
     \nu\Sigma = \frac{1}{3\pi}\dot{M}\left(1-\beta\left(\frac{R_{*}}{r}\right)^{1/2}\right)
     \label{eq:stationary_viscosity}
 \end{equation}
-where $\beta$ is an integration constant and $R_{*}$ is the inner radius of the disk. From here we deduce that the flux of angular momentum going in the accretor is 
+where $\beta$ is an integration constant and $R_{*}$ is the inner radius of the disk. We've used the definition of the constant accretin rate, the assumption of Kepleian orbits and fixed the integration constant to $C = -\beta\dot{M}\sqrt{GMR_{*}}$. From here we deduce that the flux of angular momentum going in the accretor is 
 \begin{equation*}
     F_{J} = -\dot{M}\beta\Omega_{Kepl}(R_{*})R_{*}^{2}
 \end{equation*}
-\par For example, let us suppose that the disk extends all the way down to the surface $r = R_{*}$ of the central star\footnote{As we already mentioned, this can't be the case if the central object is a BH. The minimum radius permitted in that case is that of the ISCO, the Innermost Stable Circular Orbit predicted by Schwarzschild.}. Hence, there must exist a radius $\tilde{R} > R_{*}$ where $\partial_{r}\Omega = 0$. In a realistic situation, the star must rotate more slowly than break-up speed at its equator
+\par For example, let us suppose that the disk extends all the way down to the surface $r = R_{*}$ of the central star\footnote{As we already mentioned, this can't be the case if the central object responds to the Schwarzschild metric. The minimum radius permitted in that case is that of the ISCO, the Innermost Stable Circular Orbit predicted by Schwarzschild. Note, however, that generally $R_{s}\ll R_{*}$, so the problem arises only for BHs and neutron stars.}. Hence, there must exist a radius $\tilde{R} > R_{*}$ where $\partial_{r}\Omega = 0$. In a realistic situation, the star must rotate more slowly than break-up speed at its equator
 \begin{equation*}
     \Omega(R_{*}) < \Omega_{Kepl}(R_{*})
 \end{equation*}
@@ -246,9 +248,8 @@ this implies $\beta = 1$. This means there will be an inward flux of angular mom
 \end{figure}
 \par This is particularly true when the wavelength of the GW is comparable with the relative distance between the pulsars.
 \par This way, it has been possible to gather evidence of a stochastic background of GW, as depicted in Fig.\ref{fig:gwb} and predicted by Hellings and Downs in 1983 \cite{1983ApJ...265L..39H}.
-\newpage
 \section{Spectrum and temperature of the disk}
-\par Consider again eq.\ref{eq:stationary_viscosity} for $\Omega_{*}<\Omega_{Kepl}$, so that $\beta = 1$. Under the assumption of LTE, we'd like to see if we're able to determinate the surface temeprature of the disk. You should recall the 1st principle of Thermodynamics
+\par Consider again eq.\ref{eq:stationary_viscosity} for $\Omega_{*}<\Omega_{Kepl}$, so that $\beta = 1$. Under the assumption of LTE, we'd like to see if we're able to determinate the surface temperature of the disk. You should recall the 1st principle of Thermodynamics
 \begin{equation*}
     \rho T \frac{\text{d}S}{\text{d}t} = -\nabla\cdot\vec{F}_{H}+Q_{\nu}
 \end{equation*}
@@ -263,9 +264,14 @@ Note that this condition is automatically satisfied if LTE holds, since it assur
 Because of the thin disk approximation, the disk medium is essentially "plane-parallel" at each radius, so that the temperature gradient is effectively in the $z$-direction; thus, the left hand side is simply equal to 2 times $F(z)$ (up to an additive constant).
 \par Assuming that the disk is optically thick in the $z$-direction holds as a consequence that each element of the disk face radiates roughly as a blackbody with a temperature $T(r)$ given by equating the dissipation rate $D(r)$ per unit face area to the blackbody flux (\ref{SB})
 \begin{equation*}
-    \sigma T_{s}^{4} = \int_{-\infty}^{+\infty}Q_{\nu}\,\text{d}z = D(r)
+    2\sigma T_{s}^{4} = \int_{-\infty}^{+\infty}Q_{\nu}\,\text{d}z = 2D(r)
 \end{equation*}
 \par What this equation is saying is just that all energy dissipated by viscosity is radiated away. At this point we may write down the 8 equations for the disk structure, but, in the interest of time, I won't. The interested reader may refer, once again, to \cite{Frank_King_Raine_2002}, §5.4, equation(s) 5.41.
+\par If the disk is optically thin in the $z$-direction, each element of the disk face radiates roughly as a blackbody with a temperature $T(r)$ given by equating the dissipation rate $D(r)$ per unit face area to the blackbody flux.
+\par Recalling the plane parallel approximation for radiative diffusion (\ref{eq:sstr4}) with no flux coming from the outside
+\begin{equation*}
+    -\frac{\text{d}}{\text{d}r}(\sigma T^{4}) = \frac{3}{4}F\rho\kappa_{R} \implies F = \sigma T^{4}(\tau = 2/3)\footnote{This one holds true because for a plane parallel grey atmosphere with the Eddington approximation in LTE you can show that $T^{4} = 3/4 \,T_{eff}^{4}(\tau + 2/3)$.}
+\end{equation*}
 \par Let's write down the dissipation rate 
 \begin{equation*}
     D(r) = \frac{G\partial_{r}\Omega}{4\pi r} = \frac{1}{2}\nu\Sigma(r\partial_{r}\Omega)^{2}
@@ -276,7 +282,7 @@ and evaluate it where the angular frequency has the Keplerian form
 \end{equation*}
 At this point we can equate the blackbody flux with the viscous dissipation and, plugging in the result from eq.\ref{eq:stationary_viscosity}, we finally obtain
 \begin{equation}
-    \sigma T(r)^{4} =  \frac{3}{8\pi}\dot{M}\frac{GM}{r^{3}}\left(1-\left(\frac{R_{*}}{r}\right)^{1/2}\right)
+    \sigma T(r)^{4} =  \frac{3\dot{M}}{8\pi}\frac{GM}{r^{3}}\left(1-\left(\frac{R_{*}}{r}\right)^{1/2}\right)
     \label{eq:disk_surface_temp}
 \end{equation}
 which is notably independent from viscosity.
@@ -289,13 +295,8 @@ with $T_{*}$ curiously of the same order of the blackbody temperature defined as
     T_{B} = \left(\frac{L_{acc}}{4\pi\sigma R_{*}^{2}}\right)^{1/4}
 \end{equation*}
 that is the temperature the accreting source would have if it were to radiate the given power as a blackbody spectrum.
-\par Recalling the plane parallel approximation for radiative diffusion (\ref{eq:sstr4}) with no flux coming from the outside
 \begin{equation*}
-    -\frac{\text{d}}{\text{d}r}(\sigma T^{4}) = \frac{3}{4}F\rho\kappa_{R} \implies F = \sigma T^{4}(\tau = 2/3)\footnote{This one holds true because for a plane parallel grey atmosphere with the Eddington approximation in LTE you can show that $T^{4} = 3/4 \,T_{eff}^{4}(\tau + 2/3)$.}
-\end{equation*}
-hence if we assume the flux to be roughly constant along the vertical direction 
-\begin{equation*}
-    F = \sigma T_{s}^{4} = \sigma T(r)^{4} =  \frac{3}{8\pi}\dot{M}\frac{GM}{r^{3}}\left(1-\left(\frac{R_{*}}{r}\right)^{1/2}\right)
+    F = \sigma T_{s}^{4} = \sigma T(r)^{4} =  D(r)= \frac{3\dot{M}}{8\pi}\frac{GM}{r^{3}}\left[1-\left(\frac{R_{*}}{r}\right)^{1/2}\right]
 \end{equation*}
 If we assume the opacity to be constant along the vertical direction 
 \begin{equation*}
@@ -326,7 +327,7 @@ With these choices for $\nu$ and $\kappa_{R}$, the system of equations for the d
     \delta = \frac{H}{r} = \left(\frac{R}{\mu}\right)^{2/5}\left(\frac{3}{64\pi^{2}\sigma}\right)^{1/10}\left(\frac{\kappa}{\alpha}\right)^{1/10}GM^{-7/10}r^{1/20}(f\dot{M})^{1/5}
     \label{eq:aspect_ratio_ss}
 \end{equation}
-so the disk is indeed thin.
+we can observe that the disk is indeed thin.
 \begin{figure}[h!]
     \centering 
     \includegraphics[width = 0.8\textwidth]{img/disk.png}
@@ -344,7 +345,7 @@ and we can compare it to the gravitational potential $W_{G}$
 \end{equation*}
 which is defined so that 
 \begin{equation*}
-    \int_{R_{*}}^{\infty} 2\pi r W_{G} = \frac{GM\dot{M}}{2R_{*}}
+    \int_{R_{*}}^{\infty} 2\pi r W_{G}\,\text{d}r = \frac{GM\dot{M}}{2R_{*}}
 \end{equation*}
 \par Their ratio evaluates to 
 \begin{equation}
