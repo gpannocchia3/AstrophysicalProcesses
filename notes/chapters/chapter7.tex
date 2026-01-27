@@ -20,7 +20,7 @@ We shall now try to understand what is it of a small test particle living in the
 \par Consider a binary system as crudely depicted in Fig.\ref{fig:binaries}. For the purposes of this section, we're going to assume that the two stars of the binary can be assumed to be point-like sources of potential with separation $a$.
 \par That being said, the binary period\footnote{Here we're using the angular frequency rather than the period. It's the same up to some power of $2\pi$.} is inferred from Kepler's third law
 \begin{equation}
-    \Omega^{2} = \frac{G(m_{1}+m_{2})}{a^{2}}
+    \Omega^{2} = \frac{G(m_{1}+m_{2})}{a^{3}}
     \label{eq:kepler_3}
 \end{equation}
 A more aesthetically pleasing version of Fig.\ref{fig:binaries} is given below.
@@ -133,11 +133,11 @@ with $H = c_{s}/\Omega_{0}$ the disk's scale height and $c_{s} = (TR/\mu m_{H})^
 \end{equation}
 we conclude that the gas in the disk must be supersonic\footnote{For $\Omega_{0}r$ can be considered the tangential velocity to the (circular) orbit.}. Thus, the disk is pretty much a continuum of Keplerian orbits along which the gas has different velocities.
 \par Now, if we switch to the comoving frame and recall Fig.\ref{fig:stratified_fluid}, we may notice that we are in the exact conditions for shear instability to arise. But since angular momentum is \emph{fixed} for any given orbit, each displacement caused by shear instabilities will be simply ignored, for angular momentum conservation will eventually bring back the displaced element to its original position.
-\par In fact, as long as 
+\par In fact, as long as the specific angular momentum satisfies
 \begin{equation*}
-    \frac{\partial J}{\partial r} < 0
+    \frac{\partial j^{2}}{\partial r} > 0
 \end{equation*}
-the disk is stable against small element-displacement.
+as per the Newtownian version of Rayleigh criterion, the disk is stable against small element-displacement\footnote{But see \cite{abramowicz2004rayleighsolbergcriteriareversal} for both a heuristic proof and a GR correction of the criterion for Schwarzschild BHs.}.
 \par If that's the case, how can accretion be possible? Viscosity.
 \par Although we have no clues (sorta\footnote{As for many other things in the Universe, it is probably turbulence's doing. We'll take a look at it in the next section.}\,) of how the viscosity gets high enough to allow the rings of gas to migrate towards the center and lose angular momentum, it's clear that if that is the case, then accretion may indeed be possible.
 \section{The Shakura-Sunyaev model}
