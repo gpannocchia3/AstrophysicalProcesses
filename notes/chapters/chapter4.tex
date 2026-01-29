@@ -390,3 +390,13 @@ we recognize that the vorticity generates the antisymmetric part.
     \label{eq:vorticity}
 \end{equation}
 Hence, vorticity is always non-zero in presence of rotation. In hydrostatic equilibrium vorticity is always stable and conserved.
+\subsubsection*{Useful vectorial Identity}
+It may be useful to recall the following vectorial identity:
+\begin{equation*}
+    \nabla(\vec{A}\cdot\vec{B}) = (\vec{A}\cdot\nabla)\vec{B}+(\vec{B}\cdot\nabla)\vec{A}+\vec{A}\wedge (\nabla\wedge\vec{B})+\vec{B}\wedge (\nabla\wedge\vec{A})
+\end{equation*}
+which for $\vec{A} = \vec{B}$ reduces to
+\begin{equation*}
+    (\vec{A}\cdot\nabla)\vec{A} = \frac{1}{2}\nabla(\vec{A}\cdot\vec{A}) - \vec{A}\wedge (\nabla\wedge\vec{A})
+\end{equation*}
+If $\vec{A}$ can be written as the gradient of a scalar potential, the last term is notably zero. This identity can be most useful to restate Euler's (Navier-Stokes') equation in an equivalent form, which we'll make use in the next chapter.
