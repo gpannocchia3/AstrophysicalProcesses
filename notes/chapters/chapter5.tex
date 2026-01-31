@@ -71,16 +71,16 @@ To try giving a description of turbulence, we'll often perform a Reynolds' decom
 \end{equation*}
 This allows us to write down an "averaged" version of the Navier-Stokes equation (\ref{eq:incompressible_ns}), in which a new term is coming out 
 \begin{equation*}
-    \partial_{t}\langle v_{i}\rangle+(\langle v_{j}\rangle\cdot\partial_{j})\langle v_{i}\rangle = -\frac{\langle \partial_{i}p\rangle}{\rho}-\partial_{i}\phi+\nu\partial^{2}_{j}\langle v_{i} \rangle+\nu\langle\delta v_{i}\delta v_{j} \rangle
+    \partial_{t}\langle v_{i}\rangle+(\langle v_{j}\rangle\cdot\partial_{j})\langle v_{i}\rangle = -\frac{\langle \partial_{i}p\rangle}{\rho}-\partial_{i}\phi+\nu\partial^{2}_{j}\langle v_{i} \rangle-\partial_{j}\langle\delta v_{i}\delta v_{j} \rangle
 \end{equation*}
 The last term $\langle\delta v_{i}\delta v_{j} \rangle$ representing correlations between velocity fluctuations is notably absent in laminar flows. It adds a third source of stress to the stress tensor. If we assume the fluid to be incompressible, then eq.\ref{eq:stresstensor} becomes
 \begin{equation*}
-    \sigma_{ij} = -\langle p \rangle\delta_{ij}+\mu\left(\left[\partial_{j}\langle v_{i}\rangle +\partial_{i}\langle v_{j}\rangle \right]-\rho\langle\delta v_{i}\delta v_{j}\rangle\right)
+    \sigma_{ij} = -\langle p \rangle\delta_{ij}+\mu\left[\partial_{j}\langle v_{i}\rangle +\partial_{i}\langle v_{j}\rangle \right]-\rho\langle\delta v_{i}\delta v_{j}\rangle
 \end{equation*}
 The term containing the pressure is the \emph{isotropic stress}, the term containing the gradients of $v$ is the \emph{viscous stress} while the third new term is the \emph{Reynolds stress}, caused by fluctuations.
-\par Making use of Wiener-Chinčin's theorem, we can link velocity fluctuations to fluctuations in kinetic energy. Usually the Reynolds' stress term is unpacked in a symmetric and an antisymmetric part defining the \emph{turbulent kinetic energy tensor}
+\par Making use of Wiener-Chinčin's theorem, we can link velocity fluctuations to fluctuations in kinetic energy. Usually the Reynolds' stress term is unpacked in a symmetric and an antisymmetric part defining the \emph{turbulent kinetic energy tensor} as half the trace of the Reynolds stress tensor
 \begin{equation*}
-    \kappa(\vec{x},t) = \frac{1}{2}\langle \delta v_{i}\,\delta v_{i} \rangle
+    \kappa(\vec{x},t) = \frac{1}{2}\langle \delta v^{i}\,\delta v_{i} \rangle
 \end{equation*}
 representing the mean kinetic energy (per unit mass) in the fluctuating velocity field. The \emph{deviatoric anisotropic part} is thus
 \begin{equation*}
