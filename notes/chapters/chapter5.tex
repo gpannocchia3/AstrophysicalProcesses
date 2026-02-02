@@ -30,33 +30,33 @@ The condition for the fluid to be incompressible then becomes
 \begin{equation*}
     \nabla^{2}\delta\phi_{i} = 0
 \end{equation*}
-Say that the boundary between the two fluids can be parametrized by $y = \xi(x,t)$, then in the Lagrangian frame we have that 
+Say that the boundary between the two fluids can be parametrized by $z = \xi(x,y,t)$, then in the Lagrangian frame we have that 
 \begin{equation*}
-    \frac{\text{D}\xi}{\text{D}t} = \partial_{y}\delta\phi_{1} = -\partial_{y}\delta\phi_{2}
+    \frac{\text{D}\xi}{\text{D}t} = \partial_{z}\delta\phi_{1} = -\partial_{z}\delta\phi_{2}
 \end{equation*}
 If we assume the pressure to be continuous at the interface and $\delta\phi_{i}$ to be plane waves of the form 
 \begin{equation*}
-    \delta\phi_{i} = B_{i}\exp(i(kx-\omega t)+ik_{y}y)
+    \delta\phi_{i} = B_{i}(z)\exp(i(k_{x}x-\omega t)+ik_{y}y) \quad k^{2} = k_{x}^{2}+k_{y}^{2}
 \end{equation*}
-we're able to find a dispersion relation for the system 
+we can solve Laplace's equation for $\delta\phi$. The dispersion relation for the system is then
 \begin{equation}
-    \frac{\omega}{k} = \frac{\rho_{1}v_{1}+\rho_{2}v_{2}}{\rho_{1}+\rho_{2}} \pm \left[-\frac{\rho_{1}\rho_{2}(v_{1}-v_{2})^{2}}{(\rho_{1}+\rho_{2})}\right]^{1/2}
+    \omega = k_{x}\frac{\rho_{1}v_{1}+\rho_{2}v_{2}}{\rho_{1}+\rho_{2}} \mp \left[-k^{2}\frac{\rho_{1}\rho_{2}}{(\rho_{1}+\rho_{2})^{2}}(v_{1}-v_{2})^{2}\right]^{1/2}
     \label{eq:KHi}
 \end{equation}
 Unless $v_{1} = v_{2}$, the argument of the square root is always negative, so the oscillation frequency has a purely imaginary component. When you plug that into the plane wave solution, you get an exponentially increasing amplitude for the wave, meaning that the system is unstable.
-\par This is called \emph{Kelvin-Helmoltz instability}. The KH instability has characteristic vortices arising, which normally are damped at some point by viscosity, stopping the endless formation of vortices.
 \begin{figure}[h!]
     \centering 
     \includegraphics[width = 0.8\textwidth]{img/kh.jpg}
     \caption{Vortices formation due to KH instability. Note that the process is self-similar. Credits: \href{https://www.youtube.com/watch?v=cTRQP6DSaqA}{this video}.}
     \label{fig:kh}
 \end{figure}
+\par This is called \emph{Kelvin-Helmoltz instability}. The KH instability has characteristic vortices arising, which normally are damped at some point by viscosity, stopping the endless formation of vortices.
 \par If we introduce a gravitational field in the vertical direction, we introduce a stabilizing factor in eq.\ref{eq:KHi}
 \begin{equation}
-    \frac{\omega}{k} = \frac{\rho_{1}v_{1}+\rho_{2}v_{2}}{\rho_{1}+\rho_{2}} \pm \left[\frac{g}{k}\frac{\rho_{2}-\rho_{1}}{\rho_{1}+\rho_{2}}-\frac{\rho_{1}\rho_{2}(v_{1}-v_{2})^{2}}{(\rho_{1}+\rho_{2})}\right]^{1/2}
+    \omega = k_{x}\frac{\rho_{1}v_{1}+\rho_{2}v_{2}}{\rho_{1}+\rho_{2}} \mp \left[-k^{2}\frac{\rho_{1}\rho_{2}}{(\rho_{1}+\rho_{2})^{2}}(v_{1}-v_{2})^{2}+kg\frac{(\rho_{2}-\rho_{1})}{\rho_{1}+\rho_{2}}\right]^{1/2}
     \label{eq:KH_RTi}
 \end{equation}
-Please note that even if $v_{1}=v_{2}$, the system may still be unstable. In fact, in such a scenario, the system is stable only if $\rho_{1}<\rho_{2}$ (referring to Fig.\ref{fig:stratified_fluid}), which actually makes sense: The less dense fluid must float over the denser fluid.
+Note that even if $v_{1}=v_{2}$, the system may still be unstable. In fact, in such a scenario, the system is stable only if $\rho_{1}<\rho_{2}$ (referring to Fig.\ref{fig:stratified_fluid}), which actually makes sense: The less dense fluid must float over the denser fluid.
 \par Conversely, the fluid is unstable if $\rho_{1}>\rho_{2}$ (\emph{Rayleigh-Taylor instability}). The RT instability presents characteristic "fingers" (or jets) extending from the less dense layer to the denser one.
 \begin{figure}[h!]
     \centering 

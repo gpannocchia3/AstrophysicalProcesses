@@ -45,7 +45,7 @@ where the index placement is definitely overkill, but we'll be clearer in a mome
     \end{pmatrix}
 \end{equation*}
 Note that we'll be using the same metric convention of \cite{carroll}, which is $\eta_{\mu\nu} = \text{diag}(-1,1,1,1)$ and we will work in units $c=1$\footnote{To properly reintroduce $c$ factors, you have to look carefully at the definition of $u^{\mu}$. Here, and only here, with $\rho$ we're referring to an \emph{energy density} and not to a \emph{matter density}.}. The 4-vector $u^{\mu}$ is the 4-velocity $u^{\mu} = \text{d}x^{\mu}/\text{d}s$. Please note that requiring the energy-momentum tensor to be locally conserved $\partial_{\mu}T^{\mu\nu} = 0$ allows us in principle to deduce the three fundamental equations of fluid dynamics: The mass conservation, the energy conservation and Euler's equation. We will, however, get to those equation taking another route, passing briefly from statistical mechanics. For those interested, you can see \cite{carroll}, §1.9.
-\par The stress tensor we've been discussing so far is the solely spatial component of $T^{\mu\nu}$, which is $\sigma^{ij}=T^{ij} = p\delta^{i}_{j}$. Since the stress tensor is isotropic, all its diagonal elements are equal and then we may just take 
+\par The stress tensor we've been discussing so far is the solely spatial component of $T^{\mu\nu}$, which is $\sigma^{ij}=-T^{ij} = -p\delta^{i}_{j}$. Since the stress tensor is isotropic, all its diagonal elements are equal and then we may just take 
 \begin{equation*}
     p = -\frac{1}{3}\sigma^{i}_{\;\;i}
 \end{equation*}
@@ -65,7 +65,7 @@ If $\vec{F}$ is a conservative force $\vec{F} = -\nabla\phi$, then the condition
     \nabla\rho \wedge \nabla\phi = 0 \implies \frac{\text{d}p}{\text{d}\phi} = -\rho(\phi)
 \end{equation*}
 So we find out that equilibrium in a fluid is possible if isochoric and equipotential surfaces are aligned.
-\par For example, for a self-gravitating medium, the following equation holds (in special relativity at least)
+\par For example, for a self-gravitating medium, the following equation holds (in the Newtonian limit at least)
 \begin{equation}
     \nabla^{2}\phi = 4\pi G\rho 
     \label{eq:poissongrav}
@@ -131,7 +131,7 @@ In conjunction with eq.\ref{eq:poissongrav} we could, at least theoretically, st
 \input{chapters/ellipse}
 Since the star is no longer spherically symmetric, we'll no longer see the same surface temperature everywhere, but it will change from point to point, giving rise to temperature and pressure gradients.
 \par Now, if we are in presence of a temperature gradient, a sensible call would be remembering of the existence of \emph{thermal conduction}, which is temperature-gradients driven. This implies the presence of blobs of hot gas (or whatever) moving towards the cooler regions (Fig.\ref{fig:ellipse}). At this point, we'll no longer be able to neglect the Coriolis force, which will further twist the surface of the star.
-\par It's clear that hydrostatic equilibrium is not sustainable in these conditions.
+\par It's clear that the easy, spherical hydrostatic equilibrium is not sustainable in these conditions.
 \section{Vlasov equation}
 What we'd like to do in the present section is trying to build a formalism that allows to connect the microscopical interpretation of matter through statistical mechanics to the macroscopic space.
 \par To do so, we'll define a distribution function $f = f(\vec{x}, \vec{v}, t)$ so that the number of particles in range $[\vec{x}, \vec{x}+\text{d}\vec{x}\,]$ and $[\vec{v}, \vec{v}+\text{d}\vec{v}\,]$ is given by 
@@ -263,7 +263,7 @@ Note that since the stress tensor is symmetric, $d_{ij}$ must be as well. This i
     \label{eq:stresstensor}
 \end{equation}
 Here $\mu$ is always positive and it's called the viscosity of the fluid. Generally, we'll be interested in the \emph{kinematic viscosity} of the fluid $\nu =\mu/\rho$.
-\par From eq.\ref{eq:stresstensor} we reckon that if the fluid is uncompressible ($\nabla\cdot\vec{u} = 0$), the Navier-Stokes equation has the form 
+\par From eq.\ref{eq:stresstensor} we reckon that if the fluid is incompressible ($\nabla\cdot\vec{u} = 0$), the Navier-Stokes equation has the form 
 \begin{equation}
     \rho\frac{\text{D}u_{i}}{\text{D}t} = \rho F_{i} -\partial_{i}p +\mu\partial_{j}^{2}u_{i}
     \label{eq:incompressible_ns}
@@ -368,7 +368,7 @@ as the \emph{Brunt-Väisälä frequency}, which regulates the buyouancy of the b
 \par One thing we have neglected (but is worth considering when dealing with stars) is that the bubble is likely to be made of hot plasma. That implies that the bubble is able to radiate and affect different layers of the star through means that are not only its physical displacement.
 \subsection{Convection in presence of rotation}
 We've seen that density gradients in a stratified atmosphere are expected to generate convection. What happens if we add rotation to the picture?
-\par To make things a little simpler, we're going to assume that the star rotates with angular velocity $\vec{\Omega}$ \textbf{as a rigid body}. This is a rather poor assumption, that may be true only for the core region of stars; in general, \emph{differential rotation} applies, so $\Omega = \Omega(r,t)$.
+\par To make things a little simpler, we're going to assume that the star rotates with angular velocity $\vec{\Omega}$ \textbf{as a rigid body}. This is a rather poor assumption, that may be true only for the core region of stars; in general, \emph{differential rotation} applies, so $\Omega = \Omega(r,\theta,t)$.
 \input{chapters/rotatingconvection}
 As we've already seen, in presence of rotation, the potential of a self-gravitating object must be modified to include the contribution of centrifugal acceleration 
 \begin{equation*}
