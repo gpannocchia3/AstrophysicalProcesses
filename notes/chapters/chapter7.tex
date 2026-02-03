@@ -48,14 +48,15 @@ where $\vec{r_{1}}$, $\vec{r_{2}}$ are the position vectors of the centres of th
 \par What if one of the two stars' external layer bloates up and steps out of its Roche lobe? Since the lobes are essentially demarcation lines between the two (single star) potentials, once a Roche lobe is overflown, material will fall on the other object, captured by the gravitational potential of the other star.
 \par This type of mass transfer is called \emph{Roche lobe overflow}. Since mass is removed from the star quite readily when the lobe is filled, the star cannot never grow significantly larger than its Roche lobe\footnote{This only applies to binary systems whose Roche lobes are smaller than the radius of the object after its expansion.}. The star losing mass is typically named \emph{donor}, while the one gaining mass is called \emph{accretor}.
 \par Generally, there's a non-zero pressure gradient near the $L_{1}$ Lagrange point, with material often flowing at supersonic speeds\footnote{For those who may be interested in the subject, I do suggest reading into something of I. S. Shklovskii, for example \cite{1972SvA....15..886S} or search for something \href{https://ui.adsabs.harvard.edu}{here}.}. If we introduce angular momentum back into the picture, Coriolis' forces will arise, deviating the trajectory of said gas until it settles into a ring.
+\par To a good approximation we can take the stream trajectory as the orbit of a test particle released from rest at $L_{1}$, and thus with a given angular momentum, falling in the gravitational field of the accreter alone. This would give an elliptical orbit lying in the binary plane: Since the presence of the donor deviates the potential from the $1/r$ behavior, the orbits will be slowly precessing. This is consequence of \href{https://en.wikipedia.org/wiki/Bertrand%27s_theorem}{Bertrand's theorem}, which proves that only some kind of potentials (e.g., Coulomb's) are able to induce close orbits.
+\par A continuous stream trying to follow this orbit will therefore intersect itself, resulting in dissipation of energy via shocks.
+\par On the other hand, the gas has little opportunity to rid itself of the angular momentum it had upon leaving $L_{1}$, so it will tend to the orbit of lowest energy for a given angular momentum, a circular orbit. We thus expect the gas to initially orbit the accretor in the binary plane at a radius $R_{c}$ such that the Kepler orbit at $R_{c}$ has the same specific angular momentum as the transferring gas had on passing through $L_{1}$.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{img/disk_form.png}
     \caption{Perspective view of the spiraling gas. Credits: Frank, King and Raine.}
     \label{fig:spiral_gas}
 \end{figure}
-\par To a good approximation we can take the stream trajectory as the orbit of a test particle released from rest at $L_{1}$, and thus with a given angular momentum, falling in the gravitational field of the accreter alone. This would give an elliptical orbit lying in the binary plane: The presence of the donor causes this to precess slowly. A continuous stream trying to follow this orbit will therefore intersect itself, resulting in dissipation of energy via shocks.
-\par On the other hand, the gas has little opportunity to rid itself of the angular momentum it had upon leaving $L_{1}$, so it will tend to the orbit of lowest energy for a given angular momentum, a circular orbit. We thus expect the gas to initially orbit the accretor in the binary plane at a radius $R_{c}$ such that the Kepler orbit at $R_{c}$ has the same specific angular momentum as the transferring gas had on passing through $L_{1}$.
 \par If we consider Euler's equation for the vorticity in presence of viscosity
 \begin{equation*}
     \frac{\text{D}\vec{\omega}}{\text{D}t} = \nu \nabla^{2}\vec{\omega}
@@ -74,7 +75,7 @@ As we'll have the pleasure to discuss in the next few sections, accretion isn't 
 \begin{itemize}
     \item Blazars $\to$ Elliptical galaxies
     \item Type I Seyfert $\to$ (Late type) Spiral Galaxies with narrow lines
-    \item Type II Seyfert $\to$ (Late type) Spiral Galaxies with broad lines\footnote{The broadness or narrowness of the lines is related to their velocity in respect to us. Narrow absorption lines mean that the AGN is far from us, while broad absorption lines are typical of closer AGNs.}
+    \item Type II Seyfert $\to$ (Late type) Spiral Galaxies with broad lines\footnote{The broadness or narrowness of the lines is typically related to their velocity in respect to us.}
     \item Radio Loud Quasars $\to$ (Early type) Elliptical galaxies
     \item Radio Quiet Quasars $\to$ (Early type) Elliptical galaxies
 \end{itemize}
@@ -111,7 +112,7 @@ If we ignore viscosity in Euler's equation, we may write
 \end{equation*}
 Assuming ideal gas behavior
 \begin{equation*}
-    \frac{1}{\rho}\nabla p = \frac{RT}{\mu m_{H}}\nabla\,(\log(p))
+    \frac{1}{\rho}\nabla p = \frac{kT}{\mu m_{H}}\nabla\,(\log(p))
 \end{equation*}
 \par For convenience's sake, we're going to switch to adimensional coordinates
 \begin{equation*}
@@ -122,6 +123,7 @@ this way Euler's equation can be restated in terms of adimensional quantities on
     \frac{\partial \tilde{v}}{\partial \tilde{t}} + (\tilde{v}\cdot \tilde{\nabla})\cdot \tilde{v} = -\frac{T}{T_{vir}}\tilde{\nabla}\log(p)-\frac{1}{\tilde{r}^{2}}\hat{r}
 \end{equation*}
 \par From this last equation we're learning something important already: If $T \ll T_{vir}$ there's no feedback from the gas, and so the disk's geometry will be determined by gravity alone. 
+\par This fact enormously simplifies the calculation of the stream trajectory, for pressure forces can be neglected: The stream will follow a ballistic trajectory determined by the Roche potential, as though it consisted simply of a set of test particles.
 \par Assuming that there's little pressure pushing on the "vertical" direction, we may deduce that the vertical size will be "geometrically thin", and its dynamic will be dominated by gravity alone. In fact, at first order, the vertical component of the acceleration can be assumed to be
 \begin{equation*}
     g_{z} = -\Omega_{0}^{2}z

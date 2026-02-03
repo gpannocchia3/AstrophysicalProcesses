@@ -188,13 +188,14 @@ Clearly, if $\beta = 0$, then all the mass lost by $M_{2}$ is captured by $M_{1}
 general case in which a fraction of the mass can be lost and escape the system, as may be the case, for example, in the presence of stellar winds.
 \par The angular momentum was $J = \mu\sqrt{GMa}$; if we now differentiate it with respect to time and use $\dot{M}_{1}+\dot{M}_{2} = \dot{M} = \beta\dot{M}_{2}$, we obtain 
 \begin{equation}
-    \frac{\dot{a}}{a} = -2\left(1-\frac{M_{2}}{M_{1}}\right)\frac{\dot{M}_{2}}{\dot{M}_{1}}
+    \frac{\dot{a}}{a} = -2\left(1-\frac{M_{2}}{M_{1}}\right)\frac{\dot{M}_{2}}{M_{2}}+\frac{2\dot{J}}{J}
 \end{equation}
-In short, if $M_{1}>M_{2}$, the orbit expands ($\dot{a}>0$), otherwise it shrinks. From Kepler's third law we also know that 
+Note that we're assuming $\dot{M} = 0$. If we assume \emph{conservative mass transfer}, characterized by constant binary mass and angular mo- mentum, we can set $\dot{J} = 0$ and find that if $M_{1} > M_{2}$, the orbit expands ($\dot{a}>0$), otherwise it shrinks.
+\par From Kepler's third law we also know that
 \begin{equation*}
     \frac{\dot{\omega}}{\omega} = -\frac{3}{2}\frac{\dot{a}}{a}
 \end{equation*}
-and thus the angular frequency unsurprisingly increases as the orbit shrinks.
+and thus the angular frequency unsurprisingly increases as the orbit shrinks. It should go without saying that the Roche lobe size is affected by the change in mass ratio as well as separation. Hence, unless the star can contract rapidly enough to keep its radius smaller than the Roche love, the overflow process will become very violent, proceeding on a dynamical or thermal timescale depending on whether the star’s envelope is convective or radiative.
 \subsection{Supernova kicks}
 At the end of all the subsequent stages of nuclear burning\footnote{Note that nothing is \emph{actually} burning in the common sense of "chemical burning". It's just an astrophysical slang to refer to nuclear fusion.}, there's a chance that the more massive stars can undergo a supernova (SN) explosion\footnote{As shown in Chapter \ref{ch:v}, §6.3.2, SN explosions are described fairly well with the Sedov-Taylor blastwave model.}, after which much of the stellar material is expelled and leaving behind only a shell of its former self, typically in the form of a neutron star or a stellar-mass black hole. The mass loss is practically instantaneous as the typical timescale for the explosion is much shorter than the orbital period.
 \par In general, the collapse is not perfectly
@@ -263,6 +264,18 @@ Despite the large uncertainties, it is possible to estimate the product $\lambda
 \par What we've described so far works particularly well to predict what happens when all other gravitational sources are absent.
 \par Let's assume that the average stellar mass density in the Universe is of order $\rho_{*} \approx 3\cdot10^{8}\,M_{\odot}/\text{Mpc}^{3}$; from Salpeter's initial mass function (IMF) we know that $n\sim M^{-2.35}$. This implies that roughly 0.3\% of the total stars in the Universe are over $30M_{\odot}$, thus leaving a SBH as relic at the end of their life. Since 70\% of the massive stars are observed in binaries, and we need two stars to form a binary, we can give an estimate and claim that there are about $3\cdot 10^{5}$ massive binary stars per cubic megaparsec.
 \par We can make the (extreme) assumption that those binaries are produced in a continuous, steady-state star formation process over about 10 Gyr, thus resulting in a formation rate of $3\cdot 10^{-5}\,\text{yr}^{-1}\,\text{Mpc}^{-3}$; assuming that all those massive binaries give rise to SBHBs that merge in a short timescale, then we get a SBHB merger rate\,\footnote{Note that this doesn't take into account the binary systems that get disrupted by SN kicks, so the number of mergers will be rather lower. On top of that, we also assumed a constant star formation rate across cosmic time, although it's known that it peaks at about $z\approx 1.5$.} of $3\cdot 10^{4}\,\text{yr}^{-1}\,\text{Gpc}^{-3}$.
+\subsubsection*{Summary}
+Since I realize it is a lot to digest, I'll report down below a most illuminating summary provided by \cite{celoria2018lecturenotesblackhole}.
+\begin{itemize}
+    \item Two massive stars with masses $M \approx 50M_{\odot}$ are initially bound in a wide binary system with semi-major axis $a_{i} \approx 1\,\text{AU}$.
+    \item The more massive of them becomes a giant star, fills its Roche lobe and transfers mass to the other star, changing the mass ratio and the separa- tion of the binary.
+    \item The most massive star undergoes a SN explosion. The compact remnant (a BH, for example) gets the SN kick which might destroy the binary.
+    \item If the binary survives, the other star also evolves and becomes a giant star, fills its Roche lobe and transfers mass to the BH. The mass transfer becomes unstable and a common envelope can eventually form.
+    \item The common envelope unbinds and the system shrinks by a factor $10^{2}-10^{3}$. The final separation between the BH and the Helium core is $a_{f} \sim R_{\odot}$.
+    \item At this point the second star undergoes SN explosion getting another kick. However, in this case $a_{f} \sim R_{\odot}$, the circular velocity is $v_{c}\approx 10^{3}\,\text{km}/\text{s}$, so the chances of disrupting the binary with the second SN kick are small.
+    \item Finally, we are left with a SBHB with separation $a_{f} \sim R_{\odot}$ allowing merger in a Hubble time (formation of BH-NS and NS-NS binaries proceeds through similar steps).
+    \item Enjoy the show.
+\end{itemize}
 \section{BH Binaries in Globular Clusters}
 Another channel to form SBH binaries is via dynamical processes; this is closely related to the fact that most stars are observed to form in clusters and associations. However, the vast majority of the stars we observe today in the MW\footnote{Short for Milky Way.} are ﬁeld stars and therefore do not belong to stellar associations\footnote{A "stellar association" is a group of more than $10^{3}$ stars, like globular clusters, young massive star clusters and open clusters.}.
 \par In order to understand the dynamical formation scenario, it is therefore important to start from the physics of star cluster formation and

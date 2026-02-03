@@ -127,11 +127,13 @@ so that all solutions of (\ref{eq:bhl}) can be classified by their behavior at $
     v^{2}(r_{s}) = c_{s}^{2}(r_{s}) \quad v^{2}\to 0 \;\text{as}\; r\to\infty \quad  (v^{2} < c_{s}^{2},\; r > r_{s};\;v^{2} > c_{s}^{2},\;r < r_{s})
 \end{equation*}
 which allows us to integrate directly Euler's equation and evaluate some nice quantities which, although fairly interesting, we'll skip right away. I'll just point out that such solution allows us in principle to infer that accretion from the interstellar medium is unlikely to be an observable phenomenon.
-\par It should be pretty obvious that, as the gas infalls into the star, it builds up energy. This process is eventually brought to a stop if the star has a \emph{hard boundary} at, say, $r = \bar{r}$. The sheer variation in gravitational potential is (assuming gas starting from infinity) $\Delta\phi = GM/r$.
-\par The energy dissipated, either by radiation or by the gas heating up, if the gas bounces on the surface of the star is $\dot{e} = GM/r$; if the gas doesn't stop, the Virial theorem yields $\Delta\phi = GM/2r$.
+\par It should be pretty obvious that, as the gas infalls into the star, it builds up energy. This process is eventually brought to a stop if the star has a \emph{hard boundary} at, say, $r = \bar{r}$.
+\par For a body of mass $M$ and radius $\bar{r}$, the gravitational potential energy released by the accretion of a mass $m$ onto its surface is (assuming gas starting from infinity) $\Delta E_{\text{acc}} = GMm/\bar{r}$. We would expect this energy to be released eventually mainly in the form of electromagnetic radiation.
+\par It is clear from the form of the last expression that the efficiency of accretion as an energy release mechanism is strongly dependent on the compactness of the accreting object.
+\par The energy dissipated, either by radiation or by the gas heating up, if the gas doesn't stop, follows from application of the Virial theorem $\Delta E_{\text{acc}} = GMm/2\bar{r}$.
 \par Let us assume for the moment adiabatic accretion. The internal energy of the gas could then be expressed as 
 \begin{equation*}
-    e = \frac{p}{(\gamma-1)\rho} \quad p = \frac{\rho R T}{\mu m_{H}}
+    e = \frac{p}{(\gamma-1)\rho} \quad p = \frac{\rho k T}{\mu m_{H}}
 \end{equation*}
 After complete energy dissipation, we can use the Virial temperature to write 
 \begin{equation*}
@@ -142,7 +144,7 @@ After complete energy dissipation, we can use the Virial temperature to write
     T_{vir} = \frac{GM\mu m_{H}}{k\bar{r}}
     \label{eq:virial_temperature}
 \end{equation}
-Since the sound speed of a perfect gas can be written as $c_{s} = (\gamma RT/\mu)^{1/2}$, this implies that at a temperature $T = T_{vir}$, the sound speed is roughly equal to the escape velocity from the star. In this scenario, accretion is not possible, since density fluctuations can escape the gravitational pull. Similarly, if the gas is too hot, accretion stops\footnote{When the temperature raises to or over the virial temperature the sound's speed becomes roughly equal to the escape velocity and so the gas cannot be pulled inward.}. In a sense, accretion is a \emph{self-regulating process}.
+Since the sound speed of a perfect gas can be written as $c_{s} = (kT/\mu m_{H})^{1/2}$, this implies that at a temperature $T = T_{vir}$, the sound speed is roughly equal to the escape velocity from the star. In this scenario, accretion is not possible, since density fluctuations can escape the gravitational pull. Similarly, if the gas is too hot, accretion stops\footnote{When the temperature raises to or over the virial temperature the sound's speed becomes roughly equal to the escape velocity and so the gas cannot be pulled inward.}. In a sense, accretion is a \emph{self-regulating process}.
 \par What if we consider now other mechanisms to dissipate energy?
 \par First and foremost, it's safe to assume that in most scenarios the temperature will always be such that $T\ll T_{vir}$. Still, accretion can't go on for an indefinite amount of time. Eventually it will have to stop.
 \par If we increase the accreting velocity
@@ -152,11 +154,11 @@ Since the sound speed of a perfect gas can be written as $c_{s} = (\gamma RT/\mu
 the variation of optical depth in respect to the rate of accretion will be positive $\text{d}\tau/\text{d}\dot{M} > 0$, thus there must be a critical accretion rate ($\dot{M}_{c}$) beyond which photons can't escape, making the process of accretion always adiabatic.
 \par Consider a medium with opacity $\kappa_{\nu}$ and flux $F_{\nu}$. The force exerted by photons will approximately be proportional to $\kappa_{\nu}F_{\nu}/c$, and will be the main contribution opposing to accretion. From here we can define an "equilibrium" flux for which gravity is balanced by photon pressure alone
 \begin{equation*}
-    F_{\nu, \,eq} = \frac{c}{\kappa_{\nu}}\frac{GM}{r^{2}}
+    F_{\nu, \,eq} = \frac{c}{\kappa_{\nu}}\frac{GMm_{p}}{r^{2}}
 \end{equation*}
 Hence, under the assumption of spherical symmetry, we can define \emph{Eddington's critical luminosity} as 
 \begin{equation}
-    L_{E} = 4\pi r^{2}F_{\nu, \,eq} = \frac{4\pi c GM}{\kappa_{\nu}}
+    L_{E} = 4\pi r^{2}F_{\nu, \,eq} = \frac{4\pi c GMm_{p}}{\kappa_{\nu}}
     \label{eq:eddingon_lum}
 \end{equation}
 Eddington's luminosity plays a crucial role in accretion processes, for it defines a limiting luminosity beyond which accretion can't take place.
