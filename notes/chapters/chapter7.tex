@@ -48,7 +48,7 @@ where $\vec{r_{1}}$, $\vec{r_{2}}$ are the position vectors of the centres of th
 \par What if one of the two stars' external layer bloates up and steps out of its Roche lobe? Since the lobes are essentially demarcation lines between the two (single star) potentials, once a Roche lobe is overflown, material will fall on the other object, captured by the gravitational potential of the other star.
 \par This type of mass transfer is called \emph{Roche lobe overflow}. Since mass is removed from the star quite readily when the lobe is filled, the star cannot never grow significantly larger than its Roche lobe\footnote{This only applies to binary systems whose Roche lobes are smaller than the radius of the object after its expansion.}. The star losing mass is typically named \emph{donor}, while the one gaining mass is called \emph{accretor}.
 \par Generally, there's a non-zero pressure gradient near the $L_{1}$ Lagrange point, with material often flowing at supersonic speeds\footnote{For those who may be interested in the subject, I do suggest reading into something of I. S. Shklovskii, for example \cite{1972SvA....15..886S} or search for something \href{https://ui.adsabs.harvard.edu}{here}.}. If we introduce angular momentum back into the picture, Coriolis' forces will arise, deviating the trajectory of said gas until it settles into a ring.
-\par To a good approximation we can take the stream trajectory as the orbit of a test particle released from rest at $L_{1}$, and thus with a given angular momentum, falling in the gravitational field of the accreter alone. This would give an elliptical orbit lying in the binary plane: Since the presence of the donor deviates the potential from the $1/r$ behavior, the orbits will be slowly precessing. This is consequence of \href{https://en.wikipedia.org/wiki/Bertrand%27s_theorem}{Bertrand's theorem}, which proves that only some kind of potentials (e.g., Coulomb's) are able to induce close orbits.
+\par To a good approximation we can take the stream trajectory as the orbit of a test particle released from rest at $L_{1}$, and thus with a given angular momentum, falling in the gravitational field of the accreter alone. This would give an elliptical orbit lying in the binary plane: Since the presence of the donor deviates the potential from the $1/r$ behavior, the orbits will be slowly precessing. This is consequence of \href{https://en.wikipedia.org/wiki/Bertrand%27s_theorem}{Bertrand's theorem}, which proves that only some kind of potentials (e.g., Coulomb's) have the property that all bound orbits are also closed orbits.
 \par A continuous stream trying to follow this orbit will therefore intersect itself, resulting in dissipation of energy via shocks.
 \par On the other hand, the gas has little opportunity to rid itself of the angular momentum it had upon leaving $L_{1}$, so it will tend to the orbit of lowest energy for a given angular momentum, a circular orbit. We thus expect the gas to initially orbit the accretor in the binary plane at a radius $R_{c}$ such that the Kepler orbit at $R_{c}$ has the same specific angular momentum as the transferring gas had on passing through $L_{1}$.
 \begin{figure}[h!]
@@ -135,12 +135,13 @@ which gives raise to a non-negligible velocity dispersion along the vertical dir
     \partial_{z}\rho &= -\frac{1}{H^{2}}z\rho\\
     \implies \rho(z) &= \rho_{0}\exp\left(-\frac{z^{2}}{2H^{2}}\right)
 \end{align*}
-with $H = c_{s}/\Omega_{0}$ the disk's scale height and $c_{s} = (TR/\mu m_{H})^{1/2}$ the sound speed. If we define the \emph{aspect ratio} $\delta$ of the disk as 
+with $H = c_{s}/\Omega$ the disk's scale height and $c_{s} = (kT/\mu m_{H})^{1/2}$ the sound speed. If we define the \emph{aspect ratio} $\delta$ of the disk as 
 \begin{equation}
-    \delta = \frac{H}{r} = \frac{c_{s}}{\Omega_{0}r} = \left(\frac{T}{T_{vir}}\right)^{1/2}= \frac{1}{\mathcal{M}} < 1
+    \delta = \frac{H}{r} = \frac{c_{s}}{\Omega r} = \left(\frac{T}{T_{vir}}\right)^{1/2}= \frac{1}{\mathcal{M}} < 1
     \label{eq:aspect_ratio}
 \end{equation}
-we conclude that the gas in the disk must be supersonic\footnote{For $\Omega_{0}r$ can be considered the tangential velocity to the (circular) orbit.}. Thus, the disk is pretty much a continuum of Keplerian orbits along which the gas has different velocities.
+we conclude that the gas in the disk must be supersonic\footnote{For $\Omega_{0}r$ can be considered the tangential velocity to the (circular) orbit.}.
+\par Thus, the disk is pretty much a continuum of Keplerian orbits along which the gas has different velocities.
 \par Now, if we switch to the comoving frame and recall Fig.\ref{fig:stratified_fluid}, we may notice that we are in the exact conditions for shear instability to arise. But since angular momentum is \emph{fixed} for any given orbit, each displacement caused by shear instabilities will be simply ignored, for angular momentum conservation will eventually bring back the displaced element to its original position.
 \par In fact, as long as the specific angular momentum satisfies
 \begin{equation*}
@@ -148,7 +149,7 @@ we conclude that the gas in the disk must be supersonic\footnote{For $\Omega_{0}
 \end{equation*}
 as per the Newtownian version of Rayleigh criterion, the disk is stable against small element-displacement\footnote{But see \cite{abramowicz2004rayleighsolbergcriteriareversal} for both a heuristic proof and a GR correction of the criterion for Schwarzschild BHs.}.
 \par If that's the case, how can accretion be possible? Viscosity.
-\par Although we have no clues (sorta\footnote{As for many other things in the Universe, it is probably turbulence's doing. We'll take a look at it in the next section.}\,) of how the viscosity gets high enough to allow the rings of gas to migrate towards the center and lose angular momentum, it's clear that if that is the case, then accretion may indeed be possible.
+\par Although we have no clues (sorta\footnote{As for many other things in the Universe, it is probably turbulence's doing. We'll take a look at it in the next section.}\,) of how the viscosity gets high enough to allow the rings of gas to migrate towards the center and lose angular momentum, it's clear that if that were the case, then accretion may indeed be possible.
 \section{The Shakura-Sunyaev model}
 As we have mentioned \emph{en passant} at the end of the last section, a differentially rotating medium (like our Keplerian-continuum) must develope tangential stresses between adjacent layers, which are believed to be connected to the presence of magnetic fields, turbulence, molecular and/or radiative viscosity acting as the primary mechanisms of transport of angular momentum.
 \par In the conditions that are of interest to us, nor molecular nor radiative viscosity can lead to accretion. So that leaves us with only magnetic fields and turbulence. As noticed by Shakura and Sunyaev \cite{1973A&A....24..337S}, the magnetic field flowing into the disk may have a regular structure at the distances comparable to the outer radius of the disk. But since $\nabla\cdot\vec{H} = 0$, the radial component of the magnetic field must have alternating sign, hence differential rotation leads to division of the large magnetic loops into smaller ones.
@@ -188,11 +189,7 @@ with $\rho_{0}$ the density on the plane of the disk\footnote{We have plugged in
     v_{\phi}^{2} &= \frac{GM}{r}
     \label{eq:cons_sh-su}
 \end{align}
-while the equation of conservation of angular momentum will be
-\begin{equation}
-    \partial_{t}(\rho v_{\phi}) + \partial_{r}(\rho v_{r} v_{\phi}) = F_{\phi}
-\end{equation}
-with $F_{\phi}$ the viscous "forces". Integrating over the vertical direction yields 
+while the equation of conservation of angular momentum (integrated over the vertical direction) will be
 \begin{equation}
     \partial_{t}(r\Sigma\Omega r^{2}) + \partial_{r}(r\Sigma v_{r}\Omega r^{2}) = \partial_{r}(S r^{3}\partial_{r}\Omega)
 \end{equation}
@@ -247,7 +244,7 @@ where $\beta$ is an integration constant and $R_{*}$ is the inner radius of the 
 \begin{equation*}
     F_{J} = -\dot{M}\beta\Omega_{Kepl}(R_{*})R_{*}^{2}
 \end{equation*}
-\par For example, let us suppose that the disk extends all the way down to the surface $r = R_{*}$ of the central star\footnote{As we already mentioned, this can't be the case if the central object responds to the Schwarzschild metric. The minimum radius permitted in that case is that of the ISCO, the Innermost Stable Circular Orbit predicted by Schwarzschild. Note, however, that generally $R_{s}\ll R_{*}$, so the problem arises only for BHs and neutron stars.}. Hence, there must exist a radius $\tilde{R} > R_{*}$ where $\partial_{r}\Omega = 0$. In a realistic situation, the star must rotate more slowly than break-up speed at its equator
+\par For example, let us suppose that the disk extends all the way down to the surface $r = R_{*}$ of the central star\footnote{As we already mentioned, this can't be the case if the central object responds to the Schwarzschild metric. The minimum radius permitted in that case is that of the ISCO, the Innermost Stable Circular Orbit predicted by Schwarzschild. Note, however, that generally $R_{s}\ll R_{*}$, so the problem arises only for BHs and neutron stars.}. Hence, there must exist a radius $\bar{R} > R_{*}$ where $\partial_{r}\Omega = 0$. In a realistic situation, the star must rotate more slowly than break-up speed at its equator
 \begin{equation*}
     \Omega(R_{*}) < \Omega_{Kepl}(R_{*})
 \end{equation*}
@@ -264,7 +261,7 @@ this implies $\beta = 1$. This means there will be an inward flux of angular mom
 \par This is particularly true when the wavelength of the GW is comparable with the relative distance between the pulsars.
 \par This way, it has been possible to gather evidence of a stochastic background of GW, as depicted in Fig.\ref{fig:gwb} and predicted by Hellings and Downs in 1983 \cite{1983ApJ...265L..39H}.
 \section{Spectrum and temperature of the disk}
-\par Consider again eq.\ref{eq:stationary_viscosity} for $\Omega_{*}<\Omega_{Kepl}$, so that $\beta = 1$. Under the assumption of LTE, we'd like to see if we're able to determinate the surface temperature of the disk. You should recall the 1st principle of Thermodynamics
+\par Consider again (\ref{eq:stationary_viscosity}) for $\Omega_{*}<\Omega_{Kepl}$, so that $\beta = 1$. Under the assumption of LTE, we'd like to see if we're able to determinate the surface temperature of the disk. You should recall the 1st principle of Thermodynamics
 \begin{equation*}
     \rho T \frac{\text{d}S}{\text{d}t} = -\nabla\cdot\vec{F}_{H}+Q_{\nu}
 \end{equation*}
